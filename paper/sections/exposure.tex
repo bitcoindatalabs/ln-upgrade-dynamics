@@ -1,47 +1,106 @@
 % ==========================================================================================
-\section{Exposure after Security Advisories}
+\section{Did Disclosure Move Operators?}
 \label{sec:exposure}
 
 \subsection{Advisories gossip can see}
 We collected every public security advisory for LND, CLN, Eclair and LDK from January~2022 to the cutoff (release
 notes, Lightning Labs' advisory index, Delving Bitcoin and authors' write-ups), recording the affected versions, the
-first fixed release and the disclosure date. An advisory is visible in gossip when its fix boundary coincides with
-the start of a release line (LINE), or falls inside a line but leaves whole lines affected or fixed on either side
-(PARTIAL, which gives bounds). Fixes inside the newest line, such as CLN 26.06.7--26.06.9 and Eclair 0.14.1--0.14.3,
-are patch releases and invisible. Eclair and LDK have too few live public nodes with a known line (about ten Eclair
-nodes) for shares to be meaningful, so Table~\ref{tab:advisories} lists the \NAdvRows{} LND and CLN entries,
-covering \NAdvTotal{} advisories.
+first fixed release and the disclosure date, each from the source cited in Table~\ref{tab:advisories}. An advisory is
+visible in gossip when its fix boundary coincides with the start of a release line (LINE), or falls inside a line but
+leaves whole lines affected or fixed on either side (PARTIAL, which gives bounds). Fixes inside the newest line, such
+as CLN 26.06.7--26.06.9 and Eclair 0.14.1--0.14.3, are patch releases and invisible. Eclair and LDK have too few live
+public nodes with a known line (about ten Eclair nodes) for shares to be meaningful, so Table~\ref{tab:advisories}
+lists the \NAdvRows{} LND and CLN entries, covering \NAdvTotal{} advisories.
 
 Two clocks run for each advisory. Fixes usually ship long before the vulnerability is disclosed: the median gap
 between the first fixed release and disclosure is \FixToDiscMedian{} days, and the six advisories Lightning Labs
 published on 11~August~2026 concerned bugs fixed in LND 0.19.0, released \FixToDiscLLBatch{} days earlier. A node
 still on an affected line at disclosure has therefore usually skipped a release that was already available for many
 months. Exposure is the share of live nodes (excluding the managed fleet) on an affected line, with the share of
-their live capacity alongside.
+their live capacity alongside. It is largest where the fix is youngest: when Teinturier disclosed that LND accepted
+too few confirmations on cooperative closes, \FixToDiscLndCloseconf{} days after the fix shipped in 0.21.0,
+\ExpLndCloseconfDisc\% of live LND nodes, holding \ExpCapLndCloseconfDisc\% of live LND capacity, were on an
+affected line.
 
 \input{tables/table_advisories}
 
-\subsection{Disclosure barely moves LND operators}
+\subsection{Response to disclosure}
+\label{sec:response}
+If operators act on advisories, nodes should leave the affected lines faster after a disclosure than before it. For
+every advisory with whole lines affected and enough snapshots on both sides (at least six of the eight weeks before
+and three of the four weeks after), we take, at the start of each week, the live nodes on a wholly affected line,
+and count those first seen on a later line within the week. The rate is moves per node-week, and we compare the
+weeks before and after disclosure by their rate ratio. Moves are not independent: a platform push or a group of
+operators moves many nodes in the same week, and the weekly counts vary up to \RespMaxDisp{} times more than Poisson
+counts would. The 95\% confidence intervals are therefore quasi-Poisson, scaled by that dispersion, and we add an exact
+permutation test of whether the weekly rates after disclosure exceed those before. Platform pushes could produce a
+jump that no operator chose, so we also report the ratio without moves signed within 48~hours after a platform
+release that ships the new line (\S\ref{sec:waves}). The comparison has a known bias: the rate of leaving a line
+falls as the line ages and its most attentive operators leave, so the before-window has the higher baseline, most of
+all when a disclosure follows a release by only a few months. A ratio near one therefore rules out only a large
+response.
+
+\NResp{} disclosures qualify, \NRespLND{} for LND and \NRespCLN{} for CLN (Table~\ref{tab:response},
+Fig.~\ref{fig:response}). Only CLN's two disclosures of 19~July~2026, memory-exhaustion vulnerabilities in gossipd
+(fixed in 26.04) and connectd (fixed in 25.09)~\cite{pratap2026clndos}, show a clear increase. Among live CLN nodes on
+lines before 26.04, the weekly rate rose from \WkBeforeAllClnGossipd\% to \WkAfterAllClnGossipd\% (ratio
+\RRAllClnGossipd, 95\% CI \RRLoAllClnGossipd--\RRHiAllClnGossipd), and for lines before 25.09 from
+\WkBeforeAllClnConnectd\% to \WkAfterAllClnConnectd\% (\RRAllClnConnectd, \RRLoAllClnConnectd--\RRHiAllClnConnectd).
+The two groups responded differently. The \AtRiskClnRecent{} nodes one line behind, on 25.09--25.12, moved steadily
+over the four weeks: without the moves that followed platform releases their ratio is \RROpClnRecent{}
+(\RRLoOpClnRecent--\RRHiOpClnRecent), and each of the four weeks after disclosure had a higher rate than any of the
+seven before (permutation $p=\PPermOpClnRecent$). The \AtRiskClnConnectd{} nodes on older lines moved mostly in the
+48~hours after BTCPay's security release of 7~August, which installed CLN 26.06.1 on every BTCPay deployment that
+updated; without those moves their ratio is \RROpClnConnectd{} (\RRLoOpClnConnectd--\RRHiOpClnConnectd;
+$p=\PPermOpClnConnectd$). The operators who acted on CLN's disclosure were those already close to current; the ones
+further behind moved when their platform's own advisory had them update. A month later, the ping-flood
+vulnerability, fixed at the same 25.09 boundary, was disclosed~\cite{cestari2026pingflood}, and the next day the
+maintainers asked operators to upgrade or restart offline~\cite{coreln2026offline}. The \AtRiskClnPing{} nodes still
+on older lines may have moved somewhat faster, but not clearly: \RRAllClnPing{} (\RRLoAllClnPing--\RRHiAllClnPing),
+and outside platform releases, whose removal takes BTCPay's push out of the before-window, \RROpClnPing{}
+(\RRLoOpClnPing--\RRHiOpClnPing; $p=\PPermOpClnPing$).
+
+No LND disclosure produced a detectable increase. Across the \NRespLND{}, the ratios are at most \RespLndMaxRR{}, and
+none is significant (permutation $p\geq\RespLndMinP$, with or without platform moves). The intervals are wide,
+however. For Lightning Labs' batch of 11~August~2026, the weekly rate was \WkBeforeAllLLBatch\% before and
+\WkAfterAllLLBatch\% after (\RRAllLLBatch, \RRLoAllLLBatch--\RRHiAllLLBatch); its before-window holds BTCPay's
+security release four days earlier, and without the moves that followed it the ratio is \RROpLLBatch{}
+(\RRLoOpLLBatch--\RRHiOpLLBatch). Outside platform releases, a modest increase is compatible with these data, but one
+as large as CLN's (\RROpClnRecent) is not. What the rates leave open, the exposed cohort settles
+(\S\ref{sec:fates}): two months after the batch, only \PctCohortUpLLBatch\% of the nodes exposed at disclosure had
+upgraded. The lowest ratios belong to the cooperative-close disclosure, \FixToDiscLndCloseconf{} days after 0.21.0,
+and the two of 21~September~2026, which followed the platform pushes of June and August: the bias described above.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig7_response.pdf}
+\caption{Left and centre: weekly share of the live nodes on an affected line that moved to a later line, around two
+disclosures; gold: moves signed within 48~hours after a platform release that ships the new line. Right: rate ratio
+after/before disclosure with quasi-Poisson 95\% CI for every disclosure that can be tested, for all moves (filled) and outside
+platform releases (open). Managed fleet excluded.}
+\label{fig:response}
+\end{figure*}
+
+\input{tables/table_response}
+
+\subsection{What became of the exposed nodes}
+\label{sec:fates}
 On the day Lightning Labs disclosed its batch, \ExpLLBatchDisc\% of live LND nodes, holding \ExpCapLLBatchDisc\% of
 live LND capacity, were on a line older than 0.19 (Fig.~\ref{fig:cases}). Of the \CohortLLBatch{} exposed nodes,
 \CohortUpLLBatch{} had upgraded by the cutoff, \CohortLeftLLBatch{} were no longer live and \CohortStillLLBatch{}
-(\PctCohortStillLLBatch\%) were still live on an affected line. The disclosure did not change the pace: in the 30 days
-before it, \RateLLBatchBefore\% of the live nodes then on affected lines moved to a fixed line; in the 30 days after,
-\RateLLBatchAfter\%. Morehouse's disclosure of three LND vulnerabilities fixed in the same release, on 4~December~2025,
-looks the same: \ExpLndSweeperDisc\% of live LND nodes exposed, an upgrade rate of \RateLndSweeperBefore\% before and
-\RateLndSweeperAfter\% after, and \PctCohortStillLndSweeper\% of the exposed cohort still exposed four months later.
-The exposed nodes are small: their share of capacity is about half their share of nodes.
+(\PctCohortStillLLBatch\%) were still live on an affected line. Morehouse's disclosure of three LND vulnerabilities
+fixed in the same release, on 4~December~2025~\cite{morehouse2025stalling,morehouse2025failback2,morehouse2025inbox},
+found \ExpLndSweeperDisc\% of live LND nodes exposed; four months later \PctCohortStillLndSweeper\% of that cohort was
+still live on an affected line, \PctCohortUpLndSweeper\% had upgraded and \PctCohortLeftLndSweeper\% were gone. The
+exposed LND nodes are small: their share of capacity is about half their share of nodes.
 
-\subsection{CLN operators responded}
-CLN's two memory-exhaustion vulnerabilities, disclosed on 19~July~2026, were fixed at the 25.09 and 26.04 line
-starts. Here the disclosure changed behaviour. Among live CLN nodes on lines before 26.04, the 30-day upgrade rate
-rose from \RateClnGossipdBefore\% before to \RateClnGossipdAfter\% after the disclosure (\RateClnConnectdBefore\% to
-\RateClnConnectdAfter\% for lines before 25.09), and exposure kept falling after the maintainers' call on
-26~August to upgrade or restart with \texttt{--offline}. Of \CohortClnGossipd{} CLN nodes exposed to the gossipd
-vulnerability at disclosure, \CohortUpClnGossipd{} had upgraded by the cutoff and \CohortLeftClnGossipd{} were no
-longer live, leaving \CohortStillClnGossipd{}; exposure fell from \ExpClnGossipdDisc\% of live CLN nodes to
-\ExpClnGossipdCutoff\% (from \ExpCapClnGossipdDisc\% to \ExpCapClnGossipdCutoff\% of capacity). Part of the fall is
-nodes leaving rather than upgrading, as in the shutdown we measured earlier~\cite{kumar2026clientdiversity}.
+CLN's exposure fell much further. Of the \CohortClnGossipd{} CLN nodes exposed to the gossipd vulnerability at
+disclosure, \CohortUpClnGossipd{} (\PctCohortUpClnGossipd\%) had upgraded by the cutoff and \CohortLeftClnGossipd{}
+(\PctCohortLeftClnGossipd\%) were no longer live, leaving \CohortStillClnGossipd{}; exposure fell from
+\ExpClnGossipdDisc\% of live CLN nodes to \ExpClnGossipdCutoff\% (from \ExpCapClnGossipdDisc\% to
+\ExpCapClnGossipdCutoff\% of capacity). Much of the fall is nodes leaving rather than upgrading, as in the CLN
+shutdown we measured earlier~\cite{kumar2026clientdiversity}; leaving also ends the exposure, and restarting offline
+was what the maintainers asked of operators who could not upgrade.
 
 \begin{figure*}[t]
 \centering
@@ -51,3 +110,18 @@ solid vertical line: disclosure; dotted: CLN's call of 26~August~2026 to upgrade
 exposed on the last snapshot before disclosure, by what became of them. Managed fleet excluded.}
 \label{fig:cases}
 \end{figure*}
+
+\subsection{Robustness}
+\label{sec:robust}
+Table~\ref{tab:robustness} varies the definitions behind the four case studies. A 7- or 28-day liveness window moves
+the exposure by about one percentage point. Counting the fleet as nodes would lower LND's exposure, since the fleet
+ran fixed lines, to \RobFleetLLBatchDisc\% instead of \ExpLLBatchDisc\% for Lightning Labs' batch. The strict lower
+bounds for LND sit well below the likely-line exposure, because a newer line with some default features switched off
+can produce the bits of an older one (\S\ref{sec:inference}); the likely line assumes the fewest such changes. The
+exposed nodes are not stale entries in our view of the graph: \RobSignedLLBatchDisc\% of the LND nodes exposed to
+Lightning Labs' batch had signed their current announcement, with the affected line's feature bits, in the 14~days
+before disclosure (against \RobSignedAllLLBatchDisc\% of all live LND nodes). CLN nodes re-sign far less often
+(\RobSignedAllClnGossipdDisc\% of all live CLN nodes within 14~days), so CLN exposure rests more on the absence of a
+new announcement.
+
+\input{tables/table_robustness}

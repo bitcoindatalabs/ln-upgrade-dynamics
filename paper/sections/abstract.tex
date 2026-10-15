@@ -1,14 +1,16 @@
 Every Lightning implementation disclosed security vulnerabilities in 2026, and every advisory told operators to
 upgrade. Whether they do has never been measured, because Lightning gossip carries no software version. We show that
-the release line of a public node can be read from the feature bits it announces: matched against the source of every
-release of LND, Core Lightning, Eclair and LDK, the inferred range contains the true line on \PctVerStrict\% of
-\NVerNodeDays{} node-days of nodes that state their version, and the most likely line is exact on \PctVerLikely\%.
-Applying it to \DataUsableDays{} daily snapshots of the public graph from 2023 to 2026, we find that half of the
-LND nodes on an older line upgrade within \MedianLNDAll{} days of a release, in waves consistent with node platforms
-pushing updates, while small nodes and nodes that skipped earlier releases lag far behind. One operator ran up to
-\FleetPeakNodes{} public LND nodes, \FleetPeakShare\% of all live LND nodes, with about one bitcoin between them.
-For \NAdvTotal{} LND and CLN advisories, fixes shipped a median \FixToDiscMedian{} days before disclosure. LND's
-disclosures did not change how fast operators left vulnerable releases: two months after Lightning Labs' August~2026
-batch, \PctCohortStillLLBatch\% of the nodes exposed at disclosure still ran an affected release. CLN's disclosures
-of July~2026 raised the monthly rate at which nodes left vulnerable releases two- to fourfold. Exposure measured by
-capacity is small; by node count, it depends on how one counts a single operator's fleet.
+the release line of a public node can be read from the feature bits it announces: matched against the source of
+every release of LND, Core Lightning, Eclair and LDK, the most likely line is exact for \NVerNodeLinesExact{} of
+\NVerNodeLines{} node--line pairs of nodes that state their version. Applied to \DataUsableDays{} daily snapshots of
+the public graph from 2023 to 2026, it shows that the network patches on release and platform schedules, not on
+disclosures. Half of the LND nodes on an older line upgrade within \MedianLNDAll{} days of a release, while small
+nodes and nodes that skipped earlier releases lag far behind. The largest movements are node platforms shipping a
+release to all their users: the three largest upgrade waves came about a day after the Umbrel app store released a
+new LND version, and since June~2025, \PlatShareLND\% of LND upgrades fell in the \PlatTimeLND\% of the time just
+after a platform release. Disclosure, a median \FixToDiscMedian{} days after the fix, reached only operators already
+close to current: of \NResp{} disclosures we can test, only Core Lightning's of July~2026 raised the rate at which
+nodes left affected releases, \RROpClnRecent-fold among nodes one release line behind, while nodes further behind
+moved when BTCPay Server's own advisory had their operators update. No LND disclosure produced a detectable increase;
+two months after Lightning Labs' August~2026 batch, \PctCohortStillLLBatch\% of the nodes exposed at disclosure still
+ran an affected release. The lever on that tail is the platforms that package releases.

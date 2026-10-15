@@ -1,6 +1,6 @@
 {
  "client_rules_version": "v4-2026-10-14",
- "version_rules_version": "v1-2026-10-07",
+ "version_rules_version": "v1.1-2026-10-15",
  "gt_client": {
   "anchors": 797,
   "by_client": [
@@ -89,6 +89,11 @@
    "likely_contains": 0.9816708469998071,
    "node_lines": 136,
    "node_lines_all_exact": 132,
+   "node_lines_all_exact_ci95": [
+    0.9268170119919115,
+    0.9885043230042556
+   ],
+   "node_lines_strict_always": 135,
    "largest_operator_share": 0.0521576950286192,
    "misses": [
     {
@@ -144,7 +149,7 @@
    "versioned": 0.944524941568796,
    "unrecognised": 0.0038444455770672995,
    "prerelease": 0.0003786196401657189,
-   "strict_multi": 0.6923715423653534,
+   "strict_multi": 0.6889494033100094,
    "likely_multi": 0.0,
    "node_days": 137341
   },
@@ -233,7 +238,7 @@
    "year": "2025",
    "versioned": 0.9953302901516344,
    "unrecognised": 0.0026759011490634344,
-   "prerelease": 0.0031481189988981583,
+   "prerelease": 0.0032530562988614302,
    "strict_multi": 0.0,
    "likely_multi": 0.0,
    "node_days": 19059
@@ -273,7 +278,7 @@
    "year": "2025",
    "versioned": 0.9976040238804618,
    "unrecognised": 0.009969781246813861,
-   "prerelease": 0.0012482582443102646,
+   "prerelease": 0.0015718283053708381,
    "strict_multi": 0.2910183464932652,
    "likely_multi": 0.0,
    "node_days": 1412368
@@ -283,10 +288,88 @@
    "year": "2026",
    "versioned": 0.9987726310272852,
    "unrecognised": 0.010319688203101704,
-   "prerelease": 0.0009615645264765324,
+   "prerelease": 0.0009954489459686577,
    "strict_multi": 0.10751526304851346,
    "likely_multi": 0.0,
    "node_days": 1328044
   }
- ]
+ ],
+ "consistency": {
+  "LND": {
+   "increases": 13802,
+   "decreases": 97,
+   "decrease_share": 0.006978919346715591,
+   "nodes_with_decrease": 80,
+   "lines": {
+    "0.18": {
+     "released": "20240530",
+     "nodes_before_release": 3,
+     "nodes_first_90d": 3756
+    },
+    "0.19": {
+     "released": "20250522",
+     "nodes_before_release": 37,
+     "nodes_first_90d": 3037
+    },
+    "0.20": {
+     "released": "20251120",
+     "nodes_before_release": 70,
+     "nodes_first_90d": 2763
+    },
+    "0.21": {
+     "released": "20260605",
+     "nodes_before_release": 57,
+     "nodes_first_90d": 2628
+    }
+   }
+  },
+  "CLN": {
+   "increases": 2798,
+   "decreases": 22,
+   "decrease_share": 0.007801418439716312,
+   "nodes_with_decrease": 22,
+   "lines": {
+    "23.11": {
+     "released": "20231128",
+     "nodes_before_release": 0,
+     "nodes_first_90d": 204
+    },
+    "24.02": {
+     "released": "20240228",
+     "nodes_before_release": 3,
+     "nodes_first_90d": 115
+    },
+    "24.02.2\u201324.05": {
+     "released": "20240406",
+     "nodes_before_release": 2,
+     "nodes_first_90d": 248
+    },
+    "24.08": {
+     "released": "20240830",
+     "nodes_before_release": 0,
+     "nodes_first_90d": 197
+    },
+    "24.11\u201325.02": {
+     "released": "20241209",
+     "nodes_before_release": 2,
+     "nodes_first_90d": 351
+    },
+    "25.05": {
+     "released": "20250616",
+     "nodes_before_release": 0,
+     "nodes_first_90d": 545
+    },
+    "25.09\u201325.12": {
+     "released": "20250902",
+     "nodes_before_release": 12,
+     "nodes_first_90d": 482
+    },
+    "26.04\u201326.06": {
+     "released": "20260420",
+     "nodes_before_release": 0,
+     "nodes_first_90d": 315
+    }
+   }
+  }
+ }
 }

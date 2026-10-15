@@ -7,7 +7,8 @@ We built a table of the \texttt{node\_announcement} feature bits of every releas
 their source at each release tag: LND 0.7--0.21.4, Core Lightning (CLN) 0.8.2--26.06.9, Eclair 0.3--0.14.3 and LDK
 0.0.113--0.2.7. For each release we record the bits it sets by default, the bits an operator can add through
 options, flags, plugins or known custom extensions, and the default bits an operator can switch off; each entry
-cites the source file it comes from. Consecutive releases with identical defaults form a \emph{release line}, the
+cites the source file it comes from. A release's date is its publication date (GitHub release page; crates.io for
+LDK), the day operators could install it. Consecutive releases with identical defaults form a \emph{release line}, the
 finest unit gossip can resolve: LND has 10 lines from 0.8 to 0.21, CLN 13, Eclair 13 and LDK 6. Some lines are
 single minor releases (LND 0.18, 0.19, 0.20, 0.21); others span several (LND 0.15.1--0.17; LDK 0.0.120--0.1 covers
 January~2024 to December~2025). Patch releases never change the defaults, so a patch level is never visible.
@@ -48,11 +49,23 @@ CLN built in developer mode puts the version into the default alias (e.g.\ \text
 follows the binary, so it is correct on every day the node is announced. Over \NVerNodeDays{} announced node-days of
 \NVerNodes{} such nodes on \NVerLines{} lines (no operator above \PctVerMaxOperator\% of node-days), the strict range
 contains the stated line on \PctVerStrict\% of node-days and the likely line is exact on \PctVerLikely\%
-(Fig.~\ref{fig:validation}). Of the \NVerNodeLines{} combinations of node and stated line, \NVerNodeLinesExact{} are
-exact on every day. The misses are a 24.05 node with the onion-message option, which makes it identical to 24.08; a
-25.02.1 node and a 23.11.1 node whose switched-off options make them look one line older; and a single day of a
-release candidate. For LND, versions stated in aliases are rare and set by hand; we use them only as a spot
-check.
+(Fig.~\ref{fig:validation}). Node-days of one node are not independent, so the node is the better unit: of the
+\NVerNodeLines{} combinations of node and stated line, \NVerNodeLinesExact{} are exact on every day
+(\PctNodeLineExact\%, 95\% CI \NodeLineCILo--\NodeLineCIHi\%). The misses are a 24.05 node with the onion-message
+option, which makes it identical to 24.08; a 25.02.1 node and a 23.11.1 node whose switched-off options make them look
+one line older; and a single day of a release candidate.
+
+\paragraph{Checks without ground truth}
+No LND node in our data states its version in its alias, so for LND, where most of our dynamics are measured, we rely
+on checks that a wrong release table would fail. First, operators rarely return to an older release, while a noisy
+inference would make nodes flicker between lines: among consecutive observations of live nodes, the likely line
+decreases in \PctDownLND\% of line changes for LND (against \NUpLND{} increases) and in \PctDownCLN\% for CLN. Second,
+a line assigned the wrong bits would show nodes on it long before its release: each LND line released since 2024 was
+seen on at most \PreRelLndMax{} nodes before its publication, against \PostRelLndMin--\PostRelLndMax{} in its first
+90~days. Third, a check from outside gossip: a platform that ships a new LND version moves its nodes to a known line
+(\S\ref{sec:waves}). Of the \NPlatLineChanges{} line changes whose new announcement was signed within 48~hours after
+one of the \NPlatLineReleases{} platform releases that introduced a new LND line, \PlatLineMin--\PlatLineMax\% landed
+on the line that release shipped.
 
 \paragraph{What gossip cannot resolve}
 Among live nodes with a release line, the strict range spans more than one line on \PctStrictMultiLND\% of LND and

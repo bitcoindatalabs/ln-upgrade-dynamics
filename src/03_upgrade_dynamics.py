@@ -16,8 +16,11 @@ per-node statistic and described separately (size, lines, its upgrade waves); ad
                upgrading are right-censored at their last live day (their count is reported).
   hazard       discrete-time logit on node-weeks after each release (week and release fixed effects): capacity,
                channel count, Tor-only, LND default colour (an unconfigured node), first seen before 2024
-  waves        days on which unusually many nodes move to one line: count, dominant feature set, size and age of the
-               nodes involved compared with other upgraders (a wave of new, empty nodes would point to a fleet)
+  waves        days on which unusually many nodes move to one line, merged into events when consecutive: count,
+               dominant feature set, size and age of the nodes involved compared with other upgraders (a wave of new,
+               empty nodes would point to a fleet), when the nodes signed their new announcements, and whether a
+               dated platform release (src/lnmetrics/platforms.py) shipping that line preceded the signatures
+  platforms    share of all upgrades whose new announcement was signed within 48 h after such a platform release
 
 Outputs
   data/upgrade_dynamics.json
@@ -42,6 +45,7 @@ import statsmodels.api as sm  # noqa: E402
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from config import CLIENT_PALETTE, DATA_CUTOFF, DATA_DIR, FIGURES_DIR, TABLES_DIR  # noqa: E402
 from lnmetrics import panel as pn  # noqa: E402
+from lnmetrics import platforms as pf  # noqa: E402
 from lnmetrics import version_fingerprint as vf  # noqa: E402
 
 if sys.platform == "win32":
@@ -51,8 +55,9 @@ warnings.filterwarnings("ignore")
 CLIENTS = ["LND", "CLN"]
 DENSE_FROM = pd.Timestamp("2023-11-01")      # daily coverage is dense from here (spec §4)
 HORIZON_DAYS = 365
+PLATFORM_HOURS = 48                          # an upgrade signed this soon after a platform release is attributed to it
 COLS = ["date", "pub_key", "client", "client_confidence", "likely_lo", "live_cap_14", "n_channels", "has_tor",
-        "has_clearnet", "color", "feature_sig", "fleet"]
+        "has_clearnet", "color", "feature_sig", "fleet", "ann_age_days"]
 
 plt.rcParams.update({"font.family": "serif", "font.size": 8.5, "axes.titlesize": 9, "xtick.labelsize": 7.5,
                      "ytick.labelsize": 7.5, "axes.spines.top": False, "axes.spines.right": False, "pdf.fonttype": 42})
@@ -205,32 +210,108 @@ def hazard_model(risk: pd.DataFrame) -> pd.DataFrame:
 def upgrade_events(p: pd.DataFrame) -> pd.DataFrame:
     prev = p.groupby("pub_key")[["likely_lo", "date"]].shift()
     ev = p[(p["likely_lo"] > prev["likely_lo"]) & prev["likely_lo"].notna()].copy()
+    ev["from_lo"] = prev.loc[ev.index, "likely_lo"]
     ev["gap_days"] = (ev["date"] - prev.loc[ev.index, "date"]).dt.days
     first_seen = p.groupby("pub_key")["date"].min()
     ev["age_days"] = (ev["date"] - ev["pub_key"].map(first_seen)).dt.days
+    ev["signed"] = pn.signed_at(ev)            # when the node signed its first announcement on the new line
+    ev["platform"] = False
+    for c in CLIENTS:
+        m = ev["client"] == c
+        ev.loc[m, "platform"] = pf.after_release(c, ev.loc[m, "signed"], ev.loc[m, "likely_lo"], PLATFORM_HOURS)
     return ev
 
 
-def waves(ev: pd.DataFrame, client: str) -> dict:
+def _platform_match(w: pd.DataFrame, client: str, line: int, first: pd.Timestamp, last: pd.Timestamp) -> dict:
+    """The platform release shipping `line` that best explains a wave: most of the wave's nodes signed their new
+    announcement within PLATFORM_HOURS after it. Candidates: releases from three days before the wave's first day
+    to the end of its last day."""
+    best = {"platform": None}
+    for r in pf.releases(client):
+        if r.line != pn.line_label(client, line) or not (first - pd.Timedelta(days=3) <= r.ts <= last + pd.Timedelta(days=1)):
+            continue
+        h = (w["signed"] - r.ts).dt.total_seconds() / 3600
+        after = float(((h >= 0) & (h <= PLATFORM_HOURS)).mean())
+        if best["platform"] is None or after > best["share_signed_after"]:
+            best = {"platform": r.platform, "version": r.version, "utc": r.utc, "source": r.source,
+                    "share_signed_after": after, "share_signed_24h_before": float(((h < 0) & (h >= -24)).mean()),
+                    "median_hours_after": float(h[h >= 0].median()) if (h >= 0).any() else None}
+    best["attributed"] = bool(best["platform"] is not None and best["share_signed_after"] >= 0.5)
+    return best
+
+
+def waves(ev: pd.DataFrame, p: pd.DataFrame, client: str) -> dict:
+    """Wave days: (day, line) counts of upgrades above the 99th percentile (and at least 20). Consecutive wave days
+    on the same line are one event."""
     e = ev[(ev["client"] == client) & (ev["gap_days"] <= 2)]      # upgrade day known to within two days
     daily = e.groupby(["date", "likely_lo"]).size()
     thr = float(daily.quantile(0.99))
+    hot = sorted(daily[daily > max(thr, 20)].index, key=lambda x: (x[1], x[0]))
+    events = []
+    for d, line in hot:
+        if events and events[-1]["line"] == line and (d - events[-1]["days"][-1]).days <= 2:
+            events[-1]["days"].append(d)
+        else:
+            events.append({"line": line, "days": [d]})
+    q = p[p["client"] == client]
+    base_tor = q.groupby("date")["tor_only"].mean()
     out = []
-    for (d, line), n in daily[daily > max(thr, 20)].items():
-        w = e[(e["date"] == d) & (e["likely_lo"] == line)]
-        others = e[(e["likely_lo"] == line) & (e["date"] != d)]
+    for x in events:
+        line, days = int(x["line"]), x["days"]
+        w = e[e["date"].isin(days) & (e["likely_lo"] == line)]
+        others = e[(e["likely_lo"] == line) & ~e["date"].isin(days)]
         sig = w["feature_sig"].astype(str).value_counts()
-        out.append({"date": d.strftime("%Y-%m-%d"), "line": pn.line_label(client, int(line)), "nodes": int(n),
-                    "days_after_release": int((d - pn.line_release(client, int(line))).days),
+        out.append({"first_day": days[0].strftime("%Y-%m-%d"), "last_day": days[-1].strftime("%Y-%m-%d"),
+                    "days": len(days), "line": pn.line_label(client, line), "nodes": len(w),
+                    "days_after_release": int((days[0] - pn.line_release(client, line)).days),
+                    "from_lines": {pn.line_label(client, int(k)): int(v) for k, v in w["from_lo"].value_counts().items()},
                     "top_sig_share": float(sig.iloc[0] / len(w)),
                     "median_cap_btc": float(w["live_cap_14"].median() / 1e8),
                     "median_cap_btc_other_upgraders": float(others["live_cap_14"].median() / 1e8),
                     "median_age_days": float(w["age_days"].median()),
                     "median_age_days_other_upgraders": float(others["age_days"].median()),
-                    "share_tor_only": float(w["tor_only"].mean()), "share_default_color": float(
-                        (w["color"].astype(str) == "#3399ff").mean())})
+                    "share_tor_only": float(w["tor_only"].mean()),
+                    "share_tor_only_all_live": float(base_tor.reindex(days).mean()),
+                    "share_default_color": float((w["color"].astype(str) == "#3399ff").mean()),
+                    "share_signed_within_2d": float(((w["date"] + pd.Timedelta(days=1) - w["signed"]).dt.days < 2).mean()),
+                    "platform": _platform_match(w, client, line, days[0], days[-1])})
     return {"threshold_p99": thr, "daily": {f"{d:%Y-%m-%d}|{int(l)}": int(n) for (d, l), n in daily.items()},
             "waves": sorted(out, key=lambda x: -x["nodes"])}
+
+
+def platform_lines(p: pd.DataFrame, client: str, min_changes: int = 100) -> list:
+    """An external check of the inference: every line change (up or down; day known to within two days) whose new
+    announcement was signed within PLATFORM_HOURS after a platform release, and the share that landed on the line
+    that release shipped. Releases followed by fewer than `min_changes` such changes are left out."""
+    q = p[p["client"] == client]
+    g = q.groupby("pub_key")
+    prev, prev_d = g["likely_lo"].shift(), g["date"].shift()
+    ch = q[(q["likely_lo"] != prev) & prev.notna() & ((q["date"] - prev_d).dt.days <= 2)]
+    signed = pn.signed_at(ch)
+    out = []
+    for r in pf.releases(client):
+        h = (signed - r.ts).dt.total_seconds() / 3600
+        x = ch[(h >= 0) & (h <= PLATFORM_HOURS)]
+        if len(x) < min_changes:
+            continue
+        on = (x["likely_lo"].map(lambda i: pn.line_label(client, int(i))) == r.line).mean()
+        out.append({"platform": r.platform, "version": r.version, "utc": r.utc, "line": r.line, "changes": len(x),
+                    "share_on_shipped_line": float(on)})
+    return out
+
+
+def platform_share(ev: pd.DataFrame, client: str, since: str) -> dict:
+    """Share of upgrades (day known to within two days) signed within PLATFORM_HOURS after a platform release that
+    ships the new line or a later one, against the share of time such windows cover."""
+    e = ev[(ev["client"] == client) & (ev["gap_days"] <= 2) & (ev["date"] >= since)]
+    start, end = pd.Timestamp(since), e["date"].max() + pd.Timedelta(days=1)
+    t = pd.date_range(start, end, freq="h")
+    covered = pd.Series(False, index=t)
+    for r in pf.releases(client):
+        covered |= (t >= r.ts) & (t <= r.ts + pd.Timedelta(hours=PLATFORM_HOURS))
+    return {"since": since, "upgrades": len(e), "platform_upgrades": int(e["platform"].sum()),
+            "share": float(e["platform"].mean()), "time_share": float(covered.mean()),
+            "releases": len([r for r in pf.releases(client) if r.ts >= start])}
 
 
 # ---------------------------------------------------------------------------------------
@@ -326,7 +407,14 @@ def fig_waves(ev: pd.DataFrame, days: pd.DatetimeIndex):
                         fontsize=5.5, ha="left", va="bottom", color="0.4")
                 last = rel
         ax.bar(d.index, d.values, width=1.0, color=CLIENT_PALETTE[client])
+        for r in pf.releases(client):
+            if r.ts >= DENSE_FROM:
+                ax.plot(r.ts, 0.93, marker="v", ms=3.2, color="0.15" if r.platform == "Umbrel" else "#b8860b",
+                        transform=ax.get_xaxis_transform(), clip_on=False, lw=0)
         ax.set_ylabel(f"{client}\nupgrades per day")
+    axes[0].plot([], [], marker="v", ms=3.2, color="0.15", lw=0, label="Umbrel app-store release")
+    axes[0].plot([], [], marker="v", ms=3.2, color="#b8860b", lw=0, label="BTCPay 2.4.2")
+    axes[0].legend(frameon=False, fontsize=6, loc="upper left", bbox_to_anchor=(0.0, 0.88))
     axes[-1].set_xlim(DENSE_FROM, days.max())
     fig.tight_layout()
     fig.savefig(FIGURES_DIR / "fig5_waves.pdf")
@@ -422,12 +510,16 @@ def main() -> int:
     out["hazard_lnd"] = h.reset_index().rename(columns={"index": "covariate"}).to_dict(orient="records")
 
     ev = upgrade_events(p)
-    out["waves"] = {c: waves(ev, c) for c in CLIENTS}
-    out["waves_fleet_lnd"] = waves(upgrade_events(p_all[p_all["fleet"]]), "LND")["waves"][:5]
+    out["waves"] = {c: waves(ev, p, c) for c in CLIENTS}
+    out["waves_fleet_lnd"] = waves(upgrade_events(p_all[p_all["fleet"]]), p_all[p_all["fleet"]], "LND")["waves"][:5]
+    out["platform_share"] = {c: platform_share(ev, c, "2025-06-01") for c in CLIENTS}
+    out["platform_lines"] = {c: platform_lines(p, c) for c in CLIENTS}
+    print("line changes after platform releases:", out["platform_lines"])
     for c in CLIENTS:
         print(f"{c} waves (p99 = {out['waves'][c]['threshold_p99']:.0f}/day):")
         for w in out["waves"][c]["waves"][:8]:
             print("  ", w)
+        print(f"{c} upgrades after platform releases: {out['platform_share'][c]}")
     fig_waves(ev, pd.DatetimeIndex(sorted(p_all["date"].unique())))
 
     (DATA_DIR / "upgrade_dynamics.json").write_text(json.dumps(out, indent=1, default=float), encoding="utf-8")

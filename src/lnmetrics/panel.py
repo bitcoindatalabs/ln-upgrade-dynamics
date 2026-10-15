@@ -36,6 +36,12 @@ def live(p: pd.DataFrame, days: int = LIVE_FRESH_DAYS) -> pd.Series:
     return p[f"live_cap_{days}"] > 0
 
 
+def signed_at(p: pd.DataFrame) -> pd.Series:
+    """UTC time at which the node signed the announcement it shows on that day (its `timestamp` field), from the
+    panel's `date` (datetime) and `ann_age_days` (days from the signature to the end of the day)."""
+    return p["date"] + pd.Timedelta(days=1) - pd.to_timedelta(p["ann_age_days"], unit="D")
+
+
 # ---------------------------------------------------------------------------------------
 # Release lines
 # ---------------------------------------------------------------------------------------

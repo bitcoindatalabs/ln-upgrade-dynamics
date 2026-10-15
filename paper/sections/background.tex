@@ -11,6 +11,13 @@ whatever options the operator switches on. Gossip carries no version string. A n
 it restarts or changes its settings, so a node that upgrades and restarts re-announces with the feature vector of
 the new release.
 
+\subsection{Node platforms}
+Many public nodes are not installed by hand. Node-in-a-box distributions such as Umbrel, Start9 and RaspiBlitz,
+merchant stacks such as BTCPay Server, and hosted services package an implementation and decide when their users
+receive a new release. Umbrel's app store is a public git repository: a device sees a new version of its Lightning
+app once the change to the app's manifest is merged~\cite{umbrel2026apps}, which dates each release to the minute.
+Gossip does not name the platform a node runs on.
+
 \subsection{Inferring implementations}
 Zabka et al.\ classify public nodes into LND, c-lightning and Eclair from default channel parameters, colours and
 aliases~\cite{zabka2021nodeclassification,zabka2022empirical}. Their study contains the only prior observation of an
@@ -46,8 +53,10 @@ string to count nor a forced expiry.
 The window of vulnerability, from disclosure to patch, was framed by Arbaugh et al.~\cite{arbaugh2000windows}.
 Rescorla probed servers affected by the OpenSSL vulnerabilities of 2002 and found more than two thirds still
 vulnerable two weeks after disclosure~\cite{rescorla2003securityholes}. Frei et al.\ showed that automatic
-updates dominate how fast a client population patches~\cite{frei2009firefox}, Durumeric et al.\ followed Heartbleed
-across the Internet~\cite{durumeric2014heartbleed}, and Nappa et al.\ modelled patch deployment with survival
-analysis~\cite{nappa2015clones}; Li and Paxson measured the life cycle of security fixes from the code
-side~\cite{li2017patches}. We bring this lens to a network where versions must first be inferred, and where a
-release is often fixed months or years before the vulnerability is disclosed.
+updates dominate how fast a client population patches~\cite{frei2009firefox}, and Sarabi et al.\ that the vendor's
+patch speed matters more than users' promptness~\cite{sarabi2017patchme}. Durumeric et al.\ followed Heartbleed
+across the Internet and found that direct notification raised patching by about half~\cite{durumeric2014heartbleed};
+Li et al.\ found that most notified operators never act~\cite{li2016notifications}. Nappa et al.\ modelled patch
+deployment with survival analysis~\cite{nappa2015clones}, and Li and Paxson measured the life cycle of security fixes
+from the code side~\cite{li2017patches}. We bring this lens to a network where versions must first be inferred, and
+where a release is often fixed months or years before the vulnerability is disclosed.

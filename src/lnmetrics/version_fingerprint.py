@@ -7,16 +7,18 @@ which release lines are consistent with these node_announcement bits?" It never 
 Data: ln_release_features.json (next to this file), one entry per release line — a run of releases whose default
 node_announcement bits are identical, so gossip cannot tell them apart. Per line: default bits, bits an operator
 can add (options, flags, plugins, bLIP custom bits) and default bits an operator can remove, each cited to the
-source file at the release tag. Frozen for this paper at rules_version v1-2026-10-07.
+source file at the release tag. Frozen for this paper at rules_version v1.1-2026-10-15 (v1 bits; release dates =
+publication dates).
 
 Two answers per node:
   strict  every line consistent with the bits under any non-developer configuration, released by `as_of`:
               default - removable  ⊆  bits  ⊆  default ∪ optional_add
-          Guaranteed to contain the running line (validated: 100% on CLN nodes whose alias states the version)
+          Contains the running line under any non-developer configuration (validated: 99.99% of node-days of CLN
+          nodes whose alias states the version)
           but wide when options let an old line imitate a newer one.
-  likely  the consistent line(s) needing the fewest non-default bits (added + removed). Exact on 97.9% of the
-          same ground truth; the three misses were an rc build, a release-day node and a 24.05 node with the
-          onion-messages option (indistinguishable from 24.08).
+  likely  the consistent line(s) needing the fewest non-default bits (added + removed). Exact on 98% of the same
+          node-days; the misses are a 24.05 node with the onion-messages option (indistinguishable from 24.08), two
+          nodes with switched-off options and an rc build (data/validation.json).
 
 Limits: never a patch version (e.g. CLN 26.06.7 vs 26.06.8 advertise identical bits); a node that upgraded but
 has not re-announced still shows its old bits; developer overrides and forks can imitate anything; bits seen

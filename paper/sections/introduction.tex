@@ -13,31 +13,44 @@ Lightning Network it has not, because Lightning gossip carries no software versi
 implementation a node runs~\cite{zabka2021nodeclassification,espinasa2024decisiontree,kumar2026clientdiversity}, not
 which release.
 
-We show that the release can be read from gossip after all, and measure what operators do with it. Each release
-announces a characteristic set of protocol feature bits. From the source of every release of LND, CLN, Eclair and LDK
-since 2019 we derive which sets each release can produce, and match them against \DataUsableDays{} daily snapshots of
-the public graph taken by our own node from May~2023 to October~2026. We make four contributions.
+We show that the release can be read from gossip after all, and use it to ask who patches the Lightning Network:
+operators on their own schedule, the platforms that package the implementations, or the advisories themselves. Each
+release announces a characteristic set of protocol feature bits. From the source of every release of LND, CLN, Eclair
+and LDK since 2019 we derive which sets each release can produce, and match them against \DataUsableDays{} daily
+snapshots of the public graph taken by our own node from May~2023 to October~2026. The answer is that the network
+patches on release and platform schedules, not on disclosures. Most operators upgrade within months of a release;
+the largest movements are platforms shipping a release to all their users at once; and an advisory, published long
+after its fix, moves at most the operators who were already close to current. We make four contributions.
 
 \begin{itemize}
 \item \textbf{Release-line inference from gossip.} We infer the release line (the finest unit gossip separates;
 patch releases are invisible) of every public node with a known implementation. On \NVerNodes{} CLN nodes whose alias
-states their version, the inferred range contains the true line on \PctVerStrict\% of \NVerNodeDays{} node-days
-and the most likely line is exact on \PctVerLikely\% (\S\ref{sec:inference}).
-\item \textbf{Upgrade dynamics.} New LND lines reach half of live nodes in \TFiftyLndMin--\TFiftyLndMax{} days.
-Half of the LND nodes on an older line upgrade within \MedianLNDAll{} days of a release, but the smallest quarter of
-nodes takes \MedianLNDSmall{}, and a node already more than one line behind has about five times lower odds of moving
-in any week.
-Upgrades arrive in waves consistent with node platforms pushing updates (\S\ref{sec:dynamics}).
-\item \textbf{A managed fleet.} One operator ran up to \FleetPeakNodes{} public LND nodes, \FleetPeakShare\% of all
-live LND nodes, with about one BTC of capacity between them, and upgraded them in step. Counted as independent
-nodes, they would distort every node-based statistic for 2025--2026, including adoption and exposure.
-\item \textbf{Exposure after advisories.} For the \NAdvTotal{} LND and CLN advisories whose fix boundary gossip can
-see, we measure how many live nodes and how much capacity remained exposed. Fixes typically shipped months before
-disclosure (median \FixToDiscMedian{} days). LND disclosures did not change how fast operators left vulnerable
-releases: after Lightning Labs' August~2026 batch, \PctCohortStillLLBatch\% of the exposed nodes were still live on
-an affected release two months later. CLN operators did respond: the share leaving vulnerable lines in the 30 days
-after CLN's July~2026 disclosures was two to four times that of the 30 days before (\S\ref{sec:exposure}).
+states their version, the inferred range contains the true line on \PctVerStrict\% of \NVerNodeDays{} node-days and
+the most likely line is exact for \NVerNodeLinesExact{} of \NVerNodeLines{} node--line pairs. For LND, which has no
+such ground truth, three checks that need none agree: line decreases are \PctDownLND\% of observed line changes, no
+LND line released since 2024 was seen on more than \PreRelLndMax{} nodes before its publication, and
+\PlatLineMin--\PlatLineMax\% of the nodes that changed line right after a platform shipped a new LND line landed on
+the line it shipped (\S\ref{sec:inference}).
+\item \textbf{Upgrade dynamics.} With a managed fleet of up to \FleetPeakNodes{} live LND
+nodes~\cite{kumar2026clientdiversity} set apart, new lines reach half of live LND nodes in
+\TFiftyLndMin--\TFiftyLndMax{} days. Half of the LND nodes on an older line upgrade within \MedianLNDAll{} days of a
+release, but the smallest quarter of nodes takes \MedianLNDSmall{}, and a node already more than one line behind has
+about five times lower odds of moving in any week (\S\ref{sec:dynamics}).
+\item \textbf{Platforms set the pace.} We date the LND and CLN releases of two node platforms to the minute from
+public records. The three largest LND upgrade waves, \WaveUmbrelMinNodes--\WaveUmbrelMaxNodes{} nodes each, re-signed
+their announcements a median \WaveUmbrelHoursMin--\WaveUmbrelHoursMax{}~hours after the Umbrel app store published a
+new LND version, and another wave followed BTCPay Server's security release. Upgrades signed within 48~hours after
+such a release are \PlatShareLND\% of all LND upgrades since June~2025, although those windows cover \PlatTimeLND\% of
+the time (\S\ref{sec:waves}).
+\item \textbf{Disclosure, response and exposure.} For the \NAdvTotal{} LND and CLN advisories whose fix boundary
+gossip can see, we measure how many live nodes and how much capacity remained exposed. Fixes typically shipped months
+before disclosure (median \FixToDiscMedian{} days). For \NResp{} disclosures we compare the weekly rate at which exposed
+nodes moved to a later line before and after disclosure, with and without the moves that platform releases explain.
+Only CLN's July~2026 disclosures raised it, by a factor of \RROpClnRecent{} among nodes one line behind; nodes
+further behind moved when BTCPay's own advisory had their operators update. No LND disclosure produced a detectable
+increase, and \PctCohortStillLLBatch\% of the nodes exposed to Lightning Labs' August~2026 batch were still live on an affected
+release two months later (\S\ref{sec:exposure}).
 \end{itemize}
 
 All data behind the figures and tables, and the code, are released. We report aggregates only: no list, ranking or
-label of individual nodes by release or exposure.
+label of individual nodes by release, platform or exposure.

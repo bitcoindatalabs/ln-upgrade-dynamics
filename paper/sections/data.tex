@@ -5,8 +5,10 @@
 \paragraph{Gossip snapshots}
 We take a daily dump of the public graph (\texttt{describegraph}) from our own LND node and keep, per day, every
 node announcement (feature bits, alias, colour, addresses, last-update time) and every channel direction (the policy
-a node sets for forwarding towards its peer, with capacity, the \emph{disabled} flag and last-update time). The
-snapshots run from May~2023 to the data cutoff of 13~October~2026. A per-day quality check discards dumps that
+a node sets for forwarding towards its peer, with capacity, the \emph{disabled} flag and last-update time). An
+announcement's last-update time is the moment its node signed it, so the first announcement that shows a new release's
+bits dates an upgrade more finely than the daily snapshot does (\S\ref{sec:waves}). The snapshots run from May~2023
+to the data cutoff of 13~October~2026. A per-day quality check discards dumps that
 are partial (fewer than half the channels of their period), stale (fewer than half the channels updated within two
 weeks) or error responses written while the node's wallet was locked; \DataUsableDays{} days remain. Daily coverage is
 dense from November~2023, with gaps in May--June~2024 (partial dumps), August~2024 and January--May~2025 (wallet
@@ -25,8 +27,18 @@ Nodes that stop running do not leave the graph at once: their peers mark the cha
 the channels stay announced until they are closed or pruned. An offline node cannot announce anything, so liveness
 must be read from its peers' side~\cite{kumar2026clientdiversity}. We call a node \emph{live} on a day when at least
 one channel direction towards it, set by a peer, is enabled and was updated in the previous 14~days; its \emph{live
-capacity} is the capacity of those channels. We also report 7- and 28-day variants. The distinction matters. On
-the cutoff day, \NOldLndChan{} LND nodes with channels (outside the managed fleet of \S\ref{sec:dynamics})
-announced a release older than 0.19, but only
-\NOldLndLive{} of them were live; counting every announced node would put the share of LND nodes on those releases
-at \PctOldLndNaive\%, against \PctOldLndLive\% of live nodes.
+capacity} is the capacity of those channels. Results with 7- and 28-day windows are in
+Table~\ref{tab:robustness}. The distinction matters. On the cutoff day, \NOldLndChan{} LND nodes with channels
+(outside the managed fleet described next) announced a release older than 0.19, but only \NOldLndLive{} of them were
+live; counting every announced node would put the share of LND nodes on those releases at \PctOldLndNaive\%, against
+\PctOldLndLive\% of live nodes.
+
+\paragraph{A managed fleet}
+Our previous paper found a managed fleet of small LND nodes with aliases of the form \texttt{LNT.<name>}, one or two
+channels each, mostly to a handful of hubs with the same prefix, and counted up to 1,980 announced fleet
+nodes~\cite{kumar2026clientdiversity}. We use its definition (the alias prefix, or at least half of a node's channels
+to a fleet hub) but count live nodes. The fleet appeared on \FleetFirstDay{} and peaked on \FleetPeakDay{} at
+\FleetPeakNodes{} live nodes, \FleetPeakShare\% of all live LND nodes, with \FleetPeakCap{}~BTC of live capacity
+against \FleetPeakTotalCap{}~BTC for live LND as a whole; at the cutoff \FleetCutoffNodes{} of its nodes were still
+live (\FleetCutoffShare\% of live LND nodes). Its nodes share one Lightning Terminal feature set and upgrade in step
+(\S\ref{sec:waves}), so they are not independent operators, and we exclude them from every per-node statistic.

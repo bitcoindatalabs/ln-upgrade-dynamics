@@ -3,34 +3,34 @@
 \caption{Advisories whose fix boundary is visible in gossip (LND and CLN). Exposure = share of live nodes of that implementation whose inferred release line is affected, in \%; share of their live capacity in parentheses; for PARTIAL rows (the fix lands inside a line) the bounds are given in brackets at disclosure. Fix$\to$disc.\ = days from the first fixed release to public disclosure. \# = advisories grouped in the row.}
 \label{tab:advisories}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{lllrlrrrrr}
+\begin{tabular}{lllrlrrrr}
 \toprule
-Impl. & Advisory & Class & \# & Fixed in & Fix$\to$disc. & At fix & At disclosure & +60\,d & Cutoff \\
+Impl. & Advisory (disclosed) & Class & \# & Fixed in & Fix$\to$disc. & At disclosure & +60\,d & Cutoff \\
 \midrule
-CLN & Fake channel DoS (2023-08-23) & PARTIAL & 1 & 23.02 & 175 & -- & -- & 6 (2) & 1 (0) \\
-CLN & Replacement cycling (CVE-2023-40234) (2023-10-16) & PARTIAL & 1 & 23.08.1 & 34 & -- & 38 [24--100] (17) & 26 (10) & 2 (0) \\
-CLN & BOLT11 parsing bugs, batch 1 (2023-12-08) & PARTIAL & 1 & 23.02 & 282 & -- & 4 [4--95] (2) & 2 (1) & 1 (0) \\
-CLN & BOLT11 parsing bugs, batch 2 (2023-12-08) & LINE & 1 & 23.11 & 10 & 99 (100) & 96 (96) & 69 (73) & 3 (0) \\
-CLN & funding\_created assertion DoS (2026-05-16) & LINE & 1 & 25.09 & 256 & 98 (97) & 29 (24) & 24 (21) & 12 (2) \\
-CLN & connectd queue memory exhaustion (2026-07-19) & LINE & 1 & 25.09 & 320 & 98 (97) & 24 (20) & 14 (3) & 12 (2) \\
-CLN & gossipd unknown-SCID memory exhaustion (2026-07-19) & LINE & 1 & 26.04 & 90 & 100 (100) & 67 (58) & 29 (16) & 24 (13) \\
-CLN & Ping-flood OOM (2026-08-25) & LINE & 1 & 25.09 & 357 & 98 (97) & 19 (16) & -- & 12 (2) \\
-LND & Fake channel DoS (2023-08-23) & PARTIAL & 1 & 0.16.0 & 147 & -- & -- & 0 (0) & 1 (0) \\
-LND & Replacement cycling (CVE-2023-40233) (2023-10-16) & PARTIAL & 1 & 0.17.0 & 13 & -- & 0 [0--100] (0) & 0 (0) & 1 (0) \\
-LND & Premature channel\_update OOM (2023-12-21) & LINE & 1 & 0.14.0 & 764 & -- & 0 (0) & 0 (0) & 1 (0) \\
-LND & channel\_update signature after rate limit (2023-12-21) & PARTIAL & 1 & 0.15.0 & 546 & -- & 0 [0--0] (0) & 0 (0) & 1 (0) \\
-LND & Onion bomb (CVE-2024-38359) (2024-06-18) & PARTIAL & 1 & 0.17.0 & 259 & -- & -- & -- & 1 (0) \\
-LND & Irrevocable fees / update\_fee breach fee-burn (2024-12-10) & PARTIAL & 1 & 0.18.3 & 89 & 44 (35) & 33 [33--100] (25) & 24 (11) & 4 (0) \\
-LND & Excessive HTLC failback (2025-03-04) & LINE & 1 & 0.18.0 & 278 & -- & 20 (8) & -- & 4 (0) \\
-LND & gossip\_timestamp\_filter goroutine DoS (2025-07-22) & PARTIAL & 1 & 0.18.3 & 313 & 44 (35) & 11 [11--60] (3) & 9 (2) & 4 (0) \\
-LND & Replacement stalling, failback \#2, infinite inbox (2025-12-04) & LINE & 3 & 0.19.0 & 196 & 98 (96) & 28 (12) & 22 (10) & 13 (6) \\
-LND & Zero-timestamp gossip panic (2026-06-18) & PARTIAL & 1 & 0.20.1 & 126 & 48 (73) & 34 [34--97] (27) & 25 (16) & 20 (10) \\
-LND & Lightning Labs batch: gossip, peer and queue DoS (2026-08-11) & LINE & 6 & 0.19.0 & 446 & 98 (96) & 15 (6) & 13 (6) & 13 (6) \\
-LND & HTLC first-stage sweep budget failure (2026-08-11) & LINE & 1 & 0.19.0 & 446 & 84 (92) & 10 (5) & 8 (6) & 8 (6) \\
-LND & Too few confirmations on cooperative close (2026-08-13) & PARTIAL & 1 & 0.20.1 & 182 & 48 (73) & 25 [25--51] (17) & 21 (10) & 20 (10) \\
-LND & Gossip stall via malformed announcements (2026-09-21) & PARTIAL & 1 & 0.20.1 & 221 & 27 (64) & 8 [8--32] (5) & -- & 8 (4) \\
-LND & Brontide write-allocation OOM (2026-09-21) & LINE & 1 & 0.20.0 & 305 & 99 (99) & 22 (11) & -- & 20 (10) \\
+CLN & Fake channel DoS~\cite{morehouse2023fakechannel} (2023-08-23) & PARTIAL & 1 & 23.02 & 175 & -- & 6 (2) & 1 (0) \\
+CLN & Replacement cycling (CVE-2023-40234)~\cite{riard2023replacement} (2023-10-16) & PARTIAL & 1 & 23.08.1 & 34 & 38 [24--100] (17) & 26 (10) & 2 (0) \\
+CLN & BOLT11 parsing bugs, batch 1~\cite{morehouse2023clninvoice} (2023-12-08) & PARTIAL & 1 & 23.02 & 282 & 4 [4--95] (2) & 2 (1) & 1 (0) \\
+CLN & BOLT11 parsing bugs, batch 2~\cite{morehouse2023clninvoice} (2023-12-08) & LINE & 1 & 23.11 & 10 & 96 (96) & 69 (73) & 3 (0) \\
+CLN & funding\_created assertion DoS~\cite{pratap2026clnassert} (2026-05-16) & LINE & 1 & 25.09 & 256 & 29 (24) & 24 (21) & 12 (2) \\
+CLN & connectd queue memory exhaustion~\cite{pratap2026clndos} (2026-07-19) & LINE & 1 & 25.09 & 320 & 24 (20) & 14 (3) & 12 (2) \\
+CLN & gossipd unknown-SCID memory exhaustion~\cite{pratap2026clndos} (2026-07-19) & LINE & 1 & 26.04 & 90 & 67 (58) & 29 (16) & 24 (13) \\
+CLN & Ping-flood OOM~\cite{cestari2026pingflood} (2026-08-25) & LINE & 1 & 25.09 & 357 & 19 (16) & -- & 12 (2) \\
+LND & Fake channel DoS~\cite{morehouse2023fakechannel} (2023-08-23) & PARTIAL & 1 & 0.16.0 & 147 & -- & 0 (0) & 1 (0) \\
+LND & Replacement cycling (CVE-2023-40233)~\cite{riard2023replacement} (2023-10-16) & PARTIAL & 1 & 0.17.0 & 13 & 0 [0--100] (0) & 0 (0) & 1 (0) \\
+LND & Premature channel\_update OOM~\cite{delving2023lndgossip} (2023-12-21) & LINE & 1 & 0.14.0 & 764 & 0 (0) & 0 (0) & 1 (0) \\
+LND & channel\_update signature after rate limit~\cite{delving2023lndgossip} (2023-12-21) & PARTIAL & 1 & 0.15.0 & 546 & 0 [0--0] (0) & 0 (0) & 1 (0) \\
+LND & Onion bomb (CVE-2024-38359)~\cite{morehouse2024onionbomb} (2024-06-18) & PARTIAL & 1 & 0.17.0 & 259 & -- & -- & 1 (0) \\
+LND & Irrevocable fees / update\_fee breach fee-burn~\cite{harding2024irrevocable} (2024-12-10) & PARTIAL & 1 & 0.18.3 & 89 & 33 [33--100] (25) & 24 (11) & 4 (0) \\
+LND & Excessive HTLC failback~\cite{morehouse2025failback} (2025-03-04) & LINE & 1 & 0.18.0 & 278 & 20 (8) & -- & 4 (0) \\
+LND & gossip\_timestamp\_filter goroutine DoS~\cite{morehouse2025gtsfilter} (2025-07-22) & PARTIAL & 1 & 0.18.3 & 313 & 11 [11--60] (3) & 9 (2) & 4 (0) \\
+LND & Replacement stalling, failback \#2, infinite inbox~\cite{morehouse2025stalling,morehouse2025failback2,morehouse2025inbox} (2025-12-04) & LINE & 3 & 0.19.0 & 196 & 28 (12) & 22 (10) & 13 (6) \\
+LND & Zero-timestamp gossip panic~\cite{lightninglabs2026zerots} (2026-06-18) & PARTIAL & 1 & 0.20.1 & 126 & 34 [34--97] (27) & 25 (16) & 20 (10) \\
+LND & Lightning Labs batch: gossip, peer and queue DoS~\cite{lightninglabs2026aug} (2026-08-11) & LINE & 6 & 0.19.0 & 446 & 15 (6) & 13 (6) & 13 (6) \\
+LND & HTLC first-stage sweep budget failure~\cite{lightninglabs2026sweepbudget} (2026-08-11) & LINE & 1 & 0.19.0 & 446 & 10 (5) & 8 (6) & 8 (6) \\
+LND & Too few confirmations on cooperative close~\cite{teinturier2026closeconf} (2026-08-13) & LINE & 1 & 0.21.0 & 69 & 51 (53) & 34 (29) & 33 (28) \\
+LND & Gossip stall via malformed announcements~\cite{lightninglabs2026gossipstall} (2026-09-21) & PARTIAL & 1 & 0.20.1 & 221 & 8 [8--32] (5) & -- & 8 (4) \\
+LND & Brontide write-allocation OOM~\cite{lightninglabs2026brontide} (2026-09-21) & LINE & 1 & 0.20.0 & 305 & 22 (11) & -- & 20 (10) \\
 \bottomrule
 \end{tabular}}
-\par\vspace{2pt}\parbox{\textwidth}{\footnotesize Before July 2024 our view did not include the few live nodes on LND releases older than 0.14 (\S\ref{sec:data}); exposures to the 2023 LND advisories at disclosure are lower bounds. --: no usable snapshot within 7 days.}
+\par\vspace{2pt}\parbox{\textwidth}{\footnotesize Before July 2024 our view did not include the few live nodes on LND releases older than 0.14 (\S\ref{sec:data}); exposures to the 2023 LND advisories at disclosure are lower bounds. In 2023 the mixed LND line 0.15.1--0.17 held almost every LND node, so the bounds of the 2023 LND PARTIAL rows span 0--100\%. --: no usable snapshot within 7 days.}
 \end{table*}

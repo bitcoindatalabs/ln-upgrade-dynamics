@@ -6,6 +6,7 @@
    "title": "Fake channel DoS",
    "kind": "PARTIAL",
    "count": 1,
+   "cite": "morehouse2023fakechannel",
    "disclosed": "2023-08-23",
    "fixed": "2023-03-29",
    "fixed_in": "0.16.0",
@@ -68,6 +69,7 @@
    "title": "Replacement cycling (CVE-2023-40233)",
    "kind": "PARTIAL",
    "count": 1,
+   "cite": "riard2023replacement",
    "disclosed": "2023-10-16",
    "fixed": "2023-10-03",
    "fixed_in": "0.17.0",
@@ -160,6 +162,7 @@
    "title": "Premature channel_update OOM",
    "kind": "LINE",
    "count": 1,
+   "cite": "delving2023lndgossip",
    "disclosed": "2023-12-21",
    "fixed": "2021-11-17",
    "fixed_in": "0.14.0",
@@ -252,6 +255,7 @@
    "title": "channel_update signature after rate limit",
    "kind": "PARTIAL",
    "count": 1,
+   "cite": "delving2023lndgossip",
    "disclosed": "2023-12-21",
    "fixed": "2022-06-23",
    "fixed_in": "0.15.0",
@@ -344,6 +348,7 @@
    "title": "Onion bomb (CVE-2024-38359)",
    "kind": "PARTIAL",
    "count": 1,
+   "cite": "morehouse2024onionbomb",
    "disclosed": "2024-06-18",
    "fixed": "2023-10-03",
    "fixed_in": "0.17.0",
@@ -396,6 +401,7 @@
    "title": "Irrevocable fees / update_fee breach fee-burn",
    "kind": "PARTIAL",
    "count": 1,
+   "cite": "harding2024irrevocable",
    "disclosed": "2024-12-10",
    "fixed": "2024-09-12",
    "fixed_in": "0.18.3",
@@ -498,6 +504,7 @@
    "title": "Excessive HTLC failback",
    "kind": "LINE",
    "count": 1,
+   "cite": "morehouse2025failback",
    "disclosed": "2025-03-04",
    "fixed": "2024-05-30",
    "fixed_in": "0.18.0",
@@ -570,6 +577,7 @@
    "title": "gossip_timestamp_filter goroutine DoS",
    "kind": "PARTIAL",
    "count": 1,
+   "cite": "morehouse2025gtsfilter",
    "disclosed": "2025-07-22",
    "fixed": "2024-09-12",
    "fixed_in": "0.18.3",
@@ -672,6 +680,7 @@
    "title": "Replacement stalling, failback #2, infinite inbox",
    "kind": "LINE",
    "count": 3,
+   "cite": "morehouse2025stalling,morehouse2025failback2,morehouse2025inbox",
    "disclosed": "2025-12-04",
    "fixed": "2025-05-22",
    "fixed_in": "0.19.0",
@@ -774,6 +783,7 @@
    "title": "Zero-timestamp gossip panic",
    "kind": "PARTIAL",
    "count": 1,
+   "cite": "lightninglabs2026zerots",
    "disclosed": "2026-06-18",
    "fixed": "2026-02-12",
    "fixed_in": "0.20.1",
@@ -876,6 +886,7 @@
    "title": "Lightning Labs batch: gossip, peer and queue DoS",
    "kind": "LINE",
    "count": 6,
+   "cite": "lightninglabs2026aug",
    "disclosed": "2026-08-11",
    "fixed": "2025-05-22",
    "fixed_in": "0.19.0",
@@ -978,6 +989,7 @@
    "title": "HTLC first-stage sweep budget failure",
    "kind": "LINE",
    "count": 1,
+   "cite": "lightninglabs2026sweepbudget",
    "disclosed": "2026-08-11",
    "fixed": "2025-05-22",
    "fixed_in": "0.19.0",
@@ -1078,101 +1090,102 @@
    "key": "lnd-2026-closeconf",
    "client": "LND",
    "title": "Too few confirmations on cooperative close",
-   "kind": "PARTIAL",
+   "kind": "LINE",
    "count": 1,
+   "cite": "teinturier2026closeconf",
    "disclosed": "2026-08-13",
-   "fixed": "2026-02-12",
-   "fixed_in": "0.20.1",
+   "fixed": "2026-06-05",
+   "fixed_in": "0.21.0",
    "severity": "revoked state after reorg",
-   "fix_to_disclosure_days": 182,
+   "fix_to_disclosure_days": 69,
    "fix": {
-    "date": "2026-02-12",
-    "live_nodes": 4353,
-    "central": 0.4847231794164944,
-    "definitely": 0.4847231794164944,
-    "possibly": 1.0,
-    "central_cap": 0.725714214570537,
-    "definitely_cap": 0.725714214570537,
-    "possibly_cap": 1.0,
-    "central_nodes": 2110
+    "date": "2026-06-05",
+    "live_nodes": 4248,
+    "central": 0.9903483992467044,
+    "definitely": 0.9903483992467044,
+    "possibly": 0.9903483992467044,
+    "central_cap": 0.9772053888978962,
+    "definitely_cap": 0.9772053888978962,
+    "possibly_cap": 0.9772053888978962,
+    "central_nodes": 4207
    },
    "disclosure": {
     "date": "2026-08-13",
     "live_nodes": 3598,
-    "central": 0.25041689827682045,
-    "definitely": 0.25041689827682045,
+    "central": 0.5061145080600333,
+    "definitely": 0.5061145080600333,
     "possibly": 0.5061145080600333,
-    "central_cap": 0.1710602880960438,
-    "definitely_cap": 0.1710602880960438,
+    "central_cap": 0.5253651899943986,
+    "definitely_cap": 0.5253651899943986,
     "possibly_cap": 0.5253651899943986,
-    "central_nodes": 901
+    "central_nodes": 1821
    },
    "+30d": {
     "date": "2026-09-12",
     "live_nodes": 3485,
-    "central": 0.2218077474892396,
-    "definitely": 0.2218077474892396,
+    "central": 0.39713055954088955,
+    "definitely": 0.39713055954088955,
     "possibly": 0.39713055954088955,
-    "central_cap": 0.10809089392314904,
-    "definitely_cap": 0.10809089392314904,
+    "central_cap": 0.32120008114180937,
+    "definitely_cap": 0.32120008114180937,
     "possibly_cap": 0.32120008114180937,
-    "central_nodes": 773
+    "central_nodes": 1384
    },
    "+60d": {
     "date": "2026-10-12",
     "live_nodes": 3473,
-    "central": 0.20558594874748057,
-    "definitely": 0.20558594874748057,
+    "central": 0.3357327958537288,
+    "definitely": 0.3357327958537288,
     "possibly": 0.3357327958537288,
-    "central_cap": 0.10247291523188815,
-    "definitely_cap": 0.10247291523188815,
+    "central_cap": 0.2855071984972951,
+    "definitely_cap": 0.2855071984972951,
     "possibly_cap": 0.2855071984972951,
-    "central_nodes": 714
+    "central_nodes": 1166
    },
    "cutoff": {
     "date": "2026-10-13",
     "live_nodes": 3462,
-    "central": 0.2045060658578856,
-    "definitely": 0.2045060658578856,
+    "central": 0.3333333333333333,
+    "definitely": 0.3333333333333333,
     "possibly": 0.3333333333333333,
-    "central_cap": 0.10203078321616141,
-    "definitely_cap": 0.10203078321616141,
+    "central_cap": 0.2829695209347643,
+    "definitely_cap": 0.2829695209347643,
     "possibly_cap": 0.2829695209347643,
-    "central_nodes": 708
+    "central_nodes": 1154
    },
    "with_fleet": {
     "disclosure": {
      "date": "2026-08-13",
      "live_nodes": 3990,
-     "central": 0.22706766917293233,
-     "definitely": 0.22706766917293233,
+     "central": 0.5541353383458647,
+     "definitely": 0.5541353383458647,
      "possibly": 0.5541353383458647,
-     "central_cap": 0.17104097038419702,
-     "definitely_cap": 0.17104097038419702,
+     "central_cap": 0.5254205421921628,
+     "definitely_cap": 0.5254205421921628,
      "possibly_cap": 0.5254205421921628,
-     "central_nodes": 906
+     "central_nodes": 2211
     },
     "+60d": {
      "date": "2026-10-12",
      "live_nodes": 4038,
-     "central": 0.1775631500742942,
-     "definitely": 0.1775631500742942,
+     "central": 0.4279346210995542,
+     "definitely": 0.4279346210995542,
      "possibly": 0.4279346210995542,
-     "central_cap": 0.10246525368612597,
-     "definitely_cap": 0.10246525368612597,
+     "central_cap": 0.2855616524134606,
+     "definitely_cap": 0.2855616524134606,
      "possibly_cap": 0.2855616524134606,
-     "central_nodes": 717
+     "central_nodes": 1728
     },
     "cutoff": {
      "date": "2026-10-13",
      "live_nodes": 4028,
-     "central": 0.17651439920556108,
-     "definitely": 0.17651439920556108,
+     "central": 0.426266137040715,
+     "definitely": 0.426266137040715,
      "possibly": 0.426266137040715,
-     "central_cap": 0.10202827104879453,
-     "definitely_cap": 0.10202827104879453,
+     "central_cap": 0.28298824710209075,
+     "definitely_cap": 0.28298824710209075,
      "possibly_cap": 0.28298824710209075,
-     "central_nodes": 711
+     "central_nodes": 1717
     }
    }
   },
@@ -1182,6 +1195,7 @@
    "title": "Gossip stall via malformed announcements",
    "kind": "PARTIAL",
    "count": 1,
+   "cite": "lightninglabs2026gossipstall",
    "disclosed": "2026-09-21",
    "fixed": "2026-02-12",
    "fixed_in": "0.20.1",
@@ -1254,6 +1268,7 @@
    "title": "Brontide write-allocation OOM",
    "kind": "LINE",
    "count": 1,
+   "cite": "lightninglabs2026brontide",
    "disclosed": "2026-09-21",
    "fixed": "2025-11-20",
    "fixed_in": "0.20.0",
@@ -1326,6 +1341,7 @@
    "title": "Fake channel DoS",
    "kind": "PARTIAL",
    "count": 1,
+   "cite": "morehouse2023fakechannel",
    "disclosed": "2023-08-23",
    "fixed": "2023-03-01",
    "fixed_in": "23.02",
@@ -1388,6 +1404,7 @@
    "title": "Replacement cycling (CVE-2023-40234)",
    "kind": "PARTIAL",
    "count": 1,
+   "cite": "riard2023replacement",
    "disclosed": "2023-10-16",
    "fixed": "2023-09-12",
    "fixed_in": "23.08.1",
@@ -1480,6 +1497,7 @@
    "title": "BOLT11 parsing bugs, batch 1",
    "kind": "PARTIAL",
    "count": 1,
+   "cite": "morehouse2023clninvoice",
    "disclosed": "2023-12-08",
    "fixed": "2023-03-01",
    "fixed_in": "23.02",
@@ -1572,6 +1590,7 @@
    "title": "BOLT11 parsing bugs, batch 2",
    "kind": "LINE",
    "count": 1,
+   "cite": "morehouse2023clninvoice",
    "disclosed": "2023-12-08",
    "fixed": "2023-11-28",
    "fixed_in": "23.11",
@@ -1674,6 +1693,7 @@
    "title": "funding_created assertion DoS",
    "kind": "LINE",
    "count": 1,
+   "cite": "pratap2026clnassert",
    "disclosed": "2026-05-16",
    "fixed": "2025-09-02",
    "fixed_in": "25.09",
@@ -1776,6 +1796,7 @@
    "title": "connectd queue memory exhaustion",
    "kind": "LINE",
    "count": 1,
+   "cite": "pratap2026clndos",
    "disclosed": "2026-07-19",
    "fixed": "2025-09-02",
    "fixed_in": "25.09",
@@ -1878,6 +1899,7 @@
    "title": "gossipd unknown-SCID memory exhaustion",
    "kind": "LINE",
    "count": 1,
+   "cite": "pratap2026clndos",
    "disclosed": "2026-07-19",
    "fixed": "2026-04-20",
    "fixed_in": "26.04",
@@ -1980,6 +2002,7 @@
    "title": "Ping-flood OOM",
    "kind": "LINE",
    "count": 1,
+   "cite": "cestari2026pingflood",
    "disclosed": "2026-08-25",
    "fixed": "2025-09-02",
    "fixed_in": "25.09",
@@ -2062,6 +2085,7 @@
    "title": "Fake channel DoS",
    "kind": "PARTIAL",
    "count": 1,
+   "cite": "",
    "disclosed": "2023-08-23",
    "fixed": "2023-06-19",
    "fixed_in": "0.9.0",
@@ -2124,6 +2148,7 @@
    "title": "Replacement cycling (CVE-2023-40232)",
    "kind": "PARTIAL",
    "count": 1,
+   "cite": "",
    "disclosed": "2023-10-16",
    "fixed": "2023-06-19",
    "fixed_in": "0.9.0",
@@ -2216,6 +2241,7 @@
    "title": "Irrevocable fees",
    "kind": "LINE",
    "count": 1,
+   "cite": "",
    "disclosed": "2024-12-10",
    "fixed": "2024-02-29",
    "fixed_in": "0.10.0",
@@ -2318,6 +2344,7 @@
    "title": "Preimage extraction",
    "kind": "LINE",
    "count": 1,
+   "cite": "",
    "disclosed": "2025-09-23",
    "fixed": "2025-03-11",
    "fixed_in": "0.12.0",
@@ -2410,6 +2437,7 @@
    "title": "LNF-2026-0001/0002 feature-bit and zlib DoS",
    "kind": "LINE",
    "count": 2,
+   "cite": "",
    "disclosed": "2026-09-24",
    "fixed": "2026-05-21",
    "fixed_in": "0.14.0",
@@ -3563,21 +3591,7 @@
      "left_cap": 0.05718156461784363,
      "exposed_cap": 0.6711658199967926
     }
-   ],
-   "upgrade_rate_30d": {
-    "before": {
-     "start_nodes": 1407,
-     "upgraded": 81,
-     "rate": 0.057569296375266525,
-     "complete": true
-    },
-    "after": {
-     "start_nodes": 1284,
-     "upgraded": 83,
-     "rate": 0.0646417445482866,
-     "complete": true
-    }
-   }
+   ]
   },
   "lnd-2026-ll-batch": {
    "cohort_date": "2026-08-10",
@@ -4169,21 +4183,7 @@
      "left_cap": 0.0379186160132299,
      "exposed_cap": 0.852312055073214
     }
-   ],
-   "upgrade_rate_30d": {
-    "before": {
-     "start_nodes": 636,
-     "upgraded": 44,
-     "rate": 0.06918238993710692,
-     "complete": true
-    },
-    "after": {
-     "start_nodes": 550,
-     "upgraded": 34,
-     "rate": 0.06181818181818182,
-     "complete": true
-    }
-   }
+   ]
   },
   "cln-2026-connectd": {
    "cohort_date": "2026-07-18",
@@ -4973,21 +4973,7 @@
      "left_cap": 0.1333610748374894,
      "exposed_cap": 0.0992195381930756
     }
-   ],
-   "upgrade_rate_30d": {
-    "before": {
-     "start_nodes": 217,
-     "upgraded": 18,
-     "rate": 0.08294930875576037,
-     "complete": true
-    },
-    "after": {
-     "start_nodes": 190,
-     "upgraded": 38,
-     "rate": 0.2,
-     "complete": true
-    }
-   }
+   ]
   },
   "cln-2026-gossipd": {
    "cohort_date": "2026-07-18",
@@ -5777,20 +5763,1921 @@
      "left_cap": 0.07746427171691503,
      "exposed_cap": 0.16342183119707743
     }
+   ]
+  }
+ },
+ "response": [
+  {
+   "key": "cln-2026-connectd",
+   "client": "CLN",
+   "title": "connectd queue memory exhaustion",
+   "disclosed": "2026-07-19",
+   "kind": "LINE",
+   "count": 1,
+   "fixed_in": "25.09",
+   "affected": [
+    "0.10.1\u20130.10.2",
+    "0.11",
+    "0.12\u201323.02",
+    "0.8.2\u20130.10.0",
+    "23.05\u201323.08",
+    "23.11",
+    "24.02",
+    "24.02.2\u201324.05",
+    "24.08",
+    "24.11\u201325.02",
+    "25.05"
    ],
-   "upgrade_rate_30d": {
-    "before": {
-     "start_nodes": 608,
-     "upgraded": 35,
-     "rate": 0.05756578947368421,
-     "complete": true
+   "affected_span": "<25.09",
+   "fix_to_disclosure_days": 320,
+   "weeks_before": 7,
+   "weeks_after": 4,
+   "weekly": [
+    {
+     "week": -8,
+     "start": "2026-05-24",
+     "nodes": null
     },
-    "after": {
-     "start_nodes": 524,
-     "upgraded": 126,
-     "rate": 0.24045801526717558,
-     "complete": true
+    {
+     "week": -7,
+     "start": "2026-05-31",
+     "nodes": 220,
+     "moved": 2,
+     "moved_platform": 2
+    },
+    {
+     "week": -6,
+     "start": "2026-06-07",
+     "nodes": 217,
+     "moved": 1,
+     "moved_platform": 0
+    },
+    {
+     "week": -5,
+     "start": "2026-06-14",
+     "nodes": 221,
+     "moved": 1,
+     "moved_platform": 0
+    },
+    {
+     "week": -4,
+     "start": "2026-06-21",
+     "nodes": 217,
+     "moved": 8,
+     "moved_platform": 0
+    },
+    {
+     "week": -3,
+     "start": "2026-06-28",
+     "nodes": 208,
+     "moved": 8,
+     "moved_platform": 0
+    },
+    {
+     "week": -2,
+     "start": "2026-07-05",
+     "nodes": 196,
+     "moved": 1,
+     "moved_platform": 1
+    },
+    {
+     "week": -1,
+     "start": "2026-07-12",
+     "nodes": 195,
+     "moved": 2,
+     "moved_platform": 0
+    },
+    {
+     "week": 0,
+     "start": "2026-07-19",
+     "nodes": 186,
+     "moved": 5,
+     "moved_platform": 2
+    },
+    {
+     "week": 1,
+     "start": "2026-07-26",
+     "nodes": 178,
+     "moved": 5,
+     "moved_platform": 0
+    },
+    {
+     "week": 2,
+     "start": "2026-08-02",
+     "nodes": 170,
+     "moved": 24,
+     "moved_platform": 20
+    },
+    {
+     "week": 3,
+     "start": "2026-08-09",
+     "nodes": 135,
+     "moved": 2,
+     "moved_platform": 0
     }
+   ],
+   "ok": true,
+   "at_risk_at_disclosure": 186,
+   "all": {
+    "events_before": 23,
+    "node_weeks_before": 1474,
+    "events_after": 36,
+    "node_weeks_after": 669,
+    "rate_before": 0.015603799185888738,
+    "rate_after": 0.053811659192825115,
+    "rr": 3.4486254630532263,
+    "rr_lo": 0.9849152352094832,
+    "rr_hi": 12.075168663514004,
+    "dispersion": 5.737277912859103,
+    "p_perm": 0.09090909090909091
+   },
+   "operator": {
+    "events_before": 20,
+    "node_weeks_before": 1474,
+    "events_after": 14,
+    "node_weeks_after": 669,
+    "rate_before": 0.013568521031207599,
+    "rate_after": 0.02092675635276532,
+    "rr": 1.5423019431988017,
+    "rr_lo": 0.4670354548177957,
+    "rr_hi": 5.093179242511256,
+    "dispersion": 3.0594755213923785,
+    "p_perm": 0.21212121212121213
+   }
+  },
+  {
+   "key": "cln-2026-gossipd",
+   "client": "CLN",
+   "title": "gossipd unknown-SCID memory exhaustion",
+   "disclosed": "2026-07-19",
+   "kind": "LINE",
+   "count": 1,
+   "fixed_in": "26.04",
+   "affected": [
+    "0.10.1\u20130.10.2",
+    "0.11",
+    "0.12\u201323.02",
+    "0.8.2\u20130.10.0",
+    "23.05\u201323.08",
+    "23.11",
+    "24.02",
+    "24.02.2\u201324.05",
+    "24.08",
+    "24.11\u201325.02",
+    "25.05",
+    "25.09\u201325.12"
+   ],
+   "affected_span": "<26.04",
+   "fix_to_disclosure_days": 90,
+   "weeks_before": 7,
+   "weeks_after": 4,
+   "weekly": [
+    {
+     "week": -8,
+     "start": "2026-05-24",
+     "nodes": null
+    },
+    {
+     "week": -7,
+     "start": "2026-05-31",
+     "nodes": 642,
+     "moved": 11,
+     "moved_platform": 6
+    },
+    {
+     "week": -6,
+     "start": "2026-06-07",
+     "nodes": 628,
+     "moved": 9,
+     "moved_platform": 1
+    },
+    {
+     "week": -5,
+     "start": "2026-06-14",
+     "nodes": 621,
+     "moved": 14,
+     "moved_platform": 0
+    },
+    {
+     "week": -4,
+     "start": "2026-06-21",
+     "nodes": 599,
+     "moved": 10,
+     "moved_platform": 0
+    },
+    {
+     "week": -3,
+     "start": "2026-06-28",
+     "nodes": 590,
+     "moved": 10,
+     "moved_platform": 0
+    },
+    {
+     "week": -2,
+     "start": "2026-07-05",
+     "nodes": 557,
+     "moved": 6,
+     "moved_platform": 2
+    },
+    {
+     "week": -1,
+     "start": "2026-07-12",
+     "nodes": 545,
+     "moved": 7,
+     "moved_platform": 0
+    },
+    {
+     "week": 0,
+     "start": "2026-07-19",
+     "nodes": 520,
+     "moved": 19,
+     "moved_platform": 4
+    },
+    {
+     "week": 1,
+     "start": "2026-07-26",
+     "nodes": 498,
+     "moved": 32,
+     "moved_platform": 0
+    },
+    {
+     "week": 2,
+     "start": "2026-08-02",
+     "nodes": 454,
+     "moved": 46,
+     "moved_platform": 26
+    },
+    {
+     "week": 3,
+     "start": "2026-08-09",
+     "nodes": 351,
+     "moved": 16,
+     "moved_platform": 0
+    }
+   ],
+   "ok": true,
+   "at_risk_at_disclosure": 520,
+   "all": {
+    "events_before": 67,
+    "node_weeks_before": 4182,
+    "events_after": 113,
+    "node_weeks_after": 1823,
+    "rate_before": 0.01602104256336681,
+    "rate_after": 0.06198573779484366,
+    "rr": 3.869020230716965,
+    "rr_lo": 2.425416717351801,
+    "rr_hi": 6.171853866844563,
+    "dispersion": 2.3878910760115746,
+    "p_perm": 0.0030303030303030303
+   },
+   "operator": {
+    "events_before": 58,
+    "node_weeks_before": 4182,
+    "events_after": 83,
+    "node_weeks_after": 1823,
+    "rate_before": 0.013868962219033954,
+    "rate_after": 0.04552934722984092,
+    "rr": 3.282822933020598,
+    "rr_lo": 2.1363735435041282,
+    "rr_hi": 5.044495351636588,
+    "dispersion": 1.6402386349601759,
+    "p_perm": 0.0030303030303030303
+   }
+  },
+  {
+   "key": "cln-2026-pingflood",
+   "client": "CLN",
+   "title": "Ping-flood OOM",
+   "disclosed": "2026-08-25",
+   "kind": "LINE",
+   "count": 1,
+   "fixed_in": "25.09",
+   "affected": [
+    "0.10.1\u20130.10.2",
+    "0.11",
+    "0.12\u201323.02",
+    "0.8.2\u20130.10.0",
+    "23.05\u201323.08",
+    "23.11",
+    "24.02",
+    "24.02.2\u201324.05",
+    "24.08",
+    "24.11\u201325.02",
+    "25.05"
+   ],
+   "affected_span": "<25.09",
+   "fix_to_disclosure_days": 357,
+   "weeks_before": 8,
+   "weeks_after": 4,
+   "weekly": [
+    {
+     "week": -8,
+     "start": "2026-06-30",
+     "nodes": 203,
+     "moved": 5,
+     "moved_platform": 1
+    },
+    {
+     "week": -7,
+     "start": "2026-07-07",
+     "nodes": 199,
+     "moved": 2,
+     "moved_platform": 0
+    },
+    {
+     "week": -6,
+     "start": "2026-07-14",
+     "nodes": 190,
+     "moved": 3,
+     "moved_platform": 0
+    },
+    {
+     "week": -5,
+     "start": "2026-07-21",
+     "nodes": 182,
+     "moved": 3,
+     "moved_platform": 2
+    },
+    {
+     "week": -4,
+     "start": "2026-07-28",
+     "nodes": 185,
+     "moved": 6,
+     "moved_platform": 0
+    },
+    {
+     "week": -3,
+     "start": "2026-08-04",
+     "nodes": 173,
+     "moved": 24,
+     "moved_platform": 20
+    },
+    {
+     "week": -2,
+     "start": "2026-08-11",
+     "nodes": 135,
+     "moved": 2,
+     "moved_platform": 0
+    },
+    {
+     "week": -1,
+     "start": "2026-08-18",
+     "nodes": 122,
+     "moved": 2,
+     "moved_platform": 0
+    },
+    {
+     "week": 0,
+     "start": "2026-08-25",
+     "nodes": 125,
+     "moved": 10,
+     "moved_platform": 4
+    },
+    {
+     "week": 1,
+     "start": "2026-09-01",
+     "nodes": 92,
+     "moved": 3,
+     "moved_platform": 2
+    },
+    {
+     "week": 2,
+     "start": "2026-09-08",
+     "nodes": 86,
+     "moved": 5,
+     "moved_platform": 0
+    },
+    {
+     "week": 3,
+     "start": "2026-09-15",
+     "nodes": 76,
+     "moved": 1,
+     "moved_platform": 0
+    }
+   ],
+   "ok": true,
+   "at_risk_at_disclosure": 125,
+   "all": {
+    "events_before": 47,
+    "node_weeks_before": 1389,
+    "events_after": 19,
+    "node_weeks_after": 379,
+    "rate_before": 0.033837293016558675,
+    "rate_after": 0.05013192612137203,
+    "rr": 1.481558412395442,
+    "rr_lo": 0.3579833984907111,
+    "rr_hi": 6.131612076409341,
+    "dispersion": 7.10575375962497,
+    "p_perm": 0.33131313131313134
+   },
+   "operator": {
+    "events_before": 24,
+    "node_weeks_before": 1389,
+    "events_after": 13,
+    "node_weeks_after": 379,
+    "rate_before": 0.017278617710583154,
+    "rate_after": 0.03430079155672823,
+    "rr": 1.9851583113456488,
+    "rr_lo": 1.0252781145134657,
+    "rr_hi": 3.843692228790815,
+    "dispersion": 0.9583209768724815,
+    "p_perm": 0.07676767676767676
+   }
+  },
+  {
+   "key": "lnd-2024-irrevocable",
+   "client": "LND",
+   "title": "Irrevocable fees / update_fee breach fee-burn",
+   "disclosed": "2024-12-10",
+   "kind": "PARTIAL",
+   "count": 1,
+   "fixed_in": "0.18.3",
+   "affected": [
+    "0.12",
+    "0.13",
+    "0.14\u20130.15.0",
+    "0.15.1\u20130.17",
+    "0.8",
+    "0.9\u20130.11"
+   ],
+   "affected_span": "<0.18",
+   "fix_to_disclosure_days": 89,
+   "weeks_before": 8,
+   "weeks_after": 3,
+   "weekly": [
+    {
+     "week": -8,
+     "start": "2024-10-15",
+     "nodes": 2379,
+     "moved": 26,
+     "moved_platform": 0
+    },
+    {
+     "week": -7,
+     "start": "2024-10-22",
+     "nodes": 2352,
+     "moved": 24,
+     "moved_platform": 0
+    },
+    {
+     "week": -6,
+     "start": "2024-10-29",
+     "nodes": 2246,
+     "moved": 17,
+     "moved_platform": 4
+    },
+    {
+     "week": -5,
+     "start": "2024-11-05",
+     "nodes": 2190,
+     "moved": 18,
+     "moved_platform": 0
+    },
+    {
+     "week": -4,
+     "start": "2024-11-12",
+     "nodes": 2020,
+     "moved": 27,
+     "moved_platform": 0
+    },
+    {
+     "week": -3,
+     "start": "2024-11-19",
+     "nodes": 1967,
+     "moved": 30,
+     "moved_platform": 0
+    },
+    {
+     "week": -2,
+     "start": "2024-11-26",
+     "nodes": 1937,
+     "moved": 27,
+     "moved_platform": 0
+    },
+    {
+     "week": -1,
+     "start": "2024-12-03",
+     "nodes": 1906,
+     "moved": 28,
+     "moved_platform": 0
+    },
+    {
+     "week": 0,
+     "start": "2024-12-10",
+     "nodes": 1861,
+     "moved": 25,
+     "moved_platform": 0
+    },
+    {
+     "week": 1,
+     "start": "2024-12-17",
+     "nodes": 1797,
+     "moved": 20,
+     "moved_platform": 0
+    },
+    {
+     "week": 2,
+     "start": "2024-12-24",
+     "nodes": 1775,
+     "moved": 33,
+     "moved_platform": 0
+    },
+    {
+     "week": 3,
+     "start": "2024-12-31",
+     "nodes": null
+    }
+   ],
+   "ok": true,
+   "at_risk_at_disclosure": 1861,
+   "all": {
+    "events_before": 197,
+    "node_weeks_before": 16997,
+    "events_after": 78,
+    "node_weeks_after": 5433,
+    "rate_before": 0.011590280637759605,
+    "rate_after": 0.01435670900055218,
+    "rr": 1.238685192296372,
+    "rr_lo": 0.8857988121087363,
+    "rr_hi": 1.732155185398862,
+    "dispersion": 1.6354613724293405,
+    "p_perm": 0.13333333333333333
+   },
+   "operator": {
+    "events_before": 193,
+    "node_weeks_before": 16997,
+    "events_after": 78,
+    "node_weeks_after": 5433,
+    "rate_before": 0.011354944990292404,
+    "rate_after": 0.01435670900055218,
+    "rr": 1.2643574242610645,
+    "rr_lo": 0.868758056280961,
+    "rr_hi": 1.8400976943194842,
+    "dispersion": 2.0362850530205363,
+    "p_perm": 0.13333333333333333
+   }
+  },
+  {
+   "key": "lnd-2025-gtsfilter",
+   "client": "LND",
+   "title": "gossip_timestamp_filter goroutine DoS",
+   "disclosed": "2025-07-22",
+   "kind": "PARTIAL",
+   "count": 1,
+   "fixed_in": "0.18.3",
+   "affected": [
+    "0.12",
+    "0.13",
+    "0.14\u20130.15.0",
+    "0.15.1\u20130.17",
+    "0.8",
+    "0.9\u20130.11"
+   ],
+   "affected_span": "<0.18",
+   "fix_to_disclosure_days": 313,
+   "weeks_before": 8,
+   "weeks_after": 3,
+   "weekly": [
+    {
+     "week": -8,
+     "start": "2025-05-27",
+     "nodes": 721,
+     "moved": 5,
+     "moved_platform": 0
+    },
+    {
+     "week": -7,
+     "start": "2025-06-03",
+     "nodes": 699,
+     "moved": 4,
+     "moved_platform": 0
+    },
+    {
+     "week": -6,
+     "start": "2025-06-10",
+     "nodes": 678,
+     "moved": 4,
+     "moved_platform": 0
+    },
+    {
+     "week": -5,
+     "start": "2025-06-17",
+     "nodes": 666,
+     "moved": 3,
+     "moved_platform": 0
+    },
+    {
+     "week": -4,
+     "start": "2025-06-24",
+     "nodes": 649,
+     "moved": 4,
+     "moved_platform": 0
+    },
+    {
+     "week": -3,
+     "start": "2025-07-01",
+     "nodes": 616,
+     "moved": 5,
+     "moved_platform": 1
+    },
+    {
+     "week": -2,
+     "start": "2025-07-08",
+     "nodes": 594,
+     "moved": 5,
+     "moved_platform": 0
+    },
+    {
+     "week": -1,
+     "start": "2025-07-15",
+     "nodes": 572,
+     "moved": 7,
+     "moved_platform": 0
+    },
+    {
+     "week": 0,
+     "start": "2025-07-22",
+     "nodes": 542,
+     "moved": 8,
+     "moved_platform": 1
+    },
+    {
+     "week": 1,
+     "start": "2025-07-29",
+     "nodes": 529,
+     "moved": 4,
+     "moved_platform": 0
+    },
+    {
+     "week": 2,
+     "start": "2025-08-05",
+     "nodes": 503,
+     "moved": 2,
+     "moved_platform": 0
+    },
+    {
+     "week": 3,
+     "start": "2025-08-12",
+     "nodes": null
+    }
+   ],
+   "ok": true,
+   "at_risk_at_disclosure": 542,
+   "all": {
+    "events_before": 37,
+    "node_weeks_before": 5195,
+    "events_after": 14,
+    "node_weeks_after": 1574,
+    "rate_before": 0.00712223291626564,
+    "rate_after": 0.008894536213468869,
+    "rr": 1.248840962945157,
+    "rr_lo": 0.7271618475121258,
+    "rr_hi": 2.1447821500340467,
+    "dispersion": 0.7733431663505679,
+    "p_perm": 0.2787878787878788
+   },
+   "operator": {
+    "events_before": 36,
+    "node_weeks_before": 5195,
+    "events_after": 13,
+    "node_weeks_after": 1574,
+    "rate_before": 0.006929740134744947,
+    "rate_after": 0.008259212198221092,
+    "rr": 1.1918502047155157,
+    "rr_lo": 0.7109129733416933,
+    "rr_hi": 1.998144588363932,
+    "dispersion": 0.6638209269049672,
+    "p_perm": 0.32727272727272727
+   }
+  },
+  {
+   "key": "lnd-2025-sweeper",
+   "client": "LND",
+   "title": "Replacement stalling, failback #2, infinite inbox",
+   "disclosed": "2025-12-04",
+   "kind": "LINE",
+   "count": 3,
+   "fixed_in": "0.19.0",
+   "affected": [
+    "0.12",
+    "0.13",
+    "0.14\u20130.15.0",
+    "0.15.1\u20130.17",
+    "0.18",
+    "0.8",
+    "0.9\u20130.11"
+   ],
+   "affected_span": "<0.19",
+   "fix_to_disclosure_days": 196,
+   "weeks_before": 8,
+   "weeks_after": 4,
+   "weekly": [
+    {
+     "week": -8,
+     "start": "2025-10-09",
+     "nodes": 1550,
+     "moved": 37,
+     "moved_platform": 0
+    },
+    {
+     "week": -7,
+     "start": "2025-10-16",
+     "nodes": 1514,
+     "moved": 25,
+     "moved_platform": 0
+    },
+    {
+     "week": -6,
+     "start": "2025-10-23",
+     "nodes": 1483,
+     "moved": 28,
+     "moved_platform": 0
+    },
+    {
+     "week": -5,
+     "start": "2025-10-30",
+     "nodes": 1422,
+     "moved": 23,
+     "moved_platform": 0
+    },
+    {
+     "week": -4,
+     "start": "2025-11-06",
+     "nodes": 1400,
+     "moved": 24,
+     "moved_platform": 0
+    },
+    {
+     "week": -3,
+     "start": "2025-11-13",
+     "nodes": 1358,
+     "moved": 19,
+     "moved_platform": 0
+    },
+    {
+     "week": -2,
+     "start": "2025-11-20",
+     "nodes": 1353,
+     "moved": 12,
+     "moved_platform": 0
+    },
+    {
+     "week": -1,
+     "start": "2025-11-27",
+     "nodes": 1303,
+     "moved": 16,
+     "moved_platform": 0
+    },
+    {
+     "week": 0,
+     "start": "2025-12-04",
+     "nodes": 1273,
+     "moved": 27,
+     "moved_platform": 9
+    },
+    {
+     "week": 1,
+     "start": "2025-12-11",
+     "nodes": 1237,
+     "moved": 20,
+     "moved_platform": 0
+    },
+    {
+     "week": 2,
+     "start": "2025-12-18",
+     "nodes": 1209,
+     "moved": 14,
+     "moved_platform": 0
+    },
+    {
+     "week": 3,
+     "start": "2025-12-25",
+     "nodes": 1113,
+     "moved": 15,
+     "moved_platform": 0
+    }
+   ],
+   "ok": true,
+   "at_risk_at_disclosure": 1273,
+   "all": {
+    "events_before": 184,
+    "node_weeks_before": 11383,
+    "events_after": 76,
+    "node_weeks_after": 4832,
+    "rate_before": 0.016164455767372396,
+    "rate_after": 0.015728476821192054,
+    "rr": 0.9730285416066802,
+    "rr_lo": 0.6891328928211323,
+    "rr_hi": 1.3738780322984314,
+    "dispersion": 1.6662797677944947,
+    "p_perm": 0.5535353535353535
+   },
+   "operator": {
+    "events_before": 184,
+    "node_weeks_before": 11383,
+    "events_after": 67,
+    "node_weeks_after": 4832,
+    "rate_before": 0.016164455767372396,
+    "rate_after": 0.013865894039735099,
+    "rr": 0.857801477469048,
+    "rr_lo": 0.6199567733734915,
+    "rr_hi": 1.1868946454832692,
+    "dispersion": 1.348182423554304,
+    "p_perm": 0.8101010101010101
+   }
+  },
+  {
+   "key": "lnd-2026-zerots",
+   "client": "LND",
+   "title": "Zero-timestamp gossip panic",
+   "disclosed": "2026-06-18",
+   "kind": "PARTIAL",
+   "count": 1,
+   "fixed_in": "0.20.1",
+   "affected": [
+    "0.12",
+    "0.13",
+    "0.14\u20130.15.0",
+    "0.15.1\u20130.17",
+    "0.18",
+    "0.19",
+    "0.8",
+    "0.9\u20130.11"
+   ],
+   "affected_span": "<0.20",
+   "fix_to_disclosure_days": 126,
+   "weeks_before": 8,
+   "weeks_after": 4,
+   "weekly": [
+    {
+     "week": -8,
+     "start": "2026-04-23",
+     "nodes": 1669,
+     "moved": 27,
+     "moved_platform": 0
+    },
+    {
+     "week": -7,
+     "start": "2026-04-30",
+     "nodes": 1615,
+     "moved": 30,
+     "moved_platform": 11
+    },
+    {
+     "week": -6,
+     "start": "2026-05-07",
+     "nodes": 1566,
+     "moved": 22,
+     "moved_platform": 0
+    },
+    {
+     "week": -5,
+     "start": "2026-05-14",
+     "nodes": 1531,
+     "moved": 20,
+     "moved_platform": 0
+    },
+    {
+     "week": -4,
+     "start": "2026-05-21",
+     "nodes": 1521,
+     "moved": 21,
+     "moved_platform": 0
+    },
+    {
+     "week": -3,
+     "start": "2026-05-28",
+     "nodes": 1480,
+     "moved": 13,
+     "moved_platform": 0
+    },
+    {
+     "week": -2,
+     "start": "2026-06-04",
+     "nodes": 1458,
+     "moved": 13,
+     "moved_platform": 0
+    },
+    {
+     "week": -1,
+     "start": "2026-06-11",
+     "nodes": 1438,
+     "moved": 8,
+     "moved_platform": 0
+    },
+    {
+     "week": 0,
+     "start": "2026-06-18",
+     "nodes": 1420,
+     "moved": 14,
+     "moved_platform": 0
+    },
+    {
+     "week": 1,
+     "start": "2026-06-25",
+     "nodes": 1389,
+     "moved": 29,
+     "moved_platform": 11
+    },
+    {
+     "week": 2,
+     "start": "2026-07-02",
+     "nodes": 1334,
+     "moved": 15,
+     "moved_platform": 0
+    },
+    {
+     "week": 3,
+     "start": "2026-07-09",
+     "nodes": 1307,
+     "moved": 31,
+     "moved_platform": 5
+    }
+   ],
+   "ok": true,
+   "at_risk_at_disclosure": 1420,
+   "all": {
+    "events_before": 154,
+    "node_weeks_before": 12278,
+    "events_after": 89,
+    "node_weeks_after": 5450,
+    "rate_before": 0.012542759407069556,
+    "rate_after": 0.0163302752293578,
+    "rr": 1.3019683069224341,
+    "rr_lo": 0.8438151879020666,
+    "rr_hi": 2.0088776506203465,
+    "dispersion": 2.7617545407719293,
+    "p_perm": 0.11717171717171718
+   },
+   "operator": {
+    "events_before": 143,
+    "node_weeks_before": 12278,
+    "events_after": 73,
+    "node_weeks_after": 5450,
+    "rate_before": 0.011646848020850302,
+    "rate_after": 0.013394495412844036,
+    "rr": 1.150053249502791,
+    "rr_lo": 0.7957611393683421,
+    "rr_hi": 1.6620847780299979,
+    "dispersion": 1.7061946680331626,
+    "p_perm": 0.21414141414141413
+   }
+  },
+  {
+   "key": "lnd-2026-ll-batch",
+   "client": "LND",
+   "title": "Lightning Labs batch: gossip, peer and queue DoS",
+   "disclosed": "2026-08-11",
+   "kind": "LINE",
+   "count": 6,
+   "fixed_in": "0.19.0",
+   "affected": [
+    "0.12",
+    "0.13",
+    "0.14\u20130.15.0",
+    "0.15.1\u20130.17",
+    "0.18",
+    "0.8",
+    "0.9\u20130.11"
+   ],
+   "affected_span": "<0.19",
+   "fix_to_disclosure_days": 446,
+   "weeks_before": 8,
+   "weeks_after": 4,
+   "weekly": [
+    {
+     "week": -8,
+     "start": "2026-06-16",
+     "nodes": 739,
+     "moved": 10,
+     "moved_platform": 0
+    },
+    {
+     "week": -7,
+     "start": "2026-06-23",
+     "nodes": 704,
+     "moved": 6,
+     "moved_platform": 3
+    },
+    {
+     "week": -6,
+     "start": "2026-06-30",
+     "nodes": 691,
+     "moved": 5,
+     "moved_platform": 0
+    },
+    {
+     "week": -5,
+     "start": "2026-07-07",
+     "nodes": 685,
+     "moved": 4,
+     "moved_platform": 0
+    },
+    {
+     "week": -4,
+     "start": "2026-07-14",
+     "nodes": 643,
+     "moved": 4,
+     "moved_platform": 1
+    },
+    {
+     "week": -3,
+     "start": "2026-07-21",
+     "nodes": 676,
+     "moved": 3,
+     "moved_platform": 0
+    },
+    {
+     "week": -2,
+     "start": "2026-07-28",
+     "nodes": 655,
+     "moved": 6,
+     "moved_platform": 0
+    },
+    {
+     "week": -1,
+     "start": "2026-08-04",
+     "nodes": 625,
+     "moved": 38,
+     "moved_platform": 26
+    },
+    {
+     "week": 0,
+     "start": "2026-08-11",
+     "nodes": 546,
+     "moved": 13,
+     "moved_platform": 5
+    },
+    {
+     "week": 1,
+     "start": "2026-08-18",
+     "nodes": 518,
+     "moved": 2,
+     "moved_platform": 0
+    },
+    {
+     "week": 2,
+     "start": "2026-08-25",
+     "nodes": 528,
+     "moved": 12,
+     "moved_platform": 0
+    },
+    {
+     "week": 3,
+     "start": "2026-09-01",
+     "nodes": 486,
+     "moved": 2,
+     "moved_platform": 1
+    }
+   ],
+   "ok": true,
+   "at_risk_at_disclosure": 546,
+   "all": {
+    "events_before": 76,
+    "node_weeks_before": 5418,
+    "events_after": 29,
+    "node_weeks_after": 2078,
+    "rate_before": 0.014027316352897749,
+    "rate_after": 0.01395572666025024,
+    "rr": 0.9948964084899434,
+    "rr_lo": 0.21693622600984813,
+    "rr_hi": 4.562718186040787,
+    "dispersion": 12.67494226641583,
+    "p_perm": 0.4080808080808081
+   },
+   "operator": {
+    "events_before": 46,
+    "node_weeks_before": 5418,
+    "events_after": 23,
+    "node_weeks_after": 2078,
+    "rate_before": 0.008490217792543374,
+    "rate_after": 0.011068334937439845,
+    "rr": 1.303657362848894,
+    "rr_lo": 0.5608507038707649,
+    "rr_hi": 3.0302583343137774,
+    "dispersion": 2.83977548296751,
+    "p_perm": 0.29494949494949496
+   }
+  },
+  {
+   "key": "lnd-2026-sweepbudget",
+   "client": "LND",
+   "title": "HTLC first-stage sweep budget failure",
+   "disclosed": "2026-08-11",
+   "kind": "LINE",
+   "count": 1,
+   "fixed_in": "0.19.0",
+   "affected": [
+    "0.18"
+   ],
+   "affected_span": "0.18",
+   "fix_to_disclosure_days": 446,
+   "weeks_before": 8,
+   "weeks_after": 4,
+   "weekly": [
+    {
+     "week": -8,
+     "start": "2026-06-16",
+     "nodes": 498,
+     "moved": 10,
+     "moved_platform": 0
+    },
+    {
+     "week": -7,
+     "start": "2026-06-23",
+     "nodes": 473,
+     "moved": 6,
+     "moved_platform": 3
+    },
+    {
+     "week": -6,
+     "start": "2026-06-30",
+     "nodes": 465,
+     "moved": 3,
+     "moved_platform": 0
+    },
+    {
+     "week": -5,
+     "start": "2026-07-07",
+     "nodes": 460,
+     "moved": 3,
+     "moved_platform": 0
+    },
+    {
+     "week": -4,
+     "start": "2026-07-14",
+     "nodes": 432,
+     "moved": 3,
+     "moved_platform": 1
+    },
+    {
+     "week": -3,
+     "start": "2026-07-21",
+     "nodes": 450,
+     "moved": 2,
+     "moved_platform": 0
+    },
+    {
+     "week": -2,
+     "start": "2026-07-28",
+     "nodes": 440,
+     "moved": 3,
+     "moved_platform": 0
+    },
+    {
+     "week": -1,
+     "start": "2026-08-04",
+     "nodes": 428,
+     "moved": 33,
+     "moved_platform": 23
+    },
+    {
+     "week": 0,
+     "start": "2026-08-11",
+     "nodes": 363,
+     "moved": 11,
+     "moved_platform": 5
+    },
+    {
+     "week": 1,
+     "start": "2026-08-18",
+     "nodes": 344,
+     "moved": 2,
+     "moved_platform": 0
+    },
+    {
+     "week": 2,
+     "start": "2026-08-25",
+     "nodes": 347,
+     "moved": 11,
+     "moved_platform": 0
+    },
+    {
+     "week": 3,
+     "start": "2026-09-01",
+     "nodes": 314,
+     "moved": 1,
+     "moved_platform": 0
+    }
+   ],
+   "ok": true,
+   "at_risk_at_disclosure": 363,
+   "all": {
+    "events_before": 63,
+    "node_weeks_before": 3646,
+    "events_after": 25,
+    "node_weeks_after": 1368,
+    "rate_before": 0.01727921009325288,
+    "rate_after": 0.01827485380116959,
+    "rr": 1.057620904112133,
+    "rr_lo": 0.21454721298534254,
+    "rr_hi": 5.213593601383131,
+    "dispersion": 11.856535393045315,
+    "p_perm": 0.4080808080808081
+   },
+   "operator": {
+    "events_before": 36,
+    "node_weeks_before": 3646,
+    "events_after": 20,
+    "node_weeks_after": 1368,
+    "rate_before": 0.009873834339001646,
+    "rate_after": 0.014619883040935672,
+    "rr": 1.4806692657569862,
+    "rr_lo": 0.5797479703695158,
+    "rr_hi": 3.7816112976815908,
+    "dispersion": 2.942627962375657,
+    "p_perm": 0.23232323232323232
+   }
+  },
+  {
+   "key": "lnd-2026-closeconf",
+   "client": "LND",
+   "title": "Too few confirmations on cooperative close",
+   "disclosed": "2026-08-13",
+   "kind": "LINE",
+   "count": 1,
+   "fixed_in": "0.21.0",
+   "affected": [
+    "0.12",
+    "0.13",
+    "0.14\u20130.15.0",
+    "0.15.1\u20130.17",
+    "0.18",
+    "0.19",
+    "0.20",
+    "0.8",
+    "0.9\u20130.11"
+   ],
+   "affected_span": "<0.21",
+   "fix_to_disclosure_days": 69,
+   "weeks_before": 8,
+   "weeks_after": 4,
+   "weekly": [
+    {
+     "week": -8,
+     "start": "2026-06-18",
+     "nodes": 4080,
+     "moved": 27,
+     "moved_platform": 0
+    },
+    {
+     "week": -7,
+     "start": "2026-06-25",
+     "nodes": 4015,
+     "moved": 546,
+     "moved_platform": 273
+    },
+    {
+     "week": -6,
+     "start": "2026-07-02",
+     "nodes": 3385,
+     "moved": 191,
+     "moved_platform": 0
+    },
+    {
+     "week": -5,
+     "start": "2026-07-09",
+     "nodes": 3158,
+     "moved": 195,
+     "moved_platform": 41
+    },
+    {
+     "week": -4,
+     "start": "2026-07-16",
+     "nodes": 2738,
+     "moved": 106,
+     "moved_platform": 0
+    },
+    {
+     "week": -3,
+     "start": "2026-07-23",
+     "nodes": 2763,
+     "moved": 150,
+     "moved_platform": 0
+    },
+    {
+     "week": -2,
+     "start": "2026-07-30",
+     "nodes": 2558,
+     "moved": 139,
+     "moved_platform": 0
+    },
+    {
+     "week": -1,
+     "start": "2026-08-06",
+     "nodes": 2304,
+     "moved": 278,
+     "moved_platform": 184
+    },
+    {
+     "week": 0,
+     "start": "2026-08-13",
+     "nodes": 1821,
+     "moved": 93,
+     "moved_platform": 35
+    },
+    {
+     "week": 1,
+     "start": "2026-08-20",
+     "nodes": 1701,
+     "moved": 62,
+     "moved_platform": 0
+    },
+    {
+     "week": 2,
+     "start": "2026-08-27",
+     "nodes": 1618,
+     "moved": 72,
+     "moved_platform": 0
+    },
+    {
+     "week": 3,
+     "start": "2026-09-03",
+     "nodes": 1495,
+     "moved": 32,
+     "moved_platform": 5
+    }
+   ],
+   "ok": true,
+   "at_risk_at_disclosure": 1821,
+   "all": {
+    "events_before": 1632,
+    "node_weeks_before": 25001,
+    "events_after": 259,
+    "node_weeks_after": 6635,
+    "rate_before": 0.06527738890444382,
+    "rate_after": 0.039035418236623966,
+    "rr": 0.5979929481212232,
+    "rr_lo": 0.20045445524082545,
+    "rr_hi": 1.7839242613644954,
+    "dispersion": 69.51300956583387,
+    "p_perm": 0.8868686868686869
+   },
+   "operator": {
+    "events_before": 1134,
+    "node_weeks_before": 25001,
+    "events_after": 219,
+    "node_weeks_after": 6635,
+    "rate_before": 0.0453581856725731,
+    "rate_after": 0.033006782215523736,
+    "rr": 0.7276918537657047,
+    "rr_lo": 0.36879146943833596,
+    "rr_hi": 1.4358668188378716,
+    "dispersion": 22.07136181321095,
+    "p_perm": 0.8909090909090909
+   }
+  },
+  {
+   "key": "lnd-2026-gossipstall",
+   "client": "LND",
+   "title": "Gossip stall via malformed announcements",
+   "disclosed": "2026-09-21",
+   "kind": "PARTIAL",
+   "count": 1,
+   "fixed_in": "0.20.1",
+   "affected": [
+    "0.19"
+   ],
+   "affected_span": "0.19",
+   "fix_to_disclosure_days": 221,
+   "weeks_before": 8,
+   "weeks_after": 3,
+   "weekly": [
+    {
+     "week": -8,
+     "start": "2026-07-27",
+     "nodes": 560,
+     "moved": 13,
+     "moved_platform": 0
+    },
+    {
+     "week": -7,
+     "start": "2026-08-03",
+     "nodes": 532,
+     "moved": 84,
+     "moved_platform": 61
+    },
+    {
+     "week": -6,
+     "start": "2026-08-10",
+     "nodes": 401,
+     "moved": 21,
+     "moved_platform": 2
+    },
+    {
+     "week": -5,
+     "start": "2026-08-17",
+     "nodes": 362,
+     "moved": 8,
+     "moved_platform": 2
+    },
+    {
+     "week": -4,
+     "start": "2026-08-24",
+     "nodes": 353,
+     "moved": 21,
+     "moved_platform": 0
+    },
+    {
+     "week": -3,
+     "start": "2026-08-31",
+     "nodes": 325,
+     "moved": 9,
+     "moved_platform": 0
+    },
+    {
+     "week": -2,
+     "start": "2026-09-07",
+     "nodes": 319,
+     "moved": 9,
+     "moved_platform": 0
+    },
+    {
+     "week": -1,
+     "start": "2026-09-14",
+     "nodes": 296,
+     "moved": 2,
+     "moved_platform": 0
+    },
+    {
+     "week": 0,
+     "start": "2026-09-21",
+     "nodes": 292,
+     "moved": 3,
+     "moved_platform": 0
+    },
+    {
+     "week": 1,
+     "start": "2026-09-28",
+     "nodes": 281,
+     "moved": 4,
+     "moved_platform": 0
+    },
+    {
+     "week": 2,
+     "start": "2026-10-05",
+     "nodes": 283,
+     "moved": 2,
+     "moved_platform": 0
+    },
+    {
+     "week": 3,
+     "start": "2026-10-12",
+     "nodes": null
+    }
+   ],
+   "ok": true,
+   "at_risk_at_disclosure": 292,
+   "all": {
+    "events_before": 167,
+    "node_weeks_before": 3148,
+    "events_after": 9,
+    "node_weeks_after": 856,
+    "rate_before": 0.053049555273189324,
+    "rate_after": 0.010514018691588784,
+    "rr": 0.1981924002462364,
+    "rr_lo": 0.013210259774234477,
+    "rr_hi": 2.9734636704099655,
+    "dispersion": 16.305190172441918,
+    "p_perm": 0.9818181818181818
+   },
+   "operator": {
+    "events_before": 102,
+    "node_weeks_before": 3148,
+    "events_after": 9,
+    "node_weeks_after": 856,
+    "rate_before": 0.032401524777636595,
+    "rate_after": 0.010514018691588784,
+    "rr": 0.32449147883452434,
+    "rr_lo": 0.10650228637613307,
+    "rr_hi": 0.9886615904596473,
+    "dispersion": 2.672183472444589,
+    "p_perm": 0.9757575757575757
+   }
+  },
+  {
+   "key": "lnd-2026-brontide",
+   "client": "LND",
+   "title": "Brontide write-allocation OOM",
+   "disclosed": "2026-09-21",
+   "kind": "LINE",
+   "count": 1,
+   "fixed_in": "0.20.0",
+   "affected": [
+    "0.12",
+    "0.13",
+    "0.14\u20130.15.0",
+    "0.15.1\u20130.17",
+    "0.18",
+    "0.19",
+    "0.8",
+    "0.9\u20130.11"
+   ],
+   "affected_span": "<0.20",
+   "fix_to_disclosure_days": 305,
+   "weeks_before": 8,
+   "weeks_after": 3,
+   "weekly": [
+    {
+     "week": -8,
+     "start": "2026-07-27",
+     "nodes": 1230,
+     "moved": 17,
+     "moved_platform": 0
+    },
+    {
+     "week": -7,
+     "start": "2026-08-03",
+     "nodes": 1163,
+     "moved": 120,
+     "moved_platform": 86
+    },
+    {
+     "week": -6,
+     "start": "2026-08-10",
+     "nodes": 951,
+     "moved": 27,
+     "moved_platform": 3
+    },
+    {
+     "week": -5,
+     "start": "2026-08-17",
+     "nodes": 882,
+     "moved": 13,
+     "moved_platform": 5
+    },
+    {
+     "week": -4,
+     "start": "2026-08-24",
+     "nodes": 890,
+     "moved": 31,
+     "moved_platform": 0
+    },
+    {
+     "week": -3,
+     "start": "2026-08-31",
+     "nodes": 825,
+     "moved": 12,
+     "moved_platform": 1
+    },
+    {
+     "week": -2,
+     "start": "2026-09-07",
+     "nodes": 795,
+     "moved": 14,
+     "moved_platform": 0
+    },
+    {
+     "week": -1,
+     "start": "2026-09-14",
+     "nodes": 766,
+     "moved": 5,
+     "moved_platform": 0
+    },
+    {
+     "week": 0,
+     "start": "2026-09-21",
+     "nodes": 763,
+     "moved": 4,
+     "moved_platform": 0
+    },
+    {
+     "week": 1,
+     "start": "2026-09-28",
+     "nodes": 754,
+     "moved": 8,
+     "moved_platform": 0
+    },
+    {
+     "week": 2,
+     "start": "2026-10-05",
+     "nodes": 743,
+     "moved": 6,
+     "moved_platform": 0
+    },
+    {
+     "week": 3,
+     "start": "2026-10-12",
+     "nodes": null
+    }
+   ],
+   "ok": true,
+   "at_risk_at_disclosure": 763,
+   "all": {
+    "events_before": 239,
+    "node_weeks_before": 7502,
+    "events_after": 18,
+    "node_weeks_after": 2260,
+    "rate_before": 0.031858171154358836,
+    "rate_after": 0.007964601769911504,
+    "rr": 0.2500018513718665,
+    "rr_lo": 0.021438545776811167,
+    "rr_hi": 2.915352857420229,
+    "dispersion": 26.29033214010559,
+    "p_perm": 0.9878787878787879
+   },
+   "operator": {
+    "events_before": 144,
+    "node_weeks_before": 7502,
+    "events_after": 18,
+    "node_weeks_after": 2260,
+    "rate_before": 0.01919488136496934,
+    "rate_after": 0.007964601769911504,
+    "rr": 0.4149336283185839,
+    "rr_lo": 0.15750946458899795,
+    "rr_hi": 1.093076637387356,
+    "dispersion": 3.9078901385886287,
+    "p_perm": 0.9696969696969697
+   }
+  }
+ ],
+ "response_cln_one_line_behind": {
+  "key": "cln-2026-gossipd-recent",
+  "client": "CLN",
+  "title": "gossipd unknown-SCID memory exhaustion",
+  "disclosed": "2026-07-19",
+  "kind": "LINE",
+  "count": 1,
+  "fixed_in": "26.04",
+  "affected": [
+   "25.09\u201325.12"
+  ],
+  "affected_span": "25.09\u201325.12",
+  "fix_to_disclosure_days": 90,
+  "weeks_before": 7,
+  "weeks_after": 4,
+  "weekly": [
+   {
+    "week": -8,
+    "start": "2026-05-24",
+    "nodes": null
+   },
+   {
+    "week": -7,
+    "start": "2026-05-31",
+    "nodes": 422,
+    "moved": 9,
+    "moved_platform": 4
+   },
+   {
+    "week": -6,
+    "start": "2026-06-07",
+    "nodes": 411,
+    "moved": 9,
+    "moved_platform": 1
+   },
+   {
+    "week": -5,
+    "start": "2026-06-14",
+    "nodes": 400,
+    "moved": 13,
+    "moved_platform": 0
+   },
+   {
+    "week": -4,
+    "start": "2026-06-21",
+    "nodes": 382,
+    "moved": 5,
+    "moved_platform": 0
+   },
+   {
+    "week": -3,
+    "start": "2026-06-28",
+    "nodes": 382,
+    "moved": 3,
+    "moved_platform": 0
+   },
+   {
+    "week": -2,
+    "start": "2026-07-05",
+    "nodes": 361,
+    "moved": 6,
+    "moved_platform": 2
+   },
+   {
+    "week": -1,
+    "start": "2026-07-12",
+    "nodes": 350,
+    "moved": 5,
+    "moved_platform": 0
+   },
+   {
+    "week": 0,
+    "start": "2026-07-19",
+    "nodes": 334,
+    "moved": 14,
+    "moved_platform": 2
+   },
+   {
+    "week": 1,
+    "start": "2026-07-26",
+    "nodes": 320,
+    "moved": 27,
+    "moved_platform": 0
+   },
+   {
+    "week": 2,
+    "start": "2026-08-02",
+    "nodes": 284,
+    "moved": 24,
+    "moved_platform": 6
+   },
+   {
+    "week": 3,
+    "start": "2026-08-09",
+    "nodes": 216,
+    "moved": 14,
+    "moved_platform": 0
+   }
+  ],
+  "ok": true,
+  "at_risk_at_disclosure": 334,
+  "all": {
+   "events_before": 50,
+   "node_weeks_before": 2708,
+   "events_after": 79,
+   "node_weeks_after": 1154,
+   "rate_before": 0.01846381093057607,
+   "rate_after": 0.0684575389948007,
+   "rr": 3.7076603119584037,
+   "rr_lo": 2.392218125197295,
+   "rr_hi": 5.7464429535403445,
+   "dispersion": 1.5304400786650723,
+   "p_perm": 0.0030303030303030303
+  },
+  "operator": {
+   "events_before": 43,
+   "node_weeks_before": 2708,
+   "events_after": 71,
+   "node_weeks_after": 1154,
+   "rate_before": 0.01587887740029542,
+   "rate_after": 0.06152512998266898,
+   "rr": 3.8746523719318025,
+   "rr_lo": 2.3250141631261454,
+   "rr_hi": 6.457135290363478,
+   "dispersion": 1.8184786159035329,
+   "p_perm": 0.0030303030303030303
+  }
+ },
+ "robustness": {
+  "lnd-2025-sweeper": {
+   "disclosure": {
+    "date": "20251204",
+    "live14": {
+     "nodes": 0.2768595041322314,
+     "cap": 0.12123259878484165
+    },
+    "live7": {
+     "nodes": 0.2701730726005844
+    },
+    "live28": {
+     "nodes": 0.27641570839661533
+    },
+    "definitely": 0.0724227925184863,
+    "possibly": 0.2768595041322314,
+    "with_fleet": 0.20551257253384914,
+    "exposed_nodes": 1273,
+    "exposed_signed_14d": 0.8915946582875098,
+    "all_live_signed_14d": 0.9580252283601566
+   },
+   "cutoff": {
+    "date": "20261013",
+    "live14": {
+     "nodes": 0.12536106296938185,
+     "cap": 0.0634920747592286
+    },
+    "live7": {
+     "nodes": 0.12012102874432677
+    },
+    "live28": {
+     "nodes": 0.12546762589928057
+    },
+    "definitely": 0.0439052570768342,
+    "possibly": 0.12536106296938185,
+    "with_fleet": 0.10824230387288977,
+    "exposed_nodes": 434,
+    "exposed_signed_14d": 0.7350230414746544,
+    "all_live_signed_14d": 0.9416522241478914
+   }
+  },
+  "lnd-2026-ll-batch": {
+   "disclosure": {
+    "date": "20260811",
+    "live14": {
+     "nodes": 0.1490174672489083,
+     "cap": 0.0641762931172335
+    },
+    "live7": {
+     "nodes": 0.13997728563316297
+    },
+    "live28": {
+     "nodes": 0.1490345390263802
+    },
+    "definitely": 0.04994541484716157,
+    "possibly": 0.1490174672489083,
+    "with_fleet": 0.1288127639605819,
+    "exposed_nodes": 546,
+    "exposed_signed_14d": 0.7673992673992674,
+    "all_live_signed_14d": 0.9516921397379913
+   },
+   "cutoff": {
+    "date": "20261013",
+    "live14": {
+     "nodes": 0.12536106296938185,
+     "cap": 0.0634920747592286
+    },
+    "live7": {
+     "nodes": 0.12012102874432677
+    },
+    "live28": {
+     "nodes": 0.12546762589928057
+    },
+    "definitely": 0.0439052570768342,
+    "possibly": 0.12536106296938185,
+    "with_fleet": 0.10824230387288977,
+    "exposed_nodes": 434,
+    "exposed_signed_14d": 0.7350230414746544,
+    "all_live_signed_14d": 0.9416522241478914
+   }
+  },
+  "cln-2026-connectd": {
+   "disclosure": {
+    "date": "20260719",
+    "live14": {
+     "nodes": 0.23815620998719592,
+     "cap": 0.20200049629691347
+    },
+    "live7": {
+     "nodes": 0.23717059639389737
+    },
+    "live28": {
+     "nodes": 0.2388250319284802
+    },
+    "definitely": 0.23815620998719592,
+    "possibly": 0.23815620998719592,
+    "with_fleet": 0.23815620998719592,
+    "exposed_nodes": 186,
+    "exposed_signed_14d": 0.11827956989247312,
+    "all_live_signed_14d": 0.15108834827144688
+   },
+   "cutoff": {
+    "date": "20261013",
+    "live14": {
+     "nodes": 0.12456140350877193,
+     "cap": 0.024172520245146503
+    },
+    "live7": {
+     "nodes": 0.11873840445269017
+    },
+    "live28": {
+     "nodes": 0.12456140350877193
+    },
+    "definitely": 0.12456140350877193,
+    "possibly": 0.12456140350877193,
+    "with_fleet": 0.12456140350877193,
+    "exposed_nodes": 71,
+    "exposed_signed_14d": 0.15492957746478872,
+    "all_live_signed_14d": 0.22105263157894736
+   }
+  },
+  "cln-2026-gossipd": {
+   "disclosure": {
+    "date": "20260719",
+    "live14": {
+     "nodes": 0.6658130601792573,
+     "cap": 0.5783768002043581
+    },
+    "live7": {
+     "nodes": 0.6643550624133149
+    },
+    "live28": {
+     "nodes": 0.6666666666666666
+    },
+    "definitely": 0.6286811779769527,
+    "possibly": 1.0,
+    "with_fleet": 0.6658130601792573,
+    "exposed_nodes": 520,
+    "exposed_signed_14d": 0.1,
+    "all_live_signed_14d": 0.15108834827144688
+   },
+   "cutoff": {
+    "date": "20261013",
+    "live14": {
+     "nodes": 0.24210526315789474,
+     "cap": 0.12670723190690775
+    },
+    "live7": {
+     "nodes": 0.23933209647495363
+    },
+    "live28": {
+     "nodes": 0.24210526315789474
+    },
+    "definitely": 0.21228070175438596,
+    "possibly": 1.0,
+    "with_fleet": 0.24210526315789474,
+    "exposed_nodes": 138,
+    "exposed_signed_14d": 0.13768115942028986,
+    "all_live_signed_14d": 0.22105263157894736
    }
   }
  },

@@ -2,19 +2,6 @@
 \section{How Lightning Nodes Upgrade}
 \label{sec:dynamics}
 
-\subsection{One operator, many nodes}
-Before measuring upgrades, one population has to be set apart. From \FleetFirstDay{}, hundreds of LND nodes appear
-with aliases of the form \texttt{LNT.<name>}, one or two channels each, most of them to a handful of hubs with the
-same prefix, and identical Lightning Terminal feature sets. At its peak on \FleetPeakDay{} the fleet ran
-\FleetPeakNodes{} nodes, \FleetPeakShare\% of all live LND nodes, with \FleetPeakCap{}~BTC of live capacity against
-\FleetPeakTotalCap{}~BTC for live LND as a whole; at the cutoff it still ran \FleetCutoffNodes{} nodes
-(\FleetCutoffShare\% of live LND nodes). The fleet upgrades as one: \FleetWaveNodes{} of its nodes moved to LND 0.20
-on \FleetWaveDay{}. Its upgrades are one operator's decisions, so we exclude its nodes (by alias prefix, or by having
-at least half their channels to a fleet hub) from every per-node statistic below and describe them here instead. The
-fleet also illustrates why node counts are a poor measure on the Lightning Network~\cite{kumar2026clientdiversity}:
-for half a year, more than a fifth of the live LND nodes we observe belonged to one operator and held less than a
-thousandth of LND's live capacity.
-
 \subsection{Adoption of new release lines}
 Fig.~\ref{fig:linemix} shows the release-line mix of live LND and CLN nodes. Each new LND line displaces its
 predecessor within a few months but leaves a tail: at the cutoff, \PctOldLndLive\% of live LND nodes were still on a
@@ -55,10 +42,10 @@ quarter of LND nodes by live capacity took a median \MedianLNDSmall{} days, the 
 
 Table~\ref{tab:hazard} fits a discrete-time model of the weekly probability of upgrading for LND. Larger nodes
 upgrade sooner (odds ratio \ORCapacity{} per tenfold capacity, \ORChannels{} per tenfold channel count), and so do
-Tor-only nodes (\ORTor{}). A node more than one line behind
-when the release ships is far less likely to move (\ORBehind{}): the tail is made of nodes that skipped releases
-before. Nodes with LND's default colour are no slower (\ORDefaultColor{}), and nodes seen before 2024 upgrade at the
-same rate as newer ones (\OROld{}).
+Tor-only nodes (\ORTor{}), which make up most of the platform waves of \S\ref{sec:waves}. A node more than one line
+behind when the release ships is far less likely to move (\ORBehind{}): the tail is made of nodes that skipped releases before.
+Nodes with LND's default colour are no slower (\ORDefaultColor{}), and nodes seen before 2024 upgrade at the same
+rate as newer ones (\OROld{}).
 
 \begin{figure*}[t]
 \centering
@@ -69,23 +56,3 @@ later one, by quartile of live capacity at the release (Turnbull estimate; LND 0
 \end{figure*}
 
 \input{tables/table_hazard}
-
-\subsection{Upgrade waves}
-Upgrades arrive in bursts (Fig.~\ref{fig:waves}). Outside the fleet, on \NWaves{} days at least
-\WaveMinNodes{} LND nodes, and up to \WaveMaxNodes{}, moved to a new line, \WaveMinDays--\WaveMaxDays{} days after its
-release. These are not new or empty nodes: their median live capacity (\WaveMedianCap{}~BTC, against
-\WaveOtherCap{}~BTC for other upgraders of the same line) and their median age in our data (\WaveMedianAge{} days)
-rule out a fleet of fresh nodes. \NWavesTor{} of the waves are more often Tor-only than the network
-(\WaveTorMin--\WaveTorMax\% of the wave, against \TorBaseMin--\TorBaseMax\% of all live LND nodes), and about half of
-each shares one feature set: the pattern of node platforms that ship an update to all their users at once, though
-gossip cannot name the platform. The remaining wave is different: \ClearWaveNodes{} mostly clearnet nodes
-(\ClearWaveTor\% Tor-only) moved to LND \ClearWaveLine{} on \ClearWaveDay, the day after BTCPay Server published its
-security release 2.4.2, which bundles LND 0.21.1~\cite{btcpay2026advisory}.
-
-\begin{figure*}[t]
-\centering
-\includegraphics[width=\textwidth]{figures/fig5_waves.pdf}
-\caption{Nodes first seen on a newer release line per day, where the upgrade day is known to within two days
-(managed fleet excluded). Grey: snapshot gaps; dotted lines: releases.}
-\label{fig:waves}
-\end{figure*}

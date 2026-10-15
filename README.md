@@ -12,13 +12,13 @@ advisory whose fix boundary gossip can see.
 | Stage | Output |
 |---|---|
 | `src/01_build_panel.py` | node-day panel: client, release-line range, liveness, managed-fleet flag (`data/panel/`, not committed) |
-| `src/02_validate_lines.py` | validation against self-identifying aliases: `data/validation.json`, Table I, Fig. 1 |
-| `src/03_upgrade_dynamics.py` | line mix, adoption, time to upgrade, hazard model, waves, the fleet: `data/upgrade_dynamics.json`, Figs. 2–5, Table II |
-| `src/04_advisory_exposure.py` | exposure per advisory and case studies: `data/advisory_exposure.json`, Table III, Fig. 6 |
+| `src/02_validate_lines.py` | validation against self-identifying aliases and consistency checks: `data/validation.json`, Table I, Fig. 1 |
+| `src/03_upgrade_dynamics.py` | line mix, adoption, time to upgrade, hazard model, upgrade waves and their platform releases, the fleet: `data/upgrade_dynamics.json`, Figs. 2–5, Table II |
+| `src/04_advisory_exposure.py` | exposure per advisory, case studies, response to disclosure, robustness: `data/advisory_exposure.json`, Tables III–V, Figs. 6–7 |
 | `src/05_supporting_numbers.py` | every number quoted in the text: `data/supporting_numbers.json`, `paper/numbers.tex` |
 
-`src/lnmetrics/` holds the frozen inference rules (client rules v4, release table v1-2026-10-07) and the advisory
-list. All stages truncate their inputs at the data cutoff, 13 October 2026.
+`src/lnmetrics/` holds the frozen inference rules (client rules v4, release table v1.1-2026-10-15), the advisory
+list (with the public source of each disclosure) and the dated platform releases (Umbrel app store, BTCPay). All stages truncate their inputs at the data cutoff, 13 October 2026.
 
 ## Reproduce
 
@@ -36,4 +36,4 @@ paper\build.ps1                     # main.pdf
 `VANTAGE_NODE_PREFIX` (optional) names the pubkey prefix of the vantage node for the own-node check in stage 02.
 
 ## Data policy
-Aggregates only: no list, ranking or label of individual nodes by release or exposure is published.
+Aggregates only: no list, ranking or label of individual nodes by release, platform or exposure is published.

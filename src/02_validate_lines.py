@@ -15,6 +15,12 @@ Ground truths, neither used by the rules (src/lnmetrics/client_fingerprint.py, v
 Also, on live nodes (src/lnmetrics/panel.py): share of node-days per client and year whose strict range spans more
 than one line, whose set matches no line (unrecognised), or which show a line before its release (pre-release).
 
+Consistency checks that need no ground truth, for LND as well as CLN:
+  downgrades   operators rarely go back to an older release, so a noisy inference would show many line decreases
+               between consecutive observations of a live node; we count decreases against increases
+  pre-release  a line assigned the wrong bits would show nodes on it long before its release; we count the nodes
+               seen on each line before its publication against those seen in its first 90 days
+
 Outputs
   data/validation.json
   paper/tables/table_validation.tex
@@ -121,15 +127,28 @@ def version_anchors() -> pd.DataFrame:
     return v
 
 
+def wilson(k: int, n: int, z: float = 1.96):
+    """95% Wilson score interval for a proportion k/n."""
+    if n == 0:
+        return None, None
+    p = k / n
+    d = 1 + z * z / n
+    c = (p + z * z / (2 * n)) / d
+    h = z * np.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / d
+    return float(c - h), float(c + h)
+
+
 def version_summary(v: pd.DataFrame) -> dict:
     out = {}
     for c, g in v.groupby("stated_client"):
         g = g[g["stated_line"] >= 0]
         per_node = g.groupby(["pub_key", "stated_line"]).agg(exact=("likely_exact", "mean"), strict=("in_strict", "mean"))
+        k, n = int((per_node["exact"] == 1).sum()), len(per_node)
         out[c] = {"nodes": int(g["pub_key"].nunique()), "node_days": len(g), "lines": int(g["stated_line"].nunique()),
                   "client_correct": float(g["client_ok"].mean()), "strict_contains": float(g["in_strict"].mean()),
                   "likely_exact": float(g["likely_exact"].mean()), "likely_contains": float(g["likely_contains"].mean()),
-                  "node_lines": len(per_node), "node_lines_all_exact": int((per_node["exact"] == 1).sum()),
+                  "node_lines": n, "node_lines_all_exact": k, "node_lines_all_exact_ci95": wilson(k, n),
+                  "node_lines_strict_always": int((per_node["strict"] == 1).sum()),
                   "largest_operator_share": float(g.groupby("pub_key").size().max() / len(g))}
         miss = g[~g["likely_exact"]]
         out[c]["misses"] = (miss.groupby(["stated_version", "client", "likely_lo", "likely_hi", "line_status"])
@@ -166,6 +185,34 @@ def ambiguity() -> pd.DataFrame:
     t = g.groupby(["client", "year"])[["versioned", "unrecognised", "prerelease", "strict_multi", "likely_multi"]].mean()
     t["node_days"] = g.groupby(["client", "year"]).size()
     return t.reset_index()
+
+
+def consistency() -> dict:
+    """Line decreases vs increases between consecutive observations of live nodes (managed fleet excluded), and nodes
+    seen on each line before its publication vs in its first 90 days."""
+    p = pn.load(["date", "pub_key", "client", "client_confidence", "likely_lo", "line_status", "live_cap_14", "fleet"],
+                where=lambda p: pn.live(p) & p["client"].isin(["LND", "CLN"]) & ~p["fleet"]
+                & p["client_confidence"].isin(["high", "operator"]) & (p["likely_lo"] >= 0))
+    p["date"] = pd.to_datetime(p["date"])
+    p = p.sort_values(["pub_key", "date"])
+    prev = p.groupby("pub_key")["likely_lo"].shift()
+    out = {}
+    for c in ("LND", "CLN"):
+        m = (p["client"] == c) & prev.notna()
+        up, down = int((m & (p["likely_lo"] > prev)).sum()), int((m & (p["likely_lo"] < prev)).sum())
+        lines = {}
+        for ln in vf.lines(c):
+            rel = pd.Timestamp(ln.released)
+            if rel < pd.Timestamp("2023-11-01"):
+                continue
+            q = p[(p["client"] == c) & (p["likely_lo"] == ln.index)]
+            pre = q[(q["date"] < rel) & (q["line_status"] == "pre-release")]["pub_key"].nunique()
+            post = q[(q["date"] >= rel) & (q["date"] < rel + pd.Timedelta(days=90))]["pub_key"].nunique()
+            lines[ln.label] = {"released": ln.released, "nodes_before_release": int(pre), "nodes_first_90d": int(post)}
+        out[c] = {"increases": up, "decreases": down, "decrease_share": down / (up + down) if up + down else None,
+                  "nodes_with_decrease": int(p.loc[m & (p["likely_lo"] < prev), "pub_key"].nunique()),
+                  "lines": lines}
+    return out
 
 
 # ---------------------------------------------------------------------------------------
@@ -221,6 +268,10 @@ def table_validation(cp: pd.DataFrame, vs: dict, n_anchor: int):
               r"\multicolumn{3}{l}{Node-days graded} & " + f"{s['node_days']:,} \\\\",
               r"\multicolumn{3}{l}{Strict range contains the stated line (\%)} & " + f"{pct(s['strict_contains'], 2)} \\\\",
               r"\multicolumn{3}{l}{Likely line equals the stated line (\%)} & " + f"{pct(s['likely_exact'])} \\\\",
+              r"\multicolumn{3}{l}{Node--line pairs exact on every day} & " +
+              f"{s['node_lines_all_exact']} / {s['node_lines']} \\\\",
+              r"\multicolumn{3}{l}{\quad 95\% CI (\%)} & " + "[{:.0f}, {:.0f}] \\\\".format(
+                  *(100 * x for x in s["node_lines_all_exact_ci95"])),
               r"\bottomrule", r"\end{tabular}", r"\end{table}"]
     (TABLES_DIR / "table_validation.tex").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
@@ -248,6 +299,9 @@ def main() -> int:
     amb = ambiguity()
     print(amb.to_string(index=False))
 
+    cons = consistency()
+    print("consistency:", json.dumps(cons, indent=1))
+
     FIGURES_DIR.mkdir(parents=True, exist_ok=True)
     TABLES_DIR.mkdir(parents=True, exist_ok=True)
     fig_validation(v)
@@ -255,7 +309,8 @@ def main() -> int:
     out = {"client_rules_version": RULES_VERSION, "version_rules_version": vf.VERSION_RULES_VERSION,
            "gt_client": {"anchors": len(anchors), "by_client": cp.to_dict(orient="records"),
                          "misclassified": wrong[["alias", "truth", "pred", "confidence"]].to_dict(orient="records")},
-           "gt_version": vs, "own_node": own, "ambiguity_live": amb.to_dict(orient="records")}
+           "gt_version": vs, "own_node": own, "ambiguity_live": amb.to_dict(orient="records"),
+           "consistency": cons}
     (DATA_DIR / "validation.json").write_text(json.dumps(out, indent=1, default=float), encoding="utf-8")
     print("-> data/validation.json, tables/table_validation.tex, figures/fig2_version_validation.pdf")
     return 0

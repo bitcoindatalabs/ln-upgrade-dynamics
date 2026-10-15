@@ -1,11 +1,11 @@
 {
  "data_cutoff": "20261013",
  "client_rules_version": "v4-2026-10-14",
- "version_rules_version": "v1-2026-10-07",
+ "version_rules_version": "v1.1-2026-10-15",
  "days": 814,
  "first_day": "20230508",
  "last_day": "20261013",
- "built_utc": "2026-10-15T00:05+00:00",
+ "built_utc": "2026-10-15T21:14+00:00",
  "per_day": {
   "20230508": {
    "nodes": 15650,
