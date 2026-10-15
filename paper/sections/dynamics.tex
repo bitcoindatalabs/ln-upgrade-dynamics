@@ -1,0 +1,91 @@
+% ==========================================================================================
+\section{How Lightning Nodes Upgrade}
+\label{sec:dynamics}
+
+\subsection{One operator, many nodes}
+Before measuring upgrades, one population has to be set apart. From \FleetFirstDay{}, hundreds of LND nodes appear
+with aliases of the form \texttt{LNT.<name>}, one or two channels each, most of them to a handful of hubs with the
+same prefix, and identical Lightning Terminal feature sets. At its peak on \FleetPeakDay{} the fleet ran
+\FleetPeakNodes{} nodes, \FleetPeakShare\% of all live LND nodes, with \FleetPeakCap{}~BTC of live capacity against
+\FleetPeakTotalCap{}~BTC for live LND as a whole; at the cutoff it still ran \FleetCutoffNodes{} nodes
+(\FleetCutoffShare\% of live LND nodes). The fleet upgrades as one: \FleetWaveNodes{} of its nodes moved to LND 0.20
+on \FleetWaveDay{}. Its upgrades are one operator's decisions, so we exclude its nodes (by alias prefix, or by having
+at least half their channels to a fleet hub) from every per-node statistic below and describe them here instead. The
+fleet also illustrates why node counts are a poor measure on the Lightning Network~\cite{kumar2026clientdiversity}:
+for half a year, more than a fifth of the live LND nodes we observe belonged to one operator and held less than a
+thousandth of LND's live capacity.
+
+\subsection{Adoption of new release lines}
+Fig.~\ref{fig:linemix} shows the release-line mix of live LND and CLN nodes. Each new LND line displaces its
+predecessor within a few months but leaves a tail: at the cutoff, \PctOldLndLive\% of live LND nodes were still on a
+line older than 0.19, released in May~2025. New lines reached half of live LND nodes \TFiftyLndMin--\TFiftyLndMax{}
+days after release (Fig.~\ref{fig:adoption}); half of live capacity moved as fast or faster for 0.18 and 0.19
+(\TFiftyCapLndEighteen{} and \TFiftyCapLndNineteen{} days) but more slowly for 0.20 (\TFiftyCapLndTwenty{} days).
+Counting the fleet as independent nodes would put LND 0.20 at 50\% of nodes after \TFiftyLndTwentyWithFleet{} days
+instead of \TFiftyLndTwenty{}. CLN lines took \TFiftyClnMin--\TFiftyClnMax{} days. Every LND line from 0.18 on was
+announced by a few nodes \FirstSeenLndMin--\FirstSeenLndMax{} days before its release: developers and early adopters
+running unreleased builds on mainnet.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig1_line_mix.pdf}
+\caption{Live LND and CLN nodes by inferred release line (likely line), excluding the managed fleet. White lines mark
+releases. Lines under 2\% of nodes throughout are grouped as ``other''.}
+\label{fig:linemix}
+\end{figure*}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig3_adoption.pdf}
+\caption{Share of live nodes (solid) and of their live capacity (dotted) on each release line or a later one, by
+days since the line's release. Lines are broken across snapshot gaps longer than three days.}
+\label{fig:adoption}
+\end{figure*}
+
+\subsection{Time to upgrade}
+Adoption curves mix upgrades with nodes arriving and leaving. To follow operators, we take every node that is live
+on an older line on the release day of LND 0.19, 0.20 or 0.21 or of a CLN line from 23.11 on, and measure the time
+until it is first seen on the new line or a later one. Snapshot gaps leave the upgrade day inside an interval (for
+\PctIntervalNarrow\% of LND upgrades it is at most two days wide); nodes that stop being live before upgrading are
+censored at their last live day. The share upgraded by day $t$ is the nonparametric maximum-likelihood estimate for
+interval-censored data~\cite{turnbull1976empirical}. Half of the LND nodes upgraded within \MedianLNDAll{} days and
+\ByYearLNDAll\% within a year; for CLN the median is \MedianCLNAll{} days. Size matters at the bottom: the smallest
+quarter of LND nodes by live capacity took a median \MedianLNDSmall{} days, the largest quarter \MedianLNDLarge{}
+(Fig.~\ref{fig:ttu}).
+
+Table~\ref{tab:hazard} fits a discrete-time model of the weekly probability of upgrading for LND. Larger nodes
+upgrade sooner (odds ratio \ORCapacity{} per tenfold capacity, \ORChannels{} per tenfold channel count), and so do
+Tor-only nodes (\ORTor{}). A node more than one line behind
+when the release ships is far less likely to move (\ORBehind{}): the tail is made of nodes that skipped releases
+before. Nodes with LND's default colour are no slower (\ORDefaultColor{}), and nodes seen before 2024 upgrade at the
+same rate as newer ones (\OROld{}).
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig4_time_to_upgrade.pdf}
+\caption{Share of nodes that were live on an older line at a release and have since been seen on the new line or a
+later one, by quartile of live capacity at the release (Turnbull estimate; LND 0.19--0.21, CLN 23.11--26.04).}
+\label{fig:ttu}
+\end{figure*}
+
+\input{tables/table_hazard}
+
+\subsection{Upgrade waves}
+Upgrades arrive in bursts (Fig.~\ref{fig:waves}). Outside the fleet, on \NWaves{} days at least
+\WaveMinNodes{} LND nodes, and up to \WaveMaxNodes{}, moved to a new line, \WaveMinDays--\WaveMaxDays{} days after its
+release. These are not new or empty nodes: their median live capacity (\WaveMedianCap{}~BTC, against
+\WaveOtherCap{}~BTC for other upgraders of the same line) and their median age in our data (\WaveMedianAge{} days)
+rule out a fleet of fresh nodes. \NWavesTor{} of the waves are more often Tor-only than the network
+(\WaveTorMin--\WaveTorMax\% of the wave, against \TorBaseMin--\TorBaseMax\% of all live LND nodes), and about half of
+each shares one feature set: the pattern of node platforms that ship an update to all their users at once, though
+gossip cannot name the platform. The remaining wave is different: \ClearWaveNodes{} mostly clearnet nodes
+(\ClearWaveTor\% Tor-only) moved to LND \ClearWaveLine{} on \ClearWaveDay, the day after BTCPay Server published its
+security release 2.4.2, which bundles LND 0.21.1~\cite{btcpay2026advisory}.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig5_waves.pdf}
+\caption{Nodes first seen on a newer release line per day, where the upgrade day is known to within two days
+(managed fleet excluded). Grey: snapshot gaps; dotted lines: releases.}
+\label{fig:waves}
+\end{figure*}

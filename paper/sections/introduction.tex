@@ -1,0 +1,43 @@
+% ==========================================================================================
+\section{Introduction}
+\label{sec:intro}
+
+Between July and October~2026, every major Lightning implementation disclosed security vulnerabilities. Lightning
+Labs published ten LND advisories on a single day~\cite{lightninglabs2026aug} and eight more a month
+later~\cite{lightninglabs2026sep}; Core Lightning (CLN) asked operators who could not upgrade to restart their nodes
+offline~\cite{coreln2026offline}; Eclair and LDK shipped security releases. Each advisory ends with the same advice:
+upgrade. Whether operators do, and how fast, decides how long a disclosed vulnerability stays exploitable. For web
+servers, browsers and Bitcoin and Ethereum full nodes, this question has been measured for two decades
+\cite{arbaugh2000windows,rescorla2003securityholes,frei2009firefox,durumeric2014heartbleed,kim2018ethereum}. For the
+Lightning Network it has not, because Lightning gossip carries no software version: earlier studies could tell which
+implementation a node runs~\cite{zabka2021nodeclassification,espinasa2024decisiontree,kumar2026clientdiversity}, not
+which release.
+
+We show that the release can be read from gossip after all, and measure what operators do with it. Each release
+announces a characteristic set of protocol feature bits. From the source of every release of LND, CLN, Eclair and LDK
+since 2019 we derive which sets each release can produce, and match them against \DataUsableDays{} daily snapshots of
+the public graph taken by our own node from May~2023 to October~2026. We make four contributions.
+
+\begin{itemize}
+\item \textbf{Release-line inference from gossip.} We infer the release line (the finest unit gossip separates;
+patch releases are invisible) of every public node with a known implementation. On \NVerNodes{} CLN nodes whose alias
+states their version, the inferred range contains the true line on \PctVerStrict\% of \NVerNodeDays{} node-days
+and the most likely line is exact on \PctVerLikely\% (\S\ref{sec:inference}).
+\item \textbf{Upgrade dynamics.} New LND lines reach half of live nodes in \TFiftyLndMin--\TFiftyLndMax{} days.
+Half of the LND nodes on an older line upgrade within \MedianLNDAll{} days of a release, but the smallest quarter of
+nodes takes \MedianLNDSmall{}, and a node already more than one line behind has about five times lower odds of moving
+in any week.
+Upgrades arrive in waves consistent with node platforms pushing updates (\S\ref{sec:dynamics}).
+\item \textbf{A managed fleet.} One operator ran up to \FleetPeakNodes{} public LND nodes, \FleetPeakShare\% of all
+live LND nodes, with about one BTC of capacity between them, and upgraded them in step. Counted as independent
+nodes, they would distort every node-based statistic for 2025--2026, including adoption and exposure.
+\item \textbf{Exposure after advisories.} For the \NAdvTotal{} LND and CLN advisories whose fix boundary gossip can
+see, we measure how many live nodes and how much capacity remained exposed. Fixes typically shipped months before
+disclosure (median \FixToDiscMedian{} days). LND disclosures did not change how fast operators left vulnerable
+releases: after Lightning Labs' August~2026 batch, \PctCohortStillLLBatch\% of the exposed nodes were still live on
+an affected release two months later. CLN operators did respond: the share leaving vulnerable lines in the 30 days
+after CLN's July~2026 disclosures was two to four times that of the 30 days before (\S\ref{sec:exposure}).
+\end{itemize}
+
+All data behind the figures and tables, and the code, are released. We report aggregates only: no list, ranking or
+label of individual nodes by release or exposure.

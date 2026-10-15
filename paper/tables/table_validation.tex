@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering\small
+\caption{Validation against self-identifying aliases. Top: client labels of 797 nodes whose alias names their implementation. Bottom: release lines of CLN nodes whose alias states the running version, graded on every announced node-day.}
+\label{tab:validation}
+\begin{tabular}{lrrr}
+\toprule
+Client & Nodes & Precision (\%) & Recall (\%) \\
+\midrule
+LND & 664 & 100.0 & 96.4 \\
+CLN & 117 & 98.3 & 99.1 \\
+Eclair & 9 & 58.3 & 77.8 \\
+LDK & 7 & 100.0 & 100.0 \\
+\midrule
+\multicolumn{3}{l}{CLN nodes / lines with a stated version} & 124 / 11 \\
+\multicolumn{3}{l}{Node-days graded} & 15,549 \\
+\multicolumn{3}{l}{Strict range contains the stated line (\%)} & 99.99 \\
+\multicolumn{3}{l}{Likely line equals the stated line (\%)} & 98.2 \\
+\bottomrule
+\end{tabular}
+\end{table}

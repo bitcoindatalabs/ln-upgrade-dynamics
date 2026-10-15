@@ -1,0 +1,292 @@
+{
+ "client_rules_version": "v4-2026-10-14",
+ "version_rules_version": "v1-2026-10-07",
+ "gt_client": {
+  "anchors": 797,
+  "by_client": [
+   {
+    "client": "LND",
+    "n": 664,
+    "precision": 1.0,
+    "recall": 0.963855421686747,
+    "unknown": 17
+   },
+   {
+    "client": "CLN",
+    "n": 117,
+    "precision": 0.9830508474576272,
+    "recall": 0.9914529914529915,
+    "unknown": 1
+   },
+   {
+    "client": "Eclair",
+    "n": 9,
+    "precision": 0.5833333333333334,
+    "recall": 0.7777777777777778,
+    "unknown": 2
+   },
+   {
+    "client": "LDK",
+    "n": 7,
+    "precision": 1.0,
+    "recall": 1.0,
+    "unknown": 0
+   }
+  ],
+  "misclassified": [
+   {
+    "alias": "flat18.co.uk-LND",
+    "truth": "LND",
+    "pred": "Eclair",
+    "confidence": "low"
+   },
+   {
+    "alias": "GCUBED [LND]",
+    "truth": "LND",
+    "pred": "Eclair",
+    "confidence": "low"
+   },
+   {
+    "alias": "R3ZeusNode [LND]",
+    "truth": "LND",
+    "pred": "Eclair",
+    "confidence": "low"
+   },
+   {
+    "alias": "Cypher Core [LND]",
+    "truth": "LND",
+    "pred": "Eclair",
+    "confidence": "low"
+   },
+   {
+    "alias": "bhavman2[LND]",
+    "truth": "LND",
+    "pred": "Eclair",
+    "confidence": "low"
+   },
+   {
+    "alias": "Sally Acorn (Switching to LND)",
+    "truth": "LND",
+    "pred": "CLN",
+    "confidence": "high"
+   },
+   {
+    "alias": "btcpay-lnd",
+    "truth": "LND",
+    "pred": "CLN",
+    "confidence": "high"
+   }
+  ]
+ },
+ "gt_version": {
+  "CLN": {
+   "nodes": 124,
+   "node_days": 15549,
+   "lines": 11,
+   "client_correct": 1.0,
+   "strict_contains": 0.9999356871824555,
+   "likely_exact": 0.9816708469998071,
+   "likely_contains": 0.9816708469998071,
+   "node_lines": 136,
+   "node_lines_all_exact": 132,
+   "largest_operator_share": 0.0521576950286192,
+   "misses": [
+    {
+     "stated_version": "24.05",
+     "client": "CLN",
+     "likely_lo": 8,
+     "likely_hi": 8,
+     "line_status": "ok",
+     "node_days": 222
+    },
+    {
+     "stated_version": "25.02.1",
+     "client": "CLN",
+     "likely_lo": 8,
+     "likely_hi": 8,
+     "line_status": "ok",
+     "node_days": 46
+    },
+    {
+     "stated_version": "23.11.1",
+     "client": "CLN",
+     "likely_lo": 4,
+     "likely_hi": 4,
+     "line_status": "ok",
+     "node_days": 16
+    },
+    {
+     "stated_version": "23.05rc2",
+     "client": "CLN",
+     "likely_lo": 3,
+     "likely_hi": 3,
+     "line_status": "ok",
+     "node_days": 1
+    }
+   ]
+  }
+ },
+ "own_node": [],
+ "ambiguity_live": [
+  {
+   "client": "CLN",
+   "year": "2023",
+   "versioned": 0.9407118213183221,
+   "unrecognised": 0.002542218994007627,
+   "prerelease": 0.0,
+   "strict_multi": 0.72666606137643,
+   "likely_multi": 0.0,
+   "node_days": 22028
+  },
+  {
+   "client": "CLN",
+   "year": "2024",
+   "versioned": 0.944524941568796,
+   "unrecognised": 0.0038444455770672995,
+   "prerelease": 0.0003786196401657189,
+   "strict_multi": 0.6923715423653534,
+   "likely_multi": 0.0,
+   "node_days": 137341
+  },
+  {
+   "client": "CLN",
+   "year": "2025",
+   "versioned": 0.9818871218527511,
+   "unrecognised": 0.00515562344853924,
+   "prerelease": 0.0005673913636487629,
+   "strict_multi": 0.7453831255626177,
+   "likely_multi": 0.0,
+   "node_days": 183295
+  },
+  {
+   "client": "CLN",
+   "year": "2026",
+   "versioned": 0.9921211768810326,
+   "unrecognised": 0.0013906655812691397,
+   "prerelease": 0.0,
+   "strict_multi": 0.46579059580571386,
+   "likely_multi": 0.0,
+   "node_days": 206376
+  },
+  {
+   "client": "Eclair",
+   "year": "2023",
+   "versioned": 0.2099290780141844,
+   "unrecognised": 0.0,
+   "prerelease": 0.02553191489361702,
+   "strict_multi": 0.0028368794326241137,
+   "likely_multi": 0.0,
+   "node_days": 705
+  },
+  {
+   "client": "Eclair",
+   "year": "2024",
+   "versioned": 0.18541033434650456,
+   "unrecognised": 0.0,
+   "prerelease": 0.009586158522328735,
+   "strict_multi": 0.060322656067336916,
+   "likely_multi": 0.0,
+   "node_days": 4277
+  },
+  {
+   "client": "Eclair",
+   "year": "2025",
+   "versioned": 0.6415903890160183,
+   "unrecognised": 0.0,
+   "prerelease": 0.038615560640732266,
+   "strict_multi": 0.03461098398169336,
+   "likely_multi": 0.0,
+   "node_days": 3496
+  },
+  {
+   "client": "Eclair",
+   "year": "2026",
+   "versioned": 0.8335266821345708,
+   "unrecognised": 0.0,
+   "prerelease": 0.004350348027842227,
+   "strict_multi": 0.125,
+   "likely_multi": 0.0,
+   "node_days": 3448
+  },
+  {
+   "client": "LDK",
+   "year": "2023",
+   "versioned": 0.9810126582278481,
+   "unrecognised": 0.17721518987341772,
+   "prerelease": 0.0,
+   "strict_multi": 0.0,
+   "likely_multi": 0.0,
+   "node_days": 316
+  },
+  {
+   "client": "LDK",
+   "year": "2024",
+   "versioned": 0.9836574265618535,
+   "unrecognised": 0.00703351261894911,
+   "prerelease": 0.0,
+   "strict_multi": 0.0,
+   "likely_multi": 0.0,
+   "node_days": 4834
+  },
+  {
+   "client": "LDK",
+   "year": "2025",
+   "versioned": 0.9953302901516344,
+   "unrecognised": 0.0026759011490634344,
+   "prerelease": 0.0031481189988981583,
+   "strict_multi": 0.0,
+   "likely_multi": 0.0,
+   "node_days": 19059
+  },
+  {
+   "client": "LDK",
+   "year": "2026",
+   "versioned": 0.9240105958170245,
+   "unrecognised": 0.034792235005732815,
+   "prerelease": 0.0,
+   "strict_multi": 0.0,
+   "likely_multi": 0.0,
+   "node_days": 25293
+  },
+  {
+   "client": "LND",
+   "year": "2023",
+   "versioned": 0.9992962249506352,
+   "unrecognised": 0.00028955316316722903,
+   "prerelease": 0.0,
+   "strict_multi": 0.0006555161888369212,
+   "likely_multi": 0.0,
+   "node_days": 248659
+  },
+  {
+   "client": "LND",
+   "year": "2024",
+   "versioned": 0.9960559330056694,
+   "unrecognised": 0.0038607867491876617,
+   "prerelease": 8.114485424177608e-05,
+   "strict_multi": 0.0021346791041323373,
+   "likely_multi": 0.0,
+   "node_days": 1404895
+  },
+  {
+   "client": "LND",
+   "year": "2025",
+   "versioned": 0.9976040238804618,
+   "unrecognised": 0.009969781246813861,
+   "prerelease": 0.0012482582443102646,
+   "strict_multi": 0.2910183464932652,
+   "likely_multi": 0.0,
+   "node_days": 1412368
+  },
+  {
+   "client": "LND",
+   "year": "2026",
+   "versioned": 0.9987726310272852,
+   "unrecognised": 0.010319688203101704,
+   "prerelease": 0.0009615645264765324,
+   "strict_multi": 0.10751526304851346,
+   "likely_multi": 0.0,
+   "node_days": 1328044
+  }
+ ]
+}

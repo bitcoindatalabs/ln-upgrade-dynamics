@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering\small
+\caption{What predicts upgrading: discrete-time logit on node-weeks after each LND release (week and release fixed effects; standard errors clustered by node). Odds ratios with 95\% CI.}
+\label{tab:hazard}
+\begin{tabular}{lrr}
+\toprule
+Covariate & Odds ratio & 95\% CI \\
+\midrule
+Capacity ($\times$10) & 1.11 & [1.07, 1.16] \\
+Channels ($\times$10) & 1.15 & [1.06, 1.24] \\
+Tor-only & 1.59 & [1.50, 1.69] \\
+LND default colour & 1.08 & [1.03, 1.14] \\
+Seen before 2024 & 1.01 & [0.96, 1.07] \\
+$>$1 line behind & 0.19 & [0.18, 0.21] \\
+\midrule
+Nodes / node-weeks & \multicolumn{2}{r}{7,218 / 228,254} \\
+\bottomrule
+\end{tabular}
+\end{table}

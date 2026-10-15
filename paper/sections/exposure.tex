@@ -1,0 +1,53 @@
+% ==========================================================================================
+\section{Exposure after Security Advisories}
+\label{sec:exposure}
+
+\subsection{Advisories gossip can see}
+We collected every public security advisory for LND, CLN, Eclair and LDK from January~2022 to the cutoff (release
+notes, Lightning Labs' advisory index, Delving Bitcoin and authors' write-ups), recording the affected versions, the
+first fixed release and the disclosure date. An advisory is visible in gossip when its fix boundary coincides with
+the start of a release line (LINE), or falls inside a line but leaves whole lines affected or fixed on either side
+(PARTIAL, which gives bounds). Fixes inside the newest line, such as CLN 26.06.7--26.06.9 and Eclair 0.14.1--0.14.3,
+are patch releases and invisible. Eclair and LDK have too few live public nodes with a known line (about ten Eclair
+nodes) for shares to be meaningful, so Table~\ref{tab:advisories} lists the \NAdvRows{} LND and CLN entries,
+covering \NAdvTotal{} advisories.
+
+Two clocks run for each advisory. Fixes usually ship long before the vulnerability is disclosed: the median gap
+between the first fixed release and disclosure is \FixToDiscMedian{} days, and the six advisories Lightning Labs
+published on 11~August~2026 concerned bugs fixed in LND 0.19.0, released \FixToDiscLLBatch{} days earlier. A node
+still on an affected line at disclosure has therefore usually skipped a release that was already available for many
+months. Exposure is the share of live nodes (excluding the managed fleet) on an affected line, with the share of
+their live capacity alongside.
+
+\input{tables/table_advisories}
+
+\subsection{Disclosure barely moves LND operators}
+On the day Lightning Labs disclosed its batch, \ExpLLBatchDisc\% of live LND nodes, holding \ExpCapLLBatchDisc\% of
+live LND capacity, were on a line older than 0.19 (Fig.~\ref{fig:cases}). Of the \CohortLLBatch{} exposed nodes,
+\CohortUpLLBatch{} had upgraded by the cutoff, \CohortLeftLLBatch{} were no longer live and \CohortStillLLBatch{}
+(\PctCohortStillLLBatch\%) were still live on an affected line. The disclosure did not change the pace: in the 30 days
+before it, \RateLLBatchBefore\% of the live nodes then on affected lines moved to a fixed line; in the 30 days after,
+\RateLLBatchAfter\%. Morehouse's disclosure of three LND vulnerabilities fixed in the same release, on 4~December~2025,
+looks the same: \ExpLndSweeperDisc\% of live LND nodes exposed, an upgrade rate of \RateLndSweeperBefore\% before and
+\RateLndSweeperAfter\% after, and \PctCohortStillLndSweeper\% of the exposed cohort still exposed four months later.
+The exposed nodes are small: their share of capacity is about half their share of nodes.
+
+\subsection{CLN operators responded}
+CLN's two memory-exhaustion vulnerabilities, disclosed on 19~July~2026, were fixed at the 25.09 and 26.04 line
+starts. Here the disclosure changed behaviour. Among live CLN nodes on lines before 26.04, the 30-day upgrade rate
+rose from \RateClnGossipdBefore\% before to \RateClnGossipdAfter\% after the disclosure (\RateClnConnectdBefore\% to
+\RateClnConnectdAfter\% for lines before 25.09), and exposure kept falling after the maintainers' call on
+26~August to upgrade or restart with \texttt{--offline}. Of \CohortClnGossipd{} CLN nodes exposed to the gossipd
+vulnerability at disclosure, \CohortUpClnGossipd{} had upgraded by the cutoff and \CohortLeftClnGossipd{} were no
+longer live, leaving \CohortStillClnGossipd{}; exposure fell from \ExpClnGossipdDisc\% of live CLN nodes to
+\ExpClnGossipdCutoff\% (from \ExpCapClnGossipdDisc\% to \ExpCapClnGossipdCutoff\% of capacity). Part of the fall is
+nodes leaving rather than upgrading, as in the shutdown we measured earlier~\cite{kumar2026clientdiversity}.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig6_exposure_cases.pdf}
+\caption{Top: share of live nodes (solid) and of their live capacity (dashed) on a line affected by the advisory;
+solid vertical line: disclosure; dotted: CLN's call of 26~August~2026 to upgrade or restart offline. Bottom: the nodes
+exposed on the last snapshot before disclosure, by what became of them. Managed fleet excluded.}
+\label{fig:cases}
+\end{figure*}

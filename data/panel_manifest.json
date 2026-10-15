@@ -1,0 +1,9779 @@
+{
+ "data_cutoff": "20261013",
+ "client_rules_version": "v4-2026-10-14",
+ "version_rules_version": "v1-2026-10-07",
+ "days": 814,
+ "first_day": "20230508",
+ "last_day": "20261013",
+ "built_utc": "2026-10-15T00:05+00:00",
+ "per_day": {
+  "20230508": {
+   "nodes": 15650,
+   "with_channels": 8335,
+   "live": 6664,
+   "live_by_client": {
+    "LND": 6079,
+    "CLN": 556,
+    "Eclair": 16,
+    "Unknown": 7,
+    "LDK": 6
+   }
+  },
+  "20230808": {
+   "nodes": 15961,
+   "with_channels": 8702,
+   "live": 6629,
+   "live_by_client": {
+    "LND": 6086,
+    "CLN": 520,
+    "Eclair": 14,
+    "LDK": 7,
+    "Unknown": 2
+   }
+  },
+  "20230810": {
+   "nodes": 15970,
+   "with_channels": 8715,
+   "live": 6634,
+   "live_by_client": {
+    "LND": 6098,
+    "CLN": 514,
+    "Eclair": 14,
+    "LDK": 7,
+    "Unknown": 1
+   }
+  },
+  "20231020": {
+   "nodes": 15803,
+   "with_channels": 8537,
+   "live": 6442,
+   "live_by_client": {
+    "LND": 5889,
+    "CLN": 526,
+    "Eclair": 17,
+    "LDK": 7,
+    "Unknown": 3
+   }
+  },
+  "20231022": {
+   "nodes": 15766,
+   "with_channels": 8499,
+   "live": 6384,
+   "live_by_client": {
+    "LND": 5840,
+    "CLN": 518,
+    "Eclair": 17,
+    "LDK": 7,
+    "Unknown": 2
+   }
+  },
+  "20231023": {
+   "nodes": 15762,
+   "with_channels": 8493,
+   "live": 6369,
+   "live_by_client": {
+    "LND": 5828,
+    "CLN": 514,
+    "Eclair": 17,
+    "LDK": 7,
+    "Unknown": 3
+   }
+  },
+  "20231030": {
+   "nodes": 15665,
+   "with_channels": 8403,
+   "live": 6365,
+   "live_by_client": {
+    "LND": 5812,
+    "CLN": 526,
+    "Eclair": 17,
+    "LDK": 7,
+    "Unknown": 3
+   }
+  },
+  "20231101": {
+   "nodes": 15651,
+   "with_channels": 8393,
+   "live": 6410,
+   "live_by_client": {
+    "LND": 5855,
+    "CLN": 528,
+    "Eclair": 16,
+    "LDK": 7,
+    "Unknown": 4
+   }
+  },
+  "20231102": {
+   "nodes": 15658,
+   "with_channels": 8399,
+   "live": 6394,
+   "live_by_client": {
+    "LND": 5841,
+    "CLN": 526,
+    "Eclair": 16,
+    "LDK": 7,
+    "Unknown": 4
+   }
+  },
+  "20231103": {
+   "nodes": 15656,
+   "with_channels": 8398,
+   "live": 6381,
+   "live_by_client": {
+    "LND": 5829,
+    "CLN": 525,
+    "Eclair": 16,
+    "LDK": 8,
+    "Unknown": 3
+   }
+  },
+  "20231106": {
+   "nodes": 15663,
+   "with_channels": 8404,
+   "live": 6385,
+   "live_by_client": {
+    "LND": 5835,
+    "CLN": 524,
+    "Eclair": 16,
+    "LDK": 8,
+    "Unknown": 2
+   }
+  },
+  "20231107": {
+   "nodes": 15670,
+   "with_channels": 8411,
+   "live": 6402,
+   "live_by_client": {
+    "LND": 5853,
+    "CLN": 522,
+    "Eclair": 16,
+    "LDK": 8,
+    "Unknown": 3
+   }
+  },
+  "20231108": {
+   "nodes": 15680,
+   "with_channels": 8422,
+   "live": 6419,
+   "live_by_client": {
+    "LND": 5865,
+    "CLN": 527,
+    "Eclair": 16,
+    "LDK": 8,
+    "Unknown": 3
+   }
+  },
+  "20231109": {
+   "nodes": 15686,
+   "with_channels": 8428,
+   "live": 6404,
+   "live_by_client": {
+    "LND": 5851,
+    "CLN": 525,
+    "Eclair": 16,
+    "LDK": 8,
+    "Unknown": 4
+   }
+  },
+  "20231111": {
+   "nodes": 15687,
+   "with_channels": 8428,
+   "live": 6382,
+   "live_by_client": {
+    "LND": 5830,
+    "CLN": 526,
+    "Eclair": 15,
+    "LDK": 8,
+    "Unknown": 3
+   }
+  },
+  "20231113": {
+   "nodes": 15698,
+   "with_channels": 8437,
+   "live": 6363,
+   "live_by_client": {
+    "LND": 5812,
+    "CLN": 523,
+    "Eclair": 16,
+    "LDK": 8,
+    "Unknown": 4
+   }
+  },
+  "20231114": {
+   "nodes": 15697,
+   "with_channels": 8434,
+   "live": 6354,
+   "live_by_client": {
+    "LND": 5805,
+    "CLN": 521,
+    "Eclair": 16,
+    "LDK": 8,
+    "Unknown": 4
+   }
+  },
+  "20231115": {
+   "nodes": 15697,
+   "with_channels": 8430,
+   "live": 6347,
+   "live_by_client": {
+    "LND": 5804,
+    "CLN": 515,
+    "Eclair": 16,
+    "LDK": 8,
+    "Unknown": 4
+   }
+  },
+  "20231116": {
+   "nodes": 15699,
+   "with_channels": 8432,
+   "live": 6339,
+   "live_by_client": {
+    "LND": 5794,
+    "CLN": 517,
+    "Eclair": 16,
+    "LDK": 8,
+    "Unknown": 4
+   }
+  },
+  "20231117": {
+   "nodes": 15707,
+   "with_channels": 8439,
+   "live": 6348,
+   "live_by_client": {
+    "LND": 5803,
+    "CLN": 517,
+    "Eclair": 16,
+    "LDK": 8,
+    "Unknown": 4
+   }
+  },
+  "20231121": {
+   "nodes": 15724,
+   "with_channels": 8459,
+   "live": 6282,
+   "live_by_client": {
+    "LND": 5742,
+    "CLN": 510,
+    "Eclair": 16,
+    "LDK": 8,
+    "Unknown": 6
+   }
+  },
+  "20231122": {
+   "nodes": 15727,
+   "with_channels": 8462,
+   "live": 6269,
+   "live_by_client": {
+    "LND": 5734,
+    "CLN": 505,
+    "Eclair": 16,
+    "LDK": 8,
+    "Unknown": 6
+   }
+  },
+  "20231125": {
+   "nodes": 15715,
+   "with_channels": 8450,
+   "live": 6243,
+   "live_by_client": {
+    "LND": 5711,
+    "CLN": 502,
+    "Eclair": 16,
+    "LDK": 8,
+    "Unknown": 6
+   }
+  },
+  "20231126": {
+   "nodes": 15711,
+   "with_channels": 8445,
+   "live": 6223,
+   "live_by_client": {
+    "LND": 5692,
+    "CLN": 501,
+    "Eclair": 16,
+    "LDK": 8,
+    "Unknown": 6
+   }
+  },
+  "20231127": {
+   "nodes": 15706,
+   "with_channels": 8440,
+   "live": 6196,
+   "live_by_client": {
+    "LND": 5667,
+    "CLN": 499,
+    "Eclair": 16,
+    "LDK": 8,
+    "Unknown": 6
+   }
+  },
+  "20231130": {
+   "nodes": 15709,
+   "with_channels": 8440,
+   "live": 6237,
+   "live_by_client": {
+    "LND": 5708,
+    "CLN": 500,
+    "Eclair": 17,
+    "LDK": 7,
+    "Unknown": 5
+   }
+  },
+  "20231204": {
+   "nodes": 15716,
+   "with_channels": 8443,
+   "live": 6257,
+   "live_by_client": {
+    "LND": 5729,
+    "CLN": 500,
+    "Eclair": 17,
+    "LDK": 7,
+    "Unknown": 4
+   }
+  },
+  "20231205": {
+   "nodes": 15692,
+   "with_channels": 8418,
+   "live": 6228,
+   "live_by_client": {
+    "LND": 5700,
+    "CLN": 500,
+    "Eclair": 17,
+    "LDK": 7,
+    "Unknown": 4
+   }
+  },
+  "20231208": {
+   "nodes": 15697,
+   "with_channels": 8422,
+   "live": 6242,
+   "live_by_client": {
+    "LND": 5716,
+    "CLN": 501,
+    "Eclair": 16,
+    "LDK": 7,
+    "Unknown": 2
+   }
+  },
+  "20231210": {
+   "nodes": 15695,
+   "with_channels": 8421,
+   "live": 6243,
+   "live_by_client": {
+    "LND": 5722,
+    "CLN": 496,
+    "Eclair": 16,
+    "LDK": 7,
+    "Unknown": 2
+   }
+  },
+  "20231211": {
+   "nodes": 15708,
+   "with_channels": 8433,
+   "live": 6242,
+   "live_by_client": {
+    "LND": 5717,
+    "CLN": 500,
+    "Eclair": 16,
+    "LDK": 7,
+    "Unknown": 2
+   }
+  },
+  "20231212": {
+   "nodes": 15723,
+   "with_channels": 8448,
+   "live": 6270,
+   "live_by_client": {
+    "LND": 5742,
+    "CLN": 499,
+    "Eclair": 17,
+    "LDK": 7,
+    "Unknown": 5
+   }
+  },
+  "20231213": {
+   "nodes": 15726,
+   "with_channels": 8452,
+   "live": 6261,
+   "live_by_client": {
+    "LND": 5734,
+    "CLN": 500,
+    "Eclair": 16,
+    "LDK": 7,
+    "Unknown": 4
+   }
+  },
+  "20231215": {
+   "nodes": 15732,
+   "with_channels": 8459,
+   "live": 6245,
+   "live_by_client": {
+    "LND": 5715,
+    "CLN": 504,
+    "Eclair": 15,
+    "LDK": 7,
+    "Unknown": 4
+   }
+  },
+  "20231217": {
+   "nodes": 15734,
+   "with_channels": 8460,
+   "live": 6248,
+   "live_by_client": {
+    "LND": 5719,
+    "CLN": 502,
+    "Eclair": 16,
+    "LDK": 7,
+    "Unknown": 4
+   }
+  },
+  "20231219": {
+   "nodes": 15748,
+   "with_channels": 8474,
+   "live": 6261,
+   "live_by_client": {
+    "LND": 5728,
+    "CLN": 502,
+    "Eclair": 18,
+    "LDK": 7,
+    "Unknown": 6
+   }
+  },
+  "20231220": {
+   "nodes": 15756,
+   "with_channels": 8485,
+   "live": 6262,
+   "live_by_client": {
+    "LND": 5728,
+    "CLN": 502,
+    "Eclair": 18,
+    "LDK": 7,
+    "Unknown": 7
+   }
+  },
+  "20231221": {
+   "nodes": 15745,
+   "with_channels": 8474,
+   "live": 6229,
+   "live_by_client": {
+    "LND": 5705,
+    "CLN": 493,
+    "Eclair": 17,
+    "LDK": 7,
+    "Unknown": 7
+   }
+  },
+  "20231223": {
+   "nodes": 15757,
+   "with_channels": 8487,
+   "live": 6243,
+   "live_by_client": {
+    "LND": 5711,
+    "CLN": 503,
+    "Eclair": 18,
+    "LDK": 7,
+    "Unknown": 4
+   }
+  },
+  "20231225": {
+   "nodes": 15757,
+   "with_channels": 8485,
+   "live": 6197,
+   "live_by_client": {
+    "LND": 5663,
+    "CLN": 505,
+    "Eclair": 18,
+    "LDK": 7,
+    "Unknown": 4
+   }
+  },
+  "20231227": {
+   "nodes": 15768,
+   "with_channels": 8495,
+   "live": 6207,
+   "live_by_client": {
+    "LND": 5665,
+    "CLN": 513,
+    "Eclair": 18,
+    "LDK": 7,
+    "Unknown": 4
+   }
+  },
+  "20231228": {
+   "nodes": 15775,
+   "with_channels": 8504,
+   "live": 6197,
+   "live_by_client": {
+    "LND": 5660,
+    "CLN": 508,
+    "Eclair": 18,
+    "LDK": 7,
+    "Unknown": 4
+   }
+  },
+  "20231231": {
+   "nodes": 15786,
+   "with_channels": 8517,
+   "live": 6183,
+   "live_by_client": {
+    "LND": 5642,
+    "CLN": 513,
+    "Eclair": 18,
+    "LDK": 7,
+    "Unknown": 3
+   }
+  },
+  "20240102": {
+   "nodes": 15799,
+   "with_channels": 8530,
+   "live": 6202,
+   "live_by_client": {
+    "LND": 5672,
+    "CLN": 502,
+    "Eclair": 18,
+    "LDK": 7,
+    "Unknown": 3
+   }
+  },
+  "20240103": {
+   "nodes": 15832,
+   "with_channels": 8562,
+   "live": 6203,
+   "live_by_client": {
+    "LND": 5660,
+    "CLN": 514,
+    "Eclair": 18,
+    "LDK": 7,
+    "Unknown": 4
+   }
+  },
+  "20240104": {
+   "nodes": 15832,
+   "with_channels": 8563,
+   "live": 6234,
+   "live_by_client": {
+    "LND": 5685,
+    "CLN": 518,
+    "Eclair": 18,
+    "LDK": 8,
+    "Unknown": 5
+   }
+  },
+  "20240105": {
+   "nodes": 15842,
+   "with_channels": 8582,
+   "live": 6252,
+   "live_by_client": {
+    "LND": 5699,
+    "CLN": 525,
+    "Eclair": 16,
+    "LDK": 8,
+    "Unknown": 4
+   }
+  },
+  "20240106": {
+   "nodes": 15828,
+   "with_channels": 8568,
+   "live": 6251,
+   "live_by_client": {
+    "LND": 5698,
+    "CLN": 524,
+    "Eclair": 17,
+    "LDK": 8,
+    "Unknown": 4
+   }
+  },
+  "20240108": {
+   "nodes": 15829,
+   "with_channels": 8569,
+   "live": 6254,
+   "live_by_client": {
+    "LND": 5700,
+    "CLN": 524,
+    "Eclair": 18,
+    "LDK": 8,
+    "Unknown": 4
+   }
+  },
+  "20240109": {
+   "nodes": 15823,
+   "with_channels": 8563,
+   "live": 6248,
+   "live_by_client": {
+    "LND": 5693,
+    "CLN": 527,
+    "Eclair": 18,
+    "LDK": 7,
+    "Unknown": 3
+   }
+  },
+  "20240110": {
+   "nodes": 15830,
+   "with_channels": 8570,
+   "live": 6247,
+   "live_by_client": {
+    "LND": 5690,
+    "CLN": 530,
+    "Eclair": 18,
+    "LDK": 7,
+    "Unknown": 2
+   }
+  },
+  "20240111": {
+   "nodes": 15832,
+   "with_channels": 8573,
+   "live": 6266,
+   "live_by_client": {
+    "LND": 5705,
+    "CLN": 534,
+    "Eclair": 18,
+    "LDK": 7,
+    "Unknown": 2
+   }
+  },
+  "20240112": {
+   "nodes": 15831,
+   "with_channels": 8571,
+   "live": 6280,
+   "live_by_client": {
+    "LND": 5710,
+    "CLN": 543,
+    "Eclair": 18,
+    "LDK": 7,
+    "Unknown": 2
+   }
+  },
+  "20240113": {
+   "nodes": 15815,
+   "with_channels": 8552,
+   "live": 6254,
+   "live_by_client": {
+    "LND": 5694,
+    "CLN": 533,
+    "Eclair": 18,
+    "LDK": 7,
+    "Unknown": 2
+   }
+  },
+  "20240114": {
+   "nodes": 15821,
+   "with_channels": 8561,
+   "live": 6281,
+   "live_by_client": {
+    "LND": 5715,
+    "CLN": 539,
+    "Eclair": 18,
+    "LDK": 7,
+    "Unknown": 2
+   }
+  },
+  "20240115": {
+   "nodes": 15820,
+   "with_channels": 8560,
+   "live": 6272,
+   "live_by_client": {
+    "LND": 5711,
+    "CLN": 534,
+    "Eclair": 18,
+    "LDK": 7,
+    "Unknown": 2
+   }
+  },
+  "20240117": {
+   "nodes": 15837,
+   "with_channels": 8573,
+   "live": 6248,
+   "live_by_client": {
+    "LND": 5695,
+    "CLN": 526,
+    "Eclair": 18,
+    "LDK": 7,
+    "Unknown": 2
+   }
+  },
+  "20240118": {
+   "nodes": 15843,
+   "with_channels": 8580,
+   "live": 6236,
+   "live_by_client": {
+    "LND": 5677,
+    "CLN": 532,
+    "Eclair": 18,
+    "LDK": 7,
+    "Unknown": 2
+   }
+  },
+  "20240119": {
+   "nodes": 15846,
+   "with_channels": 8583,
+   "live": 6236,
+   "live_by_client": {
+    "LND": 5681,
+    "CLN": 528,
+    "Eclair": 18,
+    "LDK": 7,
+    "Unknown": 2
+   }
+  },
+  "20240122": {
+   "nodes": 15872,
+   "with_channels": 8602,
+   "live": 6225,
+   "live_by_client": {
+    "LND": 5679,
+    "CLN": 519,
+    "Eclair": 18,
+    "LDK": 7,
+    "Unknown": 2
+   }
+  },
+  "20240123": {
+   "nodes": 15875,
+   "with_channels": 8608,
+   "live": 6231,
+   "live_by_client": {
+    "LND": 5684,
+    "CLN": 518,
+    "Eclair": 18,
+    "LDK": 7,
+    "Unknown": 4
+   }
+  },
+  "20240124": {
+   "nodes": 15879,
+   "with_channels": 8609,
+   "live": 6229,
+   "live_by_client": {
+    "LND": 5678,
+    "CLN": 522,
+    "Eclair": 18,
+    "LDK": 8,
+    "Unknown": 3
+   }
+  },
+  "20240125": {
+   "nodes": 15873,
+   "with_channels": 8607,
+   "live": 6219,
+   "live_by_client": {
+    "LND": 5674,
+    "CLN": 517,
+    "Eclair": 17,
+    "LDK": 7,
+    "Unknown": 4
+   }
+  },
+  "20240126": {
+   "nodes": 15882,
+   "with_channels": 8616,
+   "live": 6234,
+   "live_by_client": {
+    "LND": 5687,
+    "CLN": 520,
+    "Eclair": 16,
+    "LDK": 7,
+    "Unknown": 4
+   }
+  },
+  "20240127": {
+   "nodes": 15891,
+   "with_channels": 8623,
+   "live": 6252,
+   "live_by_client": {
+    "LND": 5701,
+    "CLN": 524,
+    "Eclair": 16,
+    "LDK": 7,
+    "Unknown": 4
+   }
+  },
+  "20240129": {
+   "nodes": 15910,
+   "with_channels": 8641,
+   "live": 6233,
+   "live_by_client": {
+    "LND": 5686,
+    "CLN": 519,
+    "Eclair": 17,
+    "LDK": 7,
+    "Unknown": 4
+   }
+  },
+  "20240131": {
+   "nodes": 15909,
+   "with_channels": 8642,
+   "live": 6227,
+   "live_by_client": {
+    "LND": 5669,
+    "CLN": 525,
+    "Eclair": 21,
+    "LDK": 7,
+    "Unknown": 5
+   }
+  },
+  "20240201": {
+   "nodes": 15916,
+   "with_channels": 8645,
+   "live": 6223,
+   "live_by_client": {
+    "LND": 5669,
+    "CLN": 521,
+    "Eclair": 21,
+    "LDK": 7,
+    "Unknown": 5
+   }
+  },
+  "20240203": {
+   "nodes": 15913,
+   "with_channels": 8647,
+   "live": 6225,
+   "live_by_client": {
+    "LND": 5679,
+    "CLN": 515,
+    "Eclair": 21,
+    "LDK": 7,
+    "Unknown": 3
+   }
+  },
+  "20240204": {
+   "nodes": 15913,
+   "with_channels": 8647,
+   "live": 6234,
+   "live_by_client": {
+    "LND": 5689,
+    "CLN": 514,
+    "Eclair": 21,
+    "LDK": 7,
+    "Unknown": 3
+   }
+  },
+  "20240205": {
+   "nodes": 15910,
+   "with_channels": 8644,
+   "live": 6229,
+   "live_by_client": {
+    "LND": 5684,
+    "CLN": 514,
+    "Eclair": 21,
+    "LDK": 7,
+    "Unknown": 3
+   }
+  },
+  "20240207": {
+   "nodes": 15907,
+   "with_channels": 8641,
+   "live": 6214,
+   "live_by_client": {
+    "LND": 5671,
+    "CLN": 514,
+    "Eclair": 21,
+    "LDK": 6,
+    "Unknown": 2
+   }
+  },
+  "20240211": {
+   "nodes": 15907,
+   "with_channels": 8641,
+   "live": 6143,
+   "live_by_client": {
+    "LND": 5607,
+    "CLN": 507,
+    "Eclair": 21,
+    "LDK": 6,
+    "Unknown": 2
+   }
+  },
+  "20240212": {
+   "nodes": 15638,
+   "with_channels": 8376,
+   "live": 6197,
+   "live_by_client": {
+    "LND": 5644,
+    "CLN": 521,
+    "Eclair": 21,
+    "LDK": 6,
+    "Unknown": 5
+   }
+  },
+  "20240213": {
+   "nodes": 15620,
+   "with_channels": 8360,
+   "live": 6151,
+   "live_by_client": {
+    "LND": 5605,
+    "CLN": 518,
+    "Eclair": 17,
+    "LDK": 6,
+    "Unknown": 5
+   }
+  },
+  "20240214": {
+   "nodes": 15622,
+   "with_channels": 8363,
+   "live": 6044,
+   "live_by_client": {
+    "LND": 5504,
+    "CLN": 513,
+    "Eclair": 17,
+    "LDK": 6,
+    "Unknown": 4
+   }
+  },
+  "20240215": {
+   "nodes": 15606,
+   "with_channels": 8347,
+   "live": 6044,
+   "live_by_client": {
+    "LND": 5505,
+    "CLN": 511,
+    "Eclair": 17,
+    "LDK": 6,
+    "Unknown": 5
+   }
+  },
+  "20240219": {
+   "nodes": 15505,
+   "with_channels": 8245,
+   "live": 6092,
+   "live_by_client": {
+    "LND": 5554,
+    "CLN": 510,
+    "Eclair": 17,
+    "LDK": 6,
+    "Unknown": 5
+   }
+  },
+  "20240220": {
+   "nodes": 15497,
+   "with_channels": 8241,
+   "live": 6150,
+   "live_by_client": {
+    "LND": 5603,
+    "CLN": 518,
+    "Eclair": 16,
+    "Unknown": 7,
+    "LDK": 6
+   }
+  },
+  "20240222": {
+   "nodes": 15493,
+   "with_channels": 8237,
+   "live": 6147,
+   "live_by_client": {
+    "LND": 5606,
+    "CLN": 512,
+    "Eclair": 17,
+    "LDK": 6,
+    "Unknown": 6
+   }
+  },
+  "20240223": {
+   "nodes": 15493,
+   "with_channels": 8246,
+   "live": 6136,
+   "live_by_client": {
+    "LND": 5592,
+    "CLN": 515,
+    "Eclair": 17,
+    "LDK": 6,
+    "Unknown": 6
+   }
+  },
+  "20240224": {
+   "nodes": 15498,
+   "with_channels": 8247,
+   "live": 6111,
+   "live_by_client": {
+    "LND": 5569,
+    "CLN": 513,
+    "Eclair": 17,
+    "LDK": 6,
+    "Unknown": 6
+   }
+  },
+  "20240226": {
+   "nodes": 15453,
+   "with_channels": 8204,
+   "live": 6137,
+   "live_by_client": {
+    "LND": 5588,
+    "CLN": 521,
+    "Eclair": 17,
+    "LDK": 6,
+    "Unknown": 5
+   }
+  },
+  "20240227": {
+   "nodes": 15457,
+   "with_channels": 8210,
+   "live": 6151,
+   "live_by_client": {
+    "LND": 5604,
+    "CLN": 521,
+    "Eclair": 16,
+    "LDK": 6,
+    "Unknown": 4
+   }
+  },
+  "20240229": {
+   "nodes": 15465,
+   "with_channels": 8226,
+   "live": 6126,
+   "live_by_client": {
+    "LND": 5576,
+    "CLN": 521,
+    "Eclair": 16,
+    "Unknown": 7,
+    "LDK": 6
+   }
+  },
+  "20240304": {
+   "nodes": 15481,
+   "with_channels": 8243,
+   "live": 6138,
+   "live_by_client": {
+    "LND": 5583,
+    "CLN": 526,
+    "Eclair": 16,
+    "Unknown": 7,
+    "LDK": 6
+   }
+  },
+  "20240305": {
+   "nodes": 15480,
+   "with_channels": 8243,
+   "live": 6140,
+   "live_by_client": {
+    "LND": 5591,
+    "CLN": 519,
+    "Eclair": 16,
+    "Unknown": 8,
+    "LDK": 6
+   }
+  },
+  "20240306": {
+   "nodes": 15483,
+   "with_channels": 8238,
+   "live": 6134,
+   "live_by_client": {
+    "LND": 5583,
+    "CLN": 521,
+    "Eclair": 16,
+    "Unknown": 8,
+    "LDK": 6
+   }
+  },
+  "20240311": {
+   "nodes": 15441,
+   "with_channels": 8205,
+   "live": 6157,
+   "live_by_client": {
+    "LND": 5603,
+    "CLN": 525,
+    "Eclair": 15,
+    "Unknown": 8,
+    "LDK": 6
+   }
+  },
+  "20240312": {
+   "nodes": 15441,
+   "with_channels": 8196,
+   "live": 6140,
+   "live_by_client": {
+    "LND": 5582,
+    "CLN": 530,
+    "Eclair": 14,
+    "Unknown": 8,
+    "LDK": 6
+   }
+  },
+  "20240313": {
+   "nodes": 15409,
+   "with_channels": 8159,
+   "live": 6149,
+   "live_by_client": {
+    "LND": 5591,
+    "CLN": 531,
+    "Eclair": 15,
+    "LDK": 6,
+    "Unknown": 6
+   }
+  },
+  "20240315": {
+   "nodes": 15398,
+   "with_channels": 8151,
+   "live": 6135,
+   "live_by_client": {
+    "LND": 5582,
+    "CLN": 526,
+    "Eclair": 15,
+    "LDK": 6,
+    "Unknown": 6
+   }
+  },
+  "20240316": {
+   "nodes": 15396,
+   "with_channels": 8148,
+   "live": 6129,
+   "live_by_client": {
+    "LND": 5577,
+    "CLN": 525,
+    "Eclair": 15,
+    "LDK": 6,
+    "Unknown": 6
+   }
+  },
+  "20240317": {
+   "nodes": 15390,
+   "with_channels": 8142,
+   "live": 6124,
+   "live_by_client": {
+    "LND": 5573,
+    "CLN": 524,
+    "Eclair": 15,
+    "LDK": 6,
+    "Unknown": 6
+   }
+  },
+  "20240318": {
+   "nodes": 15390,
+   "with_channels": 8142,
+   "live": 6117,
+   "live_by_client": {
+    "LND": 5567,
+    "CLN": 523,
+    "Eclair": 15,
+    "LDK": 6,
+    "Unknown": 6
+   }
+  },
+  "20240319": {
+   "nodes": 15390,
+   "with_channels": 8142,
+   "live": 6105,
+   "live_by_client": {
+    "LND": 5556,
+    "CLN": 522,
+    "Eclair": 15,
+    "LDK": 6,
+    "Unknown": 6
+   }
+  },
+  "20240320": {
+   "nodes": 15390,
+   "with_channels": 8142,
+   "live": 6087,
+   "live_by_client": {
+    "LND": 5539,
+    "CLN": 521,
+    "Eclair": 15,
+    "LDK": 6,
+    "Unknown": 6
+   }
+  },
+  "20240321": {
+   "nodes": 15390,
+   "with_channels": 8142,
+   "live": 6074,
+   "live_by_client": {
+    "LND": 5526,
+    "CLN": 521,
+    "Eclair": 15,
+    "LDK": 6,
+    "Unknown": 6
+   }
+  },
+  "20240324": {
+   "nodes": 15324,
+   "with_channels": 8074,
+   "live": 6099,
+   "live_by_client": {
+    "LND": 5546,
+    "CLN": 526,
+    "Eclair": 16,
+    "LDK": 6,
+    "Unknown": 5
+   }
+  },
+  "20240325": {
+   "nodes": 15317,
+   "with_channels": 8068,
+   "live": 6008,
+   "live_by_client": {
+    "LND": 5451,
+    "CLN": 531,
+    "Eclair": 16,
+    "LDK": 6,
+    "Unknown": 4
+   }
+  },
+  "20240326": {
+   "nodes": 15313,
+   "with_channels": 8061,
+   "live": 5944,
+   "live_by_client": {
+    "LND": 5394,
+    "CLN": 525,
+    "Eclair": 16,
+    "LDK": 6,
+    "Unknown": 3
+   }
+  },
+  "20240327": {
+   "nodes": 15316,
+   "with_channels": 8068,
+   "live": 5964,
+   "live_by_client": {
+    "LND": 5409,
+    "CLN": 530,
+    "Eclair": 16,
+    "LDK": 6,
+    "Unknown": 3
+   }
+  },
+  "20240328": {
+   "nodes": 15316,
+   "with_channels": 8064,
+   "live": 5936,
+   "live_by_client": {
+    "LND": 5385,
+    "CLN": 525,
+    "Eclair": 17,
+    "LDK": 6,
+    "Unknown": 3
+   }
+  },
+  "20240329": {
+   "nodes": 15295,
+   "with_channels": 8040,
+   "live": 5932,
+   "live_by_client": {
+    "LND": 5381,
+    "CLN": 523,
+    "Eclair": 18,
+    "LDK": 6,
+    "Unknown": 4
+   }
+  },
+  "20240330": {
+   "nodes": 15299,
+   "with_channels": 8047,
+   "live": 5938,
+   "live_by_client": {
+    "LND": 5388,
+    "CLN": 521,
+    "Eclair": 18,
+    "LDK": 6,
+    "Unknown": 5
+   }
+  },
+  "20240331": {
+   "nodes": 15272,
+   "with_channels": 8025,
+   "live": 5951,
+   "live_by_client": {
+    "LND": 5398,
+    "CLN": 524,
+    "Eclair": 18,
+    "LDK": 6,
+    "Unknown": 5
+   }
+  },
+  "20240401": {
+   "nodes": 15249,
+   "with_channels": 8006,
+   "live": 6012,
+   "live_by_client": {
+    "LND": 5458,
+    "CLN": 525,
+    "Eclair": 18,
+    "LDK": 6,
+    "Unknown": 5
+   }
+  },
+  "20240402": {
+   "nodes": 15246,
+   "with_channels": 8001,
+   "live": 6020,
+   "live_by_client": {
+    "LND": 5465,
+    "CLN": 526,
+    "Eclair": 18,
+    "LDK": 6,
+    "Unknown": 5
+   }
+  },
+  "20240403": {
+   "nodes": 15252,
+   "with_channels": 8014,
+   "live": 6027,
+   "live_by_client": {
+    "LND": 5471,
+    "CLN": 527,
+    "Eclair": 18,
+    "LDK": 6,
+    "Unknown": 5
+   }
+  },
+  "20240404": {
+   "nodes": 15252,
+   "with_channels": 8014,
+   "live": 6021,
+   "live_by_client": {
+    "LND": 5472,
+    "CLN": 520,
+    "Eclair": 18,
+    "LDK": 6,
+    "Unknown": 5
+   }
+  },
+  "20240405": {
+   "nodes": 15250,
+   "with_channels": 8012,
+   "live": 6027,
+   "live_by_client": {
+    "LND": 5466,
+    "CLN": 531,
+    "Eclair": 17,
+    "Unknown": 7,
+    "LDK": 6
+   }
+  },
+  "20240406": {
+   "nodes": 15243,
+   "with_channels": 8005,
+   "live": 6040,
+   "live_by_client": {
+    "LND": 5477,
+    "CLN": 532,
+    "Eclair": 18,
+    "Unknown": 7,
+    "LDK": 6
+   }
+  },
+  "20240407": {
+   "nodes": 15241,
+   "with_channels": 8005,
+   "live": 6062,
+   "live_by_client": {
+    "LND": 5498,
+    "CLN": 533,
+    "Eclair": 18,
+    "Unknown": 7,
+    "LDK": 6
+   }
+  },
+  "20240408": {
+   "nodes": 15245,
+   "with_channels": 8011,
+   "live": 6043,
+   "live_by_client": {
+    "LND": 5492,
+    "CLN": 520,
+    "Eclair": 18,
+    "Unknown": 7,
+    "LDK": 6
+   }
+  },
+  "20240409": {
+   "nodes": 15251,
+   "with_channels": 8015,
+   "live": 6033,
+   "live_by_client": {
+    "LND": 5482,
+    "CLN": 521,
+    "Eclair": 18,
+    "LDK": 6,
+    "Unknown": 6
+   }
+  },
+  "20240410": {
+   "nodes": 15245,
+   "with_channels": 8005,
+   "live": 5970,
+   "live_by_client": {
+    "LND": 5419,
+    "CLN": 520,
+    "Eclair": 18,
+    "Unknown": 7,
+    "LDK": 6
+   }
+  },
+  "20240411": {
+   "nodes": 15248,
+   "with_channels": 8014,
+   "live": 5963,
+   "live_by_client": {
+    "LND": 5410,
+    "CLN": 521,
+    "Eclair": 18,
+    "Unknown": 8,
+    "LDK": 6
+   }
+  },
+  "20240412": {
+   "nodes": 15257,
+   "with_channels": 8025,
+   "live": 5966,
+   "live_by_client": {
+    "LND": 5415,
+    "CLN": 519,
+    "Eclair": 19,
+    "Unknown": 7,
+    "LDK": 6
+   }
+  },
+  "20240413": {
+   "nodes": 15251,
+   "with_channels": 8021,
+   "live": 5935,
+   "live_by_client": {
+    "LND": 5387,
+    "CLN": 515,
+    "Eclair": 19,
+    "Unknown": 8,
+    "LDK": 6
+   }
+  },
+  "20240414": {
+   "nodes": 15246,
+   "with_channels": 8013,
+   "live": 5944,
+   "live_by_client": {
+    "LND": 5391,
+    "CLN": 519,
+    "Eclair": 19,
+    "Unknown": 8,
+    "LDK": 7
+   }
+  },
+  "20240415": {
+   "nodes": 15244,
+   "with_channels": 8011,
+   "live": 5934,
+   "live_by_client": {
+    "LND": 5388,
+    "CLN": 515,
+    "Eclair": 18,
+    "LDK": 7,
+    "Unknown": 6
+   }
+  },
+  "20240416": {
+   "nodes": 15246,
+   "with_channels": 8017,
+   "live": 5954,
+   "live_by_client": {
+    "LND": 5407,
+    "CLN": 516,
+    "Eclair": 18,
+    "LDK": 7,
+    "Unknown": 6
+   }
+  },
+  "20240417": {
+   "nodes": 15252,
+   "with_channels": 8013,
+   "live": 5926,
+   "live_by_client": {
+    "LND": 5382,
+    "CLN": 512,
+    "Eclair": 19,
+    "LDK": 7,
+    "Unknown": 6
+   }
+  },
+  "20240418": {
+   "nodes": 15260,
+   "with_channels": 8026,
+   "live": 5934,
+   "live_by_client": {
+    "LND": 5390,
+    "CLN": 512,
+    "Eclair": 19,
+    "LDK": 7,
+    "Unknown": 6
+   }
+  },
+  "20240419": {
+   "nodes": 15266,
+   "with_channels": 8029,
+   "live": 5948,
+   "live_by_client": {
+    "LND": 5404,
+    "CLN": 512,
+    "Eclair": 19,
+    "LDK": 7,
+    "Unknown": 6
+   }
+  },
+  "20240420": {
+   "nodes": 15267,
+   "with_channels": 8034,
+   "live": 5946,
+   "live_by_client": {
+    "LND": 5396,
+    "CLN": 516,
+    "Eclair": 19,
+    "Unknown": 8,
+    "LDK": 7
+   }
+  },
+  "20240422": {
+   "nodes": 15263,
+   "with_channels": 8032,
+   "live": 5948,
+   "live_by_client": {
+    "LND": 5403,
+    "CLN": 511,
+    "Eclair": 19,
+    "Unknown": 9,
+    "LDK": 6
+   }
+  },
+  "20240423": {
+   "nodes": 15257,
+   "with_channels": 8026,
+   "live": 5946,
+   "live_by_client": {
+    "LND": 5401,
+    "CLN": 511,
+    "Eclair": 19,
+    "Unknown": 9,
+    "LDK": 6
+   }
+  },
+  "20240424": {
+   "nodes": 15257,
+   "with_channels": 8026,
+   "live": 5941,
+   "live_by_client": {
+    "LND": 5396,
+    "CLN": 511,
+    "Eclair": 19,
+    "Unknown": 9,
+    "LDK": 6
+   }
+  },
+  "20240425": {
+   "nodes": 15257,
+   "with_channels": 8026,
+   "live": 5928,
+   "live_by_client": {
+    "LND": 5385,
+    "CLN": 509,
+    "Eclair": 19,
+    "Unknown": 9,
+    "LDK": 6
+   }
+  },
+  "20240426": {
+   "nodes": 15257,
+   "with_channels": 8026,
+   "live": 5907,
+   "live_by_client": {
+    "LND": 5366,
+    "CLN": 508,
+    "Eclair": 18,
+    "Unknown": 9,
+    "LDK": 6
+   }
+  },
+  "20240427": {
+   "nodes": 15257,
+   "with_channels": 8026,
+   "live": 5886,
+   "live_by_client": {
+    "LND": 5346,
+    "CLN": 507,
+    "Eclair": 18,
+    "Unknown": 9,
+    "LDK": 6
+   }
+  },
+  "20240701": {
+   "nodes": 21907,
+   "with_channels": 13106,
+   "live": 7200,
+   "live_by_client": {
+    "LND": 6535,
+    "CLN": 597,
+    "Unknown": 35,
+    "Eclair": 18,
+    "LDK": 15
+   }
+  },
+  "20240702": {
+   "nodes": 21905,
+   "with_channels": 13106,
+   "live": 7157,
+   "live_by_client": {
+    "LND": 6492,
+    "CLN": 595,
+    "Unknown": 38,
+    "Eclair": 18,
+    "LDK": 14
+   }
+  },
+  "20240703": {
+   "nodes": 21907,
+   "with_channels": 13105,
+   "live": 7164,
+   "live_by_client": {
+    "LND": 6494,
+    "CLN": 600,
+    "Unknown": 37,
+    "Eclair": 18,
+    "LDK": 15
+   }
+  },
+  "20240704": {
+   "nodes": 21895,
+   "with_channels": 13097,
+   "live": 7175,
+   "live_by_client": {
+    "LND": 6503,
+    "CLN": 602,
+    "Unknown": 38,
+    "Eclair": 18,
+    "LDK": 14
+   }
+  },
+  "20240705": {
+   "nodes": 21890,
+   "with_channels": 13107,
+   "live": 7142,
+   "live_by_client": {
+    "LND": 6467,
+    "CLN": 603,
+    "Unknown": 41,
+    "Eclair": 17,
+    "LDK": 14
+   }
+  },
+  "20240706": {
+   "nodes": 21881,
+   "with_channels": 13101,
+   "live": 7129,
+   "live_by_client": {
+    "LND": 6455,
+    "CLN": 600,
+    "Unknown": 43,
+    "Eclair": 17,
+    "LDK": 14
+   }
+  },
+  "20240707": {
+   "nodes": 21885,
+   "with_channels": 13095,
+   "live": 7124,
+   "live_by_client": {
+    "LND": 6451,
+    "CLN": 600,
+    "Unknown": 41,
+    "Eclair": 18,
+    "LDK": 14
+   }
+  },
+  "20240708": {
+   "nodes": 21857,
+   "with_channels": 13066,
+   "live": 7158,
+   "live_by_client": {
+    "LND": 6476,
+    "CLN": 602,
+    "Unknown": 47,
+    "Eclair": 18,
+    "LDK": 15
+   }
+  },
+  "20240709": {
+   "nodes": 21855,
+   "with_channels": 13063,
+   "live": 7117,
+   "live_by_client": {
+    "LND": 6433,
+    "CLN": 603,
+    "Unknown": 47,
+    "Eclair": 19,
+    "LDK": 15
+   }
+  },
+  "20240710": {
+   "nodes": 21850,
+   "with_channels": 13054,
+   "live": 7125,
+   "live_by_client": {
+    "LND": 6441,
+    "CLN": 601,
+    "Unknown": 49,
+    "Eclair": 19,
+    "LDK": 15
+   }
+  },
+  "20240711": {
+   "nodes": 21849,
+   "with_channels": 13050,
+   "live": 7113,
+   "live_by_client": {
+    "LND": 6428,
+    "CLN": 601,
+    "Unknown": 49,
+    "Eclair": 20,
+    "LDK": 15
+   }
+  },
+  "20240712": {
+   "nodes": 21839,
+   "with_channels": 13051,
+   "live": 7107,
+   "live_by_client": {
+    "LND": 6418,
+    "CLN": 604,
+    "Unknown": 48,
+    "Eclair": 21,
+    "LDK": 16
+   }
+  },
+  "20240713": {
+   "nodes": 21841,
+   "with_channels": 13053,
+   "live": 7072,
+   "live_by_client": {
+    "LND": 6380,
+    "CLN": 607,
+    "Unknown": 48,
+    "Eclair": 21,
+    "LDK": 16
+   }
+  },
+  "20240714": {
+   "nodes": 21837,
+   "with_channels": 13050,
+   "live": 7060,
+   "live_by_client": {
+    "LND": 6375,
+    "CLN": 600,
+    "Unknown": 47,
+    "Eclair": 21,
+    "LDK": 17
+   }
+  },
+  "20240715": {
+   "nodes": 21811,
+   "with_channels": 13044,
+   "live": 7035,
+   "live_by_client": {
+    "LND": 6353,
+    "CLN": 597,
+    "Unknown": 48,
+    "Eclair": 21,
+    "LDK": 16
+   }
+  },
+  "20240716": {
+   "nodes": 21812,
+   "with_channels": 13048,
+   "live": 7043,
+   "live_by_client": {
+    "LND": 6364,
+    "CLN": 599,
+    "Unknown": 41,
+    "Eclair": 21,
+    "LDK": 18
+   }
+  },
+  "20240717": {
+   "nodes": 21812,
+   "with_channels": 13046,
+   "live": 7011,
+   "live_by_client": {
+    "LND": 6329,
+    "CLN": 603,
+    "Unknown": 40,
+    "Eclair": 21,
+    "LDK": 18
+   }
+  },
+  "20240718": {
+   "nodes": 21813,
+   "with_channels": 13039,
+   "live": 7005,
+   "live_by_client": {
+    "LND": 6327,
+    "CLN": 598,
+    "Unknown": 41,
+    "Eclair": 21,
+    "LDK": 18
+   }
+  },
+  "20240719": {
+   "nodes": 21736,
+   "with_channels": 12969,
+   "live": 6948,
+   "live_by_client": {
+    "LND": 6282,
+    "CLN": 589,
+    "Unknown": 37,
+    "Eclair": 22,
+    "LDK": 18
+   }
+  },
+  "20240720": {
+   "nodes": 21803,
+   "with_channels": 13034,
+   "live": 7013,
+   "live_by_client": {
+    "LND": 6341,
+    "CLN": 593,
+    "Unknown": 40,
+    "Eclair": 21,
+    "LDK": 18
+   }
+  },
+  "20240721": {
+   "nodes": 21794,
+   "with_channels": 13005,
+   "live": 7007,
+   "live_by_client": {
+    "LND": 6330,
+    "CLN": 595,
+    "Unknown": 41,
+    "Eclair": 22,
+    "LDK": 19
+   }
+  },
+  "20240722": {
+   "nodes": 21803,
+   "with_channels": 13006,
+   "live": 6996,
+   "live_by_client": {
+    "LND": 6321,
+    "CLN": 598,
+    "Unknown": 38,
+    "Eclair": 21,
+    "LDK": 18
+   }
+  },
+  "20240723": {
+   "nodes": 21794,
+   "with_channels": 12991,
+   "live": 6968,
+   "live_by_client": {
+    "LND": 6300,
+    "CLN": 591,
+    "Unknown": 38,
+    "Eclair": 21,
+    "LDK": 18
+   }
+  },
+  "20240807": {
+   "nodes": 19050,
+   "with_channels": 9787,
+   "live": 5144,
+   "live_by_client": {
+    "LND": 4710,
+    "CLN": 376,
+    "Unknown": 26,
+    "Eclair": 19,
+    "LDK": 13
+   }
+  },
+  "20240808": {
+   "nodes": 20167,
+   "with_channels": 11129,
+   "live": 5775,
+   "live_by_client": {
+    "LND": 5272,
+    "CLN": 442,
+    "Unknown": 29,
+    "Eclair": 20,
+    "LDK": 12
+   }
+  },
+  "20240809": {
+   "nodes": 21000,
+   "with_channels": 12072,
+   "live": 6405,
+   "live_by_client": {
+    "LND": 5808,
+    "CLN": 531,
+    "Unknown": 33,
+    "Eclair": 20,
+    "LDK": 13
+   }
+  },
+  "20240810": {
+   "nodes": 21643,
+   "with_channels": 12740,
+   "live": 6885,
+   "live_by_client": {
+    "LND": 6210,
+    "CLN": 599,
+    "Unknown": 35,
+    "LDK": 22,
+    "Eclair": 19
+   }
+  },
+  "20240811": {
+   "nodes": 21646,
+   "with_channels": 12742,
+   "live": 6893,
+   "live_by_client": {
+    "LND": 6210,
+    "CLN": 605,
+    "Unknown": 35,
+    "LDK": 23,
+    "Eclair": 20
+   }
+  },
+  "20240826": {
+   "nodes": 21648,
+   "with_channels": 12708,
+   "live": 6802,
+   "live_by_client": {
+    "LND": 6121,
+    "CLN": 592,
+    "Unknown": 46,
+    "LDK": 22,
+    "Eclair": 21
+   }
+  },
+  "20240827": {
+   "nodes": 21642,
+   "with_channels": 12694,
+   "live": 6760,
+   "live_by_client": {
+    "LND": 6092,
+    "CLN": 581,
+    "Unknown": 43,
+    "LDK": 23,
+    "Eclair": 21
+   }
+  },
+  "20240828": {
+   "nodes": 21646,
+   "with_channels": 12698,
+   "live": 6826,
+   "live_by_client": {
+    "LND": 6144,
+    "CLN": 593,
+    "Unknown": 44,
+    "LDK": 24,
+    "Eclair": 21
+   }
+  },
+  "20240829": {
+   "nodes": 21631,
+   "with_channels": 12675,
+   "live": 6800,
+   "live_by_client": {
+    "LND": 6121,
+    "CLN": 593,
+    "Unknown": 40,
+    "LDK": 25,
+    "Eclair": 21
+   }
+  },
+  "20240830": {
+   "nodes": 21626,
+   "with_channels": 12669,
+   "live": 6814,
+   "live_by_client": {
+    "LND": 6139,
+    "CLN": 589,
+    "Unknown": 40,
+    "LDK": 25,
+    "Eclair": 21
+   }
+  },
+  "20240831": {
+   "nodes": 21647,
+   "with_channels": 12693,
+   "live": 6800,
+   "live_by_client": {
+    "LND": 6124,
+    "CLN": 590,
+    "Unknown": 39,
+    "LDK": 25,
+    "Eclair": 22
+   }
+  },
+  "20240901": {
+   "nodes": 21649,
+   "with_channels": 12712,
+   "live": 6798,
+   "live_by_client": {
+    "LND": 6122,
+    "CLN": 590,
+    "Unknown": 39,
+    "LDK": 25,
+    "Eclair": 22
+   }
+  },
+  "20240902": {
+   "nodes": 21650,
+   "with_channels": 12717,
+   "live": 6826,
+   "live_by_client": {
+    "LND": 6153,
+    "CLN": 594,
+    "Unknown": 33,
+    "LDK": 24,
+    "Eclair": 22
+   }
+  },
+  "20240903": {
+   "nodes": 21654,
+   "with_channels": 12717,
+   "live": 6824,
+   "live_by_client": {
+    "LND": 6155,
+    "CLN": 588,
+    "Unknown": 34,
+    "LDK": 25,
+    "Eclair": 22
+   }
+  },
+  "20240904": {
+   "nodes": 21662,
+   "with_channels": 12715,
+   "live": 6809,
+   "live_by_client": {
+    "LND": 6131,
+    "CLN": 597,
+    "Unknown": 32,
+    "LDK": 27,
+    "Eclair": 22
+   }
+  },
+  "20240905": {
+   "nodes": 21655,
+   "with_channels": 12715,
+   "live": 6797,
+   "live_by_client": {
+    "LND": 6123,
+    "CLN": 593,
+    "Unknown": 33,
+    "LDK": 26,
+    "Eclair": 22
+   }
+  },
+  "20240906": {
+   "nodes": 21394,
+   "with_channels": 12394,
+   "live": 6756,
+   "live_by_client": {
+    "LND": 6082,
+    "CLN": 593,
+    "Unknown": 31,
+    "LDK": 28,
+    "Eclair": 22
+   }
+  },
+  "20240907": {
+   "nodes": 21380,
+   "with_channels": 12368,
+   "live": 6727,
+   "live_by_client": {
+    "LND": 6058,
+    "CLN": 584,
+    "Unknown": 34,
+    "LDK": 29,
+    "Eclair": 22
+   }
+  },
+  "20240908": {
+   "nodes": 21219,
+   "with_channels": 12279,
+   "live": 6708,
+   "live_by_client": {
+    "LND": 6041,
+    "CLN": 583,
+    "Unknown": 33,
+    "LDK": 29,
+    "Eclair": 22
+   }
+  },
+  "20240909": {
+   "nodes": 21447,
+   "with_channels": 12301,
+   "live": 6709,
+   "live_by_client": {
+    "LND": 6038,
+    "CLN": 582,
+    "Unknown": 38,
+    "LDK": 29,
+    "Eclair": 22
+   }
+  },
+  "20240910": {
+   "nodes": 21453,
+   "with_channels": 12299,
+   "live": 6728,
+   "live_by_client": {
+    "LND": 6043,
+    "CLN": 594,
+    "Unknown": 39,
+    "LDK": 30,
+    "Eclair": 22
+   }
+  },
+  "20240911": {
+   "nodes": 21449,
+   "with_channels": 12302,
+   "live": 6672,
+   "live_by_client": {
+    "LND": 5995,
+    "CLN": 586,
+    "Unknown": 40,
+    "LDK": 29,
+    "Eclair": 22
+   }
+  },
+  "20240912": {
+   "nodes": 21449,
+   "with_channels": 12287,
+   "live": 6637,
+   "live_by_client": {
+    "LND": 5956,
+    "CLN": 589,
+    "Unknown": 41,
+    "LDK": 29,
+    "Eclair": 22
+   }
+  },
+  "20240914": {
+   "nodes": 21454,
+   "with_channels": 12274,
+   "live": 6656,
+   "live_by_client": {
+    "LND": 5973,
+    "CLN": 589,
+    "Unknown": 43,
+    "LDK": 29,
+    "Eclair": 22
+   }
+  },
+  "20240915": {
+   "nodes": 21439,
+   "with_channels": 12259,
+   "live": 6610,
+   "live_by_client": {
+    "LND": 5941,
+    "CLN": 576,
+    "Unknown": 42,
+    "LDK": 29,
+    "Eclair": 22
+   }
+  },
+  "20240916": {
+   "nodes": 21432,
+   "with_channels": 12257,
+   "live": 6598,
+   "live_by_client": {
+    "LND": 5939,
+    "CLN": 571,
+    "Unknown": 40,
+    "LDK": 29,
+    "Eclair": 19
+   }
+  },
+  "20240917": {
+   "nodes": 21435,
+   "with_channels": 12263,
+   "live": 6597,
+   "live_by_client": {
+    "LND": 5928,
+    "CLN": 583,
+    "Unknown": 39,
+    "LDK": 28,
+    "Eclair": 19
+   }
+  },
+  "20240918": {
+   "nodes": 21412,
+   "with_channels": 12231,
+   "live": 6592,
+   "live_by_client": {
+    "LND": 5927,
+    "CLN": 580,
+    "Unknown": 38,
+    "LDK": 28,
+    "Eclair": 19
+   }
+  },
+  "20240919": {
+   "nodes": 21447,
+   "with_channels": 12262,
+   "live": 6602,
+   "live_by_client": {
+    "LND": 5936,
+    "CLN": 575,
+    "Unknown": 42,
+    "LDK": 30,
+    "Eclair": 19
+   }
+  },
+  "20240920": {
+   "nodes": 21439,
+   "with_channels": 12264,
+   "live": 6616,
+   "live_by_client": {
+    "LND": 5938,
+    "CLN": 582,
+    "Unknown": 47,
+    "LDK": 30,
+    "Eclair": 19
+   }
+  },
+  "20240921": {
+   "nodes": 21438,
+   "with_channels": 12269,
+   "live": 6628,
+   "live_by_client": {
+    "LND": 5951,
+    "CLN": 581,
+    "Unknown": 46,
+    "LDK": 31,
+    "Eclair": 19
+   }
+  },
+  "20240922": {
+   "nodes": 21426,
+   "with_channels": 12260,
+   "live": 6643,
+   "live_by_client": {
+    "LND": 5962,
+    "CLN": 584,
+    "Unknown": 48,
+    "LDK": 30,
+    "Eclair": 19
+   }
+  },
+  "20240923": {
+   "nodes": 21420,
+   "with_channels": 12256,
+   "live": 6646,
+   "live_by_client": {
+    "LND": 5965,
+    "CLN": 585,
+    "Unknown": 47,
+    "LDK": 31,
+    "Eclair": 18
+   }
+  },
+  "20240924": {
+   "nodes": 21408,
+   "with_channels": 12299,
+   "live": 6663,
+   "live_by_client": {
+    "LND": 5980,
+    "CLN": 587,
+    "Unknown": 47,
+    "LDK": 31,
+    "Eclair": 18
+   }
+  },
+  "20240925": {
+   "nodes": 21385,
+   "with_channels": 12247,
+   "live": 6636,
+   "live_by_client": {
+    "LND": 5956,
+    "CLN": 582,
+    "Unknown": 49,
+    "LDK": 31,
+    "Eclair": 18
+   }
+  },
+  "20240926": {
+   "nodes": 21393,
+   "with_channels": 12252,
+   "live": 6649,
+   "live_by_client": {
+    "LND": 5967,
+    "CLN": 580,
+    "Unknown": 53,
+    "LDK": 31,
+    "Eclair": 18
+   }
+  },
+  "20240927": {
+   "nodes": 21406,
+   "with_channels": 12267,
+   "live": 6673,
+   "live_by_client": {
+    "LND": 5991,
+    "CLN": 582,
+    "Unknown": 51,
+    "LDK": 31,
+    "Eclair": 18
+   }
+  },
+  "20240928": {
+   "nodes": 21409,
+   "with_channels": 12263,
+   "live": 6653,
+   "live_by_client": {
+    "LND": 5968,
+    "CLN": 585,
+    "Unknown": 51,
+    "LDK": 31,
+    "Eclair": 18
+   }
+  },
+  "20240929": {
+   "nodes": 21419,
+   "with_channels": 12275,
+   "live": 6652,
+   "live_by_client": {
+    "LND": 5970,
+    "CLN": 583,
+    "Unknown": 52,
+    "LDK": 30,
+    "Eclair": 17
+   }
+  },
+  "20240930": {
+   "nodes": 21423,
+   "with_channels": 12265,
+   "live": 6662,
+   "live_by_client": {
+    "LND": 5980,
+    "CLN": 583,
+    "Unknown": 52,
+    "LDK": 30,
+    "Eclair": 17
+   }
+  },
+  "20241001": {
+   "nodes": 21431,
+   "with_channels": 12278,
+   "live": 6672,
+   "live_by_client": {
+    "LND": 5982,
+    "CLN": 586,
+    "Unknown": 58,
+    "LDK": 29,
+    "Eclair": 17
+   }
+  },
+  "20241002": {
+   "nodes": 21442,
+   "with_channels": 12295,
+   "live": 6656,
+   "live_by_client": {
+    "LND": 5965,
+    "CLN": 583,
+    "Unknown": 60,
+    "LDK": 31,
+    "Eclair": 17
+   }
+  },
+  "20241003": {
+   "nodes": 21441,
+   "with_channels": 12281,
+   "live": 6625,
+   "live_by_client": {
+    "LND": 5941,
+    "CLN": 578,
+    "Unknown": 57,
+    "LDK": 32,
+    "Eclair": 17
+   }
+  },
+  "20241004": {
+   "nodes": 21423,
+   "with_channels": 12256,
+   "live": 6607,
+   "live_by_client": {
+    "LND": 5925,
+    "CLN": 579,
+    "Unknown": 56,
+    "LDK": 31,
+    "Eclair": 16
+   }
+  },
+  "20241005": {
+   "nodes": 21412,
+   "with_channels": 12246,
+   "live": 6617,
+   "live_by_client": {
+    "LND": 5938,
+    "CLN": 580,
+    "Unknown": 54,
+    "LDK": 29,
+    "Eclair": 16
+   }
+  },
+  "20241006": {
+   "nodes": 21410,
+   "with_channels": 12270,
+   "live": 6675,
+   "live_by_client": {
+    "LND": 5983,
+    "CLN": 587,
+    "Unknown": 59,
+    "LDK": 30,
+    "Eclair": 16
+   }
+  },
+  "20241007": {
+   "nodes": 21414,
+   "with_channels": 12275,
+   "live": 6688,
+   "live_by_client": {
+    "LND": 5995,
+    "CLN": 591,
+    "Unknown": 55,
+    "LDK": 31,
+    "Eclair": 16
+   }
+  },
+  "20241008": {
+   "nodes": 21413,
+   "with_channels": 12280,
+   "live": 6672,
+   "live_by_client": {
+    "LND": 5980,
+    "CLN": 597,
+    "Unknown": 53,
+    "LDK": 26,
+    "Eclair": 16
+   }
+  },
+  "20241009": {
+   "nodes": 21403,
+   "with_channels": 12270,
+   "live": 6664,
+   "live_by_client": {
+    "LND": 5976,
+    "CLN": 593,
+    "Unknown": 51,
+    "LDK": 27,
+    "Eclair": 17
+   }
+  },
+  "20241010": {
+   "nodes": 21400,
+   "with_channels": 12267,
+   "live": 6671,
+   "live_by_client": {
+    "LND": 5978,
+    "CLN": 600,
+    "Unknown": 49,
+    "LDK": 27,
+    "Eclair": 17
+   }
+  },
+  "20241011": {
+   "nodes": 21395,
+   "with_channels": 12260,
+   "live": 6644,
+   "live_by_client": {
+    "LND": 5960,
+    "CLN": 590,
+    "Unknown": 50,
+    "LDK": 27,
+    "Eclair": 17
+   }
+  },
+  "20241013": {
+   "nodes": 21408,
+   "with_channels": 12269,
+   "live": 6666,
+   "live_by_client": {
+    "LND": 5994,
+    "CLN": 581,
+    "Unknown": 47,
+    "LDK": 27,
+    "Eclair": 17
+   }
+  },
+  "20241014": {
+   "nodes": 21402,
+   "with_channels": 12280,
+   "live": 6697,
+   "live_by_client": {
+    "LND": 6012,
+    "CLN": 591,
+    "Unknown": 50,
+    "LDK": 28,
+    "Eclair": 16
+   }
+  },
+  "20241015": {
+   "nodes": 21400,
+   "with_channels": 12286,
+   "live": 6727,
+   "live_by_client": {
+    "LND": 6030,
+    "CLN": 599,
+    "Unknown": 51,
+    "LDK": 29,
+    "Eclair": 18
+   }
+  },
+  "20241016": {
+   "nodes": 21400,
+   "with_channels": 12284,
+   "live": 6648,
+   "live_by_client": {
+    "LND": 5957,
+    "CLN": 587,
+    "Unknown": 56,
+    "LDK": 30,
+    "Eclair": 18
+   }
+  },
+  "20241017": {
+   "nodes": 21394,
+   "with_channels": 12282,
+   "live": 6656,
+   "live_by_client": {
+    "LND": 5960,
+    "CLN": 590,
+    "Unknown": 58,
+    "LDK": 30,
+    "Eclair": 18
+   }
+  },
+  "20241018": {
+   "nodes": 21406,
+   "with_channels": 12285,
+   "live": 6690,
+   "live_by_client": {
+    "LND": 5985,
+    "CLN": 596,
+    "Unknown": 61,
+    "LDK": 30,
+    "Eclair": 18
+   }
+  },
+  "20241019": {
+   "nodes": 21398,
+   "with_channels": 12273,
+   "live": 6668,
+   "live_by_client": {
+    "LND": 5960,
+    "CLN": 597,
+    "Unknown": 63,
+    "LDK": 30,
+    "Eclair": 18
+   }
+  },
+  "20241020": {
+   "nodes": 21400,
+   "with_channels": 12272,
+   "live": 6706,
+   "live_by_client": {
+    "LND": 5995,
+    "CLN": 601,
+    "Unknown": 62,
+    "LDK": 31,
+    "Eclair": 17
+   }
+  },
+  "20241021": {
+   "nodes": 21397,
+   "with_channels": 12520,
+   "live": 6756,
+   "live_by_client": {
+    "LND": 6046,
+    "CLN": 600,
+    "Unknown": 62,
+    "LDK": 31,
+    "Eclair": 17
+   }
+  },
+  "20241022": {
+   "nodes": 21399,
+   "with_channels": 12519,
+   "live": 6744,
+   "live_by_client": {
+    "LND": 6033,
+    "CLN": 601,
+    "Unknown": 61,
+    "LDK": 32,
+    "Eclair": 17
+   }
+  },
+  "20241023": {
+   "nodes": 21399,
+   "with_channels": 12526,
+   "live": 6729,
+   "live_by_client": {
+    "LND": 6009,
+    "CLN": 608,
+    "Unknown": 63,
+    "LDK": 32,
+    "Eclair": 17
+   }
+  },
+  "20241024": {
+   "nodes": 20967,
+   "with_channels": 12049,
+   "live": 6718,
+   "live_by_client": {
+    "LND": 6001,
+    "CLN": 605,
+    "Unknown": 62,
+    "LDK": 32,
+    "Eclair": 18
+   }
+  },
+  "20241025": {
+   "nodes": 20952,
+   "with_channels": 12029,
+   "live": 6684,
+   "live_by_client": {
+    "LND": 5984,
+    "CLN": 589,
+    "Unknown": 62,
+    "LDK": 31,
+    "Eclair": 18
+   }
+  },
+  "20241026": {
+   "nodes": 20946,
+   "with_channels": 12016,
+   "live": 6707,
+   "live_by_client": {
+    "LND": 6006,
+    "CLN": 592,
+    "Unknown": 60,
+    "LDK": 31,
+    "Eclair": 18
+   }
+  },
+  "20241027": {
+   "nodes": 20931,
+   "with_channels": 11997,
+   "live": 6709,
+   "live_by_client": {
+    "LND": 5999,
+    "CLN": 598,
+    "Unknown": 63,
+    "LDK": 31,
+    "Eclair": 18
+   }
+  },
+  "20241028": {
+   "nodes": 20931,
+   "with_channels": 12014,
+   "live": 6672,
+   "live_by_client": {
+    "LND": 5964,
+    "CLN": 597,
+    "Unknown": 62,
+    "LDK": 31,
+    "Eclair": 18
+   }
+  },
+  "20241029": {
+   "nodes": 20938,
+   "with_channels": 12016,
+   "live": 6653,
+   "live_by_client": {
+    "LND": 5937,
+    "CLN": 602,
+    "Unknown": 63,
+    "LDK": 33,
+    "Eclair": 18
+   }
+  },
+  "20241030": {
+   "nodes": 20931,
+   "with_channels": 12010,
+   "live": 6639,
+   "live_by_client": {
+    "LND": 5930,
+    "CLN": 595,
+    "Unknown": 63,
+    "LDK": 33,
+    "Eclair": 18
+   }
+  },
+  "20241031": {
+   "nodes": 20862,
+   "with_channels": 11934,
+   "live": 6595,
+   "live_by_client": {
+    "LND": 5879,
+    "CLN": 601,
+    "Unknown": 64,
+    "LDK": 33,
+    "Eclair": 18
+   }
+  },
+  "20241101": {
+   "nodes": 20865,
+   "with_channels": 11938,
+   "live": 6619,
+   "live_by_client": {
+    "LND": 5899,
+    "CLN": 602,
+    "Unknown": 67,
+    "LDK": 33,
+    "Eclair": 18
+   }
+  },
+  "20241102": {
+   "nodes": 20862,
+   "with_channels": 12028,
+   "live": 6647,
+   "live_by_client": {
+    "LND": 5918,
+    "CLN": 603,
+    "Unknown": 76,
+    "LDK": 33,
+    "Eclair": 17
+   }
+  },
+  "20241103": {
+   "nodes": 20862,
+   "with_channels": 12024,
+   "live": 6635,
+   "live_by_client": {
+    "LND": 5917,
+    "CLN": 599,
+    "Unknown": 69,
+    "LDK": 33,
+    "Eclair": 17
+   }
+  },
+  "20241105": {
+   "nodes": 20847,
+   "with_channels": 12019,
+   "live": 6658,
+   "live_by_client": {
+    "LND": 5937,
+    "CLN": 604,
+    "Unknown": 66,
+    "LDK": 34,
+    "Eclair": 17
+   }
+  },
+  "20241106": {
+   "nodes": 20811,
+   "with_channels": 11987,
+   "live": 6607,
+   "live_by_client": {
+    "LND": 5900,
+    "CLN": 604,
+    "Unknown": 58,
+    "LDK": 29,
+    "Eclair": 16
+   }
+  },
+  "20241107": {
+   "nodes": 20703,
+   "with_channels": 11866,
+   "live": 6528,
+   "live_by_client": {
+    "LND": 5815,
+    "CLN": 603,
+    "Unknown": 63,
+    "LDK": 31,
+    "Eclair": 16
+   }
+  },
+  "20241108": {
+   "nodes": 20680,
+   "with_channels": 11848,
+   "live": 6529,
+   "live_by_client": {
+    "LND": 5812,
+    "CLN": 607,
+    "Unknown": 61,
+    "LDK": 32,
+    "Eclair": 17
+   }
+  },
+  "20241109": {
+   "nodes": 20688,
+   "with_channels": 11855,
+   "live": 6564,
+   "live_by_client": {
+    "LND": 5844,
+    "CLN": 605,
+    "Unknown": 66,
+    "LDK": 32,
+    "Eclair": 17
+   }
+  },
+  "20241110": {
+   "nodes": 20673,
+   "with_channels": 11863,
+   "live": 6518,
+   "live_by_client": {
+    "LND": 5794,
+    "CLN": 600,
+    "Unknown": 75,
+    "LDK": 32,
+    "Eclair": 17
+   }
+  },
+  "20241111": {
+   "nodes": 20661,
+   "with_channels": 11831,
+   "live": 6565,
+   "live_by_client": {
+    "LND": 5832,
+    "CLN": 604,
+    "Unknown": 80,
+    "LDK": 31,
+    "Eclair": 18
+   }
+  },
+  "20241112": {
+   "nodes": 20598,
+   "with_channels": 11773,
+   "live": 6487,
+   "live_by_client": {
+    "LND": 5757,
+    "CLN": 598,
+    "Unknown": 80,
+    "LDK": 34,
+    "Eclair": 18
+   }
+  },
+  "20241113": {
+   "nodes": 20625,
+   "with_channels": 11772,
+   "live": 6478,
+   "live_by_client": {
+    "LND": 5756,
+    "CLN": 589,
+    "Unknown": 80,
+    "LDK": 35,
+    "Eclair": 18
+   }
+  },
+  "20241114": {
+   "nodes": 20605,
+   "with_channels": 11753,
+   "live": 6515,
+   "live_by_client": {
+    "LND": 5783,
+    "CLN": 598,
+    "Unknown": 82,
+    "LDK": 34,
+    "Eclair": 18
+   }
+  },
+  "20241115": {
+   "nodes": 20601,
+   "with_channels": 11758,
+   "live": 6527,
+   "live_by_client": {
+    "LND": 5789,
+    "CLN": 604,
+    "Unknown": 82,
+    "LDK": 34,
+    "Eclair": 18
+   }
+  },
+  "20241116": {
+   "nodes": 20600,
+   "with_channels": 11754,
+   "live": 6534,
+   "live_by_client": {
+    "LND": 5787,
+    "CLN": 612,
+    "Unknown": 83,
+    "LDK": 34,
+    "Eclair": 18
+   }
+  },
+  "20241117": {
+   "nodes": 20584,
+   "with_channels": 11719,
+   "live": 6524,
+   "live_by_client": {
+    "LND": 5778,
+    "CLN": 614,
+    "Unknown": 81,
+    "LDK": 33,
+    "Eclair": 18
+   }
+  },
+  "20241118": {
+   "nodes": 20568,
+   "with_channels": 11686,
+   "live": 6542,
+   "live_by_client": {
+    "LND": 5790,
+    "CLN": 617,
+    "Unknown": 85,
+    "LDK": 33,
+    "Eclair": 17
+   }
+  },
+  "20241119": {
+   "nodes": 20573,
+   "with_channels": 11686,
+   "live": 6499,
+   "live_by_client": {
+    "LND": 5752,
+    "CLN": 612,
+    "Unknown": 84,
+    "LDK": 33,
+    "Eclair": 18
+   }
+  },
+  "20241120": {
+   "nodes": 20582,
+   "with_channels": 11690,
+   "live": 6519,
+   "live_by_client": {
+    "LND": 5776,
+    "CLN": 611,
+    "Unknown": 84,
+    "LDK": 33,
+    "Eclair": 15
+   }
+  },
+  "20241121": {
+   "nodes": 20591,
+   "with_channels": 11688,
+   "live": 6521,
+   "live_by_client": {
+    "LND": 5770,
+    "CLN": 616,
+    "Unknown": 86,
+    "LDK": 34,
+    "Eclair": 15
+   }
+  },
+  "20241122": {
+   "nodes": 20589,
+   "with_channels": 11686,
+   "live": 6515,
+   "live_by_client": {
+    "LND": 5760,
+    "CLN": 622,
+    "Unknown": 82,
+    "LDK": 35,
+    "Eclair": 16
+   }
+  },
+  "20241123": {
+   "nodes": 20586,
+   "with_channels": 11710,
+   "live": 6547,
+   "live_by_client": {
+    "LND": 5793,
+    "CLN": 616,
+    "Unknown": 89,
+    "LDK": 34,
+    "Eclair": 15
+   }
+  },
+  "20241124": {
+   "nodes": 20578,
+   "with_channels": 11733,
+   "live": 6534,
+   "live_by_client": {
+    "LND": 5778,
+    "CLN": 617,
+    "Unknown": 89,
+    "LDK": 34,
+    "Eclair": 16
+   }
+  },
+  "20241125": {
+   "nodes": 20558,
+   "with_channels": 11722,
+   "live": 6518,
+   "live_by_client": {
+    "LND": 5756,
+    "CLN": 619,
+    "Unknown": 94,
+    "LDK": 33,
+    "Eclair": 16
+   }
+  },
+  "20241126": {
+   "nodes": 20552,
+   "with_channels": 11700,
+   "live": 6519,
+   "live_by_client": {
+    "LND": 5760,
+    "CLN": 617,
+    "Unknown": 93,
+    "LDK": 33,
+    "Eclair": 16
+   }
+  },
+  "20241127": {
+   "nodes": 20543,
+   "with_channels": 11710,
+   "live": 6494,
+   "live_by_client": {
+    "LND": 5738,
+    "CLN": 619,
+    "Unknown": 90,
+    "LDK": 32,
+    "Eclair": 15
+   }
+  },
+  "20241128": {
+   "nodes": 20533,
+   "with_channels": 11708,
+   "live": 6500,
+   "live_by_client": {
+    "LND": 5751,
+    "CLN": 613,
+    "Unknown": 90,
+    "LDK": 31,
+    "Eclair": 15
+   }
+  },
+  "20241129": {
+   "nodes": 20537,
+   "with_channels": 11715,
+   "live": 6469,
+   "live_by_client": {
+    "LND": 5734,
+    "CLN": 592,
+    "Unknown": 95,
+    "LDK": 32,
+    "Eclair": 16
+   }
+  },
+  "20241130": {
+   "nodes": 20526,
+   "with_channels": 11714,
+   "live": 6469,
+   "live_by_client": {
+    "LND": 5733,
+    "CLN": 585,
+    "Unknown": 102,
+    "LDK": 33,
+    "Eclair": 16
+   }
+  },
+  "20241201": {
+   "nodes": 20528,
+   "with_channels": 11725,
+   "live": 6482,
+   "live_by_client": {
+    "LND": 5745,
+    "CLN": 588,
+    "Unknown": 99,
+    "LDK": 33,
+    "Eclair": 17
+   }
+  },
+  "20241202": {
+   "nodes": 20514,
+   "with_channels": 11706,
+   "live": 6462,
+   "live_by_client": {
+    "LND": 5725,
+    "CLN": 589,
+    "Unknown": 99,
+    "LDK": 33,
+    "Eclair": 16
+   }
+  },
+  "20241203": {
+   "nodes": 20516,
+   "with_channels": 11724,
+   "live": 6497,
+   "live_by_client": {
+    "LND": 5751,
+    "CLN": 597,
+    "Unknown": 100,
+    "LDK": 33,
+    "Eclair": 16
+   }
+  },
+  "20241204": {
+   "nodes": 20567,
+   "with_channels": 11732,
+   "live": 6493,
+   "live_by_client": {
+    "LND": 5746,
+    "CLN": 596,
+    "Unknown": 103,
+    "LDK": 32,
+    "Eclair": 16
+   }
+  },
+  "20241205": {
+   "nodes": 20561,
+   "with_channels": 11728,
+   "live": 6487,
+   "live_by_client": {
+    "LND": 5733,
+    "CLN": 607,
+    "Unknown": 99,
+    "LDK": 32,
+    "Eclair": 16
+   }
+  },
+  "20241206": {
+   "nodes": 20547,
+   "with_channels": 11714,
+   "live": 6487,
+   "live_by_client": {
+    "LND": 5734,
+    "CLN": 604,
+    "Unknown": 103,
+    "LDK": 31,
+    "Eclair": 15
+   }
+  },
+  "20241207": {
+   "nodes": 20546,
+   "with_channels": 11721,
+   "live": 6462,
+   "live_by_client": {
+    "LND": 5720,
+    "CLN": 593,
+    "Unknown": 103,
+    "LDK": 31,
+    "Eclair": 15
+   }
+  },
+  "20241208": {
+   "nodes": 20539,
+   "with_channels": 11716,
+   "live": 6502,
+   "live_by_client": {
+    "LND": 5753,
+    "CLN": 598,
+    "Unknown": 105,
+    "LDK": 31,
+    "Eclair": 15
+   }
+  },
+  "20241209": {
+   "nodes": 20525,
+   "with_channels": 11699,
+   "live": 6487,
+   "live_by_client": {
+    "LND": 5733,
+    "CLN": 604,
+    "Unknown": 104,
+    "LDK": 31,
+    "Eclair": 15
+   }
+  },
+  "20241210": {
+   "nodes": 20524,
+   "with_channels": 11707,
+   "live": 6473,
+   "live_by_client": {
+    "LND": 5717,
+    "CLN": 605,
+    "Unknown": 106,
+    "LDK": 31,
+    "Eclair": 14
+   }
+  },
+  "20241211": {
+   "nodes": 20526,
+   "with_channels": 11725,
+   "live": 6448,
+   "live_by_client": {
+    "LND": 5694,
+    "CLN": 601,
+    "Unknown": 107,
+    "LDK": 31,
+    "Eclair": 15
+   }
+  },
+  "20241212": {
+   "nodes": 20532,
+   "with_channels": 11729,
+   "live": 6479,
+   "live_by_client": {
+    "LND": 5718,
+    "CLN": 610,
+    "Unknown": 107,
+    "LDK": 29,
+    "Eclair": 15
+   }
+  },
+  "20241213": {
+   "nodes": 20507,
+   "with_channels": 11694,
+   "live": 6504,
+   "live_by_client": {
+    "LND": 5734,
+    "CLN": 620,
+    "Unknown": 106,
+    "LDK": 30,
+    "Eclair": 14
+   }
+  },
+  "20241214": {
+   "nodes": 20490,
+   "with_channels": 11681,
+   "live": 6468,
+   "live_by_client": {
+    "LND": 5697,
+    "CLN": 621,
+    "Unknown": 104,
+    "LDK": 31,
+    "Eclair": 15
+   }
+  },
+  "20241215": {
+   "nodes": 20488,
+   "with_channels": 11683,
+   "live": 6475,
+   "live_by_client": {
+    "LND": 5705,
+    "CLN": 618,
+    "Unknown": 108,
+    "LDK": 29,
+    "Eclair": 15
+   }
+  },
+  "20241216": {
+   "nodes": 20484,
+   "with_channels": 11678,
+   "live": 6457,
+   "live_by_client": {
+    "LND": 5692,
+    "CLN": 612,
+    "Unknown": 110,
+    "LDK": 29,
+    "Eclair": 14
+   }
+  },
+  "20241217": {
+   "nodes": 20477,
+   "with_channels": 11659,
+   "live": 6451,
+   "live_by_client": {
+    "LND": 5687,
+    "CLN": 609,
+    "Unknown": 110,
+    "LDK": 31,
+    "Eclair": 14
+   }
+  },
+  "20241218": {
+   "nodes": 20469,
+   "with_channels": 11666,
+   "live": 6458,
+   "live_by_client": {
+    "LND": 5693,
+    "CLN": 605,
+    "Unknown": 115,
+    "LDK": 31,
+    "Eclair": 14
+   }
+  },
+  "20241219": {
+   "nodes": 20446,
+   "with_channels": 11643,
+   "live": 6462,
+   "live_by_client": {
+    "LND": 5701,
+    "CLN": 604,
+    "Unknown": 113,
+    "LDK": 30,
+    "Eclair": 14
+   }
+  },
+  "20241220": {
+   "nodes": 20440,
+   "with_channels": 11633,
+   "live": 6451,
+   "live_by_client": {
+    "LND": 5682,
+    "CLN": 609,
+    "Unknown": 115,
+    "LDK": 31,
+    "Eclair": 14
+   }
+  },
+  "20241221": {
+   "nodes": 20430,
+   "with_channels": 11628,
+   "live": 6444,
+   "live_by_client": {
+    "LND": 5674,
+    "CLN": 609,
+    "Unknown": 117,
+    "LDK": 30,
+    "Eclair": 14
+   }
+  },
+  "20241222": {
+   "nodes": 20413,
+   "with_channels": 11618,
+   "live": 6435,
+   "live_by_client": {
+    "LND": 5680,
+    "CLN": 599,
+    "Unknown": 113,
+    "LDK": 30,
+    "Eclair": 13
+   }
+  },
+  "20241223": {
+   "nodes": 20414,
+   "with_channels": 11618,
+   "live": 6437,
+   "live_by_client": {
+    "LND": 5677,
+    "CLN": 603,
+    "Unknown": 113,
+    "LDK": 31,
+    "Eclair": 13
+   }
+  },
+  "20241224": {
+   "nodes": 20391,
+   "with_channels": 11597,
+   "live": 6444,
+   "live_by_client": {
+    "LND": 5687,
+    "CLN": 596,
+    "Unknown": 117,
+    "LDK": 31,
+    "Eclair": 13
+   }
+  },
+  "20241225": {
+   "nodes": 20397,
+   "with_channels": 11606,
+   "live": 6482,
+   "live_by_client": {
+    "LND": 5722,
+    "CLN": 599,
+    "Unknown": 117,
+    "LDK": 31,
+    "Eclair": 13
+   }
+  },
+  "20241226": {
+   "nodes": 20317,
+   "with_channels": 11534,
+   "live": 6487,
+   "live_by_client": {
+    "LND": 5724,
+    "CLN": 598,
+    "Unknown": 121,
+    "LDK": 31,
+    "Eclair": 13
+   }
+  },
+  "20241227": {
+   "nodes": 20267,
+   "with_channels": 11483,
+   "live": 6437,
+   "live_by_client": {
+    "LND": 5671,
+    "CLN": 600,
+    "Unknown": 122,
+    "LDK": 31,
+    "Eclair": 13
+   }
+  },
+  "20241228": {
+   "nodes": 20250,
+   "with_channels": 11440,
+   "live": 6431,
+   "live_by_client": {
+    "LND": 5654,
+    "CLN": 610,
+    "Unknown": 121,
+    "LDK": 32,
+    "Eclair": 14
+   }
+  },
+  "20241229": {
+   "nodes": 20221,
+   "with_channels": 11404,
+   "live": 6411,
+   "live_by_client": {
+    "LND": 5631,
+    "CLN": 614,
+    "Unknown": 120,
+    "LDK": 32,
+    "Eclair": 14
+   }
+  },
+  "20241230": {
+   "nodes": 20227,
+   "with_channels": 11415,
+   "live": 6390,
+   "live_by_client": {
+    "LND": 5615,
+    "CLN": 614,
+    "Unknown": 115,
+    "LDK": 32,
+    "Eclair": 14
+   }
+  },
+  "20241231": {
+   "nodes": 20214,
+   "with_channels": 11406,
+   "live": 6394,
+   "live_by_client": {
+    "LND": 5608,
+    "CLN": 619,
+    "Unknown": 120,
+    "LDK": 33,
+    "Eclair": 14
+   }
+  },
+  "20250101": {
+   "nodes": 20222,
+   "with_channels": 11421,
+   "live": 6430,
+   "live_by_client": {
+    "LND": 5644,
+    "CLN": 623,
+    "Unknown": 117,
+    "LDK": 32,
+    "Eclair": 14
+   }
+  },
+  "20250113": {
+   "nodes": 20164,
+   "with_channels": 11399,
+   "live": 6325,
+   "live_by_client": {
+    "LND": 5552,
+    "CLN": 611,
+    "Unknown": 110,
+    "LDK": 37,
+    "Eclair": 15
+   }
+  },
+  "20250114": {
+   "nodes": 20146,
+   "with_channels": 11386,
+   "live": 6307,
+   "live_by_client": {
+    "LND": 5538,
+    "CLN": 609,
+    "Unknown": 107,
+    "LDK": 38,
+    "Eclair": 15
+   }
+  },
+  "20250115": {
+   "nodes": 20153,
+   "with_channels": 11386,
+   "live": 6272,
+   "live_by_client": {
+    "LND": 5518,
+    "CLN": 608,
+    "Unknown": 97,
+    "LDK": 34,
+    "Eclair": 15
+   }
+  },
+  "20250116": {
+   "nodes": 20150,
+   "with_channels": 11388,
+   "live": 6287,
+   "live_by_client": {
+    "LND": 5526,
+    "CLN": 613,
+    "Unknown": 98,
+    "LDK": 35,
+    "Eclair": 15
+   }
+  },
+  "20250117": {
+   "nodes": 20131,
+   "with_channels": 11356,
+   "live": 6293,
+   "live_by_client": {
+    "LND": 5527,
+    "CLN": 608,
+    "Unknown": 105,
+    "LDK": 37,
+    "Eclair": 16
+   }
+  },
+  "20250119": {
+   "nodes": 20123,
+   "with_channels": 11368,
+   "live": 6307,
+   "live_by_client": {
+    "LND": 5528,
+    "CLN": 615,
+    "Unknown": 110,
+    "LDK": 38,
+    "Eclair": 16
+   }
+  },
+  "20250120": {
+   "nodes": 20122,
+   "with_channels": 11373,
+   "live": 6327,
+   "live_by_client": {
+    "LND": 5540,
+    "CLN": 613,
+    "Unknown": 119,
+    "LDK": 39,
+    "Eclair": 16
+   }
+  },
+  "20250121": {
+   "nodes": 20090,
+   "with_channels": 11346,
+   "live": 6250,
+   "live_by_client": {
+    "LND": 5469,
+    "CLN": 613,
+    "Unknown": 112,
+    "LDK": 41,
+    "Eclair": 15
+   }
+  },
+  "20250122": {
+   "nodes": 20081,
+   "with_channels": 11336,
+   "live": 6229,
+   "live_by_client": {
+    "LND": 5454,
+    "CLN": 613,
+    "Unknown": 105,
+    "LDK": 41,
+    "Eclair": 16
+   }
+  },
+  "20250123": {
+   "nodes": 20042,
+   "with_channels": 11261,
+   "live": 6192,
+   "live_by_client": {
+    "LND": 5419,
+    "CLN": 612,
+    "Unknown": 104,
+    "LDK": 41,
+    "Eclair": 16
+   }
+  },
+  "20250124": {
+   "nodes": 20045,
+   "with_channels": 11268,
+   "live": 6234,
+   "live_by_client": {
+    "LND": 5454,
+    "CLN": 621,
+    "Unknown": 103,
+    "LDK": 40,
+    "Eclair": 16
+   }
+  },
+  "20250125": {
+   "nodes": 20039,
+   "with_channels": 11266,
+   "live": 6264,
+   "live_by_client": {
+    "LND": 5474,
+    "CLN": 628,
+    "Unknown": 105,
+    "LDK": 41,
+    "Eclair": 16
+   }
+  },
+  "20250207": {
+   "nodes": 20008,
+   "with_channels": 11241,
+   "live": 6287,
+   "live_by_client": {
+    "LND": 5482,
+    "CLN": 637,
+    "Unknown": 111,
+    "LDK": 42,
+    "Eclair": 15
+   }
+  },
+  "20250208": {
+   "nodes": 20008,
+   "with_channels": 11239,
+   "live": 6298,
+   "live_by_client": {
+    "LND": 5491,
+    "CLN": 634,
+    "Unknown": 116,
+    "LDK": 42,
+    "Eclair": 15
+   }
+  },
+  "20250209": {
+   "nodes": 20009,
+   "with_channels": 11237,
+   "live": 6288,
+   "live_by_client": {
+    "LND": 5475,
+    "CLN": 640,
+    "Unknown": 116,
+    "LDK": 42,
+    "Eclair": 15
+   }
+  },
+  "20250210": {
+   "nodes": 19996,
+   "with_channels": 11223,
+   "live": 6247,
+   "live_by_client": {
+    "LND": 5439,
+    "CLN": 640,
+    "Unknown": 111,
+    "LDK": 42,
+    "Eclair": 15
+   }
+  },
+  "20250211": {
+   "nodes": 20016,
+   "with_channels": 11247,
+   "live": 6278,
+   "live_by_client": {
+    "LND": 5464,
+    "CLN": 647,
+    "Unknown": 110,
+    "LDK": 42,
+    "Eclair": 15
+   }
+  },
+  "20250213": {
+   "nodes": 19978,
+   "with_channels": 11212,
+   "live": 6227,
+   "live_by_client": {
+    "LND": 5440,
+    "CLN": 630,
+    "Unknown": 101,
+    "LDK": 41,
+    "Eclair": 15
+   }
+  },
+  "20250215": {
+   "nodes": 19960,
+   "with_channels": 11192,
+   "live": 6215,
+   "live_by_client": {
+    "LND": 5415,
+    "CLN": 634,
+    "Unknown": 106,
+    "LDK": 44,
+    "Eclair": 16
+   }
+  },
+  "20250216": {
+   "nodes": 19960,
+   "with_channels": 11179,
+   "live": 6206,
+   "live_by_client": {
+    "LND": 5417,
+    "CLN": 626,
+    "Unknown": 104,
+    "LDK": 43,
+    "Eclair": 16
+   }
+  },
+  "20250217": {
+   "nodes": 19946,
+   "with_channels": 11173,
+   "live": 6181,
+   "live_by_client": {
+    "LND": 5401,
+    "CLN": 627,
+    "Unknown": 93,
+    "LDK": 44,
+    "Eclair": 16
+   }
+  },
+  "20250218": {
+   "nodes": 19948,
+   "with_channels": 11166,
+   "live": 6172,
+   "live_by_client": {
+    "LND": 5389,
+    "CLN": 626,
+    "Unknown": 98,
+    "LDK": 43,
+    "Eclair": 16
+   }
+  },
+  "20250219": {
+   "nodes": 19968,
+   "with_channels": 11231,
+   "live": 6149,
+   "live_by_client": {
+    "LND": 5374,
+    "CLN": 618,
+    "Unknown": 99,
+    "LDK": 42,
+    "Eclair": 16
+   }
+  },
+  "20250220": {
+   "nodes": 19968,
+   "with_channels": 11230,
+   "live": 6144,
+   "live_by_client": {
+    "LND": 5364,
+    "CLN": 621,
+    "Unknown": 101,
+    "LDK": 43,
+    "Eclair": 15
+   }
+  },
+  "20250221": {
+   "nodes": 19968,
+   "with_channels": 11239,
+   "live": 6176,
+   "live_by_client": {
+    "LND": 5396,
+    "CLN": 625,
+    "Unknown": 97,
+    "LDK": 43,
+    "Eclair": 15
+   }
+  },
+  "20250222": {
+   "nodes": 19971,
+   "with_channels": 11240,
+   "live": 6163,
+   "live_by_client": {
+    "LND": 5385,
+    "CLN": 628,
+    "Unknown": 94,
+    "LDK": 42,
+    "Eclair": 14
+   }
+  },
+  "20250223": {
+   "nodes": 19968,
+   "with_channels": 11220,
+   "live": 6170,
+   "live_by_client": {
+    "LND": 5394,
+    "CLN": 621,
+    "Unknown": 99,
+    "LDK": 42,
+    "Eclair": 14
+   }
+  },
+  "20250224": {
+   "nodes": 19975,
+   "with_channels": 11246,
+   "live": 6152,
+   "live_by_client": {
+    "LND": 5376,
+    "CLN": 622,
+    "Unknown": 97,
+    "LDK": 44,
+    "Eclair": 13
+   }
+  },
+  "20250225": {
+   "nodes": 19979,
+   "with_channels": 11253,
+   "live": 6157,
+   "live_by_client": {
+    "LND": 5387,
+    "CLN": 618,
+    "Unknown": 97,
+    "LDK": 42,
+    "Eclair": 13
+   }
+  },
+  "20250226": {
+   "nodes": 19977,
+   "with_channels": 11242,
+   "live": 6163,
+   "live_by_client": {
+    "LND": 5397,
+    "CLN": 622,
+    "Unknown": 87,
+    "LDK": 44,
+    "Eclair": 13
+   }
+  },
+  "20250227": {
+   "nodes": 19967,
+   "with_channels": 11234,
+   "live": 6142,
+   "live_by_client": {
+    "LND": 5367,
+    "CLN": 626,
+    "Unknown": 94,
+    "LDK": 42,
+    "Eclair": 13
+   }
+  },
+  "20250228": {
+   "nodes": 19965,
+   "with_channels": 11232,
+   "live": 6129,
+   "live_by_client": {
+    "LND": 5352,
+    "CLN": 623,
+    "Unknown": 97,
+    "LDK": 44,
+    "Eclair": 13
+   }
+  },
+  "20250301": {
+   "nodes": 19952,
+   "with_channels": 11211,
+   "live": 6117,
+   "live_by_client": {
+    "LND": 5347,
+    "CLN": 615,
+    "Unknown": 99,
+    "LDK": 43,
+    "Eclair": 13
+   }
+  },
+  "20250302": {
+   "nodes": 19953,
+   "with_channels": 11215,
+   "live": 6112,
+   "live_by_client": {
+    "LND": 5330,
+    "CLN": 623,
+    "Unknown": 102,
+    "LDK": 44,
+    "Eclair": 13
+   }
+  },
+  "20250303": {
+   "nodes": 19954,
+   "with_channels": 11224,
+   "live": 6116,
+   "live_by_client": {
+    "LND": 5342,
+    "CLN": 616,
+    "Unknown": 101,
+    "LDK": 43,
+    "Eclair": 14
+   }
+  },
+  "20250304": {
+   "nodes": 19953,
+   "with_channels": 11221,
+   "live": 6112,
+   "live_by_client": {
+    "LND": 5334,
+    "CLN": 618,
+    "Unknown": 102,
+    "LDK": 44,
+    "Eclair": 14
+   }
+  },
+  "20250305": {
+   "nodes": 19944,
+   "with_channels": 11204,
+   "live": 6106,
+   "live_by_client": {
+    "LND": 5333,
+    "CLN": 616,
+    "Unknown": 100,
+    "LDK": 43,
+    "Eclair": 14
+   }
+  },
+  "20250306": {
+   "nodes": 19913,
+   "with_channels": 11136,
+   "live": 6103,
+   "live_by_client": {
+    "LND": 5329,
+    "CLN": 616,
+    "Unknown": 101,
+    "LDK": 43,
+    "Eclair": 14
+   }
+  },
+  "20250307": {
+   "nodes": 19939,
+   "with_channels": 11209,
+   "live": 6090,
+   "live_by_client": {
+    "LND": 5326,
+    "CLN": 612,
+    "Unknown": 95,
+    "LDK": 44,
+    "Eclair": 13
+   }
+  },
+  "20250309": {
+   "nodes": 19875,
+   "with_channels": 11134,
+   "live": 6018,
+   "live_by_client": {
+    "LND": 5248,
+    "CLN": 616,
+    "Unknown": 99,
+    "LDK": 43,
+    "Eclair": 12
+   }
+  },
+  "20250328": {
+   "nodes": 19800,
+   "with_channels": 11034,
+   "live": 5897,
+   "live_by_client": {
+    "LND": 5093,
+    "CLN": 640,
+    "Unknown": 99,
+    "LDK": 49,
+    "Eclair": 16
+   }
+  },
+  "20250329": {
+   "nodes": 19783,
+   "with_channels": 11016,
+   "live": 5905,
+   "live_by_client": {
+    "LND": 5107,
+    "CLN": 633,
+    "Unknown": 100,
+    "LDK": 49,
+    "Eclair": 16
+   }
+  },
+  "20250330": {
+   "nodes": 19796,
+   "with_channels": 11033,
+   "live": 5900,
+   "live_by_client": {
+    "LND": 5107,
+    "CLN": 629,
+    "Unknown": 97,
+    "LDK": 51,
+    "Eclair": 16
+   }
+  },
+  "20250331": {
+   "nodes": 19792,
+   "with_channels": 11041,
+   "live": 5947,
+   "live_by_client": {
+    "LND": 5152,
+    "CLN": 633,
+    "Unknown": 97,
+    "LDK": 49,
+    "Eclair": 16
+   }
+  },
+  "20250409": {
+   "nodes": 19791,
+   "with_channels": 11045,
+   "live": 5722,
+   "live_by_client": {
+    "LND": 5019,
+    "CLN": 562,
+    "Unknown": 80,
+    "LDK": 49,
+    "Eclair": 12
+   }
+  },
+  "20250524": {
+   "nodes": 12272,
+   "with_channels": 10683,
+   "live": 6063,
+   "live_by_client": {
+    "LND": 5199,
+    "CLN": 694,
+    "LDK": 90,
+    "Unknown": 67,
+    "Eclair": 13
+   }
+  },
+  "20250525": {
+   "nodes": 12531,
+   "with_channels": 10770,
+   "live": 6055,
+   "live_by_client": {
+    "LND": 5195,
+    "CLN": 693,
+    "LDK": 89,
+    "Unknown": 65,
+    "Eclair": 13
+   }
+  },
+  "20250526": {
+   "nodes": 12543,
+   "with_channels": 10862,
+   "live": 6059,
+   "live_by_client": {
+    "LND": 5192,
+    "CLN": 699,
+    "LDK": 88,
+    "Unknown": 67,
+    "Eclair": 13
+   }
+  },
+  "20250527": {
+   "nodes": 12562,
+   "with_channels": 10881,
+   "live": 6052,
+   "live_by_client": {
+    "LND": 5186,
+    "CLN": 699,
+    "LDK": 89,
+    "Unknown": 65,
+    "Eclair": 13
+   }
+  },
+  "20250528": {
+   "nodes": 12564,
+   "with_channels": 10883,
+   "live": 6054,
+   "live_by_client": {
+    "LND": 5183,
+    "CLN": 708,
+    "LDK": 88,
+    "Unknown": 62,
+    "Eclair": 13
+   }
+  },
+  "20250529": {
+   "nodes": 12579,
+   "with_channels": 10898,
+   "live": 6068,
+   "live_by_client": {
+    "LND": 5189,
+    "CLN": 716,
+    "LDK": 87,
+    "Unknown": 63,
+    "Eclair": 13
+   }
+  },
+  "20250530": {
+   "nodes": 12575,
+   "with_channels": 10894,
+   "live": 6055,
+   "live_by_client": {
+    "LND": 5177,
+    "CLN": 720,
+    "LDK": 82,
+    "Unknown": 64,
+    "Eclair": 12
+   }
+  },
+  "20250531": {
+   "nodes": 12592,
+   "with_channels": 10908,
+   "live": 6083,
+   "live_by_client": {
+    "LND": 5205,
+    "CLN": 719,
+    "LDK": 82,
+    "Unknown": 65,
+    "Eclair": 12
+   }
+  },
+  "20250601": {
+   "nodes": 12603,
+   "with_channels": 10920,
+   "live": 6077,
+   "live_by_client": {
+    "LND": 5198,
+    "CLN": 718,
+    "LDK": 83,
+    "Unknown": 66,
+    "Eclair": 12
+   }
+  },
+  "20250602": {
+   "nodes": 12597,
+   "with_channels": 10914,
+   "live": 6062,
+   "live_by_client": {
+    "LND": 5181,
+    "CLN": 719,
+    "LDK": 83,
+    "Unknown": 67,
+    "Eclair": 12
+   }
+  },
+  "20250603": {
+   "nodes": 12601,
+   "with_channels": 10918,
+   "live": 6060,
+   "live_by_client": {
+    "LND": 5181,
+    "CLN": 721,
+    "LDK": 82,
+    "Unknown": 64,
+    "Eclair": 12
+   }
+  },
+  "20250604": {
+   "nodes": 12599,
+   "with_channels": 10916,
+   "live": 6089,
+   "live_by_client": {
+    "LND": 5202,
+    "CLN": 725,
+    "LDK": 86,
+    "Unknown": 65,
+    "Eclair": 11
+   }
+  },
+  "20250605": {
+   "nodes": 12580,
+   "with_channels": 10912,
+   "live": 6056,
+   "live_by_client": {
+    "LND": 5176,
+    "CLN": 719,
+    "LDK": 84,
+    "Unknown": 66,
+    "Eclair": 11
+   }
+  },
+  "20250606": {
+   "nodes": 12586,
+   "with_channels": 10920,
+   "live": 6015,
+   "live_by_client": {
+    "LND": 5147,
+    "CLN": 706,
+    "LDK": 85,
+    "Unknown": 65,
+    "Eclair": 12
+   }
+  },
+  "20250607": {
+   "nodes": 12585,
+   "with_channels": 10919,
+   "live": 6045,
+   "live_by_client": {
+    "LND": 5174,
+    "CLN": 710,
+    "LDK": 85,
+    "Unknown": 64,
+    "Eclair": 12
+   }
+  },
+  "20250608": {
+   "nodes": 12578,
+   "with_channels": 10912,
+   "live": 6044,
+   "live_by_client": {
+    "LND": 5173,
+    "CLN": 711,
+    "LDK": 85,
+    "Unknown": 63,
+    "Eclair": 12
+   }
+  },
+  "20250609": {
+   "nodes": 12507,
+   "with_channels": 10839,
+   "live": 6048,
+   "live_by_client": {
+    "LND": 5180,
+    "CLN": 707,
+    "LDK": 83,
+    "Unknown": 65,
+    "Eclair": 13
+   }
+  },
+  "20250610": {
+   "nodes": 12517,
+   "with_channels": 10849,
+   "live": 6038,
+   "live_by_client": {
+    "LND": 5165,
+    "CLN": 707,
+    "LDK": 83,
+    "Unknown": 70,
+    "Eclair": 13
+   }
+  },
+  "20250611": {
+   "nodes": 12521,
+   "with_channels": 10854,
+   "live": 6057,
+   "live_by_client": {
+    "LND": 5181,
+    "CLN": 710,
+    "LDK": 84,
+    "Unknown": 70,
+    "Eclair": 12
+   }
+  },
+  "20250612": {
+   "nodes": 12528,
+   "with_channels": 10861,
+   "live": 6071,
+   "live_by_client": {
+    "LND": 5198,
+    "CLN": 711,
+    "LDK": 81,
+    "Unknown": 69,
+    "Eclair": 12
+   }
+  },
+  "20250613": {
+   "nodes": 12562,
+   "with_channels": 10895,
+   "live": 6050,
+   "live_by_client": {
+    "LND": 5180,
+    "CLN": 707,
+    "LDK": 84,
+    "Unknown": 67,
+    "Eclair": 12
+   }
+  },
+  "20250614": {
+   "nodes": 12570,
+   "with_channels": 10904,
+   "live": 6070,
+   "live_by_client": {
+    "LND": 5194,
+    "CLN": 707,
+    "LDK": 85,
+    "Unknown": 71,
+    "Eclair": 13
+   }
+  },
+  "20250615": {
+   "nodes": 12576,
+   "with_channels": 10911,
+   "live": 6075,
+   "live_by_client": {
+    "LND": 5205,
+    "CLN": 703,
+    "LDK": 83,
+    "Unknown": 71,
+    "Eclair": 13
+   }
+  },
+  "20250616": {
+   "nodes": 12573,
+   "with_channels": 10907,
+   "live": 6070,
+   "live_by_client": {
+    "LND": 5193,
+    "CLN": 711,
+    "LDK": 84,
+    "Unknown": 69,
+    "Eclair": 13
+   }
+  },
+  "20250617": {
+   "nodes": 12576,
+   "with_channels": 10911,
+   "live": 6092,
+   "live_by_client": {
+    "LND": 5204,
+    "CLN": 719,
+    "LDK": 83,
+    "Unknown": 71,
+    "Eclair": 15
+   }
+  },
+  "20250618": {
+   "nodes": 12587,
+   "with_channels": 10919,
+   "live": 6093,
+   "live_by_client": {
+    "LND": 5201,
+    "CLN": 721,
+    "LDK": 84,
+    "Unknown": 72,
+    "Eclair": 15
+   }
+  },
+  "20250619": {
+   "nodes": 12596,
+   "with_channels": 10933,
+   "live": 6039,
+   "live_by_client": {
+    "LND": 5164,
+    "CLN": 709,
+    "LDK": 80,
+    "Unknown": 71,
+    "Eclair": 15
+   }
+  },
+  "20250620": {
+   "nodes": 12577,
+   "with_channels": 10916,
+   "live": 6038,
+   "live_by_client": {
+    "LND": 5159,
+    "CLN": 711,
+    "LDK": 81,
+    "Unknown": 71,
+    "Eclair": 16
+   }
+  },
+  "20250621": {
+   "nodes": 12582,
+   "with_channels": 10921,
+   "live": 6062,
+   "live_by_client": {
+    "LND": 5179,
+    "CLN": 717,
+    "LDK": 80,
+    "Unknown": 71,
+    "Eclair": 15
+   }
+  },
+  "20250622": {
+   "nodes": 12569,
+   "with_channels": 10910,
+   "live": 6060,
+   "live_by_client": {
+    "LND": 5183,
+    "CLN": 710,
+    "LDK": 79,
+    "Unknown": 72,
+    "Eclair": 16
+   }
+  },
+  "20250623": {
+   "nodes": 12561,
+   "with_channels": 10901,
+   "live": 6050,
+   "live_by_client": {
+    "LND": 5171,
+    "CLN": 713,
+    "LDK": 81,
+    "Unknown": 70,
+    "Eclair": 15
+   }
+  },
+  "20250624": {
+   "nodes": 12579,
+   "with_channels": 10920,
+   "live": 6014,
+   "live_by_client": {
+    "LND": 5149,
+    "CLN": 702,
+    "LDK": 78,
+    "Unknown": 71,
+    "Eclair": 14
+   }
+  },
+  "20250625": {
+   "nodes": 12422,
+   "with_channels": 10760,
+   "live": 6029,
+   "live_by_client": {
+    "LND": 5153,
+    "CLN": 712,
+    "Unknown": 74,
+    "LDK": 74,
+    "Eclair": 16
+   }
+  },
+  "20250626": {
+   "nodes": 12415,
+   "with_channels": 10755,
+   "live": 5996,
+   "live_by_client": {
+    "LND": 5124,
+    "CLN": 712,
+    "LDK": 75,
+    "Unknown": 72,
+    "Eclair": 13
+   }
+  },
+  "20250627": {
+   "nodes": 12418,
+   "with_channels": 10758,
+   "live": 5976,
+   "live_by_client": {
+    "LND": 5107,
+    "CLN": 707,
+    "LDK": 75,
+    "Unknown": 72,
+    "Eclair": 15
+   }
+  },
+  "20250628": {
+   "nodes": 12403,
+   "with_channels": 10741,
+   "live": 5927,
+   "live_by_client": {
+    "LND": 5067,
+    "CLN": 699,
+    "LDK": 76,
+    "Unknown": 70,
+    "Eclair": 15
+   }
+  },
+  "20250629": {
+   "nodes": 12397,
+   "with_channels": 10737,
+   "live": 5923,
+   "live_by_client": {
+    "LND": 5064,
+    "CLN": 698,
+    "LDK": 78,
+    "Unknown": 68,
+    "Eclair": 15
+   }
+  },
+  "20250630": {
+   "nodes": 12411,
+   "with_channels": 10751,
+   "live": 5931,
+   "live_by_client": {
+    "LND": 5063,
+    "CLN": 704,
+    "LDK": 81,
+    "Unknown": 69,
+    "Eclair": 14
+   }
+  },
+  "20250701": {
+   "nodes": 12433,
+   "with_channels": 10769,
+   "live": 5961,
+   "live_by_client": {
+    "LND": 5095,
+    "CLN": 699,
+    "LDK": 81,
+    "Unknown": 71,
+    "Eclair": 15
+   }
+  },
+  "20250702": {
+   "nodes": 12464,
+   "with_channels": 10803,
+   "live": 5987,
+   "live_by_client": {
+    "LND": 5119,
+    "CLN": 702,
+    "LDK": 80,
+    "Unknown": 72,
+    "Eclair": 14
+   }
+  },
+  "20250703": {
+   "nodes": 12395,
+   "with_channels": 10734,
+   "live": 5964,
+   "live_by_client": {
+    "LND": 5099,
+    "CLN": 698,
+    "LDK": 79,
+    "Unknown": 74,
+    "Eclair": 14
+   }
+  },
+  "20250704": {
+   "nodes": 12404,
+   "with_channels": 10746,
+   "live": 5975,
+   "live_by_client": {
+    "LND": 5105,
+    "CLN": 705,
+    "LDK": 79,
+    "Unknown": 74,
+    "Eclair": 12
+   }
+  },
+  "20250705": {
+   "nodes": 12426,
+   "with_channels": 10767,
+   "live": 5975,
+   "live_by_client": {
+    "LND": 5106,
+    "CLN": 707,
+    "LDK": 78,
+    "Unknown": 71,
+    "Eclair": 13
+   }
+  },
+  "20250706": {
+   "nodes": 12457,
+   "with_channels": 10797,
+   "live": 6006,
+   "live_by_client": {
+    "LND": 5139,
+    "CLN": 705,
+    "LDK": 79,
+    "Unknown": 70,
+    "Eclair": 13
+   }
+  },
+  "20250707": {
+   "nodes": 12495,
+   "with_channels": 10835,
+   "live": 6053,
+   "live_by_client": {
+    "LND": 5176,
+    "CLN": 713,
+    "LDK": 79,
+    "Unknown": 71,
+    "Eclair": 14
+   }
+  },
+  "20250708": {
+   "nodes": 12528,
+   "with_channels": 10868,
+   "live": 6077,
+   "live_by_client": {
+    "LND": 5206,
+    "CLN": 706,
+    "LDK": 79,
+    "Unknown": 71,
+    "Eclair": 15
+   }
+  },
+  "20250709": {
+   "nodes": 12581,
+   "with_channels": 10921,
+   "live": 6103,
+   "live_by_client": {
+    "LND": 5235,
+    "CLN": 707,
+    "LDK": 77,
+    "Unknown": 70,
+    "Eclair": 14
+   }
+  },
+  "20250710": {
+   "nodes": 12596,
+   "with_channels": 10936,
+   "live": 6098,
+   "live_by_client": {
+    "LND": 5229,
+    "CLN": 707,
+    "LDK": 79,
+    "Unknown": 69,
+    "Eclair": 14
+   }
+  },
+  "20250711": {
+   "nodes": 12621,
+   "with_channels": 10961,
+   "live": 6110,
+   "live_by_client": {
+    "LND": 5241,
+    "CLN": 708,
+    "LDK": 78,
+    "Unknown": 70,
+    "Eclair": 13
+   }
+  },
+  "20250712": {
+   "nodes": 12640,
+   "with_channels": 10979,
+   "live": 6118,
+   "live_by_client": {
+    "LND": 5251,
+    "CLN": 708,
+    "LDK": 77,
+    "Unknown": 68,
+    "Eclair": 14
+   }
+  },
+  "20250713": {
+   "nodes": 12651,
+   "with_channels": 10990,
+   "live": 6129,
+   "live_by_client": {
+    "LND": 5268,
+    "CLN": 703,
+    "LDK": 79,
+    "Unknown": 65,
+    "Eclair": 14
+   }
+  },
+  "20250714": {
+   "nodes": 12670,
+   "with_channels": 11008,
+   "live": 6212,
+   "live_by_client": {
+    "LND": 5346,
+    "CLN": 708,
+    "LDK": 78,
+    "Unknown": 66,
+    "Eclair": 14
+   }
+  },
+  "20250715": {
+   "nodes": 12697,
+   "with_channels": 11035,
+   "live": 6220,
+   "live_by_client": {
+    "LND": 5353,
+    "CLN": 708,
+    "LDK": 79,
+    "Unknown": 66,
+    "Eclair": 14
+   }
+  },
+  "20250716": {
+   "nodes": 12724,
+   "with_channels": 11065,
+   "live": 6088,
+   "live_by_client": {
+    "LND": 5218,
+    "CLN": 707,
+    "LDK": 80,
+    "Unknown": 70,
+    "Eclair": 13
+   }
+  },
+  "20250717": {
+   "nodes": 12741,
+   "with_channels": 11082,
+   "live": 6201,
+   "live_by_client": {
+    "LND": 5330,
+    "CLN": 706,
+    "LDK": 84,
+    "Unknown": 67,
+    "Eclair": 14
+   }
+  },
+  "20250718": {
+   "nodes": 12774,
+   "with_channels": 11112,
+   "live": 6200,
+   "live_by_client": {
+    "LND": 5324,
+    "CLN": 715,
+    "LDK": 83,
+    "Unknown": 66,
+    "Eclair": 12
+   }
+  },
+  "20250719": {
+   "nodes": 12788,
+   "with_channels": 11127,
+   "live": 6233,
+   "live_by_client": {
+    "LND": 5351,
+    "CLN": 719,
+    "LDK": 85,
+    "Unknown": 67,
+    "Eclair": 11
+   }
+  },
+  "20250720": {
+   "nodes": 12854,
+   "with_channels": 11177,
+   "live": 6256,
+   "live_by_client": {
+    "LND": 5364,
+    "CLN": 726,
+    "LDK": 84,
+    "Unknown": 69,
+    "Eclair": 13
+   }
+  },
+  "20250721": {
+   "nodes": 12892,
+   "with_channels": 11241,
+   "live": 6284,
+   "live_by_client": {
+    "LND": 5395,
+    "CLN": 727,
+    "LDK": 82,
+    "Unknown": 67,
+    "Eclair": 13
+   }
+  },
+  "20250722": {
+   "nodes": 12890,
+   "with_channels": 11240,
+   "live": 6285,
+   "live_by_client": {
+    "LND": 5402,
+    "CLN": 722,
+    "LDK": 82,
+    "Unknown": 68,
+    "Eclair": 11
+   }
+  },
+  "20250723": {
+   "nodes": 12903,
+   "with_channels": 11254,
+   "live": 6297,
+   "live_by_client": {
+    "LND": 5413,
+    "CLN": 721,
+    "LDK": 83,
+    "Unknown": 67,
+    "Eclair": 13
+   }
+  },
+  "20250724": {
+   "nodes": 12827,
+   "with_channels": 11177,
+   "live": 6341,
+   "live_by_client": {
+    "LND": 5461,
+    "CLN": 720,
+    "LDK": 80,
+    "Unknown": 67,
+    "Eclair": 13
+   }
+  },
+  "20250725": {
+   "nodes": 12860,
+   "with_channels": 11211,
+   "live": 6139,
+   "live_by_client": {
+    "LND": 5255,
+    "CLN": 724,
+    "LDK": 80,
+    "Unknown": 66,
+    "Eclair": 14
+   }
+  },
+  "20250726": {
+   "nodes": 12898,
+   "with_channels": 11249,
+   "live": 6344,
+   "live_by_client": {
+    "LND": 5458,
+    "CLN": 724,
+    "LDK": 82,
+    "Unknown": 67,
+    "Eclair": 13
+   }
+  },
+  "20250727": {
+   "nodes": 12933,
+   "with_channels": 11283,
+   "live": 6429,
+   "live_by_client": {
+    "LND": 5547,
+    "CLN": 723,
+    "LDK": 80,
+    "Unknown": 66,
+    "Eclair": 13
+   }
+  },
+  "20250728": {
+   "nodes": 14902,
+   "with_channels": 11297,
+   "live": 6227,
+   "live_by_client": {
+    "LND": 5347,
+    "CLN": 718,
+    "LDK": 82,
+    "Unknown": 65,
+    "Eclair": 15
+   }
+  },
+  "20250729": {
+   "nodes": 14918,
+   "with_channels": 11313,
+   "live": 6123,
+   "live_by_client": {
+    "LND": 5236,
+    "CLN": 722,
+    "LDK": 82,
+    "Unknown": 69,
+    "Eclair": 14
+   }
+  },
+  "20250730": {
+   "nodes": 16386,
+   "with_channels": 11326,
+   "live": 5975,
+   "live_by_client": {
+    "LND": 5087,
+    "CLN": 722,
+    "LDK": 82,
+    "Unknown": 71,
+    "Eclair": 13
+   }
+  },
+  "20250731": {
+   "nodes": 16398,
+   "with_channels": 11340,
+   "live": 5914,
+   "live_by_client": {
+    "LND": 5033,
+    "CLN": 713,
+    "LDK": 83,
+    "Unknown": 72,
+    "Eclair": 13
+   }
+  },
+  "20250801": {
+   "nodes": 16423,
+   "with_channels": 11368,
+   "live": 5889,
+   "live_by_client": {
+    "LND": 5007,
+    "CLN": 715,
+    "LDK": 81,
+    "Unknown": 72,
+    "Eclair": 14
+   }
+  },
+  "20250802": {
+   "nodes": 16425,
+   "with_channels": 11365,
+   "live": 5894,
+   "live_by_client": {
+    "LND": 5011,
+    "CLN": 713,
+    "LDK": 82,
+    "Unknown": 74,
+    "Eclair": 14
+   }
+  },
+  "20250803": {
+   "nodes": 16412,
+   "with_channels": 11350,
+   "live": 6325,
+   "live_by_client": {
+    "LND": 5441,
+    "CLN": 713,
+    "LDK": 83,
+    "Unknown": 73,
+    "Eclair": 15
+   }
+  },
+  "20250804": {
+   "nodes": 16419,
+   "with_channels": 11355,
+   "live": 6446,
+   "live_by_client": {
+    "LND": 5568,
+    "CLN": 707,
+    "LDK": 84,
+    "Unknown": 73,
+    "Eclair": 14
+   }
+  },
+  "20250805": {
+   "nodes": 16422,
+   "with_channels": 11359,
+   "live": 5893,
+   "live_by_client": {
+    "LND": 5019,
+    "CLN": 702,
+    "LDK": 82,
+    "Unknown": 75,
+    "Eclair": 15
+   }
+  },
+  "20250806": {
+   "nodes": 16466,
+   "with_channels": 11400,
+   "live": 5872,
+   "live_by_client": {
+    "LND": 5005,
+    "CLN": 696,
+    "LDK": 83,
+    "Unknown": 75,
+    "Eclair": 13
+   }
+  },
+  "20250807": {
+   "nodes": 16484,
+   "with_channels": 11418,
+   "live": 5937,
+   "live_by_client": {
+    "LND": 5066,
+    "CLN": 699,
+    "LDK": 82,
+    "Unknown": 74,
+    "Eclair": 16
+   }
+  },
+  "20250808": {
+   "nodes": 16504,
+   "with_channels": 11437,
+   "live": 5997,
+   "live_by_client": {
+    "LND": 5126,
+    "CLN": 700,
+    "LDK": 81,
+    "Unknown": 74,
+    "Eclair": 16
+   }
+  },
+  "20250809": {
+   "nodes": 16526,
+   "with_channels": 11454,
+   "live": 5960,
+   "live_by_client": {
+    "LND": 5073,
+    "CLN": 714,
+    "LDK": 83,
+    "Unknown": 75,
+    "Eclair": 15
+   }
+  },
+  "20250810": {
+   "nodes": 16530,
+   "with_channels": 11453,
+   "live": 6486,
+   "live_by_client": {
+    "LND": 5610,
+    "CLN": 707,
+    "LDK": 83,
+    "Unknown": 72,
+    "Eclair": 14
+   }
+  },
+  "20250811": {
+   "nodes": 16537,
+   "with_channels": 11457,
+   "live": 6270,
+   "live_by_client": {
+    "LND": 5386,
+    "CLN": 709,
+    "LDK": 84,
+    "Unknown": 76,
+    "Eclair": 15
+   }
+  },
+  "20250812": {
+   "nodes": 16538,
+   "with_channels": 11458,
+   "live": 6532,
+   "live_by_client": {
+    "LND": 5643,
+    "CLN": 716,
+    "LDK": 84,
+    "Unknown": 73,
+    "Eclair": 16
+   }
+  },
+  "20250813": {
+   "nodes": 16608,
+   "with_channels": 11529,
+   "live": 6571,
+   "live_by_client": {
+    "LND": 5686,
+    "CLN": 718,
+    "LDK": 84,
+    "Unknown": 69,
+    "Eclair": 14
+   }
+  },
+  "20250814": {
+   "nodes": 16611,
+   "with_channels": 11530,
+   "live": 6557,
+   "live_by_client": {
+    "LND": 5677,
+    "CLN": 719,
+    "LDK": 83,
+    "Unknown": 63,
+    "Eclair": 15
+   }
+  },
+  "20250821": {
+   "nodes": 16621,
+   "with_channels": 11549,
+   "live": 6734,
+   "live_by_client": {
+    "LND": 5831,
+    "CLN": 734,
+    "LDK": 82,
+    "Unknown": 71,
+    "Eclair": 16
+   }
+  },
+  "20250822": {
+   "nodes": 16639,
+   "with_channels": 11569,
+   "live": 6717,
+   "live_by_client": {
+    "LND": 5815,
+    "CLN": 736,
+    "LDK": 80,
+    "Unknown": 70,
+    "Eclair": 16
+   }
+  },
+  "20250823": {
+   "nodes": 16649,
+   "with_channels": 11578,
+   "live": 6719,
+   "live_by_client": {
+    "LND": 5822,
+    "CLN": 737,
+    "LDK": 76,
+    "Unknown": 68,
+    "Eclair": 16
+   }
+  },
+  "20250824": {
+   "nodes": 16646,
+   "with_channels": 11581,
+   "live": 6730,
+   "live_by_client": {
+    "LND": 5831,
+    "CLN": 736,
+    "LDK": 77,
+    "Unknown": 70,
+    "Eclair": 16
+   }
+  },
+  "20250825": {
+   "nodes": 16676,
+   "with_channels": 11605,
+   "live": 6784,
+   "live_by_client": {
+    "LND": 5894,
+    "CLN": 730,
+    "LDK": 75,
+    "Unknown": 69,
+    "Eclair": 16
+   }
+  },
+  "20250826": {
+   "nodes": 16619,
+   "with_channels": 11492,
+   "live": 6846,
+   "live_by_client": {
+    "LND": 5948,
+    "CLN": 739,
+    "LDK": 74,
+    "Unknown": 69,
+    "Eclair": 16
+   }
+  },
+  "20250827": {
+   "nodes": 16628,
+   "with_channels": 11498,
+   "live": 6876,
+   "live_by_client": {
+    "LND": 5978,
+    "CLN": 739,
+    "LDK": 74,
+    "Unknown": 69,
+    "Eclair": 16
+   }
+  },
+  "20250828": {
+   "nodes": 16648,
+   "with_channels": 11521,
+   "live": 6866,
+   "live_by_client": {
+    "LND": 5966,
+    "CLN": 742,
+    "LDK": 76,
+    "Unknown": 68,
+    "Eclair": 14
+   }
+  },
+  "20250829": {
+   "nodes": 16659,
+   "with_channels": 11534,
+   "live": 6892,
+   "live_by_client": {
+    "LND": 5985,
+    "CLN": 744,
+    "LDK": 80,
+    "Unknown": 68,
+    "Eclair": 15
+   }
+  },
+  "20250830": {
+   "nodes": 16651,
+   "with_channels": 11524,
+   "live": 6911,
+   "live_by_client": {
+    "LND": 6000,
+    "CLN": 748,
+    "LDK": 82,
+    "Unknown": 67,
+    "Eclair": 14
+   }
+  },
+  "20250831": {
+   "nodes": 16670,
+   "with_channels": 11544,
+   "live": 6881,
+   "live_by_client": {
+    "LND": 5979,
+    "CLN": 738,
+    "LDK": 80,
+    "Unknown": 68,
+    "Eclair": 16
+   }
+  },
+  "20250901": {
+   "nodes": 16661,
+   "with_channels": 11533,
+   "live": 6789,
+   "live_by_client": {
+    "LND": 5887,
+    "CLN": 741,
+    "LDK": 80,
+    "Unknown": 66,
+    "Eclair": 15
+   }
+  },
+  "20250902": {
+   "nodes": 16620,
+   "with_channels": 11524,
+   "live": 6888,
+   "live_by_client": {
+    "LND": 5987,
+    "CLN": 743,
+    "LDK": 78,
+    "Unknown": 65,
+    "Eclair": 15
+   }
+  },
+  "20250903": {
+   "nodes": 16623,
+   "with_channels": 11527,
+   "live": 6854,
+   "live_by_client": {
+    "LND": 5950,
+    "CLN": 745,
+    "LDK": 79,
+    "Unknown": 65,
+    "Eclair": 15
+   }
+  },
+  "20250904": {
+   "nodes": 16643,
+   "with_channels": 11547,
+   "live": 6833,
+   "live_by_client": {
+    "LND": 5925,
+    "CLN": 745,
+    "LDK": 80,
+    "Unknown": 67,
+    "Eclair": 16
+   }
+  },
+  "20250905": {
+   "nodes": 16644,
+   "with_channels": 11543,
+   "live": 6907,
+   "live_by_client": {
+    "LND": 5992,
+    "CLN": 748,
+    "LDK": 83,
+    "Unknown": 69,
+    "Eclair": 15
+   }
+  },
+  "20250906": {
+   "nodes": 16667,
+   "with_channels": 11569,
+   "live": 6901,
+   "live_by_client": {
+    "LND": 5984,
+    "CLN": 753,
+    "LDK": 81,
+    "Unknown": 68,
+    "Eclair": 15
+   }
+  },
+  "20250907": {
+   "nodes": 16698,
+   "with_channels": 11601,
+   "live": 6919,
+   "live_by_client": {
+    "LND": 6010,
+    "CLN": 748,
+    "LDK": 79,
+    "Unknown": 67,
+    "Eclair": 15
+   }
+  },
+  "20250908": {
+   "nodes": 16710,
+   "with_channels": 11612,
+   "live": 6932,
+   "live_by_client": {
+    "LND": 6015,
+    "CLN": 751,
+    "LDK": 81,
+    "Unknown": 69,
+    "Eclair": 16
+   }
+  },
+  "20250909": {
+   "nodes": 16659,
+   "with_channels": 11570,
+   "live": 6902,
+   "live_by_client": {
+    "LND": 5987,
+    "CLN": 748,
+    "LDK": 83,
+    "Unknown": 69,
+    "Eclair": 15
+   }
+  },
+  "20250910": {
+   "nodes": 16669,
+   "with_channels": 11582,
+   "live": 6893,
+   "live_by_client": {
+    "LND": 5992,
+    "CLN": 749,
+    "LDK": 73,
+    "Unknown": 64,
+    "Eclair": 15
+   }
+  },
+  "20250911": {
+   "nodes": 16610,
+   "with_channels": 11525,
+   "live": 6903,
+   "live_by_client": {
+    "LND": 6003,
+    "CLN": 749,
+    "LDK": 73,
+    "Unknown": 63,
+    "Eclair": 15
+   }
+  },
+  "20250912": {
+   "nodes": 16615,
+   "with_channels": 11528,
+   "live": 6898,
+   "live_by_client": {
+    "LND": 6016,
+    "CLN": 741,
+    "LDK": 75,
+    "Unknown": 51,
+    "Eclair": 15
+   }
+  },
+  "20250913": {
+   "nodes": 16612,
+   "with_channels": 11521,
+   "live": 6882,
+   "live_by_client": {
+    "LND": 5976,
+    "CLN": 759,
+    "LDK": 75,
+    "Unknown": 56,
+    "Eclair": 16
+   }
+  },
+  "20250914": {
+   "nodes": 16611,
+   "with_channels": 11520,
+   "live": 6905,
+   "live_by_client": {
+    "LND": 6007,
+    "CLN": 752,
+    "LDK": 75,
+    "Unknown": 57,
+    "Eclair": 14
+   }
+  },
+  "20250915": {
+   "nodes": 16618,
+   "with_channels": 11527,
+   "live": 6912,
+   "live_by_client": {
+    "LND": 6009,
+    "CLN": 759,
+    "LDK": 75,
+    "Unknown": 55,
+    "Eclair": 14
+   }
+  },
+  "20250916": {
+   "nodes": 16618,
+   "with_channels": 11522,
+   "live": 6844,
+   "live_by_client": {
+    "LND": 5937,
+    "CLN": 763,
+    "LDK": 75,
+    "Unknown": 55,
+    "Eclair": 14
+   }
+  },
+  "20250917": {
+   "nodes": 16642,
+   "with_channels": 11550,
+   "live": 6927,
+   "live_by_client": {
+    "LND": 6012,
+    "CLN": 769,
+    "LDK": 77,
+    "Unknown": 55,
+    "Eclair": 14
+   }
+  },
+  "20250918": {
+   "nodes": 16644,
+   "with_channels": 11548,
+   "live": 6945,
+   "live_by_client": {
+    "LND": 6033,
+    "CLN": 765,
+    "LDK": 77,
+    "Unknown": 56,
+    "Eclair": 14
+   }
+  },
+  "20250919": {
+   "nodes": 16652,
+   "with_channels": 11558,
+   "live": 6986,
+   "live_by_client": {
+    "LND": 6073,
+    "CLN": 764,
+    "LDK": 77,
+    "Unknown": 57,
+    "Eclair": 15
+   }
+  },
+  "20250920": {
+   "nodes": 16662,
+   "with_channels": 11569,
+   "live": 7002,
+   "live_by_client": {
+    "LND": 6087,
+    "CLN": 763,
+    "LDK": 78,
+    "Unknown": 59,
+    "Eclair": 15
+   }
+  },
+  "20250921": {
+   "nodes": 16661,
+   "with_channels": 11568,
+   "live": 6962,
+   "live_by_client": {
+    "LND": 6051,
+    "CLN": 761,
+    "LDK": 78,
+    "Unknown": 58,
+    "Eclair": 14
+   }
+  },
+  "20250922": {
+   "nodes": 16690,
+   "with_channels": 11599,
+   "live": 7047,
+   "live_by_client": {
+    "LND": 6136,
+    "CLN": 762,
+    "LDK": 80,
+    "Unknown": 55,
+    "Eclair": 14
+   }
+  },
+  "20250923": {
+   "nodes": 16694,
+   "with_channels": 11601,
+   "live": 6897,
+   "live_by_client": {
+    "LND": 5982,
+    "CLN": 767,
+    "LDK": 79,
+    "Unknown": 54,
+    "Eclair": 15
+   }
+  },
+  "20250924": {
+   "nodes": 16691,
+   "with_channels": 11599,
+   "live": 6990,
+   "live_by_client": {
+    "LND": 6080,
+    "CLN": 761,
+    "LDK": 78,
+    "Unknown": 56,
+    "Eclair": 15
+   }
+  },
+  "20250925": {
+   "nodes": 16696,
+   "with_channels": 11604,
+   "live": 6997,
+   "live_by_client": {
+    "LND": 6089,
+    "CLN": 760,
+    "LDK": 80,
+    "Unknown": 54,
+    "Eclair": 14
+   }
+  },
+  "20250926": {
+   "nodes": 16713,
+   "with_channels": 11625,
+   "live": 6901,
+   "live_by_client": {
+    "LND": 5994,
+    "CLN": 760,
+    "LDK": 78,
+    "Unknown": 55,
+    "Eclair": 14
+   }
+  },
+  "20250927": {
+   "nodes": 16703,
+   "with_channels": 11615,
+   "live": 6983,
+   "live_by_client": {
+    "LND": 6075,
+    "CLN": 762,
+    "LDK": 78,
+    "Unknown": 54,
+    "Eclair": 14
+   }
+  },
+  "20250928": {
+   "nodes": 16761,
+   "with_channels": 11667,
+   "live": 7071,
+   "live_by_client": {
+    "LND": 6161,
+    "CLN": 761,
+    "LDK": 81,
+    "Unknown": 55,
+    "Eclair": 13
+   }
+  },
+  "20251006": {
+   "nodes": 16927,
+   "with_channels": 11826,
+   "live": 6674,
+   "live_by_client": {
+    "LND": 5756,
+    "CLN": 770,
+    "LDK": 81,
+    "Unknown": 55,
+    "Eclair": 12
+   }
+  },
+  "20251007": {
+   "nodes": 16915,
+   "with_channels": 11813,
+   "live": 6734,
+   "live_by_client": {
+    "LND": 5822,
+    "CLN": 764,
+    "LDK": 79,
+    "Unknown": 57,
+    "Eclair": 12
+   }
+  },
+  "20251008": {
+   "nodes": 16919,
+   "with_channels": 11815,
+   "live": 6698,
+   "live_by_client": {
+    "LND": 5789,
+    "CLN": 761,
+    "LDK": 80,
+    "Unknown": 56,
+    "Eclair": 12
+   }
+  },
+  "20251009": {
+   "nodes": 16918,
+   "with_channels": 11808,
+   "live": 6967,
+   "live_by_client": {
+    "LND": 6062,
+    "CLN": 760,
+    "LDK": 79,
+    "Unknown": 55,
+    "Eclair": 11
+   }
+  },
+  "20251010": {
+   "nodes": 16930,
+   "with_channels": 11822,
+   "live": 6630,
+   "live_by_client": {
+    "LND": 5725,
+    "CLN": 758,
+    "LDK": 80,
+    "Unknown": 55,
+    "Eclair": 12
+   }
+  },
+  "20251011": {
+   "nodes": 16941,
+   "with_channels": 11832,
+   "live": 6717,
+   "live_by_client": {
+    "LND": 5814,
+    "CLN": 756,
+    "LDK": 80,
+    "Unknown": 55,
+    "Eclair": 12
+   }
+  },
+  "20251012": {
+   "nodes": 16936,
+   "with_channels": 11830,
+   "live": 6582,
+   "live_by_client": {
+    "LND": 5672,
+    "CLN": 763,
+    "LDK": 80,
+    "Unknown": 55,
+    "Eclair": 12
+   }
+  },
+  "20251013": {
+   "nodes": 16937,
+   "with_channels": 11828,
+   "live": 6687,
+   "live_by_client": {
+    "LND": 5781,
+    "CLN": 761,
+    "LDK": 81,
+    "Unknown": 52,
+    "Eclair": 12
+   }
+  },
+  "20251014": {
+   "nodes": 16928,
+   "with_channels": 11832,
+   "live": 6569,
+   "live_by_client": {
+    "LND": 5654,
+    "CLN": 770,
+    "LDK": 81,
+    "Unknown": 52,
+    "Eclair": 12
+   }
+  },
+  "20251015": {
+   "nodes": 16939,
+   "with_channels": 11840,
+   "live": 6665,
+   "live_by_client": {
+    "LND": 5747,
+    "CLN": 771,
+    "LDK": 84,
+    "Unknown": 50,
+    "Eclair": 13
+   }
+  },
+  "20251016": {
+   "nodes": 16960,
+   "with_channels": 11862,
+   "live": 6396,
+   "live_by_client": {
+    "LND": 5477,
+    "CLN": 772,
+    "LDK": 83,
+    "Unknown": 51,
+    "Eclair": 13
+   }
+  },
+  "20251017": {
+   "nodes": 16971,
+   "with_channels": 11876,
+   "live": 6783,
+   "live_by_client": {
+    "LND": 5864,
+    "CLN": 769,
+    "LDK": 84,
+    "Unknown": 53,
+    "Eclair": 13
+   }
+  },
+  "20251018": {
+   "nodes": 16976,
+   "with_channels": 11884,
+   "live": 6488,
+   "live_by_client": {
+    "LND": 5570,
+    "CLN": 769,
+    "LDK": 84,
+    "Unknown": 53,
+    "Eclair": 12
+   }
+  },
+  "20251019": {
+   "nodes": 16965,
+   "with_channels": 11869,
+   "live": 6592,
+   "live_by_client": {
+    "LND": 5672,
+    "CLN": 768,
+    "LDK": 84,
+    "Unknown": 55,
+    "Eclair": 13
+   }
+  },
+  "20251020": {
+   "nodes": 16957,
+   "with_channels": 11858,
+   "live": 6602,
+   "live_by_client": {
+    "LND": 5678,
+    "CLN": 770,
+    "LDK": 84,
+    "Unknown": 57,
+    "Eclair": 13
+   }
+  },
+  "20251021": {
+   "nodes": 16960,
+   "with_channels": 11862,
+   "live": 6441,
+   "live_by_client": {
+    "LND": 5522,
+    "CLN": 768,
+    "LDK": 82,
+    "Unknown": 56,
+    "Eclair": 13
+   }
+  },
+  "20251022": {
+   "nodes": 16952,
+   "with_channels": 11857,
+   "live": 6474,
+   "live_by_client": {
+    "LND": 5546,
+    "CLN": 770,
+    "LDK": 87,
+    "Unknown": 59,
+    "Eclair": 12
+   }
+  },
+  "20251023": {
+   "nodes": 16945,
+   "with_channels": 11848,
+   "live": 6415,
+   "live_by_client": {
+    "LND": 5497,
+    "CLN": 763,
+    "LDK": 85,
+    "Unknown": 57,
+    "Eclair": 13
+   }
+  },
+  "20251024": {
+   "nodes": 16943,
+   "with_channels": 11847,
+   "live": 6413,
+   "live_by_client": {
+    "LND": 5496,
+    "CLN": 762,
+    "LDK": 85,
+    "Unknown": 57,
+    "Eclair": 13
+   }
+  },
+  "20251025": {
+   "nodes": 16954,
+   "with_channels": 11860,
+   "live": 6448,
+   "live_by_client": {
+    "LND": 5528,
+    "CLN": 768,
+    "LDK": 84,
+    "Unknown": 56,
+    "Eclair": 12
+   }
+  },
+  "20251026": {
+   "nodes": 16957,
+   "with_channels": 11863,
+   "live": 6663,
+   "live_by_client": {
+    "LND": 5744,
+    "CLN": 767,
+    "LDK": 84,
+    "Unknown": 56,
+    "Eclair": 12
+   }
+  },
+  "20251027": {
+   "nodes": 16966,
+   "with_channels": 11868,
+   "live": 6736,
+   "live_by_client": {
+    "LND": 5809,
+    "CLN": 771,
+    "LDK": 87,
+    "Unknown": 57,
+    "Eclair": 12
+   }
+  },
+  "20251029": {
+   "nodes": 16951,
+   "with_channels": 11851,
+   "live": 6622,
+   "live_by_client": {
+    "LND": 5697,
+    "CLN": 771,
+    "LDK": 85,
+    "Unknown": 57,
+    "Eclair": 12
+   }
+  },
+  "20251030": {
+   "nodes": 16945,
+   "with_channels": 11845,
+   "live": 6529,
+   "live_by_client": {
+    "LND": 5608,
+    "CLN": 768,
+    "LDK": 85,
+    "Unknown": 55,
+    "Eclair": 13
+   }
+  },
+  "20251031": {
+   "nodes": 16945,
+   "with_channels": 11845,
+   "live": 6627,
+   "live_by_client": {
+    "LND": 5701,
+    "CLN": 771,
+    "LDK": 87,
+    "Unknown": 54,
+    "Eclair": 14
+   }
+  },
+  "20251101": {
+   "nodes": 16946,
+   "with_channels": 11845,
+   "live": 6635,
+   "live_by_client": {
+    "LND": 5722,
+    "CLN": 759,
+    "LDK": 83,
+    "Unknown": 58,
+    "Eclair": 13
+   }
+  },
+  "20251102": {
+   "nodes": 16952,
+   "with_channels": 11852,
+   "live": 6686,
+   "live_by_client": {
+    "LND": 5764,
+    "CLN": 768,
+    "LDK": 83,
+    "Unknown": 58,
+    "Eclair": 13
+   }
+  },
+  "20251103": {
+   "nodes": 16941,
+   "with_channels": 11838,
+   "live": 6663,
+   "live_by_client": {
+    "LND": 5743,
+    "CLN": 766,
+    "LDK": 84,
+    "Unknown": 57,
+    "Eclair": 13
+   }
+  },
+  "20251104": {
+   "nodes": 16941,
+   "with_channels": 11838,
+   "live": 6813,
+   "live_by_client": {
+    "LND": 5890,
+    "CLN": 767,
+    "LDK": 84,
+    "Unknown": 59,
+    "Eclair": 13
+   }
+  },
+  "20251105": {
+   "nodes": 16936,
+   "with_channels": 11819,
+   "live": 6836,
+   "live_by_client": {
+    "LND": 5906,
+    "CLN": 772,
+    "LDK": 86,
+    "Unknown": 59,
+    "Eclair": 13
+   }
+  },
+  "20251106": {
+   "nodes": 16935,
+   "with_channels": 11819,
+   "live": 6679,
+   "live_by_client": {
+    "LND": 5751,
+    "CLN": 773,
+    "LDK": 86,
+    "Unknown": 56,
+    "Eclair": 13
+   }
+  },
+  "20251107": {
+   "nodes": 16917,
+   "with_channels": 11795,
+   "live": 7086,
+   "live_by_client": {
+    "LND": 6158,
+    "CLN": 775,
+    "LDK": 83,
+    "Unknown": 57,
+    "Eclair": 13
+   }
+  },
+  "20251108": {
+   "nodes": 16916,
+   "with_channels": 11800,
+   "live": 7161,
+   "live_by_client": {
+    "LND": 6231,
+    "CLN": 779,
+    "LDK": 82,
+    "Unknown": 56,
+    "Eclair": 13
+   }
+  },
+  "20251109": {
+   "nodes": 16918,
+   "with_channels": 11804,
+   "live": 6008,
+   "live_by_client": {
+    "LND": 5080,
+    "CLN": 780,
+    "LDK": 79,
+    "Unknown": 56,
+    "Eclair": 13
+   }
+  },
+  "20251110": {
+   "nodes": 16913,
+   "with_channels": 11799,
+   "live": 5936,
+   "live_by_client": {
+    "LND": 5005,
+    "CLN": 773,
+    "LDK": 83,
+    "Unknown": 62,
+    "Eclair": 13
+   }
+  },
+  "20251111": {
+   "nodes": 16918,
+   "with_channels": 11805,
+   "live": 5970,
+   "live_by_client": {
+    "LND": 5036,
+    "CLN": 777,
+    "LDK": 83,
+    "Unknown": 60,
+    "Eclair": 14
+   }
+  },
+  "20251112": {
+   "nodes": 16926,
+   "with_channels": 11814,
+   "live": 6085,
+   "live_by_client": {
+    "LND": 5150,
+    "CLN": 777,
+    "LDK": 82,
+    "Unknown": 62,
+    "Eclair": 14
+   }
+  },
+  "20251113": {
+   "nodes": 16937,
+   "with_channels": 11827,
+   "live": 6199,
+   "live_by_client": {
+    "LND": 5271,
+    "CLN": 773,
+    "LDK": 84,
+    "Unknown": 58,
+    "Eclair": 13
+   }
+  },
+  "20251114": {
+   "nodes": 16946,
+   "with_channels": 11833,
+   "live": 6104,
+   "live_by_client": {
+    "LND": 5170,
+    "CLN": 776,
+    "LDK": 86,
+    "Unknown": 59,
+    "Eclair": 13
+   }
+  },
+  "20251115": {
+   "nodes": 16945,
+   "with_channels": 11828,
+   "live": 6159,
+   "live_by_client": {
+    "LND": 5223,
+    "CLN": 779,
+    "LDK": 87,
+    "Unknown": 57,
+    "Eclair": 13
+   }
+  },
+  "20251116": {
+   "nodes": 16948,
+   "with_channels": 11833,
+   "live": 6173,
+   "live_by_client": {
+    "LND": 5242,
+    "CLN": 774,
+    "LDK": 86,
+    "Unknown": 58,
+    "Eclair": 13
+   }
+  },
+  "20251117": {
+   "nodes": 16921,
+   "with_channels": 11807,
+   "live": 5842,
+   "live_by_client": {
+    "LND": 4914,
+    "CLN": 771,
+    "LDK": 86,
+    "Unknown": 58,
+    "Eclair": 13
+   }
+  },
+  "20251118": {
+   "nodes": 16912,
+   "with_channels": 11796,
+   "live": 5788,
+   "live_by_client": {
+    "LND": 4872,
+    "CLN": 757,
+    "LDK": 84,
+    "Unknown": 61,
+    "Eclair": 14
+   }
+  },
+  "20251119": {
+   "nodes": 16918,
+   "with_channels": 11806,
+   "live": 6230,
+   "live_by_client": {
+    "LND": 5290,
+    "CLN": 779,
+    "LDK": 86,
+    "Unknown": 62,
+    "Eclair": 13
+   }
+  },
+  "20251120": {
+   "nodes": 16920,
+   "with_channels": 11806,
+   "live": 5957,
+   "live_by_client": {
+    "LND": 5036,
+    "CLN": 762,
+    "LDK": 86,
+    "Unknown": 60,
+    "Eclair": 13
+   }
+  },
+  "20251121": {
+   "nodes": 16914,
+   "with_channels": 11799,
+   "live": 6683,
+   "live_by_client": {
+    "LND": 5766,
+    "CLN": 758,
+    "LDK": 85,
+    "Unknown": 61,
+    "Eclair": 13
+   }
+  },
+  "20251122": {
+   "nodes": 16918,
+   "with_channels": 11804,
+   "live": 6844,
+   "live_by_client": {
+    "LND": 5928,
+    "CLN": 758,
+    "LDK": 86,
+    "Unknown": 59,
+    "Eclair": 13
+   }
+  },
+  "20251123": {
+   "nodes": 16926,
+   "with_channels": 11808,
+   "live": 6992,
+   "live_by_client": {
+    "LND": 6076,
+    "CLN": 757,
+    "LDK": 86,
+    "Unknown": 60,
+    "Eclair": 13
+   }
+  },
+  "20251124": {
+   "nodes": 16933,
+   "with_channels": 11813,
+   "live": 6783,
+   "live_by_client": {
+    "LND": 5862,
+    "CLN": 762,
+    "LDK": 85,
+    "Unknown": 61,
+    "Eclair": 13
+   }
+  },
+  "20251125": {
+   "nodes": 16929,
+   "with_channels": 11809,
+   "live": 7056,
+   "live_by_client": {
+    "LND": 6124,
+    "CLN": 771,
+    "LDK": 86,
+    "Unknown": 62,
+    "Eclair": 13
+   }
+  },
+  "20251126": {
+   "nodes": 16922,
+   "with_channels": 11798,
+   "live": 6849,
+   "live_by_client": {
+    "LND": 5921,
+    "CLN": 768,
+    "LDK": 86,
+    "Unknown": 61,
+    "Eclair": 13
+   }
+  },
+  "20251127": {
+   "nodes": 16911,
+   "with_channels": 11786,
+   "live": 7071,
+   "live_by_client": {
+    "LND": 6138,
+    "CLN": 773,
+    "LDK": 87,
+    "Unknown": 60,
+    "Eclair": 13
+   }
+  },
+  "20251128": {
+   "nodes": 16972,
+   "with_channels": 11849,
+   "live": 6971,
+   "live_by_client": {
+    "LND": 6031,
+    "CLN": 780,
+    "LDK": 87,
+    "Unknown": 60,
+    "Eclair": 13
+   }
+  },
+  "20251129": {
+   "nodes": 16969,
+   "with_channels": 11843,
+   "live": 6994,
+   "live_by_client": {
+    "LND": 6066,
+    "CLN": 771,
+    "LDK": 86,
+    "Unknown": 59,
+    "Eclair": 12
+   }
+  },
+  "20251130": {
+   "nodes": 16978,
+   "with_channels": 11847,
+   "live": 7142,
+   "live_by_client": {
+    "LND": 6211,
+    "CLN": 771,
+    "LDK": 86,
+    "Unknown": 61,
+    "Eclair": 13
+   }
+  },
+  "20251201": {
+   "nodes": 16940,
+   "with_channels": 11807,
+   "live": 7199,
+   "live_by_client": {
+    "LND": 6270,
+    "CLN": 768,
+    "LDK": 86,
+    "Unknown": 62,
+    "Eclair": 13
+   }
+  },
+  "20251202": {
+   "nodes": 16988,
+   "with_channels": 11858,
+   "live": 7137,
+   "live_by_client": {
+    "LND": 6202,
+    "CLN": 772,
+    "LDK": 87,
+    "Unknown": 63,
+    "Eclair": 13
+   }
+  },
+  "20251203": {
+   "nodes": 16992,
+   "with_channels": 11863,
+   "live": 7315,
+   "live_by_client": {
+    "LND": 6375,
+    "CLN": 779,
+    "LDK": 87,
+    "Unknown": 61,
+    "Eclair": 13
+   }
+  },
+  "20251204": {
+   "nodes": 16992,
+   "with_channels": 11867,
+   "live": 7219,
+   "live_by_client": {
+    "LND": 6279,
+    "CLN": 776,
+    "LDK": 87,
+    "Unknown": 64,
+    "Eclair": 13
+   }
+  },
+  "20251205": {
+   "nodes": 16987,
+   "with_channels": 11863,
+   "live": 7366,
+   "live_by_client": {
+    "LND": 6424,
+    "CLN": 776,
+    "LDK": 88,
+    "Unknown": 65,
+    "Eclair": 13
+   }
+  },
+  "20251206": {
+   "nodes": 16988,
+   "with_channels": 11861,
+   "live": 7248,
+   "live_by_client": {
+    "LND": 6298,
+    "CLN": 781,
+    "LDK": 87,
+    "Unknown": 68,
+    "Eclair": 14
+   }
+  },
+  "20251207": {
+   "nodes": 16981,
+   "with_channels": 11854,
+   "live": 7407,
+   "live_by_client": {
+    "LND": 6460,
+    "CLN": 779,
+    "LDK": 86,
+    "Unknown": 68,
+    "Eclair": 14
+   }
+  },
+  "20251208": {
+   "nodes": 16980,
+   "with_channels": 11853,
+   "live": 7382,
+   "live_by_client": {
+    "LND": 6436,
+    "CLN": 777,
+    "LDK": 87,
+    "Unknown": 68,
+    "Eclair": 14
+   }
+  },
+  "20251209": {
+   "nodes": 16981,
+   "with_channels": 11851,
+   "live": 6825,
+   "live_by_client": {
+    "LND": 5872,
+    "CLN": 783,
+    "LDK": 88,
+    "Unknown": 68,
+    "Eclair": 14
+   }
+  },
+  "20251210": {
+   "nodes": 16982,
+   "with_channels": 11852,
+   "live": 7136,
+   "live_by_client": {
+    "LND": 6187,
+    "CLN": 780,
+    "LDK": 88,
+    "Unknown": 67,
+    "Eclair": 14
+   }
+  },
+  "20251211": {
+   "nodes": 16998,
+   "with_channels": 11870,
+   "live": 7357,
+   "live_by_client": {
+    "LND": 6407,
+    "CLN": 780,
+    "LDK": 90,
+    "Unknown": 66,
+    "Eclair": 14
+   }
+  },
+  "20251212": {
+   "nodes": 16982,
+   "with_channels": 11854,
+   "live": 6838,
+   "live_by_client": {
+    "LND": 5890,
+    "CLN": 778,
+    "LDK": 89,
+    "Unknown": 67,
+    "Eclair": 14
+   }
+  },
+  "20251213": {
+   "nodes": 16996,
+   "with_channels": 11870,
+   "live": 6689,
+   "live_by_client": {
+    "LND": 5746,
+    "CLN": 775,
+    "LDK": 89,
+    "Unknown": 65,
+    "Eclair": 14
+   }
+  },
+  "20251214": {
+   "nodes": 17011,
+   "with_channels": 11886,
+   "live": 7151,
+   "live_by_client": {
+    "LND": 6206,
+    "CLN": 773,
+    "LDK": 89,
+    "Unknown": 69,
+    "Eclair": 14
+   }
+  },
+  "20251215": {
+   "nodes": 16998,
+   "with_channels": 11875,
+   "live": 7054,
+   "live_by_client": {
+    "LND": 6138,
+    "CLN": 770,
+    "LDK": 80,
+    "Unknown": 53,
+    "Eclair": 13
+   }
+  },
+  "20251216": {
+   "nodes": 16992,
+   "with_channels": 11869,
+   "live": 6959,
+   "live_by_client": {
+    "LND": 6047,
+    "CLN": 768,
+    "LDK": 78,
+    "Unknown": 53,
+    "Eclair": 13
+   }
+  },
+  "20251217": {
+   "nodes": 16994,
+   "with_channels": 11869,
+   "live": 6842,
+   "live_by_client": {
+    "LND": 5902,
+    "CLN": 775,
+    "LDK": 86,
+    "Unknown": 66,
+    "Eclair": 13
+   }
+  },
+  "20251218": {
+   "nodes": 16994,
+   "with_channels": 11868,
+   "live": 6863,
+   "live_by_client": {
+    "LND": 5923,
+    "CLN": 773,
+    "LDK": 88,
+    "Unknown": 66,
+    "Eclair": 13
+   }
+  },
+  "20251219": {
+   "nodes": 16814,
+   "with_channels": 11685,
+   "live": 6603,
+   "live_by_client": {
+    "LND": 5656,
+    "CLN": 782,
+    "LDK": 88,
+    "Unknown": 64,
+    "Eclair": 13
+   }
+  },
+  "20251220": {
+   "nodes": 16813,
+   "with_channels": 11683,
+   "live": 6601,
+   "live_by_client": {
+    "LND": 5651,
+    "CLN": 786,
+    "LDK": 87,
+    "Unknown": 64,
+    "Eclair": 13
+   }
+  },
+  "20251221": {
+   "nodes": 16807,
+   "with_channels": 11677,
+   "live": 6624,
+   "live_by_client": {
+    "LND": 5678,
+    "CLN": 784,
+    "LDK": 87,
+    "Unknown": 62,
+    "Eclair": 13
+   }
+  },
+  "20251222": {
+   "nodes": 16803,
+   "with_channels": 11672,
+   "live": 6913,
+   "live_by_client": {
+    "LND": 5971,
+    "CLN": 780,
+    "LDK": 86,
+    "Unknown": 63,
+    "Eclair": 13
+   }
+  },
+  "20251223": {
+   "nodes": 16810,
+   "with_channels": 11679,
+   "live": 6871,
+   "live_by_client": {
+    "LND": 5928,
+    "CLN": 788,
+    "LDK": 86,
+    "Unknown": 56,
+    "Eclair": 13
+   }
+  },
+  "20251224": {
+   "nodes": 16804,
+   "with_channels": 11672,
+   "live": 6628,
+   "live_by_client": {
+    "LND": 5685,
+    "CLN": 788,
+    "LDK": 85,
+    "Unknown": 57,
+    "Eclair": 13
+   }
+  },
+  "20251225": {
+   "nodes": 16797,
+   "with_channels": 11668,
+   "live": 6422,
+   "live_by_client": {
+    "LND": 5488,
+    "CLN": 782,
+    "LDK": 84,
+    "Unknown": 55,
+    "Eclair": 13
+   }
+  },
+  "20251226": {
+   "nodes": 16793,
+   "with_channels": 11663,
+   "live": 6489,
+   "live_by_client": {
+    "LND": 5546,
+    "CLN": 789,
+    "LDK": 84,
+    "Unknown": 57,
+    "Eclair": 13
+   }
+  },
+  "20251227": {
+   "nodes": 16793,
+   "with_channels": 11662,
+   "live": 6813,
+   "live_by_client": {
+    "LND": 5876,
+    "CLN": 787,
+    "LDK": 85,
+    "Unknown": 53,
+    "Eclair": 12
+   }
+  },
+  "20251228": {
+   "nodes": 16788,
+   "with_channels": 11656,
+   "live": 6732,
+   "live_by_client": {
+    "LND": 5792,
+    "CLN": 791,
+    "LDK": 84,
+    "Unknown": 53,
+    "Eclair": 12
+   }
+  },
+  "20251229": {
+   "nodes": 16782,
+   "with_channels": 11649,
+   "live": 6769,
+   "live_by_client": {
+    "LND": 5834,
+    "CLN": 785,
+    "LDK": 83,
+    "Unknown": 55,
+    "Eclair": 12
+   }
+  },
+  "20251230": {
+   "nodes": 16752,
+   "with_channels": 11618,
+   "live": 7022,
+   "live_by_client": {
+    "LND": 6088,
+    "CLN": 783,
+    "LDK": 82,
+    "Unknown": 56,
+    "Eclair": 13
+   }
+  },
+  "20251231": {
+   "nodes": 16763,
+   "with_channels": 11629,
+   "live": 6886,
+   "live_by_client": {
+    "LND": 5942,
+    "CLN": 792,
+    "LDK": 83,
+    "Unknown": 57,
+    "Eclair": 12
+   }
+  },
+  "20260101": {
+   "nodes": 16749,
+   "with_channels": 11617,
+   "live": 6400,
+   "live_by_client": {
+    "LND": 5455,
+    "CLN": 793,
+    "LDK": 82,
+    "Unknown": 58,
+    "Eclair": 12
+   }
+  },
+  "20260102": {
+   "nodes": 16757,
+   "with_channels": 11623,
+   "live": 6456,
+   "live_by_client": {
+    "LND": 5513,
+    "CLN": 791,
+    "LDK": 83,
+    "Unknown": 57,
+    "Eclair": 12
+   }
+  },
+  "20260103": {
+   "nodes": 16756,
+   "with_channels": 11626,
+   "live": 6713,
+   "live_by_client": {
+    "LND": 5778,
+    "CLN": 785,
+    "LDK": 83,
+    "Unknown": 55,
+    "Eclair": 12
+   }
+  },
+  "20260104": {
+   "nodes": 16763,
+   "with_channels": 11637,
+   "live": 6757,
+   "live_by_client": {
+    "LND": 5818,
+    "CLN": 792,
+    "LDK": 81,
+    "Unknown": 54,
+    "Eclair": 12
+   }
+  },
+  "20260105": {
+   "nodes": 16773,
+   "with_channels": 11646,
+   "live": 6768,
+   "live_by_client": {
+    "LND": 5819,
+    "CLN": 798,
+    "LDK": 84,
+    "Unknown": 55,
+    "Eclair": 12
+   }
+  },
+  "20260106": {
+   "nodes": 16772,
+   "with_channels": 11645,
+   "live": 6841,
+   "live_by_client": {
+    "LND": 5904,
+    "CLN": 787,
+    "LDK": 85,
+    "Unknown": 53,
+    "Eclair": 12
+   }
+  },
+  "20260107": {
+   "nodes": 16773,
+   "with_channels": 11646,
+   "live": 6892,
+   "live_by_client": {
+    "LND": 5955,
+    "CLN": 786,
+    "LDK": 84,
+    "Unknown": 55,
+    "Eclair": 12
+   }
+  },
+  "20260108": {
+   "nodes": 16789,
+   "with_channels": 11665,
+   "live": 6910,
+   "live_by_client": {
+    "LND": 5974,
+    "CLN": 786,
+    "LDK": 83,
+    "Unknown": 55,
+    "Eclair": 12
+   }
+  },
+  "20260109": {
+   "nodes": 16775,
+   "with_channels": 11651,
+   "live": 6715,
+   "live_by_client": {
+    "LND": 5782,
+    "CLN": 782,
+    "LDK": 84,
+    "Unknown": 55,
+    "Eclair": 12
+   }
+  },
+  "20260110": {
+   "nodes": 16778,
+   "with_channels": 11652,
+   "live": 6800,
+   "live_by_client": {
+    "LND": 5865,
+    "CLN": 783,
+    "LDK": 87,
+    "Unknown": 53,
+    "Eclair": 12
+   }
+  },
+  "20260111": {
+   "nodes": 16779,
+   "with_channels": 11654,
+   "live": 6747,
+   "live_by_client": {
+    "LND": 5804,
+    "CLN": 790,
+    "LDK": 87,
+    "Unknown": 54,
+    "Eclair": 12
+   }
+  },
+  "20260112": {
+   "nodes": 16777,
+   "with_channels": 11656,
+   "live": 6863,
+   "live_by_client": {
+    "LND": 5925,
+    "CLN": 790,
+    "LDK": 85,
+    "Unknown": 51,
+    "Eclair": 12
+   }
+  },
+  "20260113": {
+   "nodes": 16777,
+   "with_channels": 11659,
+   "live": 6863,
+   "live_by_client": {
+    "LND": 5926,
+    "CLN": 785,
+    "LDK": 86,
+    "Unknown": 54,
+    "Eclair": 12
+   }
+  },
+  "20260114": {
+   "nodes": 16774,
+   "with_channels": 11657,
+   "live": 6842,
+   "live_by_client": {
+    "LND": 5894,
+    "CLN": 797,
+    "LDK": 86,
+    "Unknown": 54,
+    "Eclair": 11
+   }
+  },
+  "20260115": {
+   "nodes": 16784,
+   "with_channels": 11667,
+   "live": 6902,
+   "live_by_client": {
+    "LND": 5958,
+    "CLN": 792,
+    "LDK": 88,
+    "Unknown": 53,
+    "Eclair": 11
+   }
+  },
+  "20260116": {
+   "nodes": 16788,
+   "with_channels": 11677,
+   "live": 6503,
+   "live_by_client": {
+    "LND": 5554,
+    "CLN": 798,
+    "LDK": 87,
+    "Unknown": 53,
+    "Eclair": 11
+   }
+  },
+  "20260117": {
+   "nodes": 16777,
+   "with_channels": 11666,
+   "live": 6714,
+   "live_by_client": {
+    "LND": 5765,
+    "CLN": 796,
+    "LDK": 88,
+    "Unknown": 54,
+    "Eclair": 11
+   }
+  },
+  "20260118": {
+   "nodes": 16786,
+   "with_channels": 11677,
+   "live": 6822,
+   "live_by_client": {
+    "LND": 5879,
+    "CLN": 791,
+    "LDK": 87,
+    "Unknown": 54,
+    "Eclair": 11
+   }
+  },
+  "20260119": {
+   "nodes": 16800,
+   "with_channels": 11690,
+   "live": 6825,
+   "live_by_client": {
+    "LND": 5877,
+    "CLN": 794,
+    "LDK": 88,
+    "Unknown": 55,
+    "Eclair": 11
+   }
+  },
+  "20260120": {
+   "nodes": 16804,
+   "with_channels": 11693,
+   "live": 6529,
+   "live_by_client": {
+    "LND": 5580,
+    "CLN": 795,
+    "LDK": 88,
+    "Unknown": 54,
+    "Eclair": 12
+   }
+  },
+  "20260121": {
+   "nodes": 16774,
+   "with_channels": 11661,
+   "live": 6829,
+   "live_by_client": {
+    "LND": 5876,
+    "CLN": 796,
+    "LDK": 88,
+    "Unknown": 57,
+    "Eclair": 12
+   }
+  },
+  "20260122": {
+   "nodes": 16770,
+   "with_channels": 11659,
+   "live": 6665,
+   "live_by_client": {
+    "LND": 5714,
+    "CLN": 794,
+    "LDK": 86,
+    "Unknown": 60,
+    "Eclair": 11
+   }
+  },
+  "20260123": {
+   "nodes": 16770,
+   "with_channels": 11662,
+   "live": 6427,
+   "live_by_client": {
+    "LND": 5483,
+    "CLN": 787,
+    "LDK": 88,
+    "Unknown": 57,
+    "Eclair": 12
+   }
+  },
+  "20260124": {
+   "nodes": 16768,
+   "with_channels": 11661,
+   "live": 6409,
+   "live_by_client": {
+    "LND": 5469,
+    "CLN": 786,
+    "LDK": 85,
+    "Unknown": 57,
+    "Eclair": 12
+   }
+  },
+  "20260125": {
+   "nodes": 16775,
+   "with_channels": 11669,
+   "live": 6647,
+   "live_by_client": {
+    "LND": 5700,
+    "CLN": 791,
+    "LDK": 88,
+    "Unknown": 56,
+    "Eclair": 12
+   }
+  },
+  "20260126": {
+   "nodes": 16784,
+   "with_channels": 11676,
+   "live": 6380,
+   "live_by_client": {
+    "LND": 5431,
+    "CLN": 792,
+    "LDK": 87,
+    "Unknown": 58,
+    "Eclair": 12
+   }
+  },
+  "20260127": {
+   "nodes": 16780,
+   "with_channels": 11672,
+   "live": 6737,
+   "live_by_client": {
+    "LND": 5780,
+    "CLN": 799,
+    "LDK": 86,
+    "Unknown": 58,
+    "Eclair": 14
+   }
+  },
+  "20260128": {
+   "nodes": 16782,
+   "with_channels": 11672,
+   "live": 6710,
+   "live_by_client": {
+    "LND": 5758,
+    "CLN": 792,
+    "LDK": 87,
+    "Unknown": 59,
+    "Eclair": 14
+   }
+  },
+  "20260129": {
+   "nodes": 16780,
+   "with_channels": 11671,
+   "live": 6741,
+   "live_by_client": {
+    "LND": 5793,
+    "CLN": 788,
+    "LDK": 86,
+    "Unknown": 60,
+    "Eclair": 14
+   }
+  },
+  "20260130": {
+   "nodes": 16772,
+   "with_channels": 11661,
+   "live": 6758,
+   "live_by_client": {
+    "LND": 5811,
+    "CLN": 792,
+    "LDK": 82,
+    "Unknown": 59,
+    "Eclair": 14
+   }
+  },
+  "20260131": {
+   "nodes": 16751,
+   "with_channels": 11641,
+   "live": 6594,
+   "live_by_client": {
+    "LND": 5648,
+    "CLN": 788,
+    "LDK": 87,
+    "Unknown": 59,
+    "Eclair": 12
+   }
+  },
+  "20260201": {
+   "nodes": 16753,
+   "with_channels": 11642,
+   "live": 6754,
+   "live_by_client": {
+    "LND": 5805,
+    "CLN": 789,
+    "LDK": 86,
+    "Unknown": 61,
+    "Eclair": 13
+   }
+  },
+  "20260202": {
+   "nodes": 16752,
+   "with_channels": 11645,
+   "live": 6628,
+   "live_by_client": {
+    "LND": 5678,
+    "CLN": 788,
+    "LDK": 85,
+    "Unknown": 63,
+    "Eclair": 14
+   }
+  },
+  "20260203": {
+   "nodes": 16776,
+   "with_channels": 11668,
+   "live": 6700,
+   "live_by_client": {
+    "LND": 5745,
+    "CLN": 795,
+    "LDK": 84,
+    "Unknown": 62,
+    "Eclair": 14
+   }
+  },
+  "20260204": {
+   "nodes": 16751,
+   "with_channels": 11644,
+   "live": 6527,
+   "live_by_client": {
+    "LND": 5574,
+    "CLN": 796,
+    "LDK": 83,
+    "Unknown": 60,
+    "Eclair": 14
+   }
+  },
+  "20260207": {
+   "nodes": 16763,
+   "with_channels": 11659,
+   "live": 6377,
+   "live_by_client": {
+    "LND": 5433,
+    "CLN": 782,
+    "LDK": 88,
+    "Unknown": 61,
+    "Eclair": 13
+   }
+  },
+  "20260208": {
+   "nodes": 16763,
+   "with_channels": 11658,
+   "live": 6604,
+   "live_by_client": {
+    "LND": 5645,
+    "CLN": 796,
+    "LDK": 86,
+    "Unknown": 64,
+    "Eclair": 13
+   }
+  },
+  "20260209": {
+   "nodes": 16766,
+   "with_channels": 11660,
+   "live": 6516,
+   "live_by_client": {
+    "LND": 5561,
+    "CLN": 789,
+    "LDK": 87,
+    "Unknown": 66,
+    "Eclair": 13
+   }
+  },
+  "20260210": {
+   "nodes": 16773,
+   "with_channels": 11668,
+   "live": 6592,
+   "live_by_client": {
+    "LND": 5642,
+    "CLN": 784,
+    "LDK": 89,
+    "Unknown": 63,
+    "Eclair": 14
+   }
+  },
+  "20260211": {
+   "nodes": 16771,
+   "with_channels": 11670,
+   "live": 6502,
+   "live_by_client": {
+    "LND": 5551,
+    "CLN": 784,
+    "LDK": 91,
+    "Unknown": 62,
+    "Eclair": 14
+   }
+  },
+  "20260212": {
+   "nodes": 16765,
+   "with_channels": 11664,
+   "live": 6417,
+   "live_by_client": {
+    "LND": 5468,
+    "CLN": 783,
+    "LDK": 92,
+    "Unknown": 60,
+    "Eclair": 14
+   }
+  },
+  "20260213": {
+   "nodes": 16772,
+   "with_channels": 11673,
+   "live": 6422,
+   "live_by_client": {
+    "LND": 5473,
+    "CLN": 779,
+    "LDK": 94,
+    "Unknown": 61,
+    "Eclair": 15
+   }
+  },
+  "20260214": {
+   "nodes": 16782,
+   "with_channels": 11682,
+   "live": 6390,
+   "live_by_client": {
+    "LND": 5436,
+    "CLN": 783,
+    "LDK": 94,
+    "Unknown": 62,
+    "Eclair": 15
+   }
+  },
+  "20260215": {
+   "nodes": 16773,
+   "with_channels": 11673,
+   "live": 6547,
+   "live_by_client": {
+    "LND": 5588,
+    "CLN": 784,
+    "LDK": 94,
+    "Unknown": 66,
+    "Eclair": 15
+   }
+  },
+  "20260216": {
+   "nodes": 16782,
+   "with_channels": 11681,
+   "live": 6504,
+   "live_by_client": {
+    "LND": 5548,
+    "CLN": 786,
+    "LDK": 93,
+    "Unknown": 63,
+    "Eclair": 14
+   }
+  },
+  "20260217": {
+   "nodes": 16787,
+   "with_channels": 11683,
+   "live": 6575,
+   "live_by_client": {
+    "LND": 5613,
+    "CLN": 792,
+    "LDK": 94,
+    "Unknown": 62,
+    "Eclair": 14
+   }
+  },
+  "20260218": {
+   "nodes": 16781,
+   "with_channels": 11671,
+   "live": 6635,
+   "live_by_client": {
+    "LND": 5677,
+    "CLN": 783,
+    "LDK": 95,
+    "Unknown": 66,
+    "Eclair": 14
+   }
+  },
+  "20260219": {
+   "nodes": 16777,
+   "with_channels": 11669,
+   "live": 6506,
+   "live_by_client": {
+    "LND": 5541,
+    "CLN": 793,
+    "LDK": 95,
+    "Unknown": 63,
+    "Eclair": 14
+   }
+  },
+  "20260220": {
+   "nodes": 16784,
+   "with_channels": 11676,
+   "live": 6355,
+   "live_by_client": {
+    "LND": 5394,
+    "CLN": 797,
+    "LDK": 94,
+    "Unknown": 56,
+    "Eclair": 14
+   }
+  },
+  "20260221": {
+   "nodes": 16795,
+   "with_channels": 11688,
+   "live": 6593,
+   "live_by_client": {
+    "LND": 5633,
+    "CLN": 795,
+    "LDK": 96,
+    "Unknown": 55,
+    "Eclair": 14
+   }
+  },
+  "20260222": {
+   "nodes": 16792,
+   "with_channels": 11686,
+   "live": 6466,
+   "live_by_client": {
+    "LND": 5501,
+    "CLN": 799,
+    "LDK": 94,
+    "Unknown": 58,
+    "Eclair": 14
+   }
+  },
+  "20260223": {
+   "nodes": 16795,
+   "with_channels": 11691,
+   "live": 6410,
+   "live_by_client": {
+    "LND": 5445,
+    "CLN": 799,
+    "LDK": 94,
+    "Unknown": 58,
+    "Eclair": 14
+   }
+  },
+  "20260224": {
+   "nodes": 16803,
+   "with_channels": 11698,
+   "live": 6439,
+   "live_by_client": {
+    "LND": 5482,
+    "CLN": 792,
+    "LDK": 95,
+    "Unknown": 57,
+    "Eclair": 13
+   }
+  },
+  "20260225": {
+   "nodes": 16795,
+   "with_channels": 11692,
+   "live": 6404,
+   "live_by_client": {
+    "LND": 5437,
+    "CLN": 799,
+    "LDK": 95,
+    "Unknown": 59,
+    "Eclair": 14
+   }
+  },
+  "20260226": {
+   "nodes": 16813,
+   "with_channels": 11707,
+   "live": 6343,
+   "live_by_client": {
+    "LND": 5378,
+    "CLN": 800,
+    "LDK": 95,
+    "Unknown": 56,
+    "Eclair": 14
+   }
+  },
+  "20260227": {
+   "nodes": 16823,
+   "with_channels": 11716,
+   "live": 6417,
+   "live_by_client": {
+    "LND": 5462,
+    "CLN": 792,
+    "LDK": 93,
+    "Unknown": 56,
+    "Eclair": 14
+   }
+  },
+  "20260228": {
+   "nodes": 16829,
+   "with_channels": 11721,
+   "live": 6307,
+   "live_by_client": {
+    "LND": 5346,
+    "CLN": 794,
+    "LDK": 95,
+    "Unknown": 57,
+    "Eclair": 15
+   }
+  },
+  "20260301": {
+   "nodes": 16788,
+   "with_channels": 11678,
+   "live": 6335,
+   "live_by_client": {
+    "LND": 5379,
+    "CLN": 791,
+    "LDK": 96,
+    "Unknown": 55,
+    "Eclair": 14
+   }
+  },
+  "20260302": {
+   "nodes": 16772,
+   "with_channels": 11660,
+   "live": 6355,
+   "live_by_client": {
+    "LND": 5393,
+    "CLN": 796,
+    "LDK": 96,
+    "Unknown": 55,
+    "Eclair": 15
+   }
+  },
+  "20260303": {
+   "nodes": 16776,
+   "with_channels": 11663,
+   "live": 6458,
+   "live_by_client": {
+    "LND": 5489,
+    "CLN": 800,
+    "LDK": 95,
+    "Unknown": 59,
+    "Eclair": 15
+   }
+  },
+  "20260304": {
+   "nodes": 16759,
+   "with_channels": 11646,
+   "live": 6249,
+   "live_by_client": {
+    "LND": 5281,
+    "CLN": 798,
+    "LDK": 96,
+    "Unknown": 59,
+    "Eclair": 15
+   }
+  },
+  "20260305": {
+   "nodes": 16746,
+   "with_channels": 11635,
+   "live": 6252,
+   "live_by_client": {
+    "LND": 5286,
+    "CLN": 797,
+    "LDK": 96,
+    "Unknown": 58,
+    "Eclair": 15
+   }
+  },
+  "20260306": {
+   "nodes": 16748,
+   "with_channels": 11636,
+   "live": 6219,
+   "live_by_client": {
+    "LND": 5259,
+    "CLN": 795,
+    "LDK": 93,
+    "Unknown": 57,
+    "Eclair": 15
+   }
+  },
+  "20260307": {
+   "nodes": 16765,
+   "with_channels": 11649,
+   "live": 6025,
+   "live_by_client": {
+    "LND": 5056,
+    "CLN": 803,
+    "LDK": 94,
+    "Unknown": 57,
+    "Eclair": 15
+   }
+  },
+  "20260308": {
+   "nodes": 16770,
+   "with_channels": 11657,
+   "live": 6022,
+   "live_by_client": {
+    "LND": 5050,
+    "CLN": 806,
+    "LDK": 94,
+    "Unknown": 57,
+    "Eclair": 15
+   }
+  },
+  "20260309": {
+   "nodes": 16733,
+   "with_channels": 11620,
+   "live": 6253,
+   "live_by_client": {
+    "LND": 5280,
+    "CLN": 803,
+    "LDK": 94,
+    "Unknown": 61,
+    "Eclair": 15
+   }
+  },
+  "20260310": {
+   "nodes": 16722,
+   "with_channels": 11611,
+   "live": 6177,
+   "live_by_client": {
+    "LND": 5208,
+    "CLN": 802,
+    "LDK": 90,
+    "Unknown": 62,
+    "Eclair": 15
+   }
+  },
+  "20260311": {
+   "nodes": 16733,
+   "with_channels": 11623,
+   "live": 6098,
+   "live_by_client": {
+    "LND": 5126,
+    "CLN": 804,
+    "LDK": 92,
+    "Unknown": 62,
+    "Eclair": 14
+   }
+  },
+  "20260312": {
+   "nodes": 16717,
+   "with_channels": 11610,
+   "live": 6214,
+   "live_by_client": {
+    "LND": 5236,
+    "CLN": 811,
+    "LDK": 90,
+    "Unknown": 63,
+    "Eclair": 14
+   }
+  },
+  "20260313": {
+   "nodes": 16729,
+   "with_channels": 11621,
+   "live": 6380,
+   "live_by_client": {
+    "LND": 5407,
+    "CLN": 805,
+    "LDK": 91,
+    "Unknown": 63,
+    "Eclair": 14
+   }
+  },
+  "20260314": {
+   "nodes": 16748,
+   "with_channels": 11642,
+   "live": 6174,
+   "live_by_client": {
+    "LND": 5198,
+    "CLN": 809,
+    "LDK": 92,
+    "Unknown": 61,
+    "Eclair": 14
+   }
+  },
+  "20260315": {
+   "nodes": 16750,
+   "with_channels": 11645,
+   "live": 6123,
+   "live_by_client": {
+    "LND": 5140,
+    "CLN": 817,
+    "LDK": 91,
+    "Unknown": 61,
+    "Eclair": 14
+   }
+  },
+  "20260316": {
+   "nodes": 16770,
+   "with_channels": 11668,
+   "live": 6383,
+   "live_by_client": {
+    "LND": 5408,
+    "CLN": 809,
+    "LDK": 91,
+    "Unknown": 61,
+    "Eclair": 14
+   }
+  },
+  "20260317": {
+   "nodes": 16757,
+   "with_channels": 11654,
+   "live": 6186,
+   "live_by_client": {
+    "LND": 5221,
+    "CLN": 803,
+    "LDK": 90,
+    "Unknown": 58,
+    "Eclair": 14
+   }
+  },
+  "20260318": {
+   "nodes": 16764,
+   "with_channels": 11661,
+   "live": 6394,
+   "live_by_client": {
+    "LND": 5424,
+    "CLN": 807,
+    "LDK": 91,
+    "Unknown": 58,
+    "Eclair": 14
+   }
+  },
+  "20260319": {
+   "nodes": 16766,
+   "with_channels": 11664,
+   "live": 6475,
+   "live_by_client": {
+    "LND": 5513,
+    "CLN": 803,
+    "LDK": 89,
+    "Unknown": 56,
+    "Eclair": 14
+   }
+  },
+  "20260320": {
+   "nodes": 16767,
+   "with_channels": 11662,
+   "live": 6220,
+   "live_by_client": {
+    "LND": 5245,
+    "CLN": 814,
+    "LDK": 90,
+    "Unknown": 57,
+    "Eclair": 14
+   }
+  },
+  "20260321": {
+   "nodes": 16777,
+   "with_channels": 11672,
+   "live": 6051,
+   "live_by_client": {
+    "LND": 5077,
+    "CLN": 814,
+    "LDK": 89,
+    "Unknown": 57,
+    "Eclair": 14
+   }
+  },
+  "20260322": {
+   "nodes": 16783,
+   "with_channels": 11677,
+   "live": 6349,
+   "live_by_client": {
+    "LND": 5371,
+    "CLN": 818,
+    "LDK": 89,
+    "Unknown": 57,
+    "Eclair": 14
+   }
+  },
+  "20260323": {
+   "nodes": 16797,
+   "with_channels": 11694,
+   "live": 6053,
+   "live_by_client": {
+    "LND": 5063,
+    "CLN": 826,
+    "LDK": 92,
+    "Unknown": 58,
+    "Eclair": 14
+   }
+  },
+  "20260324": {
+   "nodes": 16792,
+   "with_channels": 11684,
+   "live": 6032,
+   "live_by_client": {
+    "LND": 5050,
+    "CLN": 820,
+    "LDK": 91,
+    "Unknown": 57,
+    "Eclair": 14
+   }
+  },
+  "20260325": {
+   "nodes": 16787,
+   "with_channels": 11677,
+   "live": 6171,
+   "live_by_client": {
+    "LND": 5186,
+    "CLN": 822,
+    "LDK": 93,
+    "Unknown": 56,
+    "Eclair": 14
+   }
+  },
+  "20260326": {
+   "nodes": 16779,
+   "with_channels": 11667,
+   "live": 6072,
+   "live_by_client": {
+    "LND": 5097,
+    "CLN": 822,
+    "LDK": 90,
+    "Unknown": 49,
+    "Eclair": 14
+   }
+  },
+  "20260327": {
+   "nodes": 16781,
+   "with_channels": 11670,
+   "live": 6214,
+   "live_by_client": {
+    "LND": 5235,
+    "CLN": 822,
+    "LDK": 93,
+    "Unknown": 50,
+    "Eclair": 14
+   }
+  },
+  "20260328": {
+   "nodes": 16791,
+   "with_channels": 11682,
+   "live": 5994,
+   "live_by_client": {
+    "LND": 5009,
+    "CLN": 824,
+    "LDK": 95,
+    "Unknown": 52,
+    "Eclair": 14
+   }
+  },
+  "20260329": {
+   "nodes": 16804,
+   "with_channels": 11694,
+   "live": 6153,
+   "live_by_client": {
+    "LND": 5164,
+    "CLN": 828,
+    "LDK": 93,
+    "Unknown": 54,
+    "Eclair": 14
+   }
+  },
+  "20260330": {
+   "nodes": 16800,
+   "with_channels": 11681,
+   "live": 6105,
+   "live_by_client": {
+    "LND": 5116,
+    "CLN": 824,
+    "LDK": 94,
+    "Unknown": 57,
+    "Eclair": 14
+   }
+  },
+  "20260331": {
+   "nodes": 16796,
+   "with_channels": 11687,
+   "live": 5982,
+   "live_by_client": {
+    "LND": 5000,
+    "CLN": 819,
+    "LDK": 93,
+    "Unknown": 56,
+    "Eclair": 14
+   }
+  },
+  "20260401": {
+   "nodes": 16788,
+   "with_channels": 11677,
+   "live": 5968,
+   "live_by_client": {
+    "LND": 4983,
+    "CLN": 819,
+    "LDK": 95,
+    "Unknown": 57,
+    "Eclair": 14
+   }
+  },
+  "20260402": {
+   "nodes": 16794,
+   "with_channels": 11683,
+   "live": 5987,
+   "live_by_client": {
+    "LND": 5010,
+    "CLN": 810,
+    "LDK": 96,
+    "Unknown": 57,
+    "Eclair": 14
+   }
+  },
+  "20260403": {
+   "nodes": 16790,
+   "with_channels": 11681,
+   "live": 5929,
+   "live_by_client": {
+    "LND": 4949,
+    "CLN": 814,
+    "LDK": 96,
+    "Unknown": 56,
+    "Eclair": 14
+   }
+  },
+  "20260404": {
+   "nodes": 16785,
+   "with_channels": 11676,
+   "live": 5962,
+   "live_by_client": {
+    "LND": 4989,
+    "CLN": 811,
+    "LDK": 94,
+    "Unknown": 54,
+    "Eclair": 14
+   }
+  },
+  "20260405": {
+   "nodes": 16785,
+   "with_channels": 11679,
+   "live": 5898,
+   "live_by_client": {
+    "LND": 4918,
+    "CLN": 816,
+    "LDK": 95,
+    "Unknown": 55,
+    "Eclair": 14
+   }
+  },
+  "20260406": {
+   "nodes": 16792,
+   "with_channels": 11686,
+   "live": 5918,
+   "live_by_client": {
+    "LND": 4938,
+    "CLN": 817,
+    "LDK": 96,
+    "Unknown": 52,
+    "Eclair": 15
+   }
+  },
+  "20260407": {
+   "nodes": 16791,
+   "with_channels": 11689,
+   "live": 6191,
+   "live_by_client": {
+    "LND": 5209,
+    "CLN": 822,
+    "LDK": 96,
+    "Unknown": 50,
+    "Eclair": 14
+   }
+  },
+  "20260408": {
+   "nodes": 16801,
+   "with_channels": 11702,
+   "live": 5908,
+   "live_by_client": {
+    "LND": 4927,
+    "CLN": 822,
+    "LDK": 95,
+    "Unknown": 50,
+    "Eclair": 14
+   }
+  },
+  "20260409": {
+   "nodes": 16787,
+   "with_channels": 11686,
+   "live": 5927,
+   "live_by_client": {
+    "LND": 4958,
+    "CLN": 811,
+    "LDK": 95,
+    "Unknown": 49,
+    "Eclair": 14
+   }
+  },
+  "20260410": {
+   "nodes": 16780,
+   "with_channels": 11684,
+   "live": 6379,
+   "live_by_client": {
+    "LND": 5401,
+    "CLN": 816,
+    "LDK": 98,
+    "Unknown": 50,
+    "Eclair": 14
+   }
+  },
+  "20260411": {
+   "nodes": 16785,
+   "with_channels": 11693,
+   "live": 5938,
+   "live_by_client": {
+    "LND": 4955,
+    "CLN": 819,
+    "LDK": 99,
+    "Unknown": 50,
+    "Eclair": 15
+   }
+  },
+  "20260412": {
+   "nodes": 16785,
+   "with_channels": 11693,
+   "live": 5941,
+   "live_by_client": {
+    "LND": 4960,
+    "CLN": 816,
+    "LDK": 101,
+    "Unknown": 50,
+    "Eclair": 14
+   }
+  },
+  "20260413": {
+   "nodes": 16781,
+   "with_channels": 11683,
+   "live": 5918,
+   "live_by_client": {
+    "LND": 4937,
+    "CLN": 814,
+    "LDK": 101,
+    "Unknown": 52,
+    "Eclair": 14
+   }
+  },
+  "20260414": {
+   "nodes": 16774,
+   "with_channels": 11676,
+   "live": 5886,
+   "live_by_client": {
+    "LND": 4910,
+    "CLN": 811,
+    "LDK": 100,
+    "Unknown": 51,
+    "Eclair": 14
+   }
+  },
+  "20260415": {
+   "nodes": 16774,
+   "with_channels": 11681,
+   "live": 5907,
+   "live_by_client": {
+    "LND": 4936,
+    "CLN": 808,
+    "LDK": 96,
+    "Unknown": 52,
+    "Eclair": 15
+   }
+  },
+  "20260416": {
+   "nodes": 16774,
+   "with_channels": 11680,
+   "live": 5828,
+   "live_by_client": {
+    "LND": 4856,
+    "CLN": 806,
+    "LDK": 99,
+    "Unknown": 52,
+    "Eclair": 15
+   }
+  },
+  "20260417": {
+   "nodes": 16781,
+   "with_channels": 11688,
+   "live": 5840,
+   "live_by_client": {
+    "LND": 4869,
+    "CLN": 805,
+    "LDK": 100,
+    "Unknown": 51,
+    "Eclair": 15
+   }
+  },
+  "20260418": {
+   "nodes": 16790,
+   "with_channels": 11696,
+   "live": 5893,
+   "live_by_client": {
+    "LND": 4923,
+    "CLN": 805,
+    "LDK": 100,
+    "Unknown": 51,
+    "Eclair": 14
+   }
+  },
+  "20260419": {
+   "nodes": 16791,
+   "with_channels": 11691,
+   "live": 5933,
+   "live_by_client": {
+    "LND": 4949,
+    "CLN": 818,
+    "LDK": 101,
+    "Unknown": 51,
+    "Eclair": 14
+   }
+  },
+  "20260420": {
+   "nodes": 16790,
+   "with_channels": 11691,
+   "live": 6161,
+   "live_by_client": {
+    "LND": 5188,
+    "CLN": 808,
+    "LDK": 100,
+    "Unknown": 51,
+    "Eclair": 14
+   }
+  },
+  "20260421": {
+   "nodes": 16784,
+   "with_channels": 11685,
+   "live": 5960,
+   "live_by_client": {
+    "LND": 4977,
+    "CLN": 817,
+    "LDK": 101,
+    "Unknown": 51,
+    "Eclair": 14
+   }
+  },
+  "20260422": {
+   "nodes": 16773,
+   "with_channels": 11678,
+   "live": 5871,
+   "live_by_client": {
+    "LND": 4897,
+    "CLN": 811,
+    "LDK": 98,
+    "Unknown": 50,
+    "Eclair": 15
+   }
+  },
+  "20260423": {
+   "nodes": 16773,
+   "with_channels": 11678,
+   "live": 5899,
+   "live_by_client": {
+    "LND": 4924,
+    "CLN": 812,
+    "LDK": 99,
+    "Unknown": 50,
+    "Eclair": 14
+   }
+  },
+  "20260424": {
+   "nodes": 16778,
+   "with_channels": 11683,
+   "live": 5926,
+   "live_by_client": {
+    "LND": 4944,
+    "CLN": 818,
+    "LDK": 101,
+    "Unknown": 48,
+    "Eclair": 15
+   }
+  },
+  "20260425": {
+   "nodes": 16780,
+   "with_channels": 11685,
+   "live": 5842,
+   "live_by_client": {
+    "LND": 4860,
+    "CLN": 819,
+    "LDK": 101,
+    "Unknown": 47,
+    "Eclair": 15
+   }
+  },
+  "20260426": {
+   "nodes": 16778,
+   "with_channels": 11683,
+   "live": 5954,
+   "live_by_client": {
+    "LND": 4975,
+    "CLN": 817,
+    "LDK": 101,
+    "Unknown": 46,
+    "Eclair": 15
+   }
+  },
+  "20260427": {
+   "nodes": 16774,
+   "with_channels": 11679,
+   "live": 5935,
+   "live_by_client": {
+    "LND": 4955,
+    "CLN": 817,
+    "LDK": 100,
+    "Unknown": 48,
+    "Eclair": 15
+   }
+  },
+  "20260428": {
+   "nodes": 16766,
+   "with_channels": 11671,
+   "live": 5870,
+   "live_by_client": {
+    "LND": 4899,
+    "CLN": 810,
+    "LDK": 100,
+    "Unknown": 47,
+    "Eclair": 14
+   }
+  },
+  "20260429": {
+   "nodes": 16770,
+   "with_channels": 11674,
+   "live": 5837,
+   "live_by_client": {
+    "LND": 4870,
+    "CLN": 805,
+    "LDK": 102,
+    "Unknown": 47,
+    "Eclair": 13
+   }
+  },
+  "20260430": {
+   "nodes": 16764,
+   "with_channels": 11668,
+   "live": 5950,
+   "live_by_client": {
+    "LND": 4982,
+    "CLN": 805,
+    "LDK": 101,
+    "Unknown": 48,
+    "Eclair": 14
+   }
+  },
+  "20260501": {
+   "nodes": 16764,
+   "with_channels": 11665,
+   "live": 6023,
+   "live_by_client": {
+    "LND": 5059,
+    "CLN": 805,
+    "LDK": 100,
+    "Unknown": 46,
+    "Eclair": 13
+   }
+  },
+  "20260502": {
+   "nodes": 16755,
+   "with_channels": 11656,
+   "live": 5919,
+   "live_by_client": {
+    "LND": 4953,
+    "CLN": 806,
+    "LDK": 99,
+    "Unknown": 48,
+    "Eclair": 13
+   }
+  },
+  "20260503": {
+   "nodes": 16753,
+   "with_channels": 11655,
+   "live": 5951,
+   "live_by_client": {
+    "LND": 4978,
+    "CLN": 809,
+    "LDK": 102,
+    "Unknown": 49,
+    "Eclair": 13
+   }
+  },
+  "20260504": {
+   "nodes": 16753,
+   "with_channels": 11654,
+   "live": 5962,
+   "live_by_client": {
+    "LND": 4985,
+    "CLN": 811,
+    "LDK": 103,
+    "Unknown": 50,
+    "Eclair": 13
+   }
+  },
+  "20260505": {
+   "nodes": 16760,
+   "with_channels": 11663,
+   "live": 5896,
+   "live_by_client": {
+    "LND": 4925,
+    "CLN": 809,
+    "LDK": 100,
+    "Unknown": 49,
+    "Eclair": 13
+   }
+  },
+  "20260506": {
+   "nodes": 16762,
+   "with_channels": 11666,
+   "live": 5932,
+   "live_by_client": {
+    "LND": 4967,
+    "CLN": 807,
+    "LDK": 97,
+    "Unknown": 48,
+    "Eclair": 13
+   }
+  },
+  "20260507": {
+   "nodes": 16748,
+   "with_channels": 11650,
+   "live": 5981,
+   "live_by_client": {
+    "LND": 5026,
+    "CLN": 798,
+    "LDK": 96,
+    "Unknown": 48,
+    "Eclair": 13
+   }
+  },
+  "20260508": {
+   "nodes": 16751,
+   "with_channels": 11651,
+   "live": 5955,
+   "live_by_client": {
+    "LND": 4995,
+    "CLN": 803,
+    "LDK": 95,
+    "Unknown": 49,
+    "Eclair": 13
+   }
+  },
+  "20260509": {
+   "nodes": 16756,
+   "with_channels": 11654,
+   "live": 5893,
+   "live_by_client": {
+    "LND": 4929,
+    "CLN": 809,
+    "LDK": 94,
+    "Unknown": 48,
+    "Eclair": 13
+   }
+  },
+  "20260510": {
+   "nodes": 16751,
+   "with_channels": 11647,
+   "live": 5805,
+   "live_by_client": {
+    "LND": 4843,
+    "CLN": 808,
+    "LDK": 94,
+    "Unknown": 48,
+    "Eclair": 12
+   }
+  },
+  "20260511": {
+   "nodes": 16750,
+   "with_channels": 11650,
+   "live": 5720,
+   "live_by_client": {
+    "LND": 4758,
+    "CLN": 810,
+    "LDK": 91,
+    "Unknown": 48,
+    "Eclair": 13
+   }
+  },
+  "20260512": {
+   "nodes": 16753,
+   "with_channels": 11650,
+   "live": 5778,
+   "live_by_client": {
+    "LND": 4810,
+    "CLN": 815,
+    "LDK": 92,
+    "Unknown": 48,
+    "Eclair": 13
+   }
+  },
+  "20260513": {
+   "nodes": 16754,
+   "with_channels": 11654,
+   "live": 5866,
+   "live_by_client": {
+    "LND": 4896,
+    "CLN": 815,
+    "LDK": 94,
+    "Unknown": 47,
+    "Eclair": 14
+   }
+  },
+  "20260514": {
+   "nodes": 16747,
+   "with_channels": 11646,
+   "live": 5888,
+   "live_by_client": {
+    "LND": 4917,
+    "CLN": 818,
+    "LDK": 93,
+    "Unknown": 47,
+    "Eclair": 13
+   }
+  },
+  "20260515": {
+   "nodes": 16760,
+   "with_channels": 11661,
+   "live": 5880,
+   "live_by_client": {
+    "LND": 4915,
+    "CLN": 816,
+    "LDK": 88,
+    "Unknown": 47,
+    "Eclair": 14
+   }
+  },
+  "20260516": {
+   "nodes": 16778,
+   "with_channels": 11682,
+   "live": 5832,
+   "live_by_client": {
+    "LND": 4857,
+    "CLN": 825,
+    "LDK": 94,
+    "Unknown": 43,
+    "Eclair": 13
+   }
+  },
+  "20260517": {
+   "nodes": 16780,
+   "with_channels": 11685,
+   "live": 5851,
+   "live_by_client": {
+    "LND": 4880,
+    "CLN": 819,
+    "LDK": 93,
+    "Unknown": 46,
+    "Eclair": 13
+   }
+  },
+  "20260518": {
+   "nodes": 16780,
+   "with_channels": 11685,
+   "live": 5846,
+   "live_by_client": {
+    "LND": 4881,
+    "CLN": 811,
+    "LDK": 94,
+    "Unknown": 47,
+    "Eclair": 13
+   }
+  },
+  "20260519": {
+   "nodes": 16786,
+   "with_channels": 11688,
+   "live": 5895,
+   "live_by_client": {
+    "LND": 4924,
+    "CLN": 816,
+    "LDK": 95,
+    "Unknown": 47,
+    "Eclair": 13
+   }
+  },
+  "20260525": {
+   "nodes": 16761,
+   "with_channels": 11652,
+   "live": 5886,
+   "live_by_client": {
+    "LND": 4922,
+    "CLN": 819,
+    "LDK": 90,
+    "Unknown": 42,
+    "Eclair": 13
+   }
+  },
+  "20260526": {
+   "nodes": 16755,
+   "with_channels": 11647,
+   "live": 5831,
+   "live_by_client": {
+    "LND": 4871,
+    "CLN": 815,
+    "LDK": 92,
+    "Unknown": 40,
+    "Eclair": 13
+   }
+  },
+  "20260527": {
+   "nodes": 16768,
+   "with_channels": 11661,
+   "live": 5913,
+   "live_by_client": {
+    "LND": 4955,
+    "CLN": 811,
+    "LDK": 94,
+    "Unknown": 41,
+    "Eclair": 12
+   }
+  },
+  "20260528": {
+   "nodes": 16763,
+   "with_channels": 11654,
+   "live": 5672,
+   "live_by_client": {
+    "LND": 4718,
+    "CLN": 805,
+    "LDK": 95,
+    "Unknown": 41,
+    "Eclair": 13
+   }
+  },
+  "20260529": {
+   "nodes": 16762,
+   "with_channels": 11654,
+   "live": 5790,
+   "live_by_client": {
+    "LND": 4829,
+    "CLN": 812,
+    "LDK": 95,
+    "Unknown": 42,
+    "Eclair": 12
+   }
+  },
+  "20260530": {
+   "nodes": 16763,
+   "with_channels": 11655,
+   "live": 5968,
+   "live_by_client": {
+    "LND": 5004,
+    "CLN": 810,
+    "LDK": 96,
+    "Unknown": 45,
+    "Eclair": 13
+   }
+  },
+  "20260531": {
+   "nodes": 16758,
+   "with_channels": 11649,
+   "live": 5981,
+   "live_by_client": {
+    "LND": 5013,
+    "CLN": 818,
+    "LDK": 92,
+    "Unknown": 45,
+    "Eclair": 13
+   }
+  },
+  "20260601": {
+   "nodes": 16755,
+   "with_channels": 11645,
+   "live": 5902,
+   "live_by_client": {
+    "LND": 4927,
+    "CLN": 824,
+    "LDK": 93,
+    "Unknown": 44,
+    "Eclair": 14
+   }
+  },
+  "20260602": {
+   "nodes": 16752,
+   "with_channels": 11640,
+   "live": 5962,
+   "live_by_client": {
+    "LND": 4988,
+    "CLN": 823,
+    "LDK": 94,
+    "Unknown": 44,
+    "Eclair": 13
+   }
+  },
+  "20260603": {
+   "nodes": 16745,
+   "with_channels": 11629,
+   "live": 5977,
+   "live_by_client": {
+    "LND": 5001,
+    "CLN": 824,
+    "LDK": 94,
+    "Unknown": 45,
+    "Eclair": 13
+   }
+  },
+  "20260604": {
+   "nodes": 16752,
+   "with_channels": 11644,
+   "live": 5720,
+   "live_by_client": {
+    "LND": 4747,
+    "CLN": 822,
+    "LDK": 93,
+    "Unknown": 46,
+    "Eclair": 12
+   }
+  },
+  "20260605": {
+   "nodes": 16758,
+   "with_channels": 11651,
+   "live": 5758,
+   "live_by_client": {
+    "LND": 4787,
+    "CLN": 820,
+    "LDK": 93,
+    "Unknown": 45,
+    "Eclair": 13
+   }
+  },
+  "20260606": {
+   "nodes": 16748,
+   "with_channels": 11640,
+   "live": 5759,
+   "live_by_client": {
+    "LND": 4792,
+    "CLN": 816,
+    "LDK": 93,
+    "Unknown": 45,
+    "Eclair": 13
+   }
+  },
+  "20260607": {
+   "nodes": 16746,
+   "with_channels": 11638,
+   "live": 5738,
+   "live_by_client": {
+    "LND": 4764,
+    "CLN": 820,
+    "LDK": 95,
+    "Unknown": 46,
+    "Eclair": 13
+   }
+  },
+  "20260608": {
+   "nodes": 16744,
+   "with_channels": 11637,
+   "live": 5756,
+   "live_by_client": {
+    "LND": 4787,
+    "CLN": 818,
+    "LDK": 93,
+    "Unknown": 45,
+    "Eclair": 13
+   }
+  },
+  "20260609": {
+   "nodes": 16754,
+   "with_channels": 11644,
+   "live": 5714,
+   "live_by_client": {
+    "LND": 4744,
+    "CLN": 816,
+    "LDK": 94,
+    "Unknown": 47,
+    "Eclair": 13
+   }
+  },
+  "20260610": {
+   "nodes": 16757,
+   "with_channels": 11651,
+   "live": 5718,
+   "live_by_client": {
+    "LND": 4743,
+    "CLN": 822,
+    "LDK": 93,
+    "Unknown": 47,
+    "Eclair": 13
+   }
+  },
+  "20260611": {
+   "nodes": 16751,
+   "with_channels": 11646,
+   "live": 5729,
+   "live_by_client": {
+    "LND": 4751,
+    "CLN": 825,
+    "LDK": 92,
+    "Unknown": 47,
+    "Eclair": 14
+   }
+  },
+  "20260612": {
+   "nodes": 16741,
+   "with_channels": 11636,
+   "live": 5699,
+   "live_by_client": {
+    "LND": 4730,
+    "CLN": 819,
+    "LDK": 94,
+    "Unknown": 43,
+    "Eclair": 13
+   }
+  },
+  "20260614": {
+   "nodes": 16743,
+   "with_channels": 11636,
+   "live": 6088,
+   "live_by_client": {
+    "LND": 5112,
+    "CLN": 826,
+    "LDK": 95,
+    "Unknown": 42,
+    "Eclair": 13
+   }
+  },
+  "20260617": {
+   "nodes": 16710,
+   "with_channels": 11599,
+   "live": 5820,
+   "live_by_client": {
+    "LND": 4842,
+    "CLN": 828,
+    "LDK": 97,
+    "Unknown": 40,
+    "Eclair": 13
+   }
+  },
+  "20260618": {
+   "nodes": 16711,
+   "with_channels": 11604,
+   "live": 5667,
+   "live_by_client": {
+    "LND": 4690,
+    "CLN": 826,
+    "LDK": 97,
+    "Unknown": 41,
+    "Eclair": 13
+   }
+  },
+  "20260619": {
+   "nodes": 16713,
+   "with_channels": 11605,
+   "live": 5703,
+   "live_by_client": {
+    "LND": 4734,
+    "CLN": 819,
+    "LDK": 96,
+    "Unknown": 41,
+    "Eclair": 13
+   }
+  },
+  "20260620": {
+   "nodes": 16702,
+   "with_channels": 11592,
+   "live": 5713,
+   "live_by_client": {
+    "LND": 4744,
+    "CLN": 817,
+    "LDK": 99,
+    "Unknown": 39,
+    "Eclair": 14
+   }
+  },
+  "20260621": {
+   "nodes": 16704,
+   "with_channels": 11593,
+   "live": 5679,
+   "live_by_client": {
+    "LND": 4710,
+    "CLN": 819,
+    "LDK": 98,
+    "Unknown": 39,
+    "Eclair": 13
+   }
+  },
+  "20260622": {
+   "nodes": 16706,
+   "with_channels": 11592,
+   "live": 5624,
+   "live_by_client": {
+    "LND": 4656,
+    "CLN": 818,
+    "LDK": 97,
+    "Unknown": 39,
+    "Eclair": 14
+   }
+  },
+  "20260623": {
+   "nodes": 16701,
+   "with_channels": 11586,
+   "live": 5565,
+   "live_by_client": {
+    "LND": 4591,
+    "CLN": 824,
+    "LDK": 96,
+    "Unknown": 41,
+    "Eclair": 13
+   }
+  },
+  "20260624": {
+   "nodes": 16693,
+   "with_channels": 11579,
+   "live": 5629,
+   "live_by_client": {
+    "LND": 4660,
+    "CLN": 818,
+    "LDK": 96,
+    "Unknown": 41,
+    "Eclair": 14
+   }
+  },
+  "20260625": {
+   "nodes": 16689,
+   "with_channels": 11574,
+   "live": 5714,
+   "live_by_client": {
+    "LND": 4737,
+    "CLN": 827,
+    "LDK": 94,
+    "Unknown": 42,
+    "Eclair": 14
+   }
+  },
+  "20260626": {
+   "nodes": 16685,
+   "with_channels": 11571,
+   "live": 5628,
+   "live_by_client": {
+    "LND": 4653,
+    "CLN": 822,
+    "LDK": 97,
+    "Unknown": 42,
+    "Eclair": 14
+   }
+  },
+  "20260627": {
+   "nodes": 16683,
+   "with_channels": 11569,
+   "live": 5651,
+   "live_by_client": {
+    "LND": 4683,
+    "CLN": 817,
+    "LDK": 98,
+    "Unknown": 39,
+    "Eclair": 14
+   }
+  },
+  "20260628": {
+   "nodes": 16680,
+   "with_channels": 11563,
+   "live": 5662,
+   "live_by_client": {
+    "LND": 4689,
+    "CLN": 822,
+    "LDK": 99,
+    "Unknown": 39,
+    "Eclair": 13
+   }
+  },
+  "20260629": {
+   "nodes": 16668,
+   "with_channels": 11553,
+   "live": 5633,
+   "live_by_client": {
+    "LND": 4663,
+    "CLN": 818,
+    "LDK": 100,
+    "Unknown": 40,
+    "Eclair": 12
+   }
+  },
+  "20260630": {
+   "nodes": 16669,
+   "with_channels": 11553,
+   "live": 5571,
+   "live_by_client": {
+    "LND": 4603,
+    "CLN": 817,
+    "LDK": 99,
+    "Unknown": 39,
+    "Eclair": 13
+   }
+  },
+  "20260701": {
+   "nodes": 16679,
+   "with_channels": 11562,
+   "live": 5686,
+   "live_by_client": {
+    "LND": 4713,
+    "CLN": 823,
+    "LDK": 98,
+    "Unknown": 39,
+    "Eclair": 13
+   }
+  },
+  "20260702": {
+   "nodes": 16680,
+   "with_channels": 11563,
+   "live": 5649,
+   "live_by_client": {
+    "LND": 4678,
+    "CLN": 821,
+    "LDK": 98,
+    "Unknown": 39,
+    "Eclair": 13
+   }
+  },
+  "20260703": {
+   "nodes": 16654,
+   "with_channels": 11535,
+   "live": 5691,
+   "live_by_client": {
+    "LND": 4734,
+    "CLN": 807,
+    "LDK": 97,
+    "Unknown": 40,
+    "Eclair": 13
+   }
+  },
+  "20260704": {
+   "nodes": 16638,
+   "with_channels": 11517,
+   "live": 5647,
+   "live_by_client": {
+    "LND": 4694,
+    "CLN": 808,
+    "LDK": 93,
+    "Unknown": 39,
+    "Eclair": 13
+   }
+  },
+  "20260705": {
+   "nodes": 16629,
+   "with_channels": 11499,
+   "live": 5734,
+   "live_by_client": {
+    "LND": 4788,
+    "CLN": 801,
+    "LDK": 94,
+    "Unknown": 38,
+    "Eclair": 13
+   }
+  },
+  "20260706": {
+   "nodes": 16620,
+   "with_channels": 11490,
+   "live": 5643,
+   "live_by_client": {
+    "LND": 4693,
+    "CLN": 803,
+    "LDK": 96,
+    "Unknown": 38,
+    "Eclair": 13
+   }
+  },
+  "20260707": {
+   "nodes": 16625,
+   "with_channels": 11498,
+   "live": 5648,
+   "live_by_client": {
+    "LND": 4694,
+    "CLN": 812,
+    "LDK": 95,
+    "Unknown": 35,
+    "Eclair": 12
+   }
+  },
+  "20260708": {
+   "nodes": 16631,
+   "with_channels": 11513,
+   "live": 5612,
+   "live_by_client": {
+    "LND": 4663,
+    "CLN": 802,
+    "LDK": 99,
+    "Unknown": 36,
+    "Eclair": 12
+   }
+  },
+  "20260709": {
+   "nodes": 16633,
+   "with_channels": 11518,
+   "live": 5598,
+   "live_by_client": {
+    "LND": 4649,
+    "CLN": 801,
+    "LDK": 100,
+    "Unknown": 36,
+    "Eclair": 12
+   }
+  },
+  "20260710": {
+   "nodes": 16625,
+   "with_channels": 11510,
+   "live": 5304,
+   "live_by_client": {
+    "LND": 4376,
+    "CLN": 781,
+    "LDK": 99,
+    "Unknown": 36,
+    "Eclair": 12
+   }
+  },
+  "20260711": {
+   "nodes": 16615,
+   "with_channels": 11500,
+   "live": 5289,
+   "live_by_client": {
+    "LND": 4356,
+    "CLN": 781,
+    "LDK": 103,
+    "Unknown": 37,
+    "Eclair": 12
+   }
+  },
+  "20260712": {
+   "nodes": 16599,
+   "with_channels": 11480,
+   "live": 5287,
+   "live_by_client": {
+    "LND": 4350,
+    "CLN": 785,
+    "LDK": 103,
+    "Unknown": 37,
+    "Eclair": 12
+   }
+  },
+  "20260713": {
+   "nodes": 16592,
+   "with_channels": 11470,
+   "live": 5469,
+   "live_by_client": {
+    "LND": 4530,
+    "CLN": 789,
+    "LDK": 102,
+    "Unknown": 36,
+    "Eclair": 12
+   }
+  },
+  "20260714": {
+   "nodes": 16583,
+   "with_channels": 11460,
+   "live": 5322,
+   "live_by_client": {
+    "LND": 4384,
+    "CLN": 791,
+    "LDK": 100,
+    "Unknown": 35,
+    "Eclair": 12
+   }
+  },
+  "20260715": {
+   "nodes": 16576,
+   "with_channels": 11454,
+   "live": 5329,
+   "live_by_client": {
+    "LND": 4397,
+    "CLN": 786,
+    "LDK": 100,
+    "Unknown": 34,
+    "Eclair": 12
+   }
+  },
+  "20260716": {
+   "nodes": 16575,
+   "with_channels": 11452,
+   "live": 5322,
+   "live_by_client": {
+    "LND": 4389,
+    "CLN": 784,
+    "LDK": 101,
+    "Unknown": 36,
+    "Eclair": 12
+   }
+  },
+  "20260717": {
+   "nodes": 16582,
+   "with_channels": 11461,
+   "live": 5439,
+   "live_by_client": {
+    "LND": 4529,
+    "CLN": 787,
+    "LDK": 82,
+    "Unknown": 29,
+    "Eclair": 12
+   }
+  },
+  "20260718": {
+   "nodes": 16569,
+   "with_channels": 11449,
+   "live": 5321,
+   "live_by_client": {
+    "LND": 4405,
+    "CLN": 788,
+    "LDK": 87,
+    "Unknown": 29,
+    "Eclair": 12
+   }
+  },
+  "20260719": {
+   "nodes": 16563,
+   "with_channels": 11443,
+   "live": 5422,
+   "live_by_client": {
+    "LND": 4512,
+    "CLN": 786,
+    "LDK": 83,
+    "Unknown": 29,
+    "Eclair": 12
+   }
+  },
+  "20260720": {
+   "nodes": 16566,
+   "with_channels": 11449,
+   "live": 5384,
+   "live_by_client": {
+    "LND": 4470,
+    "CLN": 783,
+    "LDK": 91,
+    "Unknown": 28,
+    "Eclair": 12
+   }
+  },
+  "20260721": {
+   "nodes": 16529,
+   "with_channels": 11405,
+   "live": 5390,
+   "live_by_client": {
+    "LND": 4470,
+    "CLN": 791,
+    "LDK": 87,
+    "Unknown": 30,
+    "Eclair": 12
+   }
+  },
+  "20260723": {
+   "nodes": 16534,
+   "with_channels": 11417,
+   "live": 5493,
+   "live_by_client": {
+    "LND": 4573,
+    "CLN": 788,
+    "LDK": 91,
+    "Unknown": 29,
+    "Eclair": 12
+   }
+  },
+  "20260724": {
+   "nodes": 16522,
+   "with_channels": 11412,
+   "live": 5639,
+   "live_by_client": {
+    "LND": 4704,
+    "CLN": 802,
+    "LDK": 92,
+    "Unknown": 29,
+    "Eclair": 12
+   }
+  },
+  "20260725": {
+   "nodes": 16526,
+   "with_channels": 11414,
+   "live": 5607,
+   "live_by_client": {
+    "LND": 4674,
+    "CLN": 796,
+    "LDK": 95,
+    "Unknown": 30,
+    "Eclair": 12
+   }
+  },
+  "20260726": {
+   "nodes": 16515,
+   "with_channels": 11401,
+   "live": 5640,
+   "live_by_client": {
+    "LND": 4708,
+    "CLN": 795,
+    "LDK": 95,
+    "Unknown": 30,
+    "Eclair": 12
+   }
+  },
+  "20260727": {
+   "nodes": 16509,
+   "with_channels": 11395,
+   "live": 5650,
+   "live_by_client": {
+    "LND": 4711,
+    "CLN": 804,
+    "LDK": 94,
+    "Unknown": 29,
+    "Eclair": 12
+   }
+  },
+  "20260728": {
+   "nodes": 16508,
+   "with_channels": 11391,
+   "live": 5627,
+   "live_by_client": {
+    "LND": 4690,
+    "CLN": 800,
+    "LDK": 95,
+    "Unknown": 30,
+    "Eclair": 12
+   }
+  },
+  "20260729": {
+   "nodes": 16505,
+   "with_channels": 11387,
+   "live": 5590,
+   "live_by_client": {
+    "LND": 4657,
+    "CLN": 799,
+    "LDK": 92,
+    "Unknown": 30,
+    "Eclair": 12
+   }
+  },
+  "20260730": {
+   "nodes": 16490,
+   "with_channels": 11371,
+   "live": 5510,
+   "live_by_client": {
+    "LND": 4579,
+    "CLN": 797,
+    "LDK": 94,
+    "Unknown": 30,
+    "Eclair": 10
+   }
+  },
+  "20260731": {
+   "nodes": 16431,
+   "with_channels": 11310,
+   "live": 5543,
+   "live_by_client": {
+    "LND": 4609,
+    "CLN": 802,
+    "LDK": 91,
+    "Unknown": 31,
+    "Eclair": 10
+   }
+  },
+  "20260801": {
+   "nodes": 16432,
+   "with_channels": 11308,
+   "live": 5442,
+   "live_by_client": {
+    "LND": 4510,
+    "CLN": 795,
+    "LDK": 96,
+    "Unknown": 31,
+    "Eclair": 10
+   }
+  },
+  "20260802": {
+   "nodes": 16413,
+   "with_channels": 11287,
+   "live": 5485,
+   "live_by_client": {
+    "LND": 4564,
+    "CLN": 784,
+    "LDK": 96,
+    "Unknown": 31,
+    "Eclair": 10
+   }
+  },
+  "20260803": {
+   "nodes": 16283,
+   "with_channels": 11130,
+   "live": 5547,
+   "live_by_client": {
+    "LND": 4628,
+    "CLN": 787,
+    "LDK": 90,
+    "Unknown": 32,
+    "Eclair": 10
+   }
+  },
+  "20260804": {
+   "nodes": 16257,
+   "with_channels": 11098,
+   "live": 5592,
+   "live_by_client": {
+    "LND": 4671,
+    "CLN": 788,
+    "LDK": 91,
+    "Unknown": 32,
+    "Eclair": 10
+   }
+  },
+  "20260805": {
+   "nodes": 16247,
+   "with_channels": 11089,
+   "live": 5415,
+   "live_by_client": {
+    "LND": 4506,
+    "CLN": 775,
+    "LDK": 92,
+    "Unknown": 32,
+    "Eclair": 10
+   }
+  },
+  "20260806": {
+   "nodes": 16107,
+   "with_channels": 10946,
+   "live": 5285,
+   "live_by_client": {
+    "LND": 4410,
+    "CLN": 740,
+    "LDK": 92,
+    "Unknown": 32,
+    "Eclair": 11
+   }
+  },
+  "20260807": {
+   "nodes": 15909,
+   "with_channels": 10743,
+   "live": 5207,
+   "live_by_client": {
+    "LND": 4382,
+    "CLN": 698,
+    "LDK": 85,
+    "Unknown": 32,
+    "Eclair": 10
+   }
+  },
+  "20260808": {
+   "nodes": 15779,
+   "with_channels": 10607,
+   "live": 5072,
+   "live_by_client": {
+    "LND": 4273,
+    "CLN": 670,
+    "LDK": 88,
+    "Unknown": 32,
+    "Eclair": 9
+   }
+  },
+  "20260809": {
+   "nodes": 15754,
+   "with_channels": 10582,
+   "live": 5076,
+   "live_by_client": {
+    "LND": 4290,
+    "CLN": 658,
+    "LDK": 87,
+    "Unknown": 32,
+    "Eclair": 9
+   }
+  },
+  "20260810": {
+   "nodes": 15766,
+   "with_channels": 10589,
+   "live": 5099,
+   "live_by_client": {
+    "LND": 4305,
+    "CLN": 666,
+    "LDK": 87,
+    "Unknown": 32,
+    "Eclair": 9
+   }
+  },
+  "20260811": {
+   "nodes": 15768,
+   "with_channels": 10592,
+   "live": 5080,
+   "live_by_client": {
+    "LND": 4297,
+    "CLN": 654,
+    "LDK": 87,
+    "Unknown": 33,
+    "Eclair": 9
+   }
+  },
+  "20260812": {
+   "nodes": 15676,
+   "with_channels": 10498,
+   "live": 4920,
+   "live_by_client": {
+    "LND": 4163,
+    "CLN": 629,
+    "LDK": 86,
+    "Unknown": 33,
+    "Eclair": 9
+   }
+  },
+  "20260813": {
+   "nodes": 15684,
+   "with_channels": 10509,
+   "live": 4800,
+   "live_by_client": {
+    "LND": 4023,
+    "CLN": 648,
+    "LDK": 88,
+    "Unknown": 32,
+    "Eclair": 9
+   }
+  },
+  "20260814": {
+   "nodes": 15688,
+   "with_channels": 10515,
+   "live": 5016,
+   "live_by_client": {
+    "LND": 4232,
+    "CLN": 654,
+    "LDK": 90,
+    "Unknown": 31,
+    "Eclair": 9
+   }
+  },
+  "20260815": {
+   "nodes": 15673,
+   "with_channels": 10493,
+   "live": 4951,
+   "live_by_client": {
+    "LND": 4170,
+    "CLN": 653,
+    "LDK": 90,
+    "Unknown": 29,
+    "Eclair": 9
+   }
+  },
+  "20260816": {
+   "nodes": 15676,
+   "with_channels": 10495,
+   "live": 4949,
+   "live_by_client": {
+    "LND": 4169,
+    "CLN": 654,
+    "LDK": 88,
+    "Unknown": 29,
+    "Eclair": 9
+   }
+  },
+  "20260817": {
+   "nodes": 15670,
+   "with_channels": 10489,
+   "live": 4957,
+   "live_by_client": {
+    "LND": 4177,
+    "CLN": 650,
+    "LDK": 92,
+    "Unknown": 29,
+    "Eclair": 9
+   }
+  },
+  "20260818": {
+   "nodes": 15663,
+   "with_channels": 10482,
+   "live": 4899,
+   "live_by_client": {
+    "LND": 4126,
+    "CLN": 644,
+    "LDK": 91,
+    "Unknown": 29,
+    "Eclair": 9
+   }
+  },
+  "20260819": {
+   "nodes": 15660,
+   "with_channels": 10479,
+   "live": 4969,
+   "live_by_client": {
+    "LND": 4193,
+    "CLN": 646,
+    "LDK": 92,
+    "Unknown": 29,
+    "Eclair": 9
+   }
+  },
+  "20260820": {
+   "nodes": 15667,
+   "with_channels": 10487,
+   "live": 4880,
+   "live_by_client": {
+    "LND": 4103,
+    "CLN": 649,
+    "LDK": 90,
+    "Unknown": 29,
+    "Eclair": 9
+   }
+  },
+  "20260821": {
+   "nodes": 15654,
+   "with_channels": 10470,
+   "live": 5066,
+   "live_by_client": {
+    "LND": 4284,
+    "CLN": 652,
+    "LDK": 90,
+    "Unknown": 31,
+    "Eclair": 9
+   }
+  },
+  "20260822": {
+   "nodes": 15648,
+   "with_channels": 10462,
+   "live": 5052,
+   "live_by_client": {
+    "LND": 4272,
+    "CLN": 651,
+    "LDK": 87,
+    "Unknown": 33,
+    "Eclair": 9
+   }
+  },
+  "20260823": {
+   "nodes": 15643,
+   "with_channels": 10457,
+   "live": 5088,
+   "live_by_client": {
+    "LND": 4307,
+    "CLN": 651,
+    "LDK": 89,
+    "Unknown": 32,
+    "Eclair": 9
+   }
+  },
+  "20260824": {
+   "nodes": 15629,
+   "with_channels": 10444,
+   "live": 5078,
+   "live_by_client": {
+    "LND": 4296,
+    "CLN": 653,
+    "LDK": 87,
+    "Unknown": 33,
+    "Eclair": 9
+   }
+  },
+  "20260825": {
+   "nodes": 15568,
+   "with_channels": 10377,
+   "live": 4686,
+   "live_by_client": {
+    "LND": 3905,
+    "CLN": 648,
+    "LDK": 89,
+    "Unknown": 34,
+    "Eclair": 10
+   }
+  },
+  "20260826": {
+   "nodes": 15475,
+   "with_channels": 10260,
+   "live": 4608,
+   "live_by_client": {
+    "LND": 3823,
+    "CLN": 652,
+    "LDK": 89,
+    "Unknown": 34,
+    "Eclair": 10
+   }
+  },
+  "20260827": {
+   "nodes": 15451,
+   "with_channels": 10237,
+   "live": 4440,
+   "live_by_client": {
+    "LND": 3764,
+    "CLN": 543,
+    "LDK": 88,
+    "Unknown": 35,
+    "Eclair": 10
+   }
+  },
+  "20260828": {
+   "nodes": 15426,
+   "with_channels": 10209,
+   "live": 4420,
+   "live_by_client": {
+    "LND": 3763,
+    "CLN": 526,
+    "LDK": 87,
+    "Unknown": 34,
+    "Eclair": 10
+   }
+  },
+  "20260829": {
+   "nodes": 15425,
+   "with_channels": 10207,
+   "live": 4500,
+   "live_by_client": {
+    "LND": 3802,
+    "CLN": 568,
+    "LDK": 87,
+    "Unknown": 33,
+    "Eclair": 10
+   }
+  },
+  "20260830": {
+   "nodes": 15423,
+   "with_channels": 10204,
+   "live": 4471,
+   "live_by_client": {
+    "LND": 3779,
+    "CLN": 563,
+    "LDK": 86,
+    "Unknown": 33,
+    "Eclair": 10
+   }
+  },
+  "20260831": {
+   "nodes": 15410,
+   "with_channels": 10195,
+   "live": 4529,
+   "live_by_client": {
+    "LND": 3830,
+    "CLN": 567,
+    "LDK": 88,
+    "Unknown": 34,
+    "Eclair": 10
+   }
+  },
+  "20260901": {
+   "nodes": 15386,
+   "with_channels": 10165,
+   "live": 4480,
+   "live_by_client": {
+    "LND": 3799,
+    "CLN": 552,
+    "LDK": 86,
+    "Unknown": 34,
+    "Eclair": 9
+   }
+  },
+  "20260902": {
+   "nodes": 15389,
+   "with_channels": 10169,
+   "live": 4761,
+   "live_by_client": {
+    "LND": 4084,
+    "CLN": 548,
+    "LDK": 85,
+    "Unknown": 34,
+    "Eclair": 10
+   }
+  },
+  "20260903": {
+   "nodes": 15378,
+   "with_channels": 10160,
+   "live": 4742,
+   "live_by_client": {
+    "LND": 4069,
+    "CLN": 543,
+    "LDK": 87,
+    "Unknown": 33,
+    "Eclair": 10
+   }
+  },
+  "20260904": {
+   "nodes": 15377,
+   "with_channels": 10155,
+   "live": 4825,
+   "live_by_client": {
+    "LND": 4156,
+    "CLN": 543,
+    "LDK": 85,
+    "Unknown": 31,
+    "Eclair": 10
+   }
+  },
+  "20260905": {
+   "nodes": 15383,
+   "with_channels": 10161,
+   "live": 4833,
+   "live_by_client": {
+    "LND": 4164,
+    "CLN": 542,
+    "LDK": 85,
+    "Unknown": 31,
+    "Eclair": 11
+   }
+  },
+  "20260906": {
+   "nodes": 15369,
+   "with_channels": 10146,
+   "live": 4469,
+   "live_by_client": {
+    "LND": 3797,
+    "CLN": 545,
+    "LDK": 85,
+    "Unknown": 32,
+    "Eclair": 10
+   }
+  },
+  "20260907": {
+   "nodes": 15367,
+   "with_channels": 10148,
+   "live": 4439,
+   "live_by_client": {
+    "LND": 3772,
+    "CLN": 542,
+    "LDK": 85,
+    "Unknown": 30,
+    "Eclair": 10
+   }
+  },
+  "20260908": {
+   "nodes": 15368,
+   "with_channels": 10146,
+   "live": 4454,
+   "live_by_client": {
+    "LND": 3785,
+    "CLN": 543,
+    "LDK": 85,
+    "Unknown": 31,
+    "Eclair": 10
+   }
+  },
+  "20260909": {
+   "nodes": 15357,
+   "with_channels": 10138,
+   "live": 4450,
+   "live_by_client": {
+    "LND": 3783,
+    "CLN": 543,
+    "LDK": 83,
+    "Unknown": 31,
+    "Eclair": 10
+   }
+  },
+  "20260910": {
+   "nodes": 15348,
+   "with_channels": 10129,
+   "live": 4418,
+   "live_by_client": {
+    "LND": 3745,
+    "CLN": 546,
+    "LDK": 83,
+    "Unknown": 33,
+    "Eclair": 11
+   }
+  },
+  "20260911": {
+   "nodes": 15348,
+   "with_channels": 10127,
+   "live": 4398,
+   "live_by_client": {
+    "LND": 3721,
+    "CLN": 549,
+    "LDK": 84,
+    "Unknown": 33,
+    "Eclair": 11
+   }
+  },
+  "20260912": {
+   "nodes": 15339,
+   "with_channels": 10117,
+   "live": 4399,
+   "live_by_client": {
+    "LND": 3723,
+    "CLN": 551,
+    "LDK": 83,
+    "Unknown": 31,
+    "Eclair": 11
+   }
+  },
+  "20260913": {
+   "nodes": 15331,
+   "with_channels": 10109,
+   "live": 4399,
+   "live_by_client": {
+    "LND": 3719,
+    "CLN": 552,
+    "LDK": 86,
+    "Unknown": 31,
+    "Eclair": 11
+   }
+  },
+  "20260914": {
+   "nodes": 15328,
+   "with_channels": 10106,
+   "live": 4428,
+   "live_by_client": {
+    "LND": 3737,
+    "CLN": 561,
+    "LDK": 87,
+    "Unknown": 31,
+    "Eclair": 12
+   }
+  },
+  "20260915": {
+   "nodes": 15307,
+   "with_channels": 10085,
+   "live": 4413,
+   "live_by_client": {
+    "LND": 3718,
+    "CLN": 565,
+    "LDK": 86,
+    "Unknown": 32,
+    "Eclair": 12
+   }
+  },
+  "20260916": {
+   "nodes": 15279,
+   "with_channels": 10058,
+   "live": 4384,
+   "live_by_client": {
+    "LND": 3705,
+    "CLN": 550,
+    "LDK": 86,
+    "Unknown": 31,
+    "Eclair": 12
+   }
+  },
+  "20260917": {
+   "nodes": 15273,
+   "with_channels": 10052,
+   "live": 4592,
+   "live_by_client": {
+    "LND": 3912,
+    "CLN": 547,
+    "LDK": 88,
+    "Unknown": 32,
+    "Eclair": 13
+   }
+  },
+  "20260918": {
+   "nodes": 15268,
+   "with_channels": 10047,
+   "live": 4713,
+   "live_by_client": {
+    "LND": 4026,
+    "CLN": 553,
+    "LDK": 88,
+    "Unknown": 34,
+    "Eclair": 12
+   }
+  },
+  "20260919": {
+   "nodes": 15258,
+   "with_channels": 10038,
+   "live": 4637,
+   "live_by_client": {
+    "LND": 3955,
+    "CLN": 550,
+    "LDK": 88,
+    "Unknown": 32,
+    "Eclair": 12
+   }
+  },
+  "20260920": {
+   "nodes": 15255,
+   "with_channels": 10037,
+   "live": 4593,
+   "live_by_client": {
+    "LND": 3915,
+    "CLN": 548,
+    "LDK": 86,
+    "Unknown": 32,
+    "Eclair": 12
+   }
+  },
+  "20260921": {
+   "nodes": 15249,
+   "with_channels": 10030,
+   "live": 4726,
+   "live_by_client": {
+    "LND": 4042,
+    "CLN": 552,
+    "LDK": 89,
+    "Unknown": 30,
+    "Eclair": 13
+   }
+  },
+  "20260922": {
+   "nodes": 15257,
+   "with_channels": 10035,
+   "live": 4739,
+   "live_by_client": {
+    "LND": 4051,
+    "CLN": 555,
+    "LDK": 88,
+    "Unknown": 32,
+    "Eclair": 13
+   }
+  },
+  "20260923": {
+   "nodes": 15217,
+   "with_channels": 9985,
+   "live": 4726,
+   "live_by_client": {
+    "LND": 4044,
+    "CLN": 553,
+    "LDK": 87,
+    "Unknown": 29,
+    "Eclair": 13
+   }
+  },
+  "20260924": {
+   "nodes": 15201,
+   "with_channels": 9970,
+   "live": 4720,
+   "live_by_client": {
+    "LND": 4033,
+    "CLN": 557,
+    "LDK": 88,
+    "Unknown": 30,
+    "Eclair": 12
+   }
+  },
+  "20260925": {
+   "nodes": 15196,
+   "with_channels": 9964,
+   "live": 4728,
+   "live_by_client": {
+    "LND": 4030,
+    "CLN": 567,
+    "LDK": 89,
+    "Unknown": 30,
+    "Eclair": 12
+   }
+  },
+  "20260926": {
+   "nodes": 15192,
+   "with_channels": 9964,
+   "live": 4727,
+   "live_by_client": {
+    "LND": 4037,
+    "CLN": 562,
+    "LDK": 87,
+    "Unknown": 29,
+    "Eclair": 12
+   }
+  },
+  "20260927": {
+   "nodes": 15202,
+   "with_channels": 9974,
+   "live": 4857,
+   "live_by_client": {
+    "LND": 4157,
+    "CLN": 564,
+    "LDK": 91,
+    "Unknown": 33,
+    "Eclair": 12
+   }
+  },
+  "20260928": {
+   "nodes": 15201,
+   "with_channels": 9976,
+   "live": 4832,
+   "live_by_client": {
+    "LND": 4133,
+    "CLN": 563,
+    "LDK": 91,
+    "Unknown": 33,
+    "Eclair": 12
+   }
+  },
+  "20260929": {
+   "nodes": 15214,
+   "with_channels": 9986,
+   "live": 4758,
+   "live_by_client": {
+    "LND": 4044,
+    "CLN": 573,
+    "LDK": 92,
+    "Unknown": 37,
+    "Eclair": 12
+   }
+  },
+  "20260930": {
+   "nodes": 15192,
+   "with_channels": 9966,
+   "live": 4887,
+   "live_by_client": {
+    "LND": 4174,
+    "CLN": 573,
+    "LDK": 92,
+    "Unknown": 36,
+    "Eclair": 12
+   }
+  },
+  "20261001": {
+   "nodes": 15203,
+   "with_channels": 9977,
+   "live": 4846,
+   "live_by_client": {
+    "LND": 4130,
+    "CLN": 575,
+    "LDK": 91,
+    "Unknown": 38,
+    "Eclair": 12
+   }
+  },
+  "20261002": {
+   "nodes": 15196,
+   "with_channels": 9974,
+   "live": 4843,
+   "live_by_client": {
+    "LND": 4127,
+    "CLN": 574,
+    "LDK": 93,
+    "Unknown": 37,
+    "Eclair": 12
+   }
+  },
+  "20261003": {
+   "nodes": 15117,
+   "with_channels": 9870,
+   "live": 4839,
+   "live_by_client": {
+    "LND": 4120,
+    "CLN": 574,
+    "LDK": 94,
+    "Unknown": 39,
+    "Eclair": 12
+   }
+  },
+  "20261004": {
+   "nodes": 15116,
+   "with_channels": 9868,
+   "live": 4822,
+   "live_by_client": {
+    "LND": 4103,
+    "CLN": 576,
+    "LDK": 94,
+    "Unknown": 37,
+    "Eclair": 12
+   }
+  },
+  "20261005": {
+   "nodes": 15105,
+   "with_channels": 9857,
+   "live": 4793,
+   "live_by_client": {
+    "LND": 4067,
+    "CLN": 583,
+    "LDK": 94,
+    "Unknown": 37,
+    "Eclair": 12
+   }
+  },
+  "20261006": {
+   "nodes": 15108,
+   "with_channels": 9861,
+   "live": 4436,
+   "live_by_client": {
+    "LND": 3724,
+    "CLN": 582,
+    "LDK": 83,
+    "Unknown": 36,
+    "Eclair": 11
+   }
+  },
+  "20261007": {
+   "nodes": 15108,
+   "with_channels": 9857,
+   "live": 4702,
+   "live_by_client": {
+    "LND": 3991,
+    "CLN": 581,
+    "LDK": 81,
+    "Unknown": 38,
+    "Eclair": 11
+   }
+  },
+  "20261008": {
+   "nodes": 15107,
+   "with_channels": 9857,
+   "live": 4790,
+   "live_by_client": {
+    "LND": 4075,
+    "CLN": 581,
+    "LDK": 85,
+    "Unknown": 38,
+    "Eclair": 11
+   }
+  },
+  "20261009": {
+   "nodes": 15099,
+   "with_channels": 9852,
+   "live": 4834,
+   "live_by_client": {
+    "LND": 4114,
+    "CLN": 583,
+    "LDK": 88,
+    "Unknown": 38,
+    "Eclair": 11
+   }
+  },
+  "20261010": {
+   "nodes": 15098,
+   "with_channels": 9855,
+   "live": 4815,
+   "live_by_client": {
+    "LND": 4093,
+    "CLN": 585,
+    "LDK": 90,
+    "Unknown": 36,
+    "Eclair": 11
+   }
+  },
+  "20261011": {
+   "nodes": 15104,
+   "with_channels": 9860,
+   "live": 4799,
+   "live_by_client": {
+    "LND": 4076,
+    "CLN": 583,
+    "LDK": 92,
+    "Unknown": 37,
+    "Eclair": 11
+   }
+  },
+  "20261012": {
+   "nodes": 15104,
+   "with_channels": 9863,
+   "live": 4777,
+   "live_by_client": {
+    "LND": 4057,
+    "CLN": 576,
+    "LDK": 93,
+    "Unknown": 40,
+    "Eclair": 11
+   }
+  },
+  "20261013": {
+   "nodes": 15076,
+   "with_channels": 9824,
+   "live": 4760,
+   "live_by_client": {
+    "LND": 4044,
+    "CLN": 575,
+    "LDK": 94,
+    "Unknown": 36,
+    "Eclair": 11
+   }
+  }
+ }
+}

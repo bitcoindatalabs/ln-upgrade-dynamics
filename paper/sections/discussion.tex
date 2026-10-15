@@ -1,0 +1,70 @@
+% ==========================================================================================
+\section{Discussion}
+\label{sec:discussion}
+
+\paragraph{Disclosure reaches the operators who were already upgrading}
+The LND advisories of 2025 and 2026 were published long after the fixes shipped, a common practice that lets
+operators upgrade before attackers learn what to look for. It works for the operators who follow releases: half of
+LND nodes move to a new line within three months, and the largest move first. The nodes still on an affected line at
+disclosure are the ones that did not, and the disclosure itself did not change their behaviour. Their upgrade rate in
+the month after Lightning Labs' batch was the same as in the month before, and most of them were still exposed two
+months later. Once a release is a year old, the exposed tail consists of nodes that upgrade rarely or never, which an
+advisory alone does not reach. CLN's July disclosures did move operators: the rate at which nodes left vulnerable
+lines rose two- to fourfold in the following month, before the maintainers' call of 26~August, after which exposure
+fell further. We cannot separate the reasons. The fixed CLN lines were younger (one of the two fixes had shipped \FixToDiscClnGossipd{}
+days before disclosure, against \FixToDiscLLBatch{} for LND), so more of the exposed operators were ones who usually keep up; CLN's
+operators are fewer and closer to its maintainers; and its disclosures came amid an active run of CLN security
+releases. Part of CLN's decline was nodes going offline rather than upgrading, which the maintainers asked for and
+which also removes the exposure.
+
+\paragraph{Platforms move nodes; size and attention keep them current}
+Upgrades arrive in waves of a hundred or more nodes a few weeks after a release, consistent with node platforms
+shipping updates to all their users at once, and one wave followed a merchant platform's security release within a
+day. This matches what Frei et al.\ found for browsers: the update mechanism, more than the user, sets the patch
+level~\cite{frei2009firefox}. The tail is the opposite population: small nodes, nodes that skipped earlier releases,
+nodes no platform updates for them. For advisories that require a channel with the victim, these nodes are also the
+cheapest to reach. Their share of capacity at risk is small (about \ExpCapLLBatchDisc\% for the August~2026 LND
+batch), but each holds its operator's funds.
+
+\paragraph{Counting nodes}
+For half a year, one operator ran more than a fifth of the live LND nodes we observe, with almost no capacity. Any
+statistic that counts nodes, whether implementation shares, version shares or exposure, would have been dominated by
+that operator's choices. Fleets are cheap to create and hard to see; we found this one only because it upgraded in
+step. Node-level Lightning measurements should look for such fleets before counting, and report capacity alongside
+nodes~\cite{kumar2026clientdiversity}.
+
+% ------------------------------------------------------------------------------------------
+\section{Limitations}
+\label{sec:limitations}
+\emph{Release lines, not patches.} Gossip cannot separate patch releases, so fixes inside a line, including all
+of CLN's 2026 patch releases, cannot be measured; for advisories with a fix inside a line we report bounds.
+\emph{Inference.} An operator can switch features on or off so that an older line looks like a newer one or the
+reverse; the strict range covers every non-developer configuration, and validation on self-identifying CLN nodes
+bounds the error of the likely line, but we have no equivalent ground truth at scale for LND. A node that upgrades
+without re-announcing, or whose announcement we do not receive, keeps its old bits, which biases exposure up.
+\emph{Vantage and liveness.} All data come from one node's view of the public graph; unannounced nodes, including
+most mobile wallets, are not covered, and liveness is inferred from peers' channel updates.
+\emph{Fleets.} We identified one managed fleet by its alias and hubs. Smaller fleets without a shared alias would go
+undetected and be counted as independent nodes.
+\emph{Exposure is not exploitability.} Several advisories require a channel with the victim, a particular
+configuration or inbound connections; we count nodes on affected releases, not nodes that can be attacked. Our
+advisory list is compiled from public sources and may miss silent fixes.
+\emph{Association.} The hazard model describes which nodes upgrade sooner; it does not identify why.
+
+% ------------------------------------------------------------------------------------------
+\section{Ethics}
+\label{sec:ethics}
+Release-line inference identifies nodes running vulnerable software, and in 2026 Lightning deployments were
+exploited (BTCPay Server~\cite{btcpay2026advisory}) and CLN maintainers reported attacks on unpatched nodes. We therefore publish aggregates only: no list, ranking, filter or label of
+individual nodes by release or exposure, in the paper or in the released data. All inputs are public gossip,
+every advisory we study had been published before our analysis began, and the paper reports no new vulnerability.
+
+% ------------------------------------------------------------------------------------------
+\section{Conclusion}
+\label{sec:conclusion}
+Lightning gossip carries no version string, but the feature bits each release announces identify its release line
+closely enough to measure how the network patches. Most operators upgrade within a few months, in waves pushed by
+their platforms; a tail of small and neglected nodes does not, and LND's disclosures, which typically come long after
+the fix, leave that tail where it was. CLN's 2026 disclosures, followed by the maintainers' appeal, moved theirs. Measured by capacity, the
+exposure is small; measured by nodes, it depends on whether one counts a single operator's fleet as hundreds of
+operators.

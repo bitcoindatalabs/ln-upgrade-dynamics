@@ -1,0 +1,32 @@
+% ==========================================================================================
+\section{Data and Vantage Point}
+\label{sec:data}
+
+\paragraph{Gossip snapshots}
+We take a daily dump of the public graph (\texttt{describegraph}) from our own LND node and keep, per day, every
+node announcement (feature bits, alias, colour, addresses, last-update time) and every channel direction (the policy
+a node sets for forwarding towards its peer, with capacity, the \emph{disabled} flag and last-update time). The
+snapshots run from May~2023 to the data cutoff of 13~October~2026. A per-day quality check discards dumps that
+are partial (fewer than half the channels of their period), stale (fewer than half the channels updated within two
+weeks) or error responses written while the node's wallet was locked; \DataUsableDays{} days remain. Daily coverage is
+dense from November~2023, with gaps in May--June~2024 (partial dumps), August~2024 and January--May~2025 (wallet
+locked after restarts). Upgrade times observed across a gap are known only to lie inside it; we treat them as
+interval-censored (\S\ref{sec:dynamics}).
+
+\paragraph{Vantage}
+All snapshots are one node's view. LND prunes channels that have not been updated for about two weeks, and our
+view widened in July~2024 (from about 8.4k to 11--13k nodes with channels), after the node's own peer set grew. We
+compare levels within a period and report shares, which are less sensitive to the view; in particular, the few
+live nodes on releases from before 2021 appear only from July~2024. Only announced (public) nodes are visible:
+mobile wallets and services behind unannounced channels, where much of LDK and Eclair runs, are not.
+
+\paragraph{Who is still there}
+Nodes that stop running do not leave the graph at once: their peers mark the channels towards them disabled, and
+the channels stay announced until they are closed or pruned. An offline node cannot announce anything, so liveness
+must be read from its peers' side~\cite{kumar2026clientdiversity}. We call a node \emph{live} on a day when at least
+one channel direction towards it, set by a peer, is enabled and was updated in the previous 14~days; its \emph{live
+capacity} is the capacity of those channels. We also report 7- and 28-day variants. The distinction matters. On
+the cutoff day, \NOldLndChan{} LND nodes with channels (outside the managed fleet of \S\ref{sec:dynamics})
+announced a release older than 0.19, but only
+\NOldLndLive{} of them were live; counting every announced node would put the share of LND nodes on those releases
+at \PctOldLndNaive\%, against \PctOldLndLive\% of live nodes.

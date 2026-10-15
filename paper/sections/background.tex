@@ -1,0 +1,53 @@
+% ==========================================================================================
+\section{Background and Related Work}
+\label{sec:background}
+
+\subsection{Gossip and feature bits}
+Public Lightning nodes announce themselves and their channels through gossip~\cite{bolt7}. A node's
+\texttt{node\_announcement} carries its alias, colour, network addresses and a feature vector: a bit field in which
+each pair of bits marks a protocol feature as required (even bit) or optional (odd bit)~\cite{bolt9}. Implementations
+set their feature vector from compiled-in defaults, which change when a release adds or retires a feature, plus
+whatever options the operator switches on. Gossip carries no version string. A node re-signs its announcement when
+it restarts or changes its settings, so a node that upgrades and restarts re-announces with the feature vector of
+the new release.
+
+\subsection{Inferring implementations}
+Zabka et al.\ classify public nodes into LND, c-lightning and Eclair from default channel parameters, colours and
+aliases~\cite{zabka2021nodeclassification,zabka2022empirical}. Their study contains the only prior observation of an
+LND upgrade we found: after LND changed its default CLTV delta from 144 to 40 in March~2019, the new value overtook
+the old one around mid-December, about nine months later. They name the planning of critical software updates as a
+use of implementation inference but do not measure it. Espinasa-Vilarrasa et al.\ infer the implementation from
+gossip traffic or from announced feature bits with decision trees~\cite{espinasa2024decisiontree}. Kappos et al.\
+note that their gossip snapshots carried no version information, and fell back on owner-reported fields for 370
+nodes~\cite{kappos2021privacy}. Our previous paper used feature-bit rules to measure client concentration and the
+2026 Core Lightning shutdown~\cite{kumar2026clientdiversity}. All of these stop at the implementation; none infers
+which release a node runs.
+
+Longitudinal studies of the Lightning graph cover topology, centralisation and robustness
+\cite{rohrer2019discharged,seres2020topological,lin2020secondpath,martinazzi2020evolving,zabka2024centrality},
+infrastructure~\cite{casas2021taproot}, privacy~\cite{romiti2021crosslayer}, channel lifecycles
+\cite{grotschla2025lifecycle}, gossip convergence~\cite{gogge2023convergence} and, most recently, stability and node
+lifetimes~\cite{valko2025geolocated,valko2025stability,valko2026lifetime}. None of them studies software versions.
+When Lightning Labs disclosed CVE-2019-12999, they were ``surprised to find many nodes running very old versions''
+but published no numbers~\cite{lightninglabs2019cve}.
+
+\subsection{Versions in other blockchain networks}
+Bitcoin and Ethereum peers report their software version in the handshake, so crawlers can count versions directly.
+Kim et al.\ found 68\% of Geth nodes two or more releases behind and tracked client age against release
+dates~\cite{kim2018ethereum}. Neudecker reports that Bitcoin nodes adopt a release mostly in its first two months,
+and documents an alternative client that went from zero to more than 700 peers in a
+day~\cite{neudecker2019characterization}; Park et al.\ and Eisenbarth et al.\ survey Bitcoin node versions and their
+known vulnerabilities~\cite{park2019bitcoinnodes,eisenbarth2021bitcoin}. SRLabs estimated that about 40\% of Parity
+nodes were still vulnerable a month after an advisory~\cite{srlabs2019patchgap}. Zcash sidesteps slow upgrades by
+expiring old releases at network upgrades~\cite{daniel2019mapz}. The Lightning Network offers neither a version
+string to count nor a forced expiry.
+
+\subsection{Patch deployment}
+The window of vulnerability, from disclosure to patch, was framed by Arbaugh et al.~\cite{arbaugh2000windows}.
+Rescorla probed servers affected by the OpenSSL vulnerabilities of 2002 and found more than two thirds still
+vulnerable two weeks after disclosure~\cite{rescorla2003securityholes}. Frei et al.\ showed that automatic
+updates dominate how fast a client population patches~\cite{frei2009firefox}, Durumeric et al.\ followed Heartbleed
+across the Internet~\cite{durumeric2014heartbleed}, and Nappa et al.\ modelled patch deployment with survival
+analysis~\cite{nappa2015clones}; Li and Paxson measured the life cycle of security fixes from the code
+side~\cite{li2017patches}. We bring this lens to a network where versions must first be inferred, and where a
+release is often fixed months or years before the vulnerability is disclosed.
