@@ -1,6 +1,6 @@
 {
   "rules_version": "v1.1-2026-10-15",
-  "description": "node_announcement feature bits by release line, per Lightning implementation. Read by shared/lightning/version_fingerprint.py. Final releases only (no rc / master / dev builds). A line is a run of releases whose default node_announcement bits are identical, so gossip cannot tell them apart.",
+  "description": "node_announcement feature bits by release line, per Lightning implementation. Read by src/lnmetrics/version_fingerprint.py. Final releases only (no rc / master / dev builds). A line is a run of releases whose default node_announcement bits are identical, so gossip cannot tell them apart.",
   "fields": {
     "line": "display label of the release line",
     "first": "first release in the line",

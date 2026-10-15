@@ -8,7 +8,7 @@ from pathlib import Path
 # Base Paths
 SRC_DIR = Path(__file__).resolve().parent
 PAPER_ROOT = SRC_DIR.parent
-REPO_ROOT = PAPER_ROOT.parent.parent
+REPO_ROOT = PAPER_ROOT
 
 # Output Paths (written directly into the LaTeX directory)
 PAPER_DIR = PAPER_ROOT / "paper"
