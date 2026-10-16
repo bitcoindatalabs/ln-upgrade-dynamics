@@ -24,10 +24,12 @@ the onion-message option would have ``upgraded'' to 24.08 on its release day). A
 yet released is a pre-release build; a set consistent with no line is unrecognised.
 
 \subsection{Implementation}
-Release lines are defined per implementation, so the implementation comes first. We extend the feature-bit rules of
+Release lines are defined per implementation, so the implementation comes first. We revise the feature-bit rules of
 our previous paper~\cite{kumar2026clientdiversity}: LND-only bits (2023, 31) and Eclair-only bits (37, or 29
 with 61) are decisive; a set with bits 11 and 39 or 43 is CLN when bit 5 is set and Eclair otherwise; 39, 43 or 63
-without 11 is LDK. New in this paper, the release table itself is evidence. When a set is consistent with the
+without 11 is LDK. The CLN--Eclair split now uses bit 5 (\texttt{upfront\_shutdown\_script}), which every CLN
+release sets, instead of keysend (bit 55), which operators can switch off. New in this paper, the release table
+itself is evidence. When a set is consistent with the
 lines of exactly one implementation, that implementation is assigned, which recovers releases older than the
 distinguishing bits, such as LND 0.8--0.11 and CLN before 23.05; and when a bit rule names an implementation that
 has no release producing the set while exactly one other implementation does, the table wins. Weak signals (LND's
