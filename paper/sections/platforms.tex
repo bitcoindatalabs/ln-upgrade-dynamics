@@ -31,10 +31,11 @@ nodes moved to LND 0.20 on \FleetWaveDay{}, \FleetWaveSigned\% of them within 48
 with the same median lag (\FleetWaveHours{}~hours) as the platform's other users.
 
 A fourth event is different: \WaveBTCPayNodes{} nodes on \WaveBTCPayDay{}, \WaveBTCPaySigned\% of them signed within
-48~hours after BTCPay's security release (median \WaveBTCPayHours{}~hours). They are mostly clearnet
-(\WaveBTCPayTor\% Tor-only, against \WaveBTCPayBase\%), as merchant nodes are, and \WaveBTCPayOlder{} of them came from
-lines older than 0.20, skipping at least one release. Their operators had not updated for months and did so when the
-advisory for their merchant software told them to; that advisory concerned BTCPay itself, not LND. Of the remaining
+48~hours after BTCPay's security release (median \WaveBTCPayHours{}~hours). Unlike the Umbrel waves they are mostly
+clearnet (\WaveBTCPayTor\% Tor-only, against \WaveBTCPayBase\%), and \WaveBTCPayOlder{} of them came from lines older
+than 0.20, skipping at least one release. They look like operators who had not moved to a newer LND line in months
+and did so when the advisory for their merchant software told them to update; that advisory concerned BTCPay
+itself, not LND. Of the remaining
 two events, one (\WaveEarlyNodes{} nodes, \WaveEarlyDay) was signed before Umbrel merged LND \WaveEarlyVersion{}
 (\WaveEarlyBefore\% in the 24~hours before), so that release cannot explain it, and one (\WaveNoneNodes{} nodes,
 \WaveNoneDay) matches no release we can date. CLN shows the same pattern at its smaller scale: its one attributed
@@ -55,6 +56,5 @@ Platform releases account for a share of upgrades out of proportion to the time 
 \PlatShareLND\% of LND upgrades whose day is known to within two days were signed within 48~hours after a platform
 release that ships the new line, although these windows cover \PlatTimeLND\% of the time; for CLN, \PlatShareCLN\%
 against \PlatTimeCLN\%. Since the platforms we cannot date are left out, these shares are lower bounds. The pushes
-also check the inference (\S\ref{sec:validation}): of the \NPlatLineChanges{} line changes signed within 48~hours
-after the \NPlatLineReleases{} platform releases that introduced a new LND line, \PlatLineMin--\PlatLineMax\% landed
-on the line that release shipped.
+also check the inference: the nodes that changed line right after a platform shipped a new LND line landed on the
+line it shipped (\S\ref{sec:validation}).

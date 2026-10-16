@@ -40,13 +40,15 @@ falls as the line ages and its most attentive operators leave, so the before-win
 all when a disclosure follows a release by only a few months. A ratio near one therefore rules out only a large
 response.
 
-\NResp{} disclosures qualify, \NRespLND{} for LND and \NRespCLN{} for CLN (Table~\ref{tab:response},
+Twelve disclosures qualify, nine for LND and three for CLN (Table~\ref{tab:response},
 Fig.~\ref{fig:response}). Only CLN's two disclosures of 19~July~2026, memory-exhaustion vulnerabilities in gossipd
 (fixed in 26.04) and connectd (fixed in 25.09)~\cite{pratap2026clndos}, show a clear increase. Among live CLN nodes on
 lines before 26.04, the weekly rate rose from \WkBeforeAllClnGossipd\% to \WkAfterAllClnGossipd\% (ratio
 \RRAllClnGossipd, 95\% CI \RRLoAllClnGossipd--\RRHiAllClnGossipd), and for lines before 25.09 from
 \WkBeforeAllClnConnectd\% to \WkAfterAllClnConnectd\% (\RRAllClnConnectd, \RRLoAllClnConnectd--\RRHiAllClnConnectd).
-The two groups responded differently. The \AtRiskClnRecent{} nodes one line behind, on 25.09--25.12, moved steadily
+The two groups responded differently. The two fix boundaries define them; we compare the nodes one line behind
+with the older lines because, once we dated BTCPay's release, it explained most moves from the older lines, so this
+comparison was made after seeing the data. The \AtRiskClnRecent{} nodes one line behind, on 25.09--25.12, moved steadily
 over the four weeks: without the moves that followed platform releases their ratio is \RROpClnRecent{}
 (\RRLoOpClnRecent--\RRHiOpClnRecent), and each of the four weeks after disclosure had a higher rate than any of the
 seven before (permutation $p=\PPermOpClnRecent$). The \AtRiskClnConnectd{} nodes on older lines moved mostly in the
@@ -60,7 +62,7 @@ on older lines may have moved somewhat faster, but not clearly: \RRAllClnPing{} 
 and outside platform releases, whose removal takes BTCPay's push out of the before-window, \RROpClnPing{}
 (\RRLoOpClnPing--\RRHiOpClnPing; $p=\PPermOpClnPing$).
 
-No LND disclosure produced a detectable increase. Across the \NRespLND{}, the ratios are at most \RespLndMaxRR{}, and
+No LND disclosure produced a detectable increase. Across the nine, the ratios are at most \RespLndMaxRR{}, and
 none is significant (permutation $p\geq\RespLndMinP$, with or without platform moves). The intervals are wide,
 however. For Lightning Labs' batch of 11~August~2026, the weekly rate was \WkBeforeAllLLBatch\% before and
 \WkAfterAllLLBatch\% after (\RRAllLLBatch, \RRLoAllLLBatch--\RRHiAllLLBatch); its before-window holds BTCPay's
