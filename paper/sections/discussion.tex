@@ -25,7 +25,12 @@ first. The nodes still on an affected line at disclosure are the ones that did n
 detectably change their pace: \PctCohortStillLLBatch\% of those exposed to Lightning Labs' August batch were still exposed two
 months later. The one disclosure that did move operators makes the same point from the other side. CLN's July
 disclosures raised the rate of leaving affected lines \RROpClnRecent-fold among nodes one line behind, operators who
-keep up; the nodes further behind moved when BTCPay's advisory had their operators update. Reported attacks do not
+keep up; the nodes further behind moved when BTCPay's advisory had their operators update. CLN's emergency call of
+26~August selected the same way: the nodes that went offline were mostly on the newest line, already patched against
+every vulnerability CLN had disclosed, while most nodes still exposed to the July vulnerabilities stayed online. Read
+through release lines, the shutdown we measured earlier~\cite{kumar2026clientdiversity} was followed mainly by the
+operators who were already keeping up.
+Reported attacks do not
 explain the CLN response, since the maintainers reported attacks on unpatched nodes only in
 October~\cite{coreln2026attacks}. More plausibly, a fix that had shipped \FixToDiscClnGossipd{} days before disclosure
 found most exposed CLN nodes one line behind, while one shipped \FixToDiscLLBatch{} days before found only the LND

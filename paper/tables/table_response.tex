@@ -1,6 +1,6 @@
 \begin{table*}[t]
 \centering\footnotesize
-\caption{Did operators respond to the disclosure? Weekly share of live nodes on a wholly affected line that moved to a later line, in the 8 weeks before and the 4 weeks after disclosure (fewer where snapshots are missing or the cutoff intervenes), and the ratio after/before with a quasi-Poisson 95\% CI. ``Outside platform releases'' leaves out moves signed within 48~h after an Umbrel or BTCPay release that ships the new line (Section~\ref{sec:waves}); $p$: exact one-sided permutation test that the weekly rates after exceed those before, outside platform releases. Managed fleet excluded.}
+\caption{Did operators respond to the disclosure? Weekly share of live nodes on a wholly affected line that moved to a later line, in the 8 weeks before and the 4 weeks after disclosure (fewer where snapshots are missing or the cutoff intervenes), and the ratio after/before with a quasi-Poisson 95\% CI. ``Outside platform releases'' leaves out moves signed within 48~h after an Umbrel or BTCPay release that ships the new line (Section~\ref{sec:waves}); $p$: exact one-sided permutation test that the weekly rates after exceed those before, outside platform releases. Indented: the nodes of the row above that were one line behind the fix (Section~\ref{sec:response}). Managed fleet excluded.}
 \label{tab:response}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{llrrrrrllr}
@@ -11,6 +11,7 @@ Impl. & Advisory (disclosed; affected lines) & (days) & nodes & bef./aft. & befo
 \midrule
 CLN & connectd queue memory exhaustion (2026-07-19; $<$25.09) & 320 & 186 & 7/4 & 1.6 & 5.4 & 3.45 [0.98, 12.08] & 1.54 [0.47, 5.09] & 0.212 \\
 CLN & gossipd unknown-SCID memory exhaustion (2026-07-19; $<$26.04) & 90 & 520 & 7/4 & 1.6 & 6.2 & 3.87 [2.43, 6.17] & 3.28 [2.14, 5.04] & 0.003 \\
+ & \quad of which one line behind (2026-07-19; 25.09--25.12) & 90 & 334 & 7/4 & 1.8 & 6.8 & 3.71 [2.39, 5.75] & 3.87 [2.33, 6.46] & 0.003 \\
 CLN & Ping-flood OOM (2026-08-25; $<$25.09) & 357 & 125 & 8/4 & 3.4 & 5.0 & 1.48 [0.36, 6.13] & 1.99 [1.03, 3.84] & 0.077 \\
 LND & Irrevocable fees / update\_fee breach fee-burn (2024-12-10; $<$0.18) & 89 & 1,861 & 8/3 & 1.2 & 1.4 & 1.24 [0.89, 1.73] & 1.26 [0.87, 1.84] & 0.133 \\
 LND & gossip\_timestamp\_filter goroutine DoS (2025-07-22; $<$0.18) & 313 & 542 & 8/3 & 0.7 & 0.9 & 1.25 [0.73, 2.14] & 1.19 [0.71, 2.00] & 0.327 \\

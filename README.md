@@ -12,7 +12,8 @@ bits it announces, matched against the source of every release, and applies it t
 to October 2026. The network patches on release and platform schedules, not on disclosures: half of the LND nodes on an
 older line upgrade within 88 days of a release; the largest upgrade waves came about a day after the Umbrel app store
 shipped a new LND version; and of 12 disclosures that can be tested, only Core Lightning's of July 2026 raised the rate
-at which nodes left affected releases, and only among nodes one release line behind. Two months after Lightning Labs'
+at which nodes left affected releases, and only among nodes one release line behind; Core Lightning's call to restart
+offline was followed mostly by nodes already on the newest line. Two months after Lightning Labs'
 August 2026 batch, 71% of the nodes exposed at disclosure still ran an affected release.
 
 ## Repository structure

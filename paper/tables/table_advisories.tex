@@ -15,10 +15,10 @@ CLN & funding\_created assertion DoS~\cite{pratap2026clnassert} (2026-05-16) & L
 CLN & connectd queue memory exhaustion~\cite{pratap2026clndos} (2026-07-19) & LINE & 1 & 25.09 & 320 & 24 (20) & 14 (3) & 12 (2) \\
 CLN & gossipd unknown-SCID memory exhaustion~\cite{pratap2026clndos} (2026-07-19) & LINE & 1 & 26.04 & 90 & 67 (58) & 29 (16) & 24 (13) \\
 CLN & Ping-flood OOM~\cite{cestari2026pingflood} (2026-08-25) & LINE & 1 & 25.09 & 357 & 19 (16) & -- & 12 (2) \\
-LND & Fake channel DoS~\cite{morehouse2023fakechannel} (2023-08-23) & PARTIAL & 1 & 0.16.0 & 147 & -- & 0 (0) & 1 (0) \\
-LND & Replacement cycling (CVE-2023-40233)~\cite{riard2023replacement} (2023-10-16) & PARTIAL & 1 & 0.17.0 & 13 & 0 [0--100] (0) & 0 (0) & 1 (0) \\
-LND & Premature channel\_update OOM~\cite{delving2023lndgossip} (2023-12-21) & LINE & 1 & 0.14.0 & 764 & 0 (0) & 0 (0) & 1 (0) \\
-LND & channel\_update signature after rate limit~\cite{delving2023lndgossip} (2023-12-21) & PARTIAL & 1 & 0.15.0 & 546 & 0 [0--0] (0) & 0 (0) & 1 (0) \\
+LND & Fake channel DoS~\cite{morehouse2023fakechannel} (2023-08-23) & PARTIAL & 1 & 0.16.0 & 147 & -- & 0 (0)$^\dagger$ & 1 (0) \\
+LND & Replacement cycling (CVE-2023-40233)~\cite{riard2023replacement} (2023-10-16) & PARTIAL & 1 & 0.17.0 & 13 & 0 [0--100] (0)$^\dagger$ & 0 (0)$^\dagger$ & 1 (0) \\
+LND & Premature channel\_update OOM~\cite{delving2023lndgossip} (2023-12-21) & LINE & 1 & 0.14.0 & 764 & 0 (0)$^\dagger$ & 0 (0)$^\dagger$ & 1 (0) \\
+LND & channel\_update signature after rate limit~\cite{delving2023lndgossip} (2023-12-21) & PARTIAL & 1 & 0.15.0 & 546 & 0 [0--0] (0)$^\dagger$ & 0 (0)$^\dagger$ & 1 (0) \\
 LND & Onion bomb (CVE-2024-38359)~\cite{morehouse2024onionbomb} (2024-06-18) & PARTIAL & 1 & 0.17.0 & 259 & -- & -- & 1 (0) \\
 LND & Irrevocable fees / update\_fee breach fee-burn~\cite{harding2024irrevocable} (2024-12-10) & PARTIAL & 1 & 0.18.3 & 89 & 33 [33--100] (25) & 24 (11) & 4 (0) \\
 LND & Excessive HTLC failback~\cite{morehouse2025failback} (2025-03-04) & LINE & 1 & 0.18.0 & 278 & 20 (8) & -- & 4 (0) \\
@@ -32,5 +32,5 @@ LND & Gossip stall via malformed announcements~\cite{lightninglabs2026gossipstal
 LND & Brontide write-allocation OOM~\cite{lightninglabs2026brontide} (2026-09-21) & LINE & 1 & 0.20.0 & 305 & 22 (11) & -- & 20 (10) \\
 \bottomrule
 \end{tabular}}
-\par\vspace{2pt}\parbox{\textwidth}{\footnotesize Before July 2024 our view did not include the few live nodes on LND releases older than 0.14 (\S\ref{sec:data}); exposures to the 2023 LND advisories at disclosure are lower bounds. In 2023 the mixed LND line 0.15.1--0.17 held almost every LND node, so the bounds of the 2023 LND PARTIAL rows span 0--100\%. --: no usable snapshot within 7 days.}
+\par\vspace{2pt}\parbox{\textwidth}{\footnotesize $^\dagger$Before July 2024 our view did not include the few live nodes on LND releases older than 0.14 (\S\ref{sec:data}), so these exposures are lower bounds and the later rise to 1\% is the wider view, not nodes moving onto affected releases. In 2023 the mixed LND line 0.15.1--0.17 held almost every LND node, so the bounds of the 2023 LND PARTIAL rows span 0--100\%. --: no usable snapshot within 7 days.}
 \end{table*}

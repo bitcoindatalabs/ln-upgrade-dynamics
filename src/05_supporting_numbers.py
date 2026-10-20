@@ -283,6 +283,29 @@ def main() -> int:
         N[f"PlatTime{c}"] = pct(s["time_share"])
         N[f"PlatReleases{c}"] = num(s["releases"])
 
+    # --- who followed CLN's call of 26 August to restart offline, by release line --------------------------------
+    c = adv["cln_offline_call"]
+    e, o = c["event"], c["ordinary"]
+    N["OffCallNewestLine"] = c["newest_line"].replace("–", "--")
+    for g, k in (("newest", "Newest"), ("behind", "Behind")):
+        N[f"OffCall{k}Nodes"] = num(e[g]["nodes"])
+        N[f"OffCall{k}Left"] = pct(e[g]["left"])
+        N[f"OffCall{k}Tor"] = pct(e[g]["left_tor_only"], 0)
+        N[f"OffCall{k}Other"] = pct(e[g]["left_other"], 0)
+        N[f"OffCallOrd{k}Median"] = pct(float(pd.Series([w[g] for w in o]).median()))
+        N[f"OffCallOrd{k}Max"] = pct(max(w[g] for w in o))
+    N["OffCallOrdWindows"] = num(len(o))
+    N["OffCallNewestLeftN"] = num(e["newest"]["left_n"])
+    N["OffCallNewestDarkN"] = num(e["newest"]["left_dark_n"])
+    N["OffCallOrdDarkShare"] = pct(sum(w["left_dark_n"] for w in o) / sum(w["left_n"] for w in o), 0)
+    top = max(o, key=lambda w: w["newest"])                       # the window with the most newest-line leavers
+    N["OffCallOrdMaxDarkShare"] = pct(top["left_dark_n"] / top["left_n"], 0)
+    N["OffCallOrdMaxDay"] = long_date(top["from"])
+    N["OffCallMovedMax"] = pct(max(e[g]["moved"] for g in e), 0)
+    N["OffCallOddsRatio"] = f"{c['fisher']['odds_ratio']:.1f}"
+    m, x = f"{c['fisher']['p']:.0e}".split("e")
+    N["OffCallP"] = rf"{int(m)}\times10^{{{int(x)}}}"
+
     bad = [k for k in N if not k.isalpha()]
     if bad:
         raise ValueError(f"LaTeX macro names must be letters only: {bad}")

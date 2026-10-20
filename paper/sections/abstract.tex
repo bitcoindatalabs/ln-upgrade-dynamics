@@ -2,7 +2,7 @@ Every Lightning implementation disclosed security vulnerabilities in 2026, and e
 upgrade. Whether they do has never been measured, because Lightning gossip carries no software version. We show that
 the release line of a public node can be read from the feature bits it announces: matched against the source of
 every release of LND, Core Lightning, Eclair and LDK, the most likely line is exact for \NVerNodeLinesExact{} of
-\NVerNodeLines{} node--line pairs of nodes that state their version. Applied to \DataUsableDays{} daily snapshots of
+\NVerNodeLines{} node--line pairs of Core Lightning nodes that state their version. Applied to \DataUsableDays{} daily snapshots of
 the public graph from 2023 to 2026, it shows that the network patches on release and platform schedules, not on
 disclosures. Half of the LND nodes on an older line upgrade within \MedianLNDAll{} days of a release, while small
 nodes and nodes that skipped earlier releases lag far behind. The largest movements are node platforms shipping a
@@ -11,6 +11,8 @@ new LND version, and since June~2025, \PlatShareLND\% of LND upgrades fell in th
 after a platform release. Disclosure, a median \FixToDiscMedian{} days after the fix, reached only operators already
 close to current: of \NResp{} disclosures we can test, only Core Lightning's of July~2026 raised the rate at which
 nodes left affected releases, \RROpClnRecent-fold among nodes one release line behind, while nodes further behind
-moved when BTCPay Server's own advisory had their operators update. No LND disclosure produced a detectable increase;
+moved when BTCPay Server's own advisory had their operators update. Core Lightning's call to restart offline was
+likewise followed twice as often by nodes already on the newest line as by nodes behind. No LND disclosure produced a
+detectable increase;
 two months after Lightning Labs' August~2026 batch, \PctCohortStillLLBatch\% of the nodes exposed at disclosure still
 ran an affected release. The lever on that tail is the platforms that package releases.

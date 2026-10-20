@@ -49,7 +49,9 @@ nodes moved to a later line before and after disclosure, with and without the mo
 Only CLN's July~2026 disclosures raised it, by a factor of \RROpClnRecent{} among nodes one line behind; nodes
 further behind moved when BTCPay's own advisory had their operators update. No LND disclosure produced a detectable
 increase, and \PctCohortStillLLBatch\% of the nodes exposed to Lightning Labs' August~2026 batch were still live on an affected
-release two months later (\S\ref{sec:exposure}).
+release two months later. When CLN asked operators who could not upgrade to restart offline, nodes already on the
+newest line went offline at twice the rate of nodes behind (\OffCallNewestLeft\% against \OffCallBehindLeft\%)
+(\S\ref{sec:exposure}).
 \end{itemize}
 
 All data behind the figures and tables, and the code, are released. We report aggregates only: no list, ranking or

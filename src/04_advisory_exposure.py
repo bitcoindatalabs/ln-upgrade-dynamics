@@ -30,6 +30,10 @@ alone; the older lines (< 25.09) are the connectd row, disclosed the same day.
 Robustness (case studies): exposure at disclosure and at the cutoff with 7- and 28-day liveness, the strict-range
 bounds, the managed fleet counted as nodes, and how many exposed nodes signed their announcement in the last 14 days.
 
+Who followed CLN's call of 2026-08-26 to restart offline: the live CLN nodes of 2026-08-25, split into the newest line
+(26.04 on, fixed for both July disclosures) and older lines, and the share of each no longer live on 2026-08-27,
+against every two-day window of August before the call; by transport (Tor-only or not), with a Fisher exact test.
+
 Outputs
   data/advisory_exposure.json
   paper/tables/table_advisories.tex, table_response.tex, table_robustness.tex
@@ -50,6 +54,7 @@ import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np  # noqa: E402
 import pandas as pd  # noqa: E402
 import statsmodels.api as sm  # noqa: E402
+from scipy.stats import fisher_exact  # noqa: E402
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from config import CLIENT_PALETTE, DATA_CUTOFF, DATA_DIR, FIGURES_DIR, TABLES_DIR  # noqa: E402
@@ -328,6 +333,54 @@ def fig_cases(series: dict, fates: dict):
     plt.close(fig)
 
 
+VIEW_WIDENED = "2024-07-01"     # our gossip view widened here; older LND releases (< 0.14) are visible only after it
+
+
+# ---------------------------------------------------------------------------------------
+# Who followed CLN's offline call
+# ---------------------------------------------------------------------------------------
+def _left_by_group(d0: str, d2: str, newest: int) -> pd.DataFrame:
+    """Live CLN nodes on d0 with a release line: newest-line flag, Tor-only flag, not live on d2 (and, if so, whether
+    it still has announced channels, i.e. went dark rather than lost its channels), moved to a later line by d2."""
+    cols = ["pub_key", "client", "client_confidence", "likely_lo", "live_cap_14", "fleet", "has_tor", "has_clearnet",
+            "n_channels"]
+    a, b = pn.read_day(d0, cols), pn.read_day(d2, cols).set_index("pub_key")
+    a = a[(a["client"] == "CLN") & a["client_confidence"].isin(["high", "operator"]) & (a["likely_lo"] >= 0)
+          & pn.live(a) & ~a["fleet"]]
+    after = b["live_cap_14"].reindex(a["pub_key"]).fillna(0).to_numpy() > 0
+    lo_after = b["likely_lo"].reindex(a["pub_key"]).to_numpy()
+    channels_after = b["n_channels"].reindex(a["pub_key"]).fillna(0).to_numpy()
+    return pd.DataFrame({"newest": (a["likely_lo"] >= newest).to_numpy(),
+                         "tor_only": (a["has_tor"] & ~a["has_clearnet"]).to_numpy(),
+                         "left": ~after, "left_dark": ~after & (channels_after > 0),
+                         "moved": after & (lo_after > a["likely_lo"].to_numpy())})
+
+
+def offline_call() -> dict:
+    newest = next(ln.index for ln in pn.vf.lines("CLN") if ln.label.startswith("26.04"))
+    days = set(pn.panel_dates())
+    ev = _left_by_group("20260825", "20260827", newest)
+    out = {"newest_line": pn.line_label("CLN", newest), "event": {}, "ordinary": []}
+    for g, m in (("newest", ev["newest"]), ("behind", ~ev["newest"])):
+        out["event"][g] = {"nodes": int(m.sum()), "left": float(ev.loc[m, "left"].mean()),
+                           "left_n": int(ev.loc[m, "left"].sum()), "left_dark_n": int(ev.loc[m, "left_dark"].sum()),
+                           "moved": float(ev.loc[m, "moved"].mean()),
+                           "left_tor_only": float(ev.loc[m & ev["tor_only"], "left"].mean()),
+                           "left_other": float(ev.loc[m & ~ev["tor_only"], "left"].mean())}
+    t = [[int((ev["newest"] & ev["left"]).sum()), int((ev["newest"] & ~ev["left"]).sum())],
+         [int((~ev["newest"] & ev["left"]).sum()), int((~ev["newest"] & ~ev["left"]).sum())]]
+    res = fisher_exact(t)
+    out["fisher"] = {"table": t, "odds_ratio": float(res.statistic), "p": float(res.pvalue)}
+    for d0 in pd.date_range("2026-08-01", "2026-08-21"):
+        a, b = d0.strftime("%Y%m%d"), (d0 + pd.Timedelta(days=2)).strftime("%Y%m%d")
+        if a in days and b in days:
+            w = _left_by_group(a, b, newest)
+            out["ordinary"].append({"from": a, "newest": float(w.loc[w["newest"], "left"].mean()),
+                                    "behind": float(w.loc[~w["newest"], "left"].mean()),
+                                    "left_n": int(w["left"].sum()), "left_dark_n": int(w["left_dark"].sum())})
+    return out
+
+
 def table_advisories(rows: list):
     def cell(r, k, bounds=False):
         x = r.get(k)
@@ -336,7 +389,8 @@ def table_advisories(rows: list):
         s = f"{100 * x['central']:.0f}"
         if bounds and r["kind"] == "PARTIAL":
             s += f" [{100 * x['definitely']:.0f}--{100 * x['possibly']:.0f}]"
-        return s + f" ({100 * x['central_cap']:.0f})"
+        mark = r"$^\dagger$" if r["client"] == "LND" and x["date"] < VIEW_WIDENED else ""
+        return s + f" ({100 * x['central_cap']:.0f}){mark}"
     lines = [r"\begin{table*}[t]", r"\centering\footnotesize",
              r"\caption{Advisories whose fix boundary is visible in gossip (LND and CLN). Exposure = share of live "
              r"nodes of that implementation whose inferred release line is affected, in \%; share of their live "
@@ -353,10 +407,11 @@ def table_advisories(rows: list):
                      f"{r['fix_to_disclosure_days']} & {cell(r, 'disclosure', True)} & "
                      f"{cell(r, '+60d')} & {cell(r, 'cutoff')} \\\\")
     lines += [r"\bottomrule", r"\end{tabular}}",
-              r"\par\vspace{2pt}\parbox{\textwidth}{\footnotesize Before July 2024 our view did not include the few live "
-              r"nodes on LND releases older than 0.14 (\S\ref{sec:data}); exposures to the 2023 LND advisories at "
-              r"disclosure are lower bounds. In 2023 the mixed LND line 0.15.1--0.17 held almost every LND node, so the "
-              r"bounds of the 2023 LND PARTIAL rows span 0--100\%. --: no usable snapshot within 7 days.}",
+              r"\par\vspace{2pt}\parbox{\textwidth}{\footnotesize $^\dagger$Before July 2024 our view did not include the "
+              r"few live nodes on LND releases older than 0.14 (\S\ref{sec:data}), so these exposures are lower bounds "
+              r"and the later rise to 1\% is the wider view, not nodes moving onto affected releases. In 2023 the mixed "
+              r"LND line 0.15.1--0.17 held almost every LND node, so the bounds of the 2023 LND PARTIAL rows span "
+              r"0--100\%. --: no usable snapshot within 7 days.}",
               r"\end{table*}"]
     (TABLES_DIR / "table_advisories.tex").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
@@ -365,16 +420,25 @@ def _short(a_title: str) -> str:
     return a_title.replace("_", r"\_").replace("&", r"\&").replace("#", r"\#")
 
 
-def table_response(resp: list):
+def table_response(resp: list, recent: dict):
+    """One row per testable disclosure; `recent` (the CLN gossipd cohort one line behind, 25.09–25.12) is an
+    indented row under its disclosure."""
     def rr(x):
         return f"{x['rr']:.2f} [{x['rr_lo']:.2f}, {x['rr_hi']:.2f}]"
+
+    def row(r, client, title, span):
+        return (f"{client} & {title} ({r['disclosed']}; {span}) & {r['fix_to_disclosure_days']} & "
+                f"{r['at_risk_at_disclosure']:,} & {r['weeks_before']}/{r['weeks_after']} & "
+                f"{100 * r['all']['rate_before']:.1f} & {100 * r['all']['rate_after']:.1f} & "
+                f"{rr(r['all'])} & {rr(r['operator'])} & {r['operator']['p_perm']:.3f} \\\\")
     lines = [r"\begin{table*}[t]", r"\centering\footnotesize",
              r"\caption{Did operators respond to the disclosure? Weekly share of live nodes on a wholly affected line "
              r"that moved to a later line, in the 8 weeks before and the 4 weeks after disclosure (fewer where "
              r"snapshots are missing or the cutoff intervenes), and the ratio after/before with a quasi-Poisson 95\% "
              r"CI. ``Outside platform releases'' leaves out moves signed within 48~h after an Umbrel or BTCPay "
              r"release that ships the new line (Section~\ref{sec:waves}); $p$: exact one-sided permutation test that "
-             r"the weekly rates after exceed those before, outside platform releases. Managed fleet excluded.}",
+             r"the weekly rates after exceed those before, outside platform releases. Indented: the nodes of the row "
+             r"above that were one line behind the fix (Section~\ref{sec:response}). Managed fleet excluded.}",
              r"\label{tab:response}", r"\resizebox{\textwidth}{!}{%", r"\begin{tabular}{llrrrrrllr}", r"\toprule",
              r" & & Fix$\to$disc. & At risk & Weeks & \multicolumn{2}{c}{Weekly rate (\%)} & "
              r"\multicolumn{3}{c}{Rate ratio after/before} \\",
@@ -383,10 +447,9 @@ def table_response(resp: list):
              r"all moves & outside platform releases & $p$ \\", r"\midrule"]
     for r in resp:
         span = r["affected_span"].replace("<", "$<$").replace("–", "--")
-        lines.append(f"{r['client']} & {_short(r['title'])} ({r['disclosed']}; {span}) & {r['fix_to_disclosure_days']} & "
-                     f"{r['at_risk_at_disclosure']:,} & {r['weeks_before']}/{r['weeks_after']} & "
-                     f"{100 * r['all']['rate_before']:.1f} & {100 * r['all']['rate_after']:.1f} & "
-                     f"{rr(r['all'])} & {rr(r['operator'])} & {r['operator']['p_perm']:.3f} \\\\")
+        lines.append(row(r, r["client"], _short(r["title"]), span))
+        if r["key"] == "cln-2026-gossipd":
+            lines.append(row(recent, "", r"\quad of which one line behind", "25.09--25.12"))
     lines += [r"\bottomrule", r"\end{tabular}}", r"\end{table*}"]
     (TABLES_DIR / "table_response.tex").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
@@ -526,10 +589,16 @@ def main() -> int:
     fig_cases(series, fates)
     fig_response(resp)
     table_advisories(rows)
-    table_response(resp)
+    table_response(resp, recent)
     table_robustness(rob)
+    call = offline_call()
+    e = call["event"]
+    print(f"CLN offline call 08-25 -> 08-27: newest line ({call['newest_line']}) {e['newest']['nodes']} nodes, "
+          f"{100 * e['newest']['left']:.1f}% not live; older lines {e['behind']['nodes']} nodes, "
+          f"{100 * e['behind']['left']:.1f}%; Fisher OR {call['fisher']['odds_ratio']:.2f} p {call['fisher']['p']:.1e}; "
+          f"ordinary windows: {[(w['from'], round(100 * w['newest'], 1), round(100 * w['behind'], 1)) for w in call['ordinary']]}")
     out = {"advisories": rows, "cases": fates, "response": resp, "response_cln_one_line_behind": recent,
-           "robustness": rob,
+           "cln_offline_call": call, "robustness": rob,
            "series": {k: s.reset_index().assign(date=lambda x: x["date"].dt.strftime("%Y-%m-%d"))
                          .round(5).to_dict(orient="list") for k, s in series.items() if k in CASES}}
     (DATA_DIR / "advisory_exposure.json").write_text(json.dumps(out, indent=1, default=float), encoding="utf-8")

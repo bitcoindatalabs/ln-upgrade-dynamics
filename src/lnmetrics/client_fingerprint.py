@@ -23,8 +23,10 @@ Signals, strongest first:
      Eclair 144, LDK 72) — weak on its own because operators override it. An empty feature set is never
      labelled LDK: every LDK release announces features.
 
-Changes from v3 (2026-10-06): CLN/Eclair split on bit 5 instead of keysend (55), so CLN with keysend
-disabled stays CLN; release-table step added; the 29+61 exclusion; empty set + CLTV 72 → Unknown.
+Steps 1, 2, 4 and 5 are the rules v4 of paper 01 (github.com/bitcoindatalabs/ln-client-diversity, arXiv:2610.20952v2,
+Table I there); step 3, the release-table match, is new in this paper. Changes from v3 (2026-10-06): CLN/Eclair split
+on bit 5 instead of keysend (55), so CLN with keysend disabled stays CLN; the 29+61 exclusion; empty set + CLTV 72 →
+Unknown; release-table step added.
 
 Returns (client, confidence, reason); confidence in {"operator", "high", "medium", "low"}.
 
