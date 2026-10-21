@@ -9,7 +9,10 @@ release moved \WaveBTCPayNodes{} LND nodes in a day, and with them the CLN nodes
 disclosure had not moved. No LND disclosure produced a visible increase at all. Frei et al.\ found the same for browsers:
 the update mechanism, more than the user, sets the patch level~\cite{frei2009firefox}; and Sarabi et al.\ found the
 vendor's patch speed to matter more than users' promptness~\cite{sarabi2017patchme}. On the Lightning Network the
-vendor that reaches most small nodes is the platform, not the implementation. Each Umbrel wave came
+vendor that reaches most small nodes is the platform, not the implementation. The same division, between maintainers
+who fix and disclose and packagers who deliver, runs through much open-source software, where distributions and app
+stores stand between a project and its users; there too, the packager's schedule is likely to set the patch level.
+Each Umbrel wave came
 \WaveUmbrelDaysMin--\WaveUmbrelDaysMax{} days after LND's own release, a large part of the median time to upgrade
 (\MedianLNDAll{} days). Two practical consequences follow. A fix reaches most small nodes when platforms ship it, so
 the platforms' release schedule, not only the implementation's, decides how long a vulnerability stays open. And a
@@ -19,7 +22,8 @@ concerned BTCPay rather than LND.
 
 \paragraph{Disclosure reaches the operators who were already upgrading}
 The LND advisories of 2025 and 2026 were published long after the fixes shipped (median \FixToDiscMedian{} days across
-the LND and CLN advisories), a common practice that lets operators upgrade before attackers learn what to look for. It works for
+the LND and CLN advisories), a common practice in coordinated vulnerability disclosure that lets operators upgrade
+before attackers learn what to look for. It works for
 the operators who follow releases: half of LND nodes move to a new line within three months, and the largest move
 first. The nodes still on an affected line at disclosure are the ones that did not, and for LND the disclosure did not
 detectably change their pace: \PctCohortStillLLBatch\% of those exposed to Lightning Labs' August batch were still exposed two

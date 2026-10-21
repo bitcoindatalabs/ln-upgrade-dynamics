@@ -14,33 +14,30 @@ services publish through channels we cannot date to the day and are not covered.
 \subsection{Upgrade waves}
 Upgrades arrive in bursts (Fig.~\ref{fig:waves}). We call a day a wave day for a line when more nodes moved to it
 than on 99\% of all (day, line) pairs, and merge consecutive wave days on one line into an event. Outside the fleet,
-LND had \NWaveEvents{} events of \WaveMinNodes--\WaveMaxNodes{} nodes, \WaveMinDays--\WaveMaxDays{} days after the
-line's release. They are not gossip catching up after a gap: in every event, \WaveMinSignedTwo\% of the nodes had
-signed their new announcement within two days before we first saw it.
+LND had \NWaveEvents{} events of \WaveMinNodes--\WaveMaxNodes{} nodes. None came at the line's release; all came
+\WaveMinDays--\WaveMaxDays{} days later. They are real upgrades, not gossip catching up after a gap: in every
+event, \WaveMinSignedTwo\% of the nodes had signed their new announcement within two days before we first saw it.
 
-The three largest LND events, \WaveUmbrelMinNodes--\WaveUmbrelMaxNodes{} nodes each, follow Umbrel's releases
-of LND 0.19.1, 0.20.0 and 0.21.1: in each, at least \WaveUmbrelSignedMin\% of the nodes signed their new
-announcement within 48~hours after the merge (median \WaveUmbrelHoursMin--\WaveUmbrelHoursMax{}~hours after) and at
-most \WaveUmbrelBeforeMax\% in the 24~hours before. These nodes are far more often Tor-only
-(\WaveUmbrelTorMin--\WaveUmbrelTorMax\%, against \WaveUmbrelBaseMin--\WaveUmbrelBaseMax\% of all live LND nodes), small
-(median live capacity \WaveUmbrelCapMin--\WaveUmbrelCapMax{}~BTC, against \WaveUmbrelOtherCapMin--\WaveUmbrelOtherCapMax{}~BTC
-for the other upgraders to the same line) and established (median \WaveUmbrelAgeMin--\WaveUmbrelAgeMax{} days in our
-data). Their timing is the platform's: each wave came \WaveUmbrelDaysMin--\WaveUmbrelDaysMax{} days after LND's own
-release, when Umbrel shipped it. The managed fleet of \S\ref{sec:data} kept the same schedule: \FleetWaveNodes{} of its
-nodes moved to LND 0.20 on \FleetWaveDay{}, \FleetWaveSigned\% of them within 48~hours after Umbrel published 0.20.0,
-with the same median lag (\FleetWaveHours{}~hours) as the platform's other users.
+The three largest were set by Umbrel, not by LND. Each followed Umbrel's release of a new LND version (0.19.1, 0.20.0
+and 0.21.1), which came \WaveUmbrelDaysMin--\WaveUmbrelDaysMax{} days after LND's own. The timing is Umbrel's: in
+each wave, at least \WaveUmbrelSignedMin\% of the \WaveUmbrelMinNodes--\WaveUmbrelMaxNodes{} nodes signed their new
+announcement within 48~hours after Umbrel merged the release (median \WaveUmbrelHoursMin--\WaveUmbrelHoursMax{}~hours
+after), and at most \WaveUmbrelBeforeMax\% in the 24~hours before. These nodes are far more often Tor-only than the
+rest of the network (\WaveUmbrelTorMin--\WaveUmbrelTorMax\%, against \WaveUmbrelBaseMin--\WaveUmbrelBaseMax\% of all
+live LND nodes). Even the managed fleet of \S\ref{sec:data} kept Umbrel's schedule: \FleetWaveNodes{} of its nodes
+moved to LND 0.20 on \FleetWaveDay{}, \FleetWaveSigned\% of them within 48~hours after Umbrel published 0.20.0, with
+the same median lag (\FleetWaveHours{}~hours) as the platform's other users.
 
-A fourth event is different: \WaveBTCPayNodes{} nodes on \WaveBTCPayDay{}, \WaveBTCPaySigned\% of them signed within
-48~hours after BTCPay's security release (median \WaveBTCPayHours{}~hours). Unlike the Umbrel waves they are mostly
-clearnet (\WaveBTCPayTor\% Tor-only, against \WaveBTCPayBase\%), and \WaveBTCPayOlder{} of them came from lines older
-than 0.20, skipping at least one release. They look like operators who had not moved to a newer LND line in months
-and did so when the advisory for their merchant software told them to update; that advisory concerned BTCPay
-itself, not LND. Of the remaining
-two events, one (\WaveEarlyNodes{} nodes, \WaveEarlyDay) was signed before Umbrel merged LND \WaveEarlyVersion{}
-(\WaveEarlyBefore\% in the 24~hours before), so that release cannot explain it, and one (\WaveNoneNodes{} nodes,
-\WaveNoneDay) matches no release we can date. CLN shows the same pattern at its smaller scale: its one attributed
-event, \ClnWaveNodes{} nodes on \ClnWaveDay{}, followed Umbrel's release of CLN 26.04.1 (\ClnWaveSigned\% within
-48~hours, median \ClnWaveHours{}~hours).
+A fourth event followed BTCPay Server's security release: \WaveBTCPayNodes{} nodes on \WaveBTCPayDay{},
+\WaveBTCPaySigned\% of them signed within 48~hours after it. Unlike the Umbrel waves, these nodes are mostly clearnet
+(\WaveBTCPayTor\% Tor-only, against \WaveBTCPayBase\%), and \WaveBTCPayOlder{} of them came from lines older than
+0.20, skipping at least one release. They look like operators who had not moved to a newer LND line in months and
+did so when the advisory for their merchant software told them to update; that advisory concerned BTCPay itself, not
+LND. Of the remaining two events, one (\WaveEarlyNodes{} nodes, \WaveEarlyDay) was signed before Umbrel merged LND
+\WaveEarlyVersion{} (\WaveEarlyBefore\% in the 24~hours before), so that release cannot explain it, and one
+(\WaveNoneNodes{} nodes, \WaveNoneDay) matches no release we can date. CLN shows the same pattern at its smaller
+scale: its one attributed event, \ClnWaveNodes{} nodes on \ClnWaveDay{}, followed Umbrel's release of CLN 26.04.1,
+\ClnWaveSigned\% of them within 48~hours.
 
 \begin{figure*}[t]
 \centering

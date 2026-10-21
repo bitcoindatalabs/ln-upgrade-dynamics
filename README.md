@@ -1,4 +1,4 @@
-# Who Patches the Lightning Network? Release Lines from Gossip, Node Platforms and Security Advisories, 2023–2026
+# Who Patches the Lightning Network? Evidence from Release Lines in Gossip, 2023–2026
 
 Saurabh Kumar, Bitcoin Data Labs
 

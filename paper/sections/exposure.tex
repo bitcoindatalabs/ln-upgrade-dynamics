@@ -43,39 +43,35 @@ response.
 Twelve disclosures qualify, nine for LND and three for CLN (Table~\ref{tab:response},
 Fig.~\ref{fig:response}). Only CLN's two disclosures of 19~July~2026, memory-exhaustion vulnerabilities in gossipd
 (fixed in 26.04) and connectd (fixed in 25.09)~\cite{pratap2026clndos}, show a clear increase. Among live CLN nodes on
-lines before 26.04, the weekly rate rose from \WkBeforeAllClnGossipd\% to \WkAfterAllClnGossipd\% (ratio
-\RRAllClnGossipd, 95\% CI \RRLoAllClnGossipd--\RRHiAllClnGossipd; outside platform releases permutation
-$p=\PPermOpClnGossipd$, the only one of the twelve tests below a Bonferroni threshold of $0.05/12$), and for lines
-before 25.09 from
-\WkBeforeAllClnConnectd\% to \WkAfterAllClnConnectd\% (\RRAllClnConnectd, \RRLoAllClnConnectd--\RRHiAllClnConnectd).
-The two groups responded differently. The two fix boundaries define them; we compare the nodes one line behind
-with the older lines because, once we dated BTCPay's release, it explained most moves from the older lines, so this
-comparison was made after seeing the data. The \AtRiskClnRecent{} nodes one line behind, on 25.09--25.12, moved steadily
-over the four weeks (indented row of Table~\ref{tab:response}): without the moves that followed platform releases their
-ratio is \RROpClnRecent{} (\RRLoOpClnRecent--\RRHiOpClnRecent), and each of the four weeks after disclosure had a
-higher rate than any of the seven before (permutation $p=\PPermOpClnRecent$, the smallest value the test can give
-with eleven weeks). The \AtRiskClnConnectd{} nodes on older lines moved mostly in the
-48~hours after BTCPay's security release of 7~August, which installed CLN 26.06.1 on every BTCPay deployment that
-updated; without those moves their ratio is \RROpClnConnectd{} (\RRLoOpClnConnectd--\RRHiOpClnConnectd;
-$p=\PPermOpClnConnectd$). The operators who acted on CLN's disclosure were those already close to current; the ones
-further behind moved when their platform's own advisory had them update. A month later, the ping-flood
-vulnerability, fixed at the same 25.09 boundary, was disclosed~\cite{cestari2026pingflood}, and the next day the
-maintainers asked operators to upgrade or restart offline~\cite{coreln2026offline}. The \AtRiskClnPing{} nodes still
-on older lines may have moved somewhat faster, but not clearly: \RRAllClnPing{} (\RRLoAllClnPing--\RRHiAllClnPing),
-and outside platform releases, whose removal takes BTCPay's push out of the before-window, \RROpClnPing{}
-(\RRLoOpClnPing--\RRHiOpClnPing; $p=\PPermOpClnPing$). Part of the response to that call does not appear in these
-rates: a node that restarted offline as asked left the live set and counts as not having moved, so leaving, which
-\S\ref{sec:fates} measures, competes with upgrading.
+lines before 26.04, the weekly rate of leaving them rose from \WkBeforeAllClnGossipd\% before disclosure to
+\WkAfterAllClnGossipd\% after. Without the moves that followed platform releases the ratio is \RROpClnGossipd{}
+(permutation $p=\PPermOpClnGossipd$), the only one of the twelve tests below a Bonferroni threshold of $0.05/12$.
+
+The operators who responded were those already close to current. The two fix boundaries split the affected nodes
+into the \AtRiskClnRecent{} one line behind, on 25.09--25.12, and the \AtRiskClnConnectd{} on older lines. We compare
+these two groups because, once we dated BTCPay's release, it explained most moves from the older lines; the
+comparison was therefore made after seeing the data. The nodes one line behind moved steadily (indented row of
+Table~\ref{tab:response}): without platform moves their rate rose \RROpClnRecent-fold, and each of the four weeks
+after disclosure had a higher rate than any of the seven before (permutation $p=\PPermOpClnRecent$, the smallest
+value the test can give with eleven weeks). The nodes on older lines moved mostly in the 48~hours after BTCPay's
+security release of 7~August, which installed CLN 26.06.1 on every BTCPay deployment that updated; without those
+moves their ratio is \RROpClnConnectd{} ($p=\PPermOpClnConnectd$). They moved when their platform's own advisory had
+their operators update, not when CLN disclosed.
+
+A month later, the ping-flood vulnerability, fixed at the same 25.09 boundary, was
+disclosed~\cite{cestari2026pingflood}, and the next day the maintainers asked operators to upgrade or restart
+offline~\cite{coreln2026offline}. The \AtRiskClnPing{} nodes still on older lines may have moved somewhat faster, but
+not clearly: outside platform releases, which takes BTCPay's push out of the before-window, the ratio is
+\RROpClnPing{} ($p=\PPermOpClnPing$). These rates also miss part of the response: a node that restarted offline as
+asked left the live set and counts as not having moved. \S\ref{sec:fates} measures who left.
 
 No LND disclosure produced a detectable increase. Across the nine, the ratios are at most \RespLndMaxRR{}, and
 none is significant (permutation $p\geq\RespLndMinP$, with or without platform moves). The intervals are wide,
 however. For Lightning Labs' batch of 11~August~2026, the weekly rate was \WkBeforeAllLLBatch\% before and
-\WkAfterAllLLBatch\% after (\RRAllLLBatch, \RRLoAllLLBatch--\RRHiAllLLBatch); its before-window holds BTCPay's
-security release four days earlier, and without the moves that followed it the ratio is \RROpLLBatch{}
-(\RRLoOpLLBatch--\RRHiOpLLBatch). Outside platform releases, a modest increase is compatible with these data, but one
-as large as CLN's (\RROpClnRecent) is not. What the rates leave open, the exposed cohort settles
-(\S\ref{sec:fates}): two months after the batch, only \PctCohortUpLLBatch\% of the nodes exposed at disclosure had
-upgraded. The lowest ratios belong to the cooperative-close disclosure, \FixToDiscLndCloseconf{} days after 0.21.0,
+\WkAfterAllLLBatch\% after; without the moves that followed BTCPay's security release four days before, the ratio is
+\RROpLLBatch{} (\RRLoOpLLBatch--\RRHiOpLLBatch), compatible with a modest increase but not with one as large as
+CLN's (\RROpClnRecent). The exposed cohort settles what the rates leave open (\S\ref{sec:fates}): two months after
+the batch, only \PctCohortUpLLBatch\% of the nodes exposed at disclosure had upgraded. The lowest ratios belong to the cooperative-close disclosure, \FixToDiscLndCloseconf{} days after 0.21.0,
 and the two of 21~September~2026, which followed the platform pushes of June and August: the bias described above.
 
 \begin{figure*}[t]
@@ -92,36 +88,36 @@ platform releases (open). Managed fleet excluded.}
 
 \subsection{What became of the exposed nodes}
 \label{sec:fates}
-On the day Lightning Labs disclosed its batch, \ExpLLBatchDisc\% of live LND nodes, holding \ExpCapLLBatchDisc\% of
-live LND capacity, were on a line older than 0.19 (Fig.~\ref{fig:cases}). Of the \CohortLLBatch{} exposed nodes,
-\CohortUpLLBatch{} had upgraded by the cutoff, \CohortLeftLLBatch{} were no longer live and \CohortStillLLBatch{}
-(\PctCohortStillLLBatch\%) were still live on an affected line. Morehouse's disclosure of three LND vulnerabilities
-fixed in the same release, on 4~December~2025~\cite{morehouse2025stalling,morehouse2025failback2,morehouse2025inbox},
-found \ExpLndSweeperDisc\% of live LND nodes exposed; four months later \PctCohortStillLndSweeper\% of that cohort was
-still live on an affected line, \PctCohortUpLndSweeper\% had upgraded and \PctCohortLeftLndSweeper\% were gone. The
-exposed LND nodes are small: their share of capacity is about half their share of nodes.
+Most LND nodes exposed at disclosure stayed exposed. On the day Lightning Labs disclosed its batch,
+\ExpLLBatchDisc\% of live LND nodes, holding \ExpCapLLBatchDisc\% of live LND capacity, were on a line older than 0.19
+(Fig.~\ref{fig:cases}). By the cutoff two months later, \PctCohortStillLLBatch\% of them were still live on an
+affected line; \PctCohortUpLLBatch\% had upgraded and \PctCohortLeftLLBatch\% were no longer live. Morehouse's
+disclosure of three LND vulnerabilities fixed in the same release, on
+4~December~2025~\cite{morehouse2025stalling,morehouse2025failback2,morehouse2025inbox}, found \ExpLndSweeperDisc\% of live LND nodes
+exposed; four months later \PctCohortStillLndSweeper\% of that cohort was still live on an affected line. The exposed
+LND nodes are small: their share of capacity is about half their share of nodes.
 
-CLN's exposure fell much further. Of the \CohortClnGossipd{} CLN nodes exposed to the gossipd vulnerability at
-disclosure, \CohortUpClnGossipd{} (\PctCohortUpClnGossipd\%) had upgraded by the cutoff and \CohortLeftClnGossipd{}
-(\PctCohortLeftClnGossipd\%) were no longer live, leaving \CohortStillClnGossipd{}; exposure fell from
-\ExpClnGossipdDisc\% of live CLN nodes to \ExpClnGossipdCutoff\% (from \ExpCapClnGossipdDisc\% to
-\ExpCapClnGossipdCutoff\% of capacity). Much of the fall is nodes leaving rather than upgrading, as in the CLN
-shutdown we measured earlier~\cite{kumar2026clientdiversity}; leaving also ends the exposure, and restarting offline
-was what the maintainers asked of operators who could not upgrade.
+CLN's exposure fell much further: from \ExpClnGossipdDisc\% of live CLN nodes at the gossipd disclosure to
+\ExpClnGossipdCutoff\% at the cutoff (from \ExpCapClnGossipdDisc\% to \ExpCapClnGossipdCutoff\% of capacity). Of the
+exposed nodes, \PctCohortUpClnGossipd\% had upgraded and \PctCohortLeftClnGossipd\% were no longer live. Much of the
+fall is nodes leaving rather than upgrading, as in the CLN shutdown we measured
+earlier~\cite{kumar2026clientdiversity}; leaving also ends the exposure, and restarting offline was what the
+maintainers asked of operators who could not upgrade.
 
-Release lines show who followed that call. Of the \OffCallNewestNodes{} live CLN nodes on the newest line
-(\OffCallNewestLine) on 25~August, \OffCallNewestLeft\% were no longer live two days later, against
-\OffCallBehindLeft\% of the \OffCallBehindNodes{} on older lines (odds ratio \OffCallOddsRatio, Fisher's exact test
-$p=\OffCallP$). In the \OffCallOrdWindows{} two-day windows of August before the call, the medians were
-\OffCallOrdNewestMedian\% and \OffCallOrdBehindMedian\%. The highest, \OffCallOrdNewestMax\% and
-\OffCallOrdBehindMax\% from \OffCallOrdMaxDay, came during the closing waves of early
-August~\cite{kumar2026clientdiversity}, and only \OffCallOrdMaxDarkShare\% of the nodes that left then still had
-announced channels; at the call, \OffCallNewestDarkN{} of the \OffCallNewestLeftN{} newest-line nodes that left still had
-theirs, so they had gone offline rather than lost their channels. The gap is not one of transport: among Tor-only nodes
-\OffCallNewestTor\% and \OffCallBehindTor\% left, among the others \OffCallNewestOther\% and \OffCallBehindOther\%. At
-most \OffCallMovedMax\% of either group changed line in those two days; the next CLN release came out on 28~August. The operators who took their nodes offline were mostly those who keep up with
-releases, already patched against both July vulnerabilities; the nodes still on lines those vulnerabilities affect
-mostly neither upgraded nor left. This is also why CLN's exposure briefly rose at the call (Fig.~\ref{fig:cases}).
+Release lines show who followed that call: mostly operators already patched against both July vulnerabilities. Of
+the \OffCallNewestNodes{} live CLN nodes on the newest line (\OffCallNewestLine) on 25~August, \OffCallNewestLeft\%
+were no longer live two days later, against \OffCallBehindLeft\% of the \OffCallBehindNodes{} on older lines (odds
+ratio \OffCallOddsRatio, Fisher's exact test $p=\OffCallP$). Both are well above the medians of the
+\OffCallOrdWindows{} two-day windows of August before the call (\OffCallOrdNewestMedian\% and
+\OffCallOrdBehindMedian\%). The highest of those, \OffCallOrdNewestMax\% and \OffCallOrdBehindMax\% from
+\OffCallOrdMaxDay, came during the closing waves of early August~\cite{kumar2026clientdiversity}, when only
+\OffCallOrdMaxDarkShare\% of the nodes that left still had announced channels; at the call, \OffCallNewestDarkN{} of
+the \OffCallNewestLeftN{} newest-line nodes that left still had theirs, so they had gone offline rather than lost
+their channels. Transport does not explain the gap: among Tor-only nodes \OffCallNewestTor\% and \OffCallBehindTor\%
+left, among the others \OffCallNewestOther\% and \OffCallBehindOther\%. Nor did the nodes behind upgrade instead: at
+most \OffCallMovedMax\% of either group changed line in those two days, and the next CLN release came out on
+28~August. The nodes still exposed to the July vulnerabilities mostly neither upgraded nor left, which is also why
+CLN's exposure briefly rose at the call (Fig.~\ref{fig:cases}).
 
 \begin{figure*}[t]
 \centering

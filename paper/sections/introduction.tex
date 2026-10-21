@@ -2,12 +2,15 @@
 \section{Introduction}
 \label{sec:intro}
 
-Between July and October~2026, every major Lightning implementation disclosed security vulnerabilities. Lightning
+The Lightning Network is a payment network built on Bitcoin. Its nodes run open-source software and hold their
+operators' funds in payment channels, so a flaw in that software can put those funds at risk. Between July and
+October~2026, every major Lightning implementation disclosed security vulnerabilities. Lightning
 Labs published ten LND advisories on a single day~\cite{lightninglabs2026aug} and eight more a month
 later~\cite{lightninglabs2026sep}; Core Lightning (CLN) asked operators who could not upgrade to restart their nodes
 offline~\cite{coreln2026offline}; Eclair and LDK shipped security releases. Each advisory ends with the same advice:
-upgrade. Whether operators do, and how fast, decides how long a disclosed vulnerability stays exploitable. For web
-servers, browsers and Bitcoin and Ethereum full nodes, this question has been measured for two decades
+upgrade. Whether operators do, and how fast, decides how long a disclosed vulnerability stays exploitable, and by
+October CLN's maintainers reported attacks on unpatched nodes~\cite{coreln2026attacks}. For web servers, browsers and
+Bitcoin and Ethereum full nodes, how fast operators patch has been measured for two decades
 \cite{arbaugh2000windows,rescorla2003securityholes,frei2009firefox,durumeric2014heartbleed,kim2018ethereum}. For the
 Lightning Network it has not, because Lightning gossip carries no software version: earlier studies could tell which
 implementation a node runs~\cite{zabka2021nodeclassification,espinasa2024decisiontree,kumar2026clientdiversity}, not
@@ -23,35 +26,35 @@ the largest movements are platforms shipping a release to all their users at onc
 after its fix, moves at most the operators who were already close to current. We make four contributions.
 
 \begin{itemize}
-\item \textbf{Release-line inference from gossip.} We infer the release line (the finest unit gossip separates;
-patch releases are invisible) of every public node with a known implementation. On \NVerNodes{} CLN nodes whose alias
-states their version, the inferred range contains the true line on \PctVerStrict\% of \NVerNodeDays{} node-days and
-the most likely line is exact for \NVerNodeLinesExact{} of \NVerNodeLines{} node--line pairs. For LND, which has no
-such ground truth, three checks that need none agree: line decreases are \PctDownLND\% of observed line changes, no
+\item \textbf{Release-line inference from gossip.} The release line of a public node can be read from its gossip.
+A release line is the finest unit gossip separates; patch releases are invisible. Where a node states its version, the
+inference is close to exact: on CLN nodes whose alias names the version, the most likely line is right for
+\NVerNodeLinesExact{} of \NVerNodeLines{} node--line pairs. LND nodes state no version, so we check three things that
+must hold if the inference is right, and all three do: line decreases are \PctDownLND\% of observed line changes, no
 LND line released since 2024 was seen on more than \PreRelLndMax{} nodes before its publication, and
 \PlatLineMin--\PlatLineMax\% of the nodes that changed line right after a platform shipped a new LND line landed on
 the line it shipped (\S\ref{sec:inference}).
-\item \textbf{Upgrade dynamics.} With a managed fleet of up to \FleetPeakNodes{} live LND
-nodes~\cite{kumar2026clientdiversity} set apart, new lines reach half of live LND nodes in
-\TFiftyLndMin--\TFiftyLndMax{} days. Half of the LND nodes on an older line upgrade within \MedianLNDAll{} days of a
-release, but the smallest quarter of nodes takes \MedianLNDSmall{}, and a node already more than one line behind has
-about five times lower odds of moving in any week (\S\ref{sec:dynamics}).
-\item \textbf{Platforms set the pace.} We date the LND and CLN releases of two node platforms to the minute from
-public records. The three largest LND upgrade waves, \WaveUmbrelMinNodes--\WaveUmbrelMaxNodes{} nodes each, re-signed
-their announcements a median \WaveUmbrelHoursMin--\WaveUmbrelHoursMax{}~hours after the Umbrel app store published a
-new LND version, and another wave followed BTCPay Server's security release. Upgrades signed within 48~hours after
-such a release are \PlatShareLND\% of all LND upgrades since June~2025, although those windows cover \PlatTimeLND\% of
-the time (\S\ref{sec:waves}).
-\item \textbf{Disclosure, response and exposure.} For the \NAdvTotal{} LND and CLN advisories whose fix boundary
-gossip can see, we measure how many live nodes and how much capacity remained exposed. Fixes typically shipped months
-before disclosure (median \FixToDiscMedian{} days). For \NResp{} disclosures we compare the weekly rate at which exposed
-nodes moved to a later line before and after disclosure, with and without the moves that platform releases explain.
-Only CLN's July~2026 disclosures raised it, by a factor of \RROpClnRecent{} among nodes one line behind; nodes
-further behind moved when BTCPay's own advisory had their operators update. No LND disclosure produced a detectable
-increase, and \PctCohortStillLLBatch\% of the nodes exposed to Lightning Labs' August~2026 batch were still live on an affected
-release two months later. When CLN asked operators who could not upgrade to restart offline, nodes already on the
-newest line went offline at twice the rate of nodes behind (\OffCallNewestLeft\% against \OffCallBehindLeft\%)
-(\S\ref{sec:exposure}).
+\item \textbf{Upgrade dynamics.} Most operators upgrade within months; the ones that lag are small or already behind. Half of the
+LND nodes on an older line upgrade within \MedianLNDAll{} days of a release; the smallest quarter of nodes takes
+\MedianLNDSmall{}, and a node already more than one line behind has about five times lower odds of moving in any
+week. These figures set apart a managed fleet of up to \FleetPeakNodes{} live LND
+nodes~\cite{kumar2026clientdiversity}, whose schedule would otherwise dominate them (\S\ref{sec:dynamics}).
+\item \textbf{Platforms set the pace.} The largest upgrades are node platforms shipping a release to all their users
+at once. Dating the releases of two platforms to the minute from public records, we find that the three largest LND
+upgrade waves, \WaveUmbrelMinNodes--\WaveUmbrelMaxNodes{} nodes each, came about a day after the Umbrel app store
+published a new LND version, and another followed BTCPay Server's security release. Since June~2025, the 48~hours
+after such releases cover \PlatTimeLND\% of the time but hold \PlatShareLND\% of LND upgrades (\S\ref{sec:waves}).
+\item \textbf{Disclosure, response and exposure.} Disclosure moved few operators, and mostly those already close to
+current. For the \NAdvTotal{} LND and CLN advisories whose fix boundary gossip can see, we measure how many live nodes
+and how much capacity stayed exposed; the fixes typically shipped months before disclosure (median \FixToDiscMedian{}
+days). For \NResp{} disclosures we test whether exposed nodes left the affected lines faster afterwards. Only CLN's
+July~2026 disclosures
+raised that rate, by a factor of \RROpClnRecent{} among nodes one line behind; nodes further behind moved when
+BTCPay's own advisory had their operators update. No LND disclosure produced a detectable increase: two months after
+Lightning Labs' August~2026 batch, \PctCohortStillLLBatch\% of the nodes exposed at disclosure still ran an affected
+release. When CLN asked operators who could not upgrade to restart offline, the nodes that went offline were mostly
+already patched: \OffCallNewestLeft\% of the nodes on the newest line went offline, against \OffCallBehindLeft\% of
+the nodes behind (\S\ref{sec:exposure}).
 \end{itemize}
 
 All data behind the figures and tables, and the code, are released. We report aggregates only: no list, ranking or
