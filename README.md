@@ -2,6 +2,12 @@
 
 Saurabh Kumar, Bitcoin Data Labs
 
+**Paper:** [arXiv:2610.30350](https://arxiv.org/abs/2610.30350) ([HTML](https://arxiv.org/html/2610.30350),
+[PDF](https://arxiv.org/pdf/2610.30350)) · DOI [10.48550/arXiv.2610.30350](https://doi.org/10.48550/arXiv.2610.30350)
+· [Bitcoin Data Labs research](https://bitcoindatalabs.org/research.html#ln-upgrade-dynamics). Builds on
+[*Does Client Diversity Protect the Lightning Network?*](https://github.com/bitcoindatalabs/ln-client-diversity)
+(arXiv:2610.20952), which owns the client-inference rules used here.
+
 Code, aggregate data and LaTeX source for the paper. arXiv categories: `cs.CR`, cross-list `cs.NI`.
 Data cutoff: 2026-10-13.
 
@@ -15,6 +21,24 @@ shipped a new LND version; and of 12 disclosures that can be tested, only Core L
 at which nodes left affected releases, and only among nodes one release line behind; Core Lightning's call to restart
 offline was followed mostly by nodes already on the newest line. Two months after Lightning Labs'
 August 2026 batch, 71% of the nodes exposed at disclosure still ran an affected release.
+
+## Key findings
+
+**Can gossip tell which software release a Lightning node runs?** Its release line, yes. Matching the feature bits a
+node announces against the source of every LND, Core Lightning, Eclair and LDK release reveals it; where Core Lightning
+nodes state their version, the inferred line is exact for 132 of 136 node-line pairs.
+
+**How fast do Lightning nodes upgrade?** Half of LND nodes upgrade within 88 days of a release. Small nodes and those
+that skipped releases lag far behind.
+
+**Do operators upgrade on security advisories or on platform releases?** The network patches on release and platform
+schedules, not on disclosures. The three largest upgrade waves came about a day after the Umbrel app store shipped a
+new LND version, and since June 2025, 17% of LND upgrades came in the 48 hours after a platform release, windows that
+cover 4.4% of the time. Of 12 disclosures we can test, only Core Lightning's of July 2026 sped up upgrades, and only
+among nodes one release line behind.
+
+**How many nodes stay exposed after a disclosure?** Two months after Lightning Labs' August 2026 batch, 71% of the LND
+nodes exposed at disclosure still ran an affected release.
 
 ## Repository structure
 * `paper/`: LaTeX source (`main.tex`, `sections/`, `references.bib`, `figures/`, `tables/`, `numbers.tex`), the
@@ -65,6 +89,21 @@ cd paper && pdflatex main && bibtex main && pdflatex main && pdflatex main
 ## Data policy
 Aggregates only: no list, ranking or label of individual nodes by release, platform or exposure is published, in the
 paper or in `data/`.
+
+## How to cite
+Please cite the paper (GitHub's *Cite this repository* button gives the same entry from [`CITATION.cff`](./CITATION.cff)):
+```bibtex
+@misc{kumar2026upgradedynamics,
+  title         = {Who Patches the Lightning Network? Evidence from Release Lines in Gossip, 2023--2026},
+  author        = {Saurabh Kumar},
+  year          = {2026},
+  eprint        = {2610.30350},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CR},
+  doi           = {10.48550/arXiv.2610.30350},
+  url           = {https://arxiv.org/abs/2610.30350}
+}
+```
 
 ## License
 MIT (see `LICENSE`).
